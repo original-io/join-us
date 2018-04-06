@@ -33,9 +33,11 @@ export default {
 <style scoped>
   .container {
     display: grid;
+    grid-template-columns: 100%;
     grid-template-areas:
-    'route route route'
-    'slide imageselected info'
+    'route'
+    'imageselected'
+    'info';
   }
   .route {
     grid-area: route
@@ -44,6 +46,7 @@ export default {
     grid-area: slide
   }
   .imageselected {
+    justify-self: center;
     align-self: center;
     grid-area: imageselected
   }
@@ -51,4 +54,24 @@ export default {
     margin: 10px;
     grid-area: info
   }
+  @media(min-width: 560px){
+    .container {
+      grid-template-columns: 150px minmax(500px, auto);
+      grid-template-areas:
+      'route route'
+      'slide imageselected'
+      'info info';
+    }
+  }
+@media(min-width: 1200px){
+  .container {
+    grid-template-columns: 150px minmax(500px, auto) 560px;
+    grid-template-areas:
+    'route route route'
+    'slide imageselected info';
+  }
+  .info {
+    align-self: center;
+  }
+}
 </style>
