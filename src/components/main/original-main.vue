@@ -63,15 +63,15 @@ export default {
       'info info';
     }
   }
-@media(min-width: 1200px){
-  .container {
-    grid-template-columns: 150px minmax(500px, auto) 560px;
-    grid-template-areas:
-    'route route route'
-    'slide imageselected info';
+  @media(min-width: 1200px){
+    .container {
+      grid-template-columns: 150px minmax(500px, auto) 560px;
+      grid-template-areas:
+      'route route route'
+      'slide imageselected info';
+    }
+    .info {
+      align-self: center;
+    }
   }
-  .info {
-    align-self: center;
-  }
-}
 </style>

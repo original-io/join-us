@@ -1,7 +1,7 @@
 <template>
   <header class="testheader">
-    <img src="../../assets/logo.png">
-    <img class="testheader-logoespelhada" src="../../assets/logo.png">
+    <img src="../../../static/logo.png">
+    <img class="testheader-logoespelhada" src="../../../static/logo.png">
   </header>
 </template>
 

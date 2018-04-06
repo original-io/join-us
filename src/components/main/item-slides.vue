@@ -2,10 +2,10 @@
   <div class="slides">
     <button @click="slideUp"><i class="icon fas fa-arrow-up"></i></button>
     <div ref="slide">
-      <img class="selected" src="../../assets/benassi1.jpg" @click="selectedSlide">
-      <img class="image" src="../../assets/benassi2.jpg" @click="selectedSlide">
-      <img class="image" src="../../assets/benassi3.jpg" @click="selectedSlide">
-      <img class="image" src="../../assets/benassi4.jpg" @click="selectedSlide">
+      <img class="selected" src="../../../static/benassi1.jpg" @click="selectedSlide">
+      <img class="image" src="../../../static/benassi2.jpg" @click="selectedSlide">
+      <img class="image" src="../../../static/benassi3.jpg" @click="selectedSlide">
+      <img class="image" src="../../../static/benassi4.jpg" @click="selectedSlide">
     </div>
     <button @click="slideDown"><i class="icon fas fa-arrow-down"></i></button>
   </div>

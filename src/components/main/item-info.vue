@@ -36,7 +36,7 @@
 
 <script>
 export default {
-  name: 'card-item',
+  name: 'item-info',
   data () {
     return {
       colorSelected: 'Black Olive',
@@ -126,7 +126,6 @@ button {
   background-color: #CFE4CE;
   border: 1px solid #CFE4CE;
   border-radius: 35px;
-  position: absolute;
 }
 .size-box {
   text-align: center;
@@ -144,7 +143,6 @@ button {
   width: 30px;
   background-color: rgba(187,217,185, 0.6);
   border-radius: 35px;
-  position: absolute;
 }
 .buttoncompra {
   width: 100%;
