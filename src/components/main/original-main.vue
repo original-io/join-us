@@ -3,7 +3,7 @@
     <item-route :route="route" class="route"></item-route>
     <item-slides class="slide" @src="imageSrc"></item-slides>
     <image-selected class="imageselected" :imageSelected="imageSelected"></image-selected>
-    <item-info class="info"></item-info>
+    <item-info class="info" @addToCart="addToCart"></item-info>
   </main>
 </template>
 
@@ -23,6 +23,9 @@ export default {
     }
   },
   methods: {
+    addToCart () {
+      this.$emit('addToCart', this.imageSelected)
+    },
     imageSrc (imageSrc) {
       this.imageSelected = imageSrc
     }

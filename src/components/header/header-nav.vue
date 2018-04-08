@@ -17,6 +17,7 @@
       </li>
       <li>
         <i class="icon fas fa-shopping-bag"></i>
+       <span class="cartcount" v-show="cartItens > 0">{{ cartItens }}</span>
       </li>
     </ul>
   </nav>
@@ -25,6 +26,7 @@
 <script>
 export default {
   name: 'header-navigation',
+  props: ['cartItens'],
   data () {
     return {
 
@@ -39,6 +41,7 @@ export default {
     text-transform: uppercase;
   }
   li {
+    position: relative;
     cursor: pointer;
     transition: 0.5s;
   }
@@ -90,6 +93,25 @@ export default {
   .useractions li{
     width: 100%;
     text-align: center;
+  }
+  .fa-shopping-bag {
+    position: absolute;
+    font-size: 20px;
+    color: #3a301c;
+  }
+  .cartcount {
+    position: relative;
+    display: inline-block;
+    top: -6px;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    color: red;
+    font-weight: 800;
+    background: yellow;
+    text-align: center;
+    line-height: 18px;
   }
   @media (min-width: 550px) {
     .testnav {

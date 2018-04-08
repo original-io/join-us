@@ -1,7 +1,7 @@
 <template>
   <div>
     <header-logo></header-logo>
-    <header-nav></header-nav>
+    <header-nav :cartItens="cartItens"></header-nav>
   </div>
 </template>
 
@@ -11,7 +11,8 @@ import headerNav from './header-nav'
 
 export default {
   name: 'original-header',
-  components: { headerLogo, headerNav }
+  components: { headerLogo, headerNav },
+  props: ['cartItens']
 }
 </script>
 

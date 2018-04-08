@@ -28,7 +28,7 @@
           </li>
         </ul>
       </div>
-      <button class="buttoncompra">Adicionar à sacola</button>
+      <button class="buttoncompra" @click="addToCart">Adicionar à sacola</button>
       <p class="description">Feito com material espuma Solarsoft, o Chinelo Nike Benassi Solarsoft Slide 2 – Adulto é a opção ideal para quem deseja calçar algo confortável nas horas de lazer ou descanso. Desenvolvido com a qualidade Nike, o chinelo possui tira larga e confortável, com acolchoamento e camada em “mesh”. Não perca!</p>
 
   </div>
@@ -51,6 +51,9 @@ export default {
     }
   },
   methods: {
+    addToCart (event) {
+      this.$emit('addToCart')
+    },
     handlerClick (color) {
       this.colorSelected = color
     },
