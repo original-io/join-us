@@ -2,13 +2,18 @@
   <div class="slides">
     <button @click="slideLeft" class="icon-left"><i class="fas fa-arrow-left"></i></button>
     <div ref="suggestionSlide" class="slide">
-      <suggestion-image class="selected " imageSrc="../../../static/suggestion1.jpg" @click.native="selectedSlide"></suggestion-image>
-      <suggestion-image class="image" imageSrc="../../../static/suggestion2.jpg" @click.native="selectedSlide"></suggestion-image>
-      <suggestion-image class="image" imageSrc="../../../static/suggestion3.jpg" @click.native="selectedSlide"></suggestion-image>
-      <suggestion-image class="image" imageSrc="../../../static/suggestion4.jpg" @click.native="selectedSlide"></suggestion-image>
+
+      <suggestion-image class="selected " imageSrc="../../../static/suggestion1.jpg" @click.native="selectSlide"></suggestion-image>
+
+      <suggestion-image class="image" imageSrc="../../../static/suggestion2.jpg" @click.native="selectSlide"></suggestion-image>
+
+      <suggestion-image class="image" imageSrc="../../../static/suggestion3.jpg" @click.native="selectSlide"></suggestion-image>
+
+      <suggestion-image class="image" imageSrc="../../../static/suggestion4.jpg" @click.native="selectSlide"></suggestion-image>
+
     </div>
     <button @click="slideRight" class="icon-right"><i class="fas fa-arrow-right"></i></button>
-    <div class="rows">1 de 4</div>
+    <div class="suggestioncount">{{ suggestionCount }}</div>
   </div>
 </template>
 
@@ -18,42 +23,60 @@ import suggestionImage from './suggestion-image'
 export default {
   name: 'suggestions-slides',
   components: { suggestionImage },
+  data () {
+    return {
+      mounted: false,
+      selected: 1
+    }
+  },
   methods: {
+    getSelectedIndex () {
+      const items = this.$refs.suggestionSlide.children
+      const childrenIndexLenght = items.length - 1
+      for (let index = 0; index <= childrenIndexLenght; index++) {
+        if (items[index].className.includes('selected')) {
+          return index
+        }
+      }
+    },
     selectedClear () {
       for (const img of this.$refs.suggestionSlide.children) {
         img.className = 'image'
       }
     },
-    selectedSlide (event) {
+    selectSlide (event) {
       this.selectedClear()
+      console.log(event.target)
       event.target.className = 'selected'
     },
     slideLeft (event) {
-      let childrenIndexLenght = this.$refs.suggestionSlide.children.length - 1
-      let index = 0
-      while (index <= childrenIndexLenght) {
-        if (this.$refs.suggestionSlide.children[index].className.includes('selected')) {
-          if (index === 0) break
-          this.selectedClear()
-          this.$refs.suggestionSlide.children[index - 1].className = 'selected'
-          break
-        }
-        index++
+      const selectedIndex = this.getSelectedIndex()
+      if (selectedIndex !== 0) {
+        this.selectedClear()
+        this.$refs.suggestionSlide.children[selectedIndex - 1].className = 'selected'
+        this.selected = selectedIndex
       }
     },
     slideRight (event) {
-      let childrenIndexLenght = this.$refs.suggestionSlide.children.length - 1
-      let index = 0
-      while (index <= childrenIndexLenght) {
-        if (this.$refs.suggestionSlide.children[index].className.includes('selected')) {
-          if (index === this.$refs.suggestionSlide.children.length - 1) break
-          this.selectedClear()
-          this.$refs.suggestionSlide.children[index + 1].className = 'selected'
-          break
-        }
-        index++
+      const selectedIndex = this.getSelectedIndex()
+      if (selectedIndex !== this.$refs.suggestionSlide.children.length - 1) {
+        this.selectedClear()
+        this.$refs.suggestionSlide.children[selectedIndex + 1].className = 'selected'
+        this.selected = selectedIndex + 2
       }
     }
+  },
+  computed: {
+    suggestionCount (e) {
+      if (this.mounted) {
+        const items = this.$refs.suggestionSlide.children
+        const total = items.length
+        return `${this.selected} de ${total}`
+      }
+    }
+  },
+  mounted () {
+    this.mounted = true
   }
 }
 </script>
@@ -98,7 +121,7 @@ export default {
     grid-template-rows: 1fr;
     justify-content: center;
   }
-  .rows{
+  .suggestioncount{
     display:none;
     color: #1976d2;
   }
@@ -118,11 +141,11 @@ export default {
     }
   }
   @media(min-width: 800px){
-    .rows{
+    .suggestioncount{
       justify-self: center;
       align-self: center;
       display: inline;
-      grid-area: rows
+      grid-area: suggestioncount
     }
     .icon-left{
       justify-self: end;
@@ -140,7 +163,7 @@ export default {
       grid-column-gap: 20px;
       grid-template-areas:
       'slide slide slide'
-      'leftIcon rows rightIcon'
+      'leftIcon suggestioncount rightIcon'
     }
   }
 </style>
