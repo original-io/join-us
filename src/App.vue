@@ -3,7 +3,7 @@
     <modal ref="modal" :imgSrc="imgSrc"></modal>
     <original-header :cartItens="cartItens"></original-header>
     <original-main @addToCart="openModal"></original-main>
-    <original-suggestions></original-suggestions>
+    <original-suggestions @addToCart="openModal"></original-suggestions>
     <original-footer></original-footer>
   </div>
 </template>

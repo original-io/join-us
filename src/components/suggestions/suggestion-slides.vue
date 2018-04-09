@@ -1,28 +1,37 @@
 <template>
   <div class="slides">
-    <button @click="slideLeft" class="icon-left"><i class="fas fa-arrow-left"></i></button>
+    <button @click="slideLeft" class="slidebtn icon-left"><i class="fas fa-arrow-left"></i></button>
     <div ref="suggestionSlide" class="slide">
 
-      <suggestion-image class="selected " imageSrc="../../../static/suggestion1.jpg" @click.native="selectSlide"></suggestion-image>
+      <div class="wrap selected" @click="selectSlide">
+        <img src="../../../static/suggestion1.jpg">
+        <button class="additem" @click="addToCart">+</button>
+      </div>
 
-      <suggestion-image class="image" imageSrc="../../../static/suggestion2.jpg" @click.native="selectSlide"></suggestion-image>
+      <div class="wrap image" @click="selectSlide">
+        <img src="../../../static/suggestion2.jpg">
+        <button class="additem" @click="addToCart">+</button>
+      </div>
 
-      <suggestion-image class="image" imageSrc="../../../static/suggestion3.jpg" @click.native="selectSlide"></suggestion-image>
+      <div class="wrap image" @click="selectSlide">
+        <img src="../../../static/suggestion3.jpg">
+        <button class="additem" @click="addToCart">+</button>
+      </div>
 
-      <suggestion-image class="image" imageSrc="../../../static/suggestion4.jpg" @click.native="selectSlide"></suggestion-image>
+      <div class="wrap image" @click="selectSlide">
+        <img src="../../../static/suggestion4.jpg">
+        <button class="additem" @click="addToCart">+</button>
+      </div>
 
     </div>
-    <button @click="slideRight" class="icon-right"><i class="fas fa-arrow-right"></i></button>
+    <button @click="slideRight" class="slidebtn icon-right"><i class="fas fa-arrow-right"></i></button>
     <div class="suggestioncount">{{ suggestionCount }}</div>
   </div>
 </template>
 
 <script>
-import suggestionImage from './suggestion-image'
-
 export default {
   name: 'suggestions-slides',
-  components: { suggestionImage },
   data () {
     return {
       mounted: false,
@@ -30,6 +39,10 @@ export default {
     }
   },
   methods: {
+    addToCart (event) {
+      const src = event.target.parentElement.children[0].getAttribute('src') // Pega o primeiro filho do elemento pai(wrap)
+      this.$emit('addToCart', src)
+    },
     getSelectedIndex () {
       const items = this.$refs.suggestionSlide.children
       const childrenIndexLenght = items.length - 1
@@ -46,8 +59,9 @@ export default {
     },
     selectSlide (event) {
       this.selectedClear()
-      console.log(event.target)
-      event.target.className = 'selected'
+      event.target.parentElement.className = 'selected'
+      const selectedIndex = this.getSelectedIndex()
+      this.selected = selectedIndex + 1
     },
     slideLeft (event) {
       const selectedIndex = this.getSelectedIndex()
@@ -82,7 +96,12 @@ export default {
 </script>
 
 <style scoped>
-  button {
+  img {
+    display: inline-block;
+    width: 150px;
+    height:150px;
+  }
+  .slidebtn {
     border: 1px solid #1976d2;
     height: 30px;
     width: 30px;
@@ -92,9 +111,29 @@ export default {
     outline-style: none;
     transition: 0.4s;
   }
-  button:hover {
+  .slidebtn:hover {
     color: #0d47a1;
     background: #e3f2fd;
+  }
+  .wrap {
+    position: relative;
+    border: none;
+  }
+  .additem {
+    position: absolute;
+    top: 5px;
+    right: 2px;
+    height: 30px;
+    width: 30px;
+    border: 1px solid tomato;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    color: tomato;
+    transition: 0.5s;
+  }
+  .additem:hover {
+    transform: scale(1.2);
+    background: rgba(255, 255, 255, 1);
   }
   .image {
     display: none;
@@ -105,10 +144,11 @@ export default {
     opacity: 0.7;
   }
   .selected {
+    display: inline-block;
     position: relative;
     height: 150px;
     width: 150px;
-    border:1px solid #000;
+    border: 1px solid #000;
   }
   .icon-left, .icon-right {
     cursor: pointer;
@@ -137,7 +177,7 @@ export default {
       align-self: center;
     }
     .image {
-      display: inline;
+      display: inline-block;
     }
   }
   @media(min-width: 800px){

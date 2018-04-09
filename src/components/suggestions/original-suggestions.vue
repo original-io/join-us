@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="title">Quem viu viu também</div>
-    <suggestion-slides></suggestion-slides>
+    <suggestion-slides @addToCart="addToCart"></suggestion-slides>
   </div>
 </template>
 
@@ -9,7 +9,12 @@
 import suggestionSlides from './suggestion-slides'
 export default {
   name: 'original-suggestions',
-  components: { suggestionSlides }
+  components: { suggestionSlides },
+  methods: {
+    addToCart (imgSrc) {
+      this.$emit('addToCart', imgSrc)
+    }
+  }
 }
 </script>
 
