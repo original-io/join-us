@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>original.io</title>
+  <link rel="shortcut icon" href="dev/images/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="dev/styles/css/materialize.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="dev/styles/css/custom.css" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <section class="navbar-area">
+    <div class="container">
+      <div class="row col s12 center logo">
+        <a href="" class="brand-logo">
+          <img src="dev/images/logo.png" alt="logo">
+        </a>
+      </div>
+    </div>
+    <nav class="nav-extended menu">
+      <div class="nav-wrapper container">
+        <div class="row">
+          <div class="col s3">
+            <ul class="tabs tabs-transparent login">
+              <li class="tab">
+                <a href="#entrar">Entrar</a>
+              </li>
+              <li class="tab">
+                |
+              </li>
+              <li class="tab">
+                <a class="active" href="#cadastra-se">Cadastra-se</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col s6">
+            <ul class="tabs tabs-transparent itens">
+              <li class="tab">
+                <a href="#sapatos">Sapatos</a>
+              </li>
+              <li class="tab">
+                <a href="#bolsas">Bolsas</a>
+              </li>
+              <li class="tab">
+                <a href="#acessorios">Acessórios</a>
+              </li>
+              <li class="tab">
+                <a href="#off">OFF</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col s3">
+            <ul class="tabs tabs-transparent">
+              <li class="tab busca">
+                <div class="inputWithIcon">
+                  <input type="text" placeholder="Busca">
+                  <img src="dev/images/lupa.png" alt="" aria-hidden="true" />
+                </div>
+              </li>
+
+              <li class="tab sacola">
+                <a href="#sacola">
+                  <img src="dev/images/sacola.png" alt="">
+                  <ul>
+                    <li id="nProdutos" style="display: block;">0</li>
+                  </ul>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li>
+        <a href="sass.html">Sass</a>
+      </li>
+      <li>
+        <a href="badges.html">Components</a>
+      </li>
+      <li>
+        <a href="collapsible.html">JavaScript</a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="main">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <p class="produto__categoria">Home / <span>Sapatos</span></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s1">
+          <ul class="produto__video">
+            <li class="produto__video--titulo">Video</li>
+            <li class="produto__video--play">
+              <a href="https://www.youtube.com/watch?v=bKIXOnHd8EI" target="_blank">
+                  <img src="dev/images/play.png" alt="" srcset="">
+              </a>
+            </li>
+          </ul>
+
+          <div class="ubislider left ecommerce">
+            <a class="arrow prev pasive"></a>
+            <a class="arrow next"></a>
+
+            <ul id="thumb_img" class="ubislider-inner" style="width: auto; height: 462px;">
+              <li>
+                <a>
+                  <img class="product-v-img" src="dev/images/prod02.1.png" onclick="changeImage('dev/images/prod02.1.png');">
+                </a>
+              </li>
+              <li>
+                <a>
+                  <img class="product-v-img" src="dev/images/prod02.2.png" onclick="changeImage('dev/images/prod02.2.png');">
+                </a>
+              </li>
+              <li>
+                <a>
+                  <img class="product-v-img" src="dev/images/prod02.3.png" onclick="changeImage('dev/images/prod02.3.png');">
+                </a>
+              </li>
+              <li>
+                <a>
+                  <img class="product-v-img" src="dev/images/prod02.4.png" onclick="changeImage('dev/images/prod02.4.png');">
+                </a>
+              </li>
+              <li>
+                <a>
+                  <img class="product-v-img" src="dev/images/prod02.5.png" onclick="changeImage('dev/images/prod02.5.png');">
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="col s5">
+
+          <div id="main_img" class="ubislider-image-container">
+            <img class="img-destaque" id="img" src="dev/images/prod02.1.png">
+          </div>
+
+        </div>
+        <div class="col s5">
+          <div class="row produto">
+            <div class="col s12">
+              <div class="produto__informacoes">
+                <ul>
+                  <li class="produto__informacoes--titulo">Rasteira tira dedo</li>
+                  <li class="produto__informacoes--codigo">RT 0568 | 03.07.0653</li>
+                </ul>
+
+                <ul>
+                  <li class="produto__informacoes--preco">
+                    <span class="produto__informacoes--preco-normal">R$69,00</span> |
+                    <span class="produto__informacoes--preco-desconto">R$55,20</span>
+                  </li>
+                  <li class="produto__informacoes--preco-parcelado">Ou 6x de R$9,20</li>
+                </ul>
+
+                <ul class="produto__informacoes--cores">
+                  <ul class="produto__informacoes--cores-texto">
+                    <li>Cor:
+                      <span>(Fucsia)</span>
+                    </li>
+                  </ul>
+                  <ul class="produto__informacoes--cores-opcoes">
+                    <li>
+                      <img src="dev/images/cor1.png" alt="cor1">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor2.png" alt="cor2">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor3.png" alt="cor3">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor4.png" alt="cor4">
+                    </li>
+                  </ul>
+                </ul>
+
+                <ul class="produto__informacoes--tamanhos">
+                  <ul class="produto__informacoes--tamanhos-texto">
+                    <li>Tamanho:
+                      <span>(37)</span>
+                    </li>
+                    <li>Guia de medidas</li>
+                  </ul>
+                  <ul class="produto__informacoes--tamanhos-opcoes">
+                    <li>
+                      <p>33</p>
+                    </li>
+                    <li>
+                      <p>34</p>
+                    </li>
+                    <li>
+                      <p>35</p>
+                    </li>
+                    <li>
+                      <p>36</p>
+                    </li>
+                    <li>
+                      <p>37</p>
+                    </li>
+                    <li>
+                      <p>38</p>
+                    </li>
+                    <li>
+                      <p>39</p>
+                    </li>
+                    <li>
+                      <p>40</p>
+                    </li>
+                    <li>
+                      <p>41</p>
+                    </li>
+                    <li>
+                      <p>42</p>
+                    </li>
+                  </ul>
+                </ul>
+
+                <a class="waves-effect waves-light btn-large modal-trigger" href="#modal1" style="width: 100%" onclick="nCompras()">Adicionar à Sacola</a>
+
+                <!-- Modal -->
+                <div id="modal1" class="modal">
+                  <div class="modal-footer">
+                    <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat fechar">
+                      <img src="dev/images/fechar.png" alt="fechar">
+                    </a>
+                  </div>
+                  <div class="modal-content">
+                    <img src="dev/images/prod02.1.png" alt="prod02.1">
+                    <p class="adicionado">Adicionado com Sucesso!</p>
+                    <a class="waves-effect waves-light btn-large modal-action modal-close" href="#" style="width: 100%">Finalizar compra</a>
+                    <a class="continuar-compra modal-action modal-close" href="#">Continuar comprando</a>
+                  </div>
+                </div>
+
+                <p>Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal.</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s1"></div>
+      </div>
+  </section>
+
+  <section class="galeria">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <p class="galeria__titulo">Quem viu viu também</p>
+        </div>
+      </div>
+      <div class="row galeria__produtos">
+        <div class="col s3">
+          <div class="card">
+            <img src="dev/images/prod01.png" alt="">
+          </div>
+        </div>
+
+        <div class="col s3">
+          <div class="card">
+            <img src="dev/images/prod03.png" alt="">
+          </div>
+        </div>
+
+        <div class="col s3">
+          <div class="card">
+            <img src="dev/images/prod02.1.png" alt="">
+          </div>
+        </div>
+
+        <div class="col s3">
+          <div class="card">
+            <img src="dev/images/prod04.png" alt="">
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <footer class="page-footer white">
+    <div class="container rodape">
+      <div class="row rodape__redes-sociais">
+        <div class="col s12">
+          <ul class="tabs">
+            <li class="tab">
+              <a href=#facebook>
+                <img src="dev/images/media-facebook.png" alt="facebook">
+              </a>
+            </li>
+            <li class="tab">
+              <a href="#instagram">
+                <img src="dev/images/media-instagram.png" alt="instagram">
+              </a>
+            </li>
+            <li class="tab">
+              <a href="#pinterest">
+                <img src="dev/images/media-pinterest.png" alt="pinterest">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row rodape__outros">
+
+        <div class="col s3 rodape__outros--selos">
+          <a href="https://www.vtex.com/pt/" target="_blank">
+            <img src="dev/images/vtex-pci-200.png">
+          </a>
+          <a href="https://www.ebit.com.br/" target="_blank">
+            <img src="dev/images/selo-ebit.png">
+          </a>
+        </div>
+        <div class="col s2 rodape__outros--links">
+          <ul>
+            <li>Institucional</li>
+            <li>
+              <a href="#a-marca">A Marca</a>
+            </li>
+            <li>
+              <a href="#lojas">Lojas</a>
+            </li>
+            <li>
+              <a href="#contato">Contato</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col s2 rodape__outros--links">
+          <ul>
+            <li>Informações</li>
+            <li>
+              <a href="#formas-de-pagamento">Formas de Pagamento</a>
+            </li>
+            <li>
+              <a href="#trocas-e-devolucoes">Trocas e Devoluções</a>
+            </li>
+            <li>
+              <a href="#cuidados-com-o-produto">Cuidados Com o Produto</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col s2 rodape__outros--links">
+          <ul>
+            <li>Conheça</li>
+            <li>
+              <a href="#franquias-e-multimarcas">Franquias e Multimarcas</a>
+            </li>
+            <li>
+              <a href="#trabalhe-com-a-gente">Trabalhe com a Gente</a>
+            </li>
+            <li>
+              <a href="#procon-rj">Procon-RJ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col s3">
+
+          <div class="zoom">
+            <form class="col s12 rodape__outros--assine">
+              <ul>
+                <li>Assine nossa news</li>
+              </ul>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="nome" type="text" class="validate">
+                  <label for="nome">Nome</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="email" type="email" class="validate">
+                  <label for="email">E-mail</label>
+                </div>
+              </div>
+              <div class="center">
+                <a class="waves-effect waves-light btn">ENVIAR</a>
+              </div>
+            </form>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      <div class="container">
+        <div class="row valign-wrapper">
+
+          <div class="col s10">
+            <ul>
+              <li class="endereco">
+                Via Mia | V. Milano Centro Comercio de Bolsas Eireli - EPP.
+                <br> Av.das Américas, 500 - bloco 20, loja 126 - Barra da Tijuca - Rio de Janeiro - RJ - CEP: 22640-100
+                <br> CNPJ: 05.292.288/0002-10 - I.E: 86.732.548 - E-mail: ecommerce@viamia.com.br
+              </li>
+            </ul>
+          </div>
+
+          <div class="col s2">
+            <a class="right" href="#">
+              <img src="dev/images/logo-branco.png" alt="logo-branco">
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="dev/js/materialize.min.js"></script>
+  <script type="text/javascript" src="dev/js/scripts.js"></script>
+</body>
+</html>
