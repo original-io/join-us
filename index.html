@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="dev/styles/css/materialize.css" media="screen,projection" />
   <link type="text/css" rel="stylesheet" href="dev/styles/css/custom.css" />
+  <link type="text/css" rel="stylesheet" href="dist/css/style.css" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -92,61 +93,61 @@
     <div class="container">
       <div class="row">
         <div class="col s12">
-          <p class="produto__categoria">Home / <span>Sapatos</span></p>
+          <p class="produto__categoria">Home /
+            <span>Sapatos</span>
+          </p>
         </div>
       </div>
       <div class="row">
         <div class="col s1">
           <ul class="produto__video">
-            <li class="produto__video--titulo">Video</li>
+            <li class="produto__video--titulo">Vídeo</li>
             <li class="produto__video--play">
               <a href="https://www.youtube.com/watch?v=bKIXOnHd8EI" target="_blank">
-                  <img src="dev/images/play.png" alt="" srcset="">
+                <img src="dev/images/play.png" alt="" srcset="">
               </a>
             </li>
           </ul>
 
-          <div class="ubislider left ecommerce">
-            <a class="arrow prev pasive"></a>
-            <a class="arrow next"></a>
+          <div class="produto__slider-vertical">
 
-            <ul id="thumb_img" class="ubislider-inner" style="width: auto; height: 462px;">
+            <ul class="produto__slider-vertical--interior">
               <li>
                 <a>
-                  <img class="product-v-img" src="dev/images/prod02.1.png" onclick="changeImage('dev/images/prod02.1.png');">
+                  <img src="dev/images/prod02.1.png" onclick="changeImageCarouselVertical('dev/images/prod02.1.png');">
                 </a>
               </li>
               <li>
                 <a>
-                  <img class="product-v-img" src="dev/images/prod02.2.png" onclick="changeImage('dev/images/prod02.2.png');">
+                  <img src="dev/images/prod02.2.png" onclick="changeImageCarouselVertical('dev/images/prod02.2.png');">
                 </a>
               </li>
               <li>
                 <a>
-                  <img class="product-v-img" src="dev/images/prod02.3.png" onclick="changeImage('dev/images/prod02.3.png');">
+                  <img src="dev/images/prod02.3.png" onclick="changeImageCarouselVertical('dev/images/prod02.3.png');">
                 </a>
               </li>
               <li>
                 <a>
-                  <img class="product-v-img" src="dev/images/prod02.4.png" onclick="changeImage('dev/images/prod02.4.png');">
+                  <img src="dev/images/prod02.4.png" onclick="changeImageCarouselVertical('dev/images/prod02.4.png');">
                 </a>
               </li>
               <li>
                 <a>
-                  <img class="product-v-img" src="dev/images/prod02.5.png" onclick="changeImage('dev/images/prod02.5.png');">
+                  <img src="dev/images/prod02.5.png" onclick="changeImageCarouselVertical('dev/images/prod02.5.png');">
                 </a>
               </li>
             </ul>
 
           </div>
         </div>
+
         <div class="col s5">
-
-          <div id="main_img" class="ubislider-image-container">
-            <img class="img-destaque" id="img" src="dev/images/prod02.1.png">
+          <div>
+            <img class="img-destaque" id="img-vertical" src="dev/images/prod02.1.png">
           </div>
-
         </div>
+
         <div class="col s5">
           <div class="row produto">
             <div class="col s12">
@@ -229,7 +230,6 @@
 
                 <a class="waves-effect waves-light btn-large modal-trigger" href="#modal1" style="width: 100%" onclick="nCompras()">Adicionar à Sacola</a>
 
-                <!-- Modal -->
                 <div id="modal1" class="modal">
                   <div class="modal-footer">
                     <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat fechar">
@@ -261,29 +261,235 @@
           <p class="galeria__titulo">Quem viu viu também</p>
         </div>
       </div>
+
       <div class="row galeria__produtos">
-        <div class="col s3">
-          <div class="card">
-            <img src="dev/images/prod01.png" alt="">
-          </div>
-        </div>
 
-        <div class="col s3">
-          <div class="card">
-            <img src="dev/images/prod03.png" alt="">
-          </div>
-        </div>
+        <div class="col s12">
+          <div class="carousel">
+            <div class="col s3 carousel-item" href="#one!">
+              <div class="galeria__produtos--produto">
+                <ul class="galeria__produtos--produto-mais">
+                  <li>
+                    <a href="#mais">+</a>
+                  </li>
+                </ul>
+                <img class="galeria__produtos--produto-imagem" src="dev/images/prod01.png" alt="">
+                <div>
+                  <ul class="galeria__produtos--produto-preco">
+                    <li>R$204,90</li>
+                  </ul>
+                  <ul class="galeria__produtos--produto-cores">
+                    <li>
+                      <img src="dev/images/cor1.png" alt="cor1">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor2.png" alt="cor2">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor3.png" alt="cor3">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor4.png" alt="cor4">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col s3 carousel-item" href="#one!">
+              <div class="galeria__produtos--produto">
+                <ul class="galeria__produtos--produto-mais">
+                  <li>
+                    <a href="#mais">+</a>
+                  </li>
+                </ul>
+                <img class="galeria__produtos--produto-imagem" src="dev/images/prod04.png" alt="">
+                <div>
+                  <ul class="galeria__produtos--produto-preco">
+                    <li>R$204,90</li>
+                  </ul>
+                  <ul class="galeria__produtos--produto-cores">
+                    <li>
+                      <img src="dev/images/cor1.png" alt="cor1">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor2.png" alt="cor2">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor3.png" alt="cor3">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor4.png" alt="cor4">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-        <div class="col s3">
-          <div class="card">
-            <img src="dev/images/prod02.1.png" alt="">
-          </div>
-        </div>
+            <div class="col s3 carousel-item" href="#one!">
+              <div class="galeria__produtos--produto">
+                <ul class="galeria__produtos--produto-mais">
+                  <li>
+                    <a href="#mais">+</a>
+                  </li>
+                </ul>
+                <img class="galeria__produtos--produto-imagem" src="dev/images/prod02.1.png" alt="">
+                <div>
+                  <ul class="galeria__produtos--produto-preco">
+                    <li>R$204,90</li>
+                  </ul>
+                  <ul class="galeria__produtos--produto-cores">
+                    <li>
+                      <img src="dev/images/cor1.png" alt="cor1">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor2.png" alt="cor2">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor3.png" alt="cor3">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor4.png" alt="cor4">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-        <div class="col s3">
-          <div class="card">
-            <img src="dev/images/prod04.png" alt="">
+            <div class="col s3 carousel-item" href="#one!">
+              <div class="galeria__produtos--produto">
+                <ul class="galeria__produtos--produto-mais">
+                  <li>
+                    <a href="#mais">+</a>
+                  </li>
+                </ul>
+                <img class="galeria__produtos--produto-imagem" src="dev/images/prod03.png" alt="">
+                <div>
+                  <ul class="galeria__produtos--produto-preco">
+                    <li>R$204,90</li>
+                  </ul>
+                  <ul class="galeria__produtos--produto-cores">
+                    <li>
+                      <img src="dev/images/cor1.png" alt="cor1">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor2.png" alt="cor2">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor3.png" alt="cor3">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor4.png" alt="cor4">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col s3 carousel-item" href="#one!">
+              <div class="galeria__produtos--produto">
+                <ul class="galeria__produtos--produto-mais">
+                  <li>
+                    <a href="#mais">+</a>
+                  </li>
+                </ul>
+                <img class="galeria__produtos--produto-imagem" src="dev/images/prod03.png" alt="">
+                <div>
+                  <ul class="galeria__produtos--produto-preco">
+                    <li>R$204,90</li>
+                  </ul>
+                  <ul class="galeria__produtos--produto-cores">
+                    <li>
+                      <img src="dev/images/cor1.png" alt="cor1">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor2.png" alt="cor2">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor3.png" alt="cor3">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor4.png" alt="cor4">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col s3 carousel-item" href="#one!">
+              <div class="galeria__produtos--produto">
+                <ul class="galeria__produtos--produto-mais">
+                  <li>
+                    <a href="#mais">+</a>
+                  </li>
+                </ul>
+                <img class="galeria__produtos--produto-imagem" src="dev/images/prod03.png" alt="">
+                <div>
+                  <ul class="galeria__produtos--produto-preco">
+                    <li>R$204,90</li>
+                  </ul>
+                  <ul class="galeria__produtos--produto-cores">
+                    <li>
+                      <img src="dev/images/cor1.png" alt="cor1">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor2.png" alt="cor2">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor3.png" alt="cor3">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor4.png" alt="cor4">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col s3 carousel-item" href="#one!">
+              <div class="galeria__produtos--produto">
+                <ul class="galeria__produtos--produto-mais">
+                  <li>
+                    <a href="#mais">+</a>
+                  </li>
+                </ul>
+                <img class="galeria__produtos--produto-imagem" src="dev/images/prod03.png" alt="">
+                <div>
+                  <ul class="galeria__produtos--produto-preco">
+                    <li>R$204,90</li>
+                  </ul>
+                  <ul class="galeria__produtos--produto-cores">
+                    <li>
+                      <img src="dev/images/cor1.png" alt="cor1">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor2.png" alt="cor2">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor3.png" alt="cor3">
+                    </li>
+                    <li>
+                      <img src="dev/images/cor4.png" alt="cor4">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <ul class="galeria__produtos--botoes">
+            <li class="prev">
+              <a href="#!">
+                <img src="dev/images/voltar.png" alt="voltar">
+              </a>
+            </li>
+            <li class="galeria__produtos--botoes-paginas">1 de 10</li>
+            <li class="next">
+              <a href="#!">
+                <img src="dev/images/avancar.png" alt="avancar">
+              </a>
+            </li>
+          </ul>
+
         </div>
       </div>
   </section>
@@ -294,17 +500,17 @@
         <div class="col s12">
           <ul class="tabs">
             <li class="tab">
-              <a href=#facebook>
+              <a href="https://www.facebook.com/">
                 <img src="dev/images/media-facebook.png" alt="facebook">
               </a>
             </li>
             <li class="tab">
-              <a href="#instagram">
+              <a href="https://www.instagram.com/">
                 <img src="dev/images/media-instagram.png" alt="instagram">
               </a>
             </li>
             <li class="tab">
-              <a href="#pinterest">
+              <a href="https://br.pinterest.com/">
                 <img src="dev/images/media-pinterest.png" alt="pinterest">
               </a>
             </li>
@@ -363,6 +569,7 @@
             </li>
           </ul>
         </div>
+
         <div class="col s3">
 
           <div class="zoom">
@@ -388,7 +595,6 @@
             </form>
           </div>
 
-
         </div>
       </div>
     </div>
@@ -399,7 +605,7 @@
 
           <div class="col s10">
             <ul>
-              <li class="endereco">
+              <li class="rodape__endereco">
                 Via Mia | V. Milano Centro Comercio de Bolsas Eireli - EPP.
                 <br> Av.das Américas, 500 - bloco 20, loja 126 - Barra da Tijuca - Rio de Janeiro - RJ - CEP: 22640-100
                 <br> CNPJ: 05.292.288/0002-10 - I.E: 86.732.548 - E-mail: ecommerce@viamia.com.br
@@ -418,9 +624,9 @@
     </div>
   </footer>
 
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="dev/js/materialize.min.js"></script>
   <script type="text/javascript" src="dev/js/scripts.js"></script>
 </body>
+
 </html>

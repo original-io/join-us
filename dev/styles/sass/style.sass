@@ -1,0 +1,73 @@
+//cores
+$cinza: #202020
+    
+.galeria
+    position: relative
+    
+    &__titulo 
+        display: block
+        color: #DE8F75
+        font-size: 26px
+        text-align: center
+        text-transform: uppercase
+        margin: 60px 0 10px
+        width: 100%
+    
+    &__produtos--produto
+        position: relative
+        margin: 0.5rem 0 1rem 0
+        background-color: #fff
+        border-radius: 2px
+
+        &-mais
+            display: flex
+            align-items: center
+            justify-content: space-around
+            background-color: rgba(255, 255, 255, 0.5)
+            font-size: 35px
+            text-align: center
+            border: 2px solid rgba(222, 143, 117, 0.5)
+            border-radius: 50%
+            position: absolute
+            right: 10px
+            top: -25px
+            height: 45px
+            width: 45px            
+
+            li
+                position: relative
+                top: -3px
+                left: 1px
+
+                a
+                    color: rgba(222, 143, 117, 0.5) 
+
+        &-imagem 
+            margin-bottom: -10px
+            width: 100%
+
+        &-preco
+            color: $cinza
+            font-size: 16px
+            line-height: 26px
+            float: left
+
+        &-cores
+            display: flex
+            align-content: space-between
+            float: right
+            
+            li
+                padding-left: 5px
+
+    &__produtos--botoes
+        display: flex
+        align-items: center
+        justify-content: center
+
+        &-paginas
+            color: #2A5A75
+            font-size: 14px
+            line-height: 23px
+            text-align: center
+            margin: -5px 20px 0

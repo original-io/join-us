@@ -8345,7 +8345,7 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 440px !important; /* changed */
   -webkit-perspective: 500px;
           perspective: 500px;
   -webkit-transform-style: preserve-3d;
