@@ -2,14 +2,12 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 var rename = require('gulp-rename');
-var uglifycss = require('gulp-uglifycss');
 var imagemin = require('gulp-imagemin');
 
 gulp.task('default', ['css', 'sass', 'img']);
 
 gulp.task('watch', function() {
   gulp.watch('./dev/styles/sass/*.sass', ['sass']);
-  gulp.watch('./dist/css/*.css', ['css']);
 });
 
 gulp.task('sass', function () {

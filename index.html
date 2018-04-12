@@ -6,7 +6,6 @@
   <link rel="shortcut icon" href="dev/images/favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="dev/styles/css/materialize.css" media="screen,projection" />
-  <link type="text/css" rel="stylesheet" href="dev/styles/css/custom.css" />
   <link type="text/css" rel="stylesheet" href="dist/css/style.css" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,6 +24,7 @@
       <div class="nav-wrapper container">
         <div class="row">
           <div class="col s3">
+
             <ul class="tabs tabs-transparent login">
               <li class="tab">
                 <a href="#entrar">Entrar</a>
@@ -36,8 +36,10 @@
                 <a class="active" href="#cadastra-se">Cadastra-se</a>
               </li>
             </ul>
+
           </div>
           <div class="col s6">
+
             <ul class="tabs tabs-transparent itens">
               <li class="tab">
                 <a href="#sapatos">Sapatos</a>
@@ -52,8 +54,10 @@
                 <a href="#off">OFF</a>
               </li>
             </ul>
+
           </div>
           <div class="col s3">
+
             <ul class="tabs tabs-transparent">
               <li class="tab busca">
                 <div class="inputWithIcon">
@@ -109,6 +113,12 @@
             </li>
           </ul>
 
+          <div class="produto__setas produto__setas--voltar" onclick="sliderVerticalVoltar()">
+            <a href="#voltar">
+              <img src="dev/images/voltar-vertical.png" alt="voltar">
+            </a>
+          </div>
+
           <div class="produto__slider-vertical">
 
             <ul class="produto__slider-vertical--interior">
@@ -137,9 +147,31 @@
                   <img src="dev/images/prod02.5.png" onclick="changeImageCarouselVertical('dev/images/prod02.5.png');">
                 </a>
               </li>
+              <li>
+                <a>
+                  <img src="dev/images/prod02.3.png" onclick="changeImageCarouselVertical('dev/images/prod02.5.png');">
+                </a>
+              </li>
+              <li>
+                <a>
+                  <img src="dev/images/prod02.1.png" onclick="changeImageCarouselVertical('dev/images/prod02.5.png');">
+                </a>
+              </li>
+              <li>
+                <a>
+                  <img src="dev/images/prod02.4.png" onclick="changeImageCarouselVertical('dev/images/prod02.5.png');">
+                </a>
+              </li>
             </ul>
 
           </div>
+
+          <div class="produto__setas produto__setas--avancar" onclick="sliderVerticalAvancar()">
+            <a href="#avancar">
+              <img src="dev/images/avancar-vertical.png" alt="avancar">
+            </a>
+          </div>
+
         </div>
 
         <div class="col s5">
@@ -149,7 +181,8 @@
         </div>
 
         <div class="col s5">
-          <div class="row produto">
+
+          <div class="row">
             <div class="col s12">
               <div class="produto__informacoes">
                 <ul>
@@ -228,7 +261,7 @@
                   </ul>
                 </ul>
 
-                <a class="waves-effect waves-light btn-large modal-trigger" href="#modal1" style="width: 100%" onclick="nCompras()">Adicionar à Sacola</a>
+                <a class="waves-effect waves-light btn-large modal-trigger" href="#modal1" onclick="nCompras()">Adicionar à Sacola</a>
 
                 <div id="modal1" class="modal">
                   <div class="modal-footer">
@@ -249,6 +282,7 @@
               </div>
             </div>
           </div>
+
         </div>
         <div class="col s1"></div>
       </div>
@@ -263,8 +297,8 @@
       </div>
 
       <div class="row galeria__produtos">
-
         <div class="col s12">
+
           <div class="carousel">
             <div class="col s3 carousel-item" href="#one!">
               <div class="galeria__produtos--produto">
@@ -498,6 +532,7 @@
     <div class="container rodape">
       <div class="row rodape__redes-sociais">
         <div class="col s12">
+
           <ul class="tabs">
             <li class="tab">
               <a href="https://www.facebook.com/">
@@ -515,6 +550,7 @@
               </a>
             </li>
           </ul>
+
         </div>
       </div>
       <div class="row rodape__outros">

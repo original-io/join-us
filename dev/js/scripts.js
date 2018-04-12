@@ -13,6 +13,16 @@ function nCompras() {
     document.getElementById("nProdutos").style.display = "block";
 }
 
+function sliderVerticalVoltar() {
+    document.getElementsByClassName("produto__slider-vertical--interior")[0].style.top = "0";
+    document.getElementsByClassName("produto__slider-vertical--interior")[0].style.transition = "all .6s ease-in-out";
+}
+
+function sliderVerticalAvancar() {
+    document.getElementsByClassName("produto__slider-vertical--interior")[0].style.top = "-25.5pc";
+    document.getElementsByClassName("produto__slider-vertical--interior")[0].style.transition = "all .6s ease-in-out";
+}
+
 $(document).ready(function () {
     $('.carousel').carousel({
         dist: 0,
