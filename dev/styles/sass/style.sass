@@ -1,17 +1,16 @@
-//cores
-$cinza: #202020
-
+@import palette
+    
 .container 
     width: 90%
 
 .menu 
     background-color: #fff
-    border-top: 2px solid #CCCCCC
-    border-bottom: 2px solid #CCCCCC
+    border-top: 2px solid $cinza-claro-4
+    border-bottom: 2px solid $cinza-claro-4
 
     ul li,
     ul li a 
-        color: #686868 !important
+        color: $cinza-escuro-3 !important
 
 .logo 
     margin: 20px 0
@@ -21,35 +20,97 @@ $cinza: #202020
     justify-content: center
     text-transform: uppercase
 
-.img-destaque 
-    width: 430px
-    height: 556px
-    margin-left: 40px
-
-
-.produto__video 
+.busca 
     position: relative
-    text-align: center
 
-    &--titulo 
-        color: #DE8F75
+    input::placeholder 
+        color: $cinza-escuro-3
+        position: relative
+        left: 40px
+
+    input[type=text] 
+        width: 83px
+        margin: 8px 0
+        outline: none
+        margin-right: 20px
+        transition: .3s
+        border-bottom: 1px solid rgba(104, 104, 104, 0.4)
+        height: 36px
+        top: -4px
+        position: relative
+        font-size: 14px
+
+    .inputWithIcon 
+        position: relative
+        margin-left: 80px
+
+  
+    .inputWithIcon img 
+        position: absolute
+        left: 0
+        top: 6px
+        padding: 6px 2px
+        transition: .3s
+  
+    .inputWithIcon input[type=text]:focus + img 
+        display: none
+
+.sacola 
+    position: relative
+    top: 5px
+
+    ul li 
+        font-family: cursive
+        position: absolute
+        top: 4px
+        right: 10px
+
+
+.produto
+
+    &__categoria 
+        color: $azul-claro
         font-size: 12px
 
-.produto__slider-vertical 
-    overflow: hidden
-    width: 5pc
-    height: 25.5pc
-    position: relative
-    margin: 8px 0 0
-    padding: 2px 0 5px
-    float: left
+        span 
+            font-weight: bold
+            color: $azul-claro
 
-    &--interior 
+    &__caixa-slider
+        width: auto !important
+
+    &__video 
+        position: relative
+        text-align: center
+
+    &__video--titulo 
+        color: $laranja
+        font-size: 12px
+
+    &__setas 
+        display: block
+        text-align: center
+
+    &__setas--voltar
+        margin-top: -10px
+        margin-left: -1px
+        padding-bottom: 5px
+
+    &__slider-vertical 
+        overflow: hidden
+        width: 5pc
+        height: 25.5pc
+        position: relative
+        margin: 8px 0 0
+        padding: 2px 0 5px
+        float: left
+
+    &__slider-vertical--interior 
         list-style-type: none
         padding: 0
         margin: 0
         position: relative
-        left: 4px
+        left: 2px
         top: 0
         width: 100%
         overflow: hidden
@@ -58,95 +119,99 @@ $cinza: #202020
         -o-transition: all .2s ease-in-out
         transition: all .2s ease-in-out
 
-    &--interior li 
-        width: 74px
-        height: 94.3px
-        margin-bottom: 3px
-        position: relative
-        cursor: pointer
-        display: inline-block
-        -webkit-transition: transform .2s ease-in-out
-        -moz-transition: transform .2s ease-in-out
-        -o-transition: transform .2s ease-in-out
-        transition: transform .2s ease-in-out
-        overflow: hidden
+        li 
+            width: 74px
+            height: 94.3px
+            margin-bottom: 3px
+            position: relative
+            cursor: pointer
+            display: inline-block
+            -webkit-transition: transform .2s ease-in-out
+            -moz-transition: transform .2s ease-in-out
+            -o-transition: transform .2s ease-in-out
+            transition: transform .2s ease-in-out
+            overflow: hidden
 
-    &--interior li img 
-        max-height: 100%
-        position: absolute
-        left: 50%
-        top: 50%
-        -webkit-transform: translate(-50%,-50%)
-        -ms-transform: translate(-50%,-50%)
-        transform: translate(-50%,-50%)
-        border: 0
+        li img 
+            max-height: 100%
+            position: absolute
+            left: 50%
+            top: 50%
+            -webkit-transform: translate(-50%,-50%)
+            -ms-transform: translate(-50%,-50%)
+            transform: translate(-50%,-50%)
+            border: 0
 
+    &__slider-vertical--imagem-destaque
+        width: 430px
+        height: 556px
+        margin-left: 40px
 
-.produto__informacoes
-    border: 2px solid #D2E1DF
-    border-radius: 4px
-    margin: 0 0 0 40px !important
-    padding: 20px 20px 0
+    &__informacoes
+        border: 2px solid #D2E1DF
+        border-radius: 4px
+        margin: 0 0 0 40px !important
+        padding: 20px 20px 0
 
-    &--titulo 
-        color: #202020
+    &__informacoes--titulo 
+        color: $cinza-escuro-4
         font-weight: bold
         font-size: 26px
         line-height: 37px
         text-transform: uppercase
         margin-top: -10px
 
-    &--codigo 
-        color: #202020
+    &__informacoes--codigo 
+        color: $cinza-escuro-4
         font-weight: bold
         font-size: 14px
         line-height: 23px
         text-transform: uppercase
 
-    &--preco 
-        color: #E35442
+    &__informacoes--preco 
+        color: $vermelho
         font-size: 14px
         line-height: 23px
         margin-top: 20px
 
-    &--preco-normal 
+    &__informacoes--preco-normal 
         text-decoration: line-through
 
-    &--preco-desconto 
-        color: #686868
+    &__informacoes--preco-desconto 
+        color: $cinza-escuro-3
         font-size: 28px
         font-weight: bold
         line-height: 28px
         margin-left: 10px
 
-    &--preco-parcelado 
-        color: #7F7F7F
+    &__informacoes--preco-parcelado 
+        color: $cinza-escuro-2
         font-size: 12px
         line-height: 20px
         clear: both
 
-    &--cores 
+    &__informacoes--cores 
         margin-top: 30px
         margin-bottom: 20px
 
-    &--cores-texto,
-    &--tamanhos-texto  
-        color: #202020
+    &__informacoes--cores-texto,
+    &__informacoes--tamanhos-texto  
+        color: $cinza-escuro-4
         font-size: 14px
         line-height: 23px
 
-    &--cores-texto span,
-    &--tamanhos-texto span 
-        color: #5F75AA
+    &__informacoes--cores-texto span,
+    &__informacoes--tamanhos-texto span 
+        color: $azul
 
-    &--cores-opcoes 
+    &__informacoes--cores-opcoes 
         display: flex
 
-    &--cores-opcoes li 
+    &__informacoes--cores-opcoes li 
         margin: 5px
 
-    &--cores-opcoes img:hover 
-        border: 4px solid #E0DA9C
+    &__informacoes--cores-opcoes img:hover 
+        border: 4px solid $amarelo
         border-radius: 50%
         position: relative
         top: -4px
@@ -155,41 +220,41 @@ $cinza: #202020
         margin-left: -4px
         cursor: pointer
 
-    &--tamanhos-texto li:first-child 
+    &__informacoes--tamanhos-texto li:first-child 
         float: left
 
-    &--tamanhos-texto li:last-child 
+    &__informacoes--tamanhos-texto li:last-child 
         float: right
-        color: #DE8F75
+        color: $laranja
         text-decoration: underline
         margin-right: 2px
         cursor: pointer
 
-    &--tamanhos-opcoes 
+    &__informacoes--tamanhos-opcoes 
         clear: both
         display: flex
         justify-content: space-between
         top: 10px
         position: relative
 
-    &--tamanhos-opcoes li 
+    &__informacoes--tamanhos-opcoes li 
         height: 34px
         width: 34px
-        background-color: #EBEBEB
+        background-color: $cinza-claro-2
         border-radius: 50%
         display: inline-block
 
-    &--tamanhos-opcoes li:hover 
-        background-color: #E0DA9C
+    &__informacoes--tamanhos-opcoes li:hover 
+        background-color: $amarelo
         font-weight: bold
         cursor: pointer
 
-    a
+    &__informacoes--adicionar
         width: 100%
         margin-top: 50px
 
-    &--tamanhos-opcoes p 
-        color: #2A5A75
+    &__informacoes--tamanhos-opcoes p 
+        color: $azul-escuro
         font-size: 14px
         line-height: 20px
         text-align: center
@@ -201,11 +266,9 @@ $cinza: #202020
     width: 400px
     overflow: hidden
 
-.fechar:hover 
-    transform-origin: center
-    transition-duration: .6s
-    -webkit-transform: rotate(360deg)
-    transform: rotate(360deg)
+    .modal-footer 
+        padding: 0
+        margin-bottom: -15px
 
 .modal-content 
     display: flex
@@ -213,159 +276,28 @@ $cinza: #202020
     margin: 0 auto
     padding: 0 50px !important
 
-.modal .modal-footer 
-    padding: 0
-    margin-bottom: -15px
+.fechar:hover 
+    transform-origin: center
+    transition-duration: .6s
+    -webkit-transform: rotate(360deg)
+    transform: rotate(360deg)
 
 .adicionado 
-    color: #DE8F75
+    color: $laranja
     font-size: 22px
     text-transform: uppercase
     margin: 2px 0
 
 .continuar-compra 
-    color: #AEB6C1
+    color: $azul-claro
     font-size: 14px
     text-align: center
     cursor: pointer
     text-transform: capitalize
     margin: 10px 0 20px
 
-.continuar-compra:hover 
-    text-decoration: underline
-
-
-.busca 
-    position: relative
-
-.busca input::placeholder 
-    color: #686868
-    position: relative
-    left: 40px
-
-
-.busca input[type=text] 
-    width: 83px
-    margin: 8px 0
-    outline: none
-    margin-right: 20px
-    transition: .3s
-    border-bottom: 1px solid rgba(104, 104, 104, 0.4)
-    height: 36px
-    top: -4px
-    position: relative
-    font-size: 14px
-
-  
-.busca .inputWithIcon 
-    position: relative
-    margin-left: 80px
-
-  
-.busca .inputWithIcon img 
-    position: absolute
-    left: 0
-    top: 6px
-    padding: 6px 2px
-    transition: .3s
-
-  
-.busca .inputWithIcon input[type=text]:focus + img 
-    display: none
-
-
-.sacola 
-    position: relative
-    top: 5px
-
-
-.sacola ul li 
-    font-family: cursive
-    position: absolute
-    top: 4px
-    right: 15px
-
-
-.categoria 
-    color: #AEB6C1
-    font-size: 12px
-
-
-.categoria span 
-    font-weight: bold
-
-
-.rodape__outros 
-    display: flex
-    align-items: center
-    position: relative
-    top: -50px
-
-
-.rodape__outros--selos 
-    display: flex
-    justify-content: space-around
-
-
-.rodape__outros--links li 
-    font-size: 14px
-    margin-bottom: 20px
-
-
-.rodape__outros--links li a 
-    color: #202020
-    text-decoration: none
-
-
-.rodape__outros--links li:first-child 
-    color: #AEB6C1
-    font-size: 12px
-    font-weight: bold
-    text-transform: uppercase
-    margin: 0
-
-
-.rodape__outros--assine li 
-    color: #202020
-    font-size: 16px
-    text-transform: uppercase
-    font-weight: bold
-    margin-bottom: -10px
-
-
-.rodape__outros--assine .btn 
-    background-color: #DE8F75
-    font-size: 14px
-
-.rodape__endereco 
-    font-size: 12px
-
-.page-footer 
-    border-top: 2px solid #AEB6C1 
-    padding-top: 10px
-    margin-top: 120px  
-
-.zoom 
-    padding: 50px
-    background-color: #fff
-    transition: transform .2s
-    margin: 0 auto
-    border-radius: 50%
-
     &:hover 
-        -ms-transform: scale(1.3) /* IE 9 */
-        -webkit-transform: scale(1.3) /* Safari 3-8 */
-        transform: scale(1.3) 
-        border: 2px solid #AEB6C1
-        height: 280px
-        position: relative
-        top: -50px
-        transition: linear .2s
-        transition: color .2s linear, -webkit-transform .2s linear
-        transition: transform .2s linear, color .2s linear
-        transition: transform .2s linear, color .2s linear, -webkit-transform .2s linear
-        -webkit-transform-origin: center
-        transform-origin: center
+        text-decoration: underline
 
 
 .galeria
@@ -373,7 +305,7 @@ $cinza: #202020
     
     &__titulo 
         display: block
-        color: #DE8F75
+        color: $laranja
         font-size: 26px
         text-align: center
         text-transform: uppercase
@@ -401,20 +333,20 @@ $cinza: #202020
         height: 45px
         width: 45px            
 
-        li
-            position: relative
-            top: -3px
-            left: 1px
+    &__produtos--produto-mais li
+        position: relative
+        top: -3px
+        left: 1px
 
-            a
-                color: rgba(222, 143, 117, 0.5) 
+    &__produtos--produto-mais li a
+        color: rgba(222, 143, 117, 0.5) 
 
     &__produtos--produto-imagem 
         margin-bottom: -10px
         width: 100%
 
     &__produtos--produto-preco
-        color: $cinza
+        color: $cinza-escuro-4
         font-size: 16px
         line-height: 26px
         float: left
@@ -424,8 +356,8 @@ $cinza: #202020
         align-content: space-between
         float: right
         
-        li
-            padding-left: 5px
+    &__produtos--produto-cores li
+        padding-left: 5px
 
     &__produtos--botoes
         display: flex
@@ -433,20 +365,75 @@ $cinza: #202020
         justify-content: center
 
     &__produtos--botoes-paginas
-        color: #2A5A75
+        color: $azul-escuro
         font-size: 14px
         line-height: 23px
         text-align: center
-        margin: -5px 20px 0
+        margin: -5px 20px 0    
 
 
-.produto__setas 
-    display: block
-    text-align: center
+.rodape__outros 
+    display: flex
+    align-items: center
+    position: relative
+    top: -50px
 
-    &--voltar
-        margin-top: -10px
-        margin-left: -1px
-        padding-bottom: 5px
+    &--selos 
+        display: flex
+        justify-content: space-around
 
-    &--avancar
+    &--links li 
+        font-size: 14px
+        margin-bottom: 20px
+
+    &--links li a 
+        color: $cinza-escuro-4
+        text-decoration: none
+
+    &--links li:first-child 
+        color: $azul-claro
+        font-size: 12px
+        font-weight: bold
+        text-transform: uppercase
+        margin: 0
+
+    &--assine li 
+        color: $cinza-escuro-4
+        font-size: 16px
+        text-transform: uppercase
+        font-weight: bold
+        margin-bottom: -10px
+
+    &--assine .btn 
+        background-color: $laranja
+        font-size: 14px
+
+.rodape__endereco 
+    font-size: 12px
+
+.page-footer 
+    border-top: 2px solid $azul-claro 
+    padding-top: 10px
+    margin-top: 120px  
+
+.zoom 
+    padding: 50px
+    background-color: #fff
+    transition: transform .2s
+    margin: 0 auto
+    border-radius: 50%
+
+    &:hover 
+        -ms-transform: scale(1.3) /* IE 9 */
+        -webkit-transform: scale(1.3) /* Safari 3-8 */
+        transform: scale(1.3) 
+        border: 2px solid $azul-claro
+        height: 280px
+        position: relative
+        top: -50px
+        transition: linear .2s
+        transition: color .2s linear, -webkit-transform .2s linear
+        transition: transform .2s linear, color .2s linear
+        transition: transform .2s linear, color .2s linear, -webkit-transform .2s linear
+        -webkit-transform-origin: center
+        transform-origin: center    
