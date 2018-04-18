@@ -12,7 +12,6 @@
 </template>
 
 <script>
-    import minhaNavegacao from './navegacao.vue';
     import bsNavegacao from './navbar.vue';
     import bBreadcrumb from './breadcrumb.vue';
     
@@ -26,7 +25,6 @@
             }
         },
         components: {
-            minhaNavegacao,
             bsNavegacao,
             bBreadcrumb
         }
