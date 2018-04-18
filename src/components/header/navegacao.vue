@@ -1,26 +1,19 @@
 <template>
   <nav class="navbar">
         <a href="#">
-            <img src="imagens/Logo.png" title="JDC Perícias" alt="JDC Perícias">
+            <img src="" title="" alt="">
         </a>
         <button type="button" data-toggle="collapse" data-target="#menuItens"><span></span></button>                    
         <div class="collapse" id="menuItens">
             <ul>
-                <li>
-                    <a href="#topo">Home</a>
-                </li>
-                <li>
-                    <a href="#areaAtuacao">Área de atuação</a>
-                </li>
-                <li>
-                    <a class="ativo" href="#quemSomos">Quem somos</a>
-                </li>
-                <li>
-                    <a href="#faleConosco">Fale conosco</a>
-                </li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="#">Item 3</a></li>
+                <li><a href="#">Item 4</a></li>
             </ul>
         </div>
     </nav>
+    
 </template>
 
 <script>

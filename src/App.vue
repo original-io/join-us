@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="container">
     <meu-header></meu-header>
     <meu-conteudo></meu-conteudo>
     <meu-footer></meu-footer>
@@ -30,5 +30,11 @@ export default {
 body {
   margin: 0;
   padding: 0;
+  background-color: #FFE8E8;
+  color: #202020;
+  font-family: Open Sans;
+  > .container {
+      min-width: 1280px;
+  }
 }
 </style>
