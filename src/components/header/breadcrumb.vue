@@ -23,6 +23,7 @@ export default {
         padding-top: 7px;
         padding-bottom: 7px;
         background-color: rgba(255, 255, 255, 0.9);
+        margin: 0;
         > li {
             > a, span {
                 font-style: normal;

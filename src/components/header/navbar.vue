@@ -10,10 +10,7 @@
             
             <b-navbar-nav id="menu-principal" class="mx-auto">
                 <b-nav-item-dropdown text="Sapatos">
-                    <b-dropdown-item href="#">Sapatos 1</b-dropdown-item>
-                    <b-dropdown-item href="#">Sapatos 2</b-dropdown-item>
-                    <b-dropdown-item href="#">Sapatos 3</b-dropdown-item>
-                    <b-dropdown-item href="#">Sapatos 4</b-dropdown-item>
+                    <ccSubMenuSapatos/>
                 </b-nav-item-dropdown>
                 <b-nav-item-dropdown text="Bolsas">
                     <b-dropdown-item href="#">Bolsas 1</b-dropdown-item>
@@ -45,13 +42,13 @@
 </template>
 
 <script>
-    import imgSacola from '../../assets/img/sacola.png';
-    
+    import ccSubMenuSapatos from './subMenuSapatos.vue';
     export default {
         data() {
-            return {
-                imgSacola: imgSacola
-            }
+            return {}
+        },
+        components: {
+            ccSubMenuSapatos,
         }
     }
 </script>
