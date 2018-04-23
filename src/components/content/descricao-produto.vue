@@ -8,20 +8,17 @@
                 <span>Ou 6x de  R$ 9,20</span>
             </div>
             <div id="cores">
-                Cor: <span>({{corSelecionada}})</span>
+                Cor: <span id="corSelecionada">({{corSelecionada}})</span>
                 <ul>
-                    <li class="cor1 ativa"></li>
-                    <li class="cor2"></li>
-                    <li class="cor3"></li>
-                    <li class="cor4"></li>
+                    <li class="cores" v-for="(cor, index) in cores" :style="{ backgroundColor: cor.hex}" @click="changeValues('corSelecionada', cor.nome, 'cores')"></li>
                 </ul>
             </div>
             <div id="tamanhos">
-                Tamanho: <span>({{tamanhoSelecionado}})</span>
+                Tamanho: <span id="tamanhoSelecionado">({{tamanhoSelecionado}})</span>
                 <a href="#">Guia de medidas</a>
                 <ul>
-                    <li class="ativo">33</li>
-                    <li v-for="n in tamanhos">{{ n }}</li>                    
+                    <li class="tamanhos" v-for="(tamanho, index) in tamanhos" @click="changeValues('tamanhoSelecionado', tamanho, 'tamanhos')"> {{tamanho}} </li>
+                
                 </ul>
             </div>
             <button>Adicionar à sacola</button>
@@ -38,7 +35,30 @@
             return {
                 corSelecionada: 'Fucsia',
                 tamanhoSelecionado: 33,
-                tamanhos: [34,35,36,37,38,39,40,41,42]
+                tamanhos: [33,34,35,36,37,38,39,40,41,42],
+                cores: [
+                    {nome: 'Fucsia', hex: '#A9095E'},
+                    {nome: 'Cor 2', hex: '#6B85C1'},
+                    {nome: 'Cor 3', hex: '#A14830'},
+                    {nome: 'Preto', hex: 'black'},
+                    {nome: 'Laranja', hex: 'Orange'}
+                ]
+            };
+        },
+        methods: {
+            changeValues: function (targetId, str, thisClass) {
+                var lista = document.getElementsByClassName(thisClass);
+                var mudaTexto = document.getElementById(targetId).innerHTML = "("+ str +")";
+                
+                for (var i = 0; i < lista.length; i++) {
+                    lista[i].onclick = function() {
+                        var ativo = document.querySelector('.'+thisClass+'.ativo');
+                        if (ativo && ativo !== this) {
+                            ativo.classList.remove('ativo');
+                        }
+                        this.classList.add('ativo');
+                    };
+                }
             }
         }
     }
@@ -111,11 +131,7 @@
                     margin: 0 2px;
                     border-radius: 50px;
                     cursor: pointer;
-                    &.cor1 {background-color: #A9095E;}
-                    &.cor2 {background-color: #6B85C1;}
-                    &.cor3 {background-color: #A14830;}
-                    &.cor4 {background-color: black;}
-                    &.ativa {
+                    &.ativo {
                         border: 3px solid #E0DA9C;
                     }
                 }

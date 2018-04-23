@@ -13,6 +13,9 @@ import { Breadcrumb } from 'bootstrap-vue/es/components';
 Vue.use(Breadcrumb);
 import { Carousel } from 'bootstrap-vue/es/components';
 Vue.use(Carousel);
+import { Modal } from 'bootstrap-vue/es/components';
+Vue.use(Modal);
+
 
 
 //View principal

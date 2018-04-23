@@ -18,6 +18,7 @@
     import ccFotosProduto from './fotos-produto.vue';
     import ccDescricaoProduto from './descricao-produto.vue';
     import ccSugestoes from './sugestoes.vue';
+    import ccTeste from './teste.vue';
     
     export default {
         data() {
@@ -28,7 +29,8 @@
         components: {
             ccFotosProduto,
             ccDescricaoProduto,
-            ccSugestoes
+            ccSugestoes,
+            ccTeste
         }
     }
 
@@ -48,7 +50,7 @@
             &#linha1 {
                 top: 40px;
                 right: 0;                
-                z-index: 2;
+                z-index: 0;
                 @media only screen and (min-width: 1000px) {
                     width: 200px;
                 }
@@ -56,7 +58,7 @@
             &#linha2 {
                 top: 500px;
                 left: 0;
-                z-index: 2;
+                z-index: 0;
                 @media only screen and (min-width: 1000px) {
                     width: 1000px;
                 }
@@ -64,7 +66,7 @@
             
         }
         >.row {
-            > article {z-index: 2;}
+            
             margin: 0;
         }
     }

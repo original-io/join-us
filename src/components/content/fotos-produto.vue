@@ -6,38 +6,82 @@
                     <h4>Vídeo</h4>
                     <b-img src="/src/assets/img/icon-video.png" alt="Vídeo do produto" title="Vídeo do produto" />
                 </div>
-                <button id="nav-up">up</button>
+                <button id="nav-up" @click="scrollThumbnail('miniaturas-nav-container','up')">up</button>
                 <div id="miniaturas-nav-container">
-                    <span class="miniaturas-item" v-for="item in itens">
-                        <b-img-lazy :src="item.url" width="74" height="94" blank-color="#bbb" alt="Miniatura do produto" />
+                    <span class="miniaturas-item" v-for="(item, index) in dados.slice(0, 20)">
+                        <b-img-lazy
+                            v-bind:src="item.thumbnailUrl"
+                            @click.native="changePhoto(index)"
+                            blank-color="#bbb"
+                            v-bind:alt="item.title"
+                            v-bind:title="item.title" />
                     </span>
                 </div>
-                <button id="nav-down">down</button>
+                <button id="nav-down" @click="scrollThumbnail('miniaturas-nav-container','dwn')">down</button>
             </b-col>
             <b-col id="foto-produto" sm="8" offset-sm="2" lg="9" offset-lg="1">
-                <b-img-lazy src="https://lorempixel.com/430/556/fashion/1/" fluid width="430" height="556" blank-color="#bbb" alt="Imagem do produto" />
+                <b-img 
+                    v-b-modal.modal1
+                    id="alvo"
+                    src="src/assets/img/loading_icon.gif"
+                    fluid
+                    blank-color="#bbb"
+                    alt="Imagem do produto" />
+                
+                <!-- Modal Component -->
+                <b-modal id="modal1" size="lg" centered title="Imagem do produto">
+                    <img id="alvoModal" src="src/assets/img/loading_icon.gif" alt="Imagem do produto" />
+                </b-modal>
             </b-col>
-        </b-row>
+        </b-row>        
     </b-col>
 </template>
 
 <script>
+    import axios from 'axios';    
+    const apiUrl = 'https://jsonplaceholder.typicode.com/photos';
+    
     export default {
-        props: {
-            img: {type: String, default: null}
-        },
         data() {
             return {
-                itens: [
-                    {url: 'https://lorempixel.com/74/94/fashion/1/'},
-                    {url: 'https://lorempixel.com/74/94/fashion/1/'},
-                    {url: 'https://lorempixel.com/74/94/fashion/1/'},
-                    {url: 'https://lorempixel.com/74/94/fashion/1/'},
-                    {url: 'https://lorempixel.com/74/94/fashion/1/'},
-                    {url: 'https://lorempixel.com/74/94/fashion/1/'},
-                    {url: 'https://lorempixel.com/74/94/fashion/1/'},
-                ]
+                dados: []
+            };
+        },
+        methods: {
+            fetchFotos: function () {
+                axios.get(apiUrl).then((response) => {
+                    this.dados = response.data;
+                    document.getElementById('alvo').src = response.data[0].url;                    
+                    document.getElementById('alvoModal').src = response.data[0].url;                    
+                }, (error) => {
+                    console.log(error)
+                });
+            },
+            changePhoto: function (posicao) {
+                var foto       = this.dados[posicao],
+                    url        = foto.url,
+                    title      = foto.title,
+                    alvo       = document.getElementById('alvo'),
+                    alvoModal  = document.getElementById('alvoModal');
+                
+                alvo.src = url;
+                alvoModal.src = url;
+                alvo.title = title;
+                alvo.alt = title;
+            },
+            scrollThumbnail: function(alvo, upDwn) {                
+                var t = document.getElementById(alvo);
+                if (upDwn === 'up') {
+                    //subir
+                    return t.scrollTop -=90;
+                } else {
+                    //descer
+                    return t.scrollTop +=90;
+                }
             }
+        },
+        mounted: function () {
+            this.fetchFotos();
         }
     }
 
@@ -105,12 +149,17 @@
             }
             > #foto-produto {
                 margin-top: 12px;
-                > img {
+                > img#alvo {
                     width: 430px;
                     height: 556px;
+                    cursor: pointer;
                 }
+                img#alvoModal{
+                    display: block;
+                    margin: 0 auto;
+                }
+                
             }
         }
     }
 </style>
-
