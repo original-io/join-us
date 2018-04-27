@@ -1,0 +1,76 @@
+@font-face {
+    font-family: gotham-book;
+    src: url(../fonts/gotham-book.otf);
+}
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "gotham-book", sans-serif;
+}
+.container{
+  width: 95%;
+  margin: 0 auto;
+}
+.menu #logo{
+  text-align: center;
+  padding: 24px 0;
+  border-bottom: 1px solid #CCCCCC;
+  box-sizing: border-box;
+}
+#list-menu{
+  border-bottom: 1px solid #CCCCCC;
+  padding: 7px 0;
+}
+#list-menu .container{
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+.cat-itens .cat-itens-content{
+  display: flex;
+  justify-content: space-between;
+}
+.cat-itens .cat-itens-content li{
+  list-style: none;
+  margin: 0 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-style: regular;
+}
+.menu a{
+  text-decoration: none;
+  color: #686868;
+}
+.login-itens a{
+  font Family: Open Sans;
+  font Style: Regular;
+  font Size: 12px;
+  line Height: 20px;
+  color: #686868;
+}
+.login-itens span{
+  margin: 0 10px;
+}
+.search-itens{
+  display: flex;
+  justify-content: space-between;
+}
+.search-itens input{
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  font Family: "Open Sans";
+  font Style: Regular;
+  font Size: 12px;
+  line Height: 20px;
+  align: center;
+  width: 100%;
+}
+.search-item-input{
+  width:83px;
+  position: relative;
+}
+.search-item-input svg{
+  position: absolute;
+  top: 0;
+}

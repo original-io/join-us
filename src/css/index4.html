@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>balls</title>
+  </head>
+
+  <style>
+
+    *{
+      padding: 0;
+      margin: 0;
+      font-family: "Arial", sans-serif;
+    }
+    button{
+      padding: 10px;
+    }
+    .box{
+      position: relative;
+      left: 45%;
+      top: 300px;
+      height: 100px;
+      width: 100px;
+      /* border: 1px solid #000; */
+      transition: 2s;
+    }
+    .ball-1{
+      position: absolute;
+      background-color: red;
+      width: 50px;
+      height: 50px;
+      transition: 2s;
+    }
+    .ball-2{
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: red;
+      width: 50px;
+      height: 50px;
+      transition: 2s;
+      transition-delay: .4s;
+    }
+    .ball-3{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background-color: red;
+      width: 50px;
+      height: 50px;
+      transition: 2s;
+      transition-delay: .3s;
+    }
+    .ball-4{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: red;
+      width: 50px;
+      height: 50px;
+      transition: 2s;
+      transition-delay: .2s;
+    }
+
+    .ball .ball-1{
+      border-radius: 50px;
+      transform: scale(.3) translate(0);
+      transition: 2s;
+    }
+    .ball .ball-2{
+      border-radius: 50px;
+      transform: scale(.3) translate(0);
+      transition: 2s;
+      transition-delay: .2s;
+    }
+    .ball .ball-3{
+      border-radius: 50px;
+      transform: scale(.3) translate(0);
+      transition: 2s;
+      transition-delay: .3s;
+    }
+    .ball .ball-4{
+      border-radius: 50px;
+      transform: scale(.3) translate(0);
+      transition: 2s;
+      transition-delay: .4s;
+    }
+    .ball .box{
+      animation: rotate 2s;
+      animation-timing-function: linear;
+      animation-delay: 1.5s;
+    }
+
+    @keyframes rotate {
+      0%   { transform: rotate(0);}
+      100% { transform: rotate(360deg);}
+    }
+
+
+  </style>
+
+  <body>
+    <div>
+      <div class="box">
+        <div class="ball-1"></div>
+        <div class="ball-2"></div>
+        <div class="ball-3"></div>
+        <div class="ball-4"></div>
+      </div>
+      <button id="1">1</button>
+    </div>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script>
+
+    $("button").click(function(){
+      var idbtn = $(this).attr('id');
+      switch ( idbtn ) {
+        case '1':
+          $('html').toggleClass('ball')
+          break;
+      }
+
+    });
+
+  </script>
+
+</html>

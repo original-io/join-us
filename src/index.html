@@ -11,29 +11,37 @@
       <div id="logo">
         <h1>Logo</h1>
       </div>
-      <div id="list-menu" class="container">
-        <div class="login-itens">
-          <a href="">Entrar</a>
-          <a href="">Cadastre-se</a>
-        </div>
-        <div class="cat-itens">
-          <ul class="cat-itens-content">
-            <li>
-              <a href="">Sapatos</a>
-            </li>
-            <li>
-              <a href="">Bolsas</a>
-            </li>
-            <li>
-              <a href="">Acessórios</a>
-            </li>
-            <li>
-              <a href="">Off</a>
-            </li>
-          </ul>
-        </div>
-        <div class="search-itens">
-
+      <div id="list-menu">
+        <div class="container">
+          <div class="login-itens">
+            <a href="">Entrar</a>
+            <span>|</span>
+            <a href="">Cadastre-se</a>
+          </div>
+          <div class="cat-itens">
+            <ul class="cat-itens-content">
+              <li>
+                <a href="">Sapatos</a>
+              </li>
+              <li>
+                <a href="">Bolsas</a>
+              </li>
+              <li>
+                <a href="">Acessórios</a>
+              </li>
+              <li>
+                <a href="">Off</a>
+              </li>
+            </ul>
+          </div>
+          <div class="search-itens">
+            <div class="search-item-input">
+              <input type="text" placeholder="Busca">
+              <svg width="21" height="21" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <image width="21" height="21" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHJSURBVHgBrVSxbsIwEHVSJGDLJ6Rf0EhIqAsSbB37B9AFwZTwBYSNrekEYmn6B/AFpBvd6B/4E9hIB6DvqosabEiI4CTrzvbd8zv7zoZQxPM8a7vdtg3DeD4cDg60Bb2BXmOEsD+n06kUGWKkJ91u10PgkIAyYiT2/clk8pEL2uv1fKgh2cTMNM0QwRHZvNaBamLYHDICY/8sKAAp4J3XwkqlMgiCYKM6w8/GQS4O8Gi+3+8Hs9ks0EDJEXrJDEKc/iJypN/vvxIwZVGtVu9VAmYqJUkpiQukXC6P+PGsOI5ddZ9A22xHea+aCDEDYJJ2UwOlsiGDykUUEPh/k07ij0BzyicLVLK2TjH9u2S8ZCHwLH9iuuYTHVFAQOaB9VoDxYh406MWFRcKSHis5xooCv0tKQ/0/PASQNQ2vbzNV6e1691qtYrr9foP7CcAP9ZqNavRaHzRuupMmTiOM4bpMssxynChZZE6nVj6PKVPYw4mi91utymVSsTKwXCV15YYLbW+j34ptB+1HrGwxRnhq6L0O+K/E4+AzXQAvjNybmFQ/0dpIJ771OsAGLGfZOAl/yE606KifEYyYXwV6Dngq0FPAd8EVAGWv/xv4hIwNy5tAAAAAElFTkSuQmCC"/></svg>
+          </div>
+            <a href="">Carinho</a>
+          </div>
         </div>
       </div>
     </div>
@@ -48,10 +56,15 @@
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-  <script>
+  <!-- <script>
 
+      Vue.component('menu-top', require('menu.vue') )
 
-  </script>
+    new Vue ({
+      el: '#menu'
+    })
+
+  </script> -->
 
   </body>
 </html>
