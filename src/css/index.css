@@ -20,11 +20,13 @@
 #list-menu{
   border-bottom: 1px solid #CCCCCC;
   padding: 7px 0;
+  box-sizing: border-box;
 }
 #list-menu .container{
   display: flex;
   justify-content: space-between;
-  padding: 8px 0;
+  padding: 0;
+  align-items: center;
 }
 .cat-itens .cat-itens-content{
   display: flex;
@@ -37,6 +39,24 @@
   font-size: 14px;
   font-style: regular;
 }
+.cat-itens .cat-itens-content li a{
+  display: block;
+  padding: 10px;
+  position: relative;
+}
+.cat-itens .cat-itens-content li a:after{
+  content: " ";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background-color: #686868;
+  bottom: 0;
+  left: 0;
+  transition: .5s;
+}
+.cat-itens .cat-itens-content li:hover a:after{
+  width: 100%;
+}
 .menu a{
   text-decoration: none;
   color: #686868;
@@ -47,30 +67,61 @@
   font Size: 12px;
   line Height: 20px;
   color: #686868;
+  position: relative;
+  padding: 10px;
+}
+.login-itens a:after{
+  content: " ";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background-color: #686868;
+  bottom: 0;
+  left: 0;
+  transition: .5s;
+}
+.login-itens a:hover:after{
+  width: 100%;
 }
 .login-itens span{
   margin: 0 10px;
+  color: #686868;
 }
 .search-itens{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .search-itens input{
   border-top: 0;
   border-left: 0;
   border-right: 0;
   font Family: "Open Sans";
-  font Style: Regular;
+  font Style: regular;
   font Size: 12px;
   line Height: 20px;
   align: center;
   width: 100%;
+  text-indent: 3ch;
+  padding-bottom: 5px;
+  outline: none;
+  width: 83px;
+  transition: .5s;
+}
+.search-itens input:focus{
+  width: 250px;
 }
 .search-item-input{
-  width:83px;
   position: relative;
+  margin-right: 20px;
 }
 .search-item-input svg{
   position: absolute;
-  top: 0;
+  top: -2px;
+}
+.search-itens > a{
+  line-height: -1px;
+  font Family: "gotham-book";
+  font Size: 12px;
+  line Height: 17px;
 }
