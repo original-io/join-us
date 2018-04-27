@@ -3,13 +3,41 @@
   <head>
     <meta charset="utf-8">
     <title>Teste Original.io</title>
+    <link rel="stylesheet" href="css/index.css">
   </head>
 
-  <heaedr>
-    <div id="example">
-      <my-component></my-component>
+  <header>
+    <div class="menu">
+      <div id="logo">
+        <h1>Logo</h1>
+      </div>
+      <div id="list-menu" class="container">
+        <div class="login-itens">
+          <a href="">Entrar</a>
+          <a href="">Cadastre-se</a>
+        </div>
+        <div class="cat-itens">
+          <ul class="cat-itens-content">
+            <li>
+              <a href="">Sapatos</a>
+            </li>
+            <li>
+              <a href="">Bolsas</a>
+            </li>
+            <li>
+              <a href="">Acessórios</a>
+            </li>
+            <li>
+              <a href="">Off</a>
+            </li>
+          </ul>
+        </div>
+        <div class="search-itens">
+
+        </div>
+      </div>
     </div>
-  </heaedr>
+  </header>
 
   <body>
 
@@ -22,16 +50,10 @@
 
   <script>
 
-    Vue.component('my-component', {
-      template: '<div>Um elemento personalizado!</div>'
-    })
-
-  new Vue({
-    el: '#example'
-  })
-
 
   </script>
 
   </body>
 </html>
+
+<!-- https://br.vuejs.org/v2/guide/components.html -->
