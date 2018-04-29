@@ -180,6 +180,15 @@
   width: 14px;
   height: 8.64px;
 }
+.preview-slider,
+.swiper-wrapper,
+.swiper-container{
+  height: 500px;
+}
+.swiper-slide{
+  height: 94px !important;
+  width: auto; 
+}
 
 
 /* RESPONSIVE */
