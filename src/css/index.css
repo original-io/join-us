@@ -10,12 +10,16 @@
 .container{
   width: 95%;
   margin: 0 auto;
+  max-width: 1920px;
 }
 .menu #logo{
   text-align: center;
   padding: 24px 0;
   border-bottom: 1px solid #CCCCCC;
   box-sizing: border-box;
+}
+.menu .burguer{
+  display: none;
 }
 #list-menu{
   border-bottom: 1px solid #CCCCCC;
@@ -129,18 +133,85 @@
 /* RESPONSIVE */
 
 @media screen and (max-width: 910px) {
+  .menu{
+    position: relative;
+  }
+  .menu .burguer{
+    display: block;
+    width: 40px;
+    height: 22px;
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+  .burguer .top,
+  .burguer .middle,
+  .burguer .bottom{
+    width: 100%;
+    height: 2px;
+    background-color: #de8f75;
+    position: absolute;
+  }
+  .burguer .top{
+    top: 0;
+    transition: .5s;
+  }
+  .burguer .middle{
+    top: 10px;
+    transition: .5s;
+    transition-delay: .3s;
+  }
+  .burguer .bottom{
+    top: 20px;
+    transition: .5s;
+  }
+  .menu-active .burguer .top{
+    width: 0;
+  }
+  .menu-active .burguer .middle{
+    transform: rotate(45deg);
+  }
+  .menu-active .burguer .bottom{
+    transform: rotate(-45deg);
+    top: 11px;
+  }
   #list-menu{
     position: fixed;
     width: 100%;
     left: -100%;
+    transition: .5s;
+  }
+  .menu-active #list-menu{
+    left: 0;
   }
   #list-menu .container{
     display: block;
     width: 100%;
   }
+  .login-itens{
+    transform: scale(2);
+    opacity: 0;
+    transition: .5s;
+  }
+  .menu-active .login-itens{
+    transform: scale(1);
+    opacity: 1;
+    transition: .5s;
+    transition-delay: .7s;
+  }
   #list-menu .container div{
     width: 100%;
     text-align: center;
+    opacity: 0;
+    transform: scale(2);
+  }
+  .menu-active #list-menu .container div{
+    opacity: 1;
+    transform: scale(1);
+    transition: .5s;
+    transition-delay: .8s;
   }
   .cat-itens .cat-itens-content{
     display: block;
@@ -157,7 +228,8 @@
   }
   .search-itens input{
     width: 100px;
-    text-indent: 2ch;
+    text-indent: 1ch;
+    font-size: 14px;
   }
 }
 
