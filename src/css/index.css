@@ -128,6 +128,19 @@
   font Size: 12px;
   line Height: 17px;
 }
+.cat-itens-access{
+  padding: 10px;
+  font-size: 14px;
+}
+.cat-itens-access a{
+  text-decoration: none;
+  color: #AEB6C1;
+}
+.cat-itens-access span{
+  font Family: Gotham Bold, Open Sans;
+  font-weight: bolder;
+  color: #AEB6C1;
+}
 
 
 /* RESPONSIVE */
@@ -185,6 +198,7 @@
   }
   .menu-active #list-menu{
     left: 0;
+    background-color: #fff;
   }
   #list-menu .container{
     display: block;
