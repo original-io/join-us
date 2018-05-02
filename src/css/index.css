@@ -187,8 +187,25 @@
 }
 .swiper-slide{
   height: 94px !important;
-  width: auto; 
+  width: auto;
 }
+.product-info{
+  border: 1px solid #D2E1DF;
+  border-radius: 3px;
+  padding: 21px;
+}
+.product-info .product-title{
+  font Family: Gotham Bold;
+  font Size: 26px;
+  line Height: 37px;
+  color: #202020;
+  text-transform: uppercase;
+  }
+  .product-info .product-code{
+    font Family: Open Sans;
+    font Size: 14px;
+    line Height: 23px;
+  }
 
 
 /* RESPONSIVE */
