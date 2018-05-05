@@ -1,0 +1,505 @@
+/** Colors **/
+$white = #fff // White
+$highopacityWhite = rgba(255,255,255,.9) //White + Opacity
+$lowopacityWhite = rgba(255,255,255, .4) //White + Opacity
+$smokeWhite = #ebebeb // Smoke White
+$gray = #7f7f7f // Grey
+$neroGray = #202020 //Nero Gray - Primary Color
+$dimGray = #686868 //Dim Gray
+$lightGray = #ccc // Light Grey
+$green = #32917b //Gossamer Green
+$iceGreen = #d2e1df //Iceberg Green
+$brown = #a14830 //Medium Carmine
+$orange = #e35442 //Flamingo Orange
+$darkpink = #a9095e //Jazzberry Jam
+$burningSand = #de8f75 //Burning Sand - Main Color
+$blue = #6b85c1 //Danube Blue
+$heatherBlue = #aeb6c1 //Heather Blue
+$darkblue = #5f75aa //Chetwode Blue
+$veniceBlue = #2a5a75 //Venice Blue
+$yellow = #e0da9c //Sapling Yellow
+$black = #000 //Black
+
+/** Fonts **/
+@font-face
+    font-family 'Gotham Book'
+    src url('../fonts/gotham-book-webfont.woff') format('woff')
+
+@font-face
+    font-family 'Gotham Bold'
+    src url('../fonts/gotham-bold-webfont.woff') format('woff')
+
+/** Reset **/
+*
+    margin 0
+    padding 0
+    border 0
+    font-size 0
+    font inherit 
+    vertical-align baseline
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section
+    display block    
+
+/** Style **/
+body 
+    font 1em 'Open Sans', sans-serif
+    line-height 1    
+    color $neroGray
+    background $highopacityWhite
+
+a 
+    color $dimGray
+    text-decoration none
+
+    &:hover
+        text-decoration underline 
+
+li 
+    display inline 
+
+input[type=text]
+    border-bottom 1px solid $heatherBlue
+    outline 0
+
+    &:focus
+        border-bottom 1px solid $burningSand  
+
+
+/** Header **/
+.header
+    height 136px
+    
+    &-logo
+        display flex
+        align-items center        
+        justify-content center
+        height 86px
+    
+        &--logo
+            width 148px
+            height 34px
+
+    &-menubar
+        display flex 
+        align-items center        
+        flex-flow row wrap   
+        justify-content space-between  
+        padding 0 40px 0 40px       
+        height 50px //height 100%   
+        border 1px solid $lightGray
+        border-left 1px solid transparent
+        border-right 1px solid transparent
+
+        &--login
+            color $neroGray       
+
+        &--links
+            color $dimGray       
+            text-transform uppercase
+    
+            & a
+                padding 17px 30px
+
+            & a:hover
+                text-decoration none                
+                background-color $smokeWhite 
+
+        &--search
+            height 30px
+            width 80px                 
+            margin-right 20px            
+            padding-left 40px
+            background url(../imgs/icons/ic_search_black_24px.png) no-repeat
+            background-position 4px 4px
+  
+        &--shoppingcart 
+            display flex 
+            align-items center             
+            justify-content center 
+            color $neroGray
+
+        &--cartnumber
+            margin-left 2px
+
+/** Breadcumb **/            
+
+.breadcumb
+    padding 8px 40px 10px 40px
+    color $heatherBlue  
+
+    & a 
+        color inherit     
+
+/** Product **/
+.product 
+    display flex
+    flex-flow row wrap
+    justify-content space-between 
+    padding 8px 120px 10px 40px    
+    
+    &-photo
+        display flex
+        align-items center          
+        flex-flow row wrap
+        justify-content space-around
+        border none 
+
+        &--carousel
+            width 76px
+            text-align center
+        
+        &--highlight
+            width 430px
+            margin-left 60px
+
+    &-info 
+        height 100%
+        box-sizing border-box        
+        padding 20px
+        border 2px solid $iceGreen      
+        border-radius 3px
+
+        &--cod
+            margin-top -10px
+
+        &--price
+            color $dimGray
+
+        &--parcels
+            color $gray
+
+        &--colorpicker
+            margin-top 30px       
+        
+        &--colors
+            display inline-block            
+            height 22px
+            width 22px
+            margin-top 2px            
+            border 5px solid $white            
+            border-radius 50%
+
+            &:hover
+                border 5px solid $yellow
+                cursor pointer
+
+        &--sizeselector
+            margin-top 20px
+            margin-bottom 45px
+
+        &--sizeselection   
+            display flex
+            justify-content space-between             
+            max-width 90%          
+
+        &--size
+            display inline-block            
+            height 34px
+            width 34px
+            margin-top 5px  
+            line-height 34px
+            color $veniceBlue
+            text-align center                      
+            border 1px solid $white
+            border-radius 50%
+
+            &:hover
+                background $yellow
+                cursor pointer
+
+        &--description
+            margin-top 20px
+
+ /** Shelf **/       
+.shelf
+    padding 100px 40px 10px 40px
+
+    &-title
+        display flex
+        align-items center
+        justify-content center        
+        color $burningSand
+
+    &-wrapper
+        display flex //flex-wrap nowrap (media-querie)
+        align-items center        
+        flex-direction row
+        justify-content center        
+        height 100%
+
+    &-product
+        position relative
+        height 405px // img = 375px + 30px padding             
+        width 291px
+        margin 10px
+
+        &--more
+            position absolute
+            top 12px
+            right 10px             
+            height 28px
+            width 28px
+            line-height 30px
+            text-align right    
+            background-color $lowopacityWhite                  
+            border 2px solid $burningSand
+            border-radius 50%
+
+        &--details
+            display flex
+            align-items center            
+            justify-content space-between
+
+        &--colors
+            display inline-block            
+            height 13px
+            width 13px
+            border-radius 50%
+
+    &-nav
+        display flex
+        align-items center
+        justify-content center
+        margin 20px 0 190px 0
+
+        &--icon 
+            height 35px
+            width 35px
+            margin 10px
+            line-height 37px
+            color $veniceBlue
+            text-align center
+            border 2px solid $veniceBlue
+            border-radius 50%            
+
+/** Footer **/
+.footer
+    padding 20px 30px 0 70px
+    border-top 2px solid $lightGray
+
+    &-social
+        padding 0
+
+        & a
+            margin-right 20px
+        
+    &-links
+        display flex
+        flex-direction row
+        justify-content space-between        
+        padding 20px 0 60px 0
+
+        &--certifications 
+            margin auto 0
+
+        &--sitemap
+            display flex
+            justify-content space-between
+
+        &--list
+            display block
+            margin-left 80px
+
+            & li
+                display list-item  
+                margin-bottom 20px
+                list-style none                
+
+                &:first-child
+                    margin-bottom 0                 
+                
+    &-newsletter         
+        width 293px
+        height 293px
+        margin-top -165px            
+        background-color $white 
+        border 2px solid $lightGray
+        border-radius 50%           
+
+        &--formtitle
+            margin-top 40px 
+        
+        &--form
+            padding 0 0 10px 45px
+
+            & fieldset 
+                margin-top 20px
+                text-indent 0
+            
+                & legend 
+                    margin-bottom 10px
+                    line-height 0
+                    
+                & input
+                    width 200px                    
+                    margin-bottom 30px
+
+                & button 
+                    margin 0 45px
+
+    &-end    
+        position absolute
+        left 0
+        right 0      
+        display flex
+        align-items center        
+        justify-content space-between          
+        background $burningSand
+        height 60px
+        padding 0 130px 0 130px
+        color $white        
+        
+        &--logo
+            height 24.93px            
+            width 111px
+                    
+            
+/** Background Colors**/
+.c-white
+    background-color $white
+
+.c-darkpink
+    background-color $darkpink
+
+.c-blue
+    background-color $blue
+
+.c-brown
+    background-color $brown
+
+.c-black
+    background-color $black 
+
+.c-green
+    background-color $green   
+
+.c-gray
+    background-color $smokeWhite     
+
+/** Botões **/
+.bt 
+    color $white    
+    text-transform uppercase
+    background-color $burningSand    
+    border none     
+    border-radius 3px    
+    cursor pointer    
+    outline 0    
+
+    &-small //f-size-mi
+        height 42px
+        width 159px        
+
+    &-regular //f-size-xs
+        height 50px         
+        width 110px       
+
+    &-medium //f-size-xs
+        height 50px        
+        width 190px
+
+    &-large //f-size-md
+        height 60px        
+        width 228px
+
+    &-extralarge //f-size-xl   
+        height 80px     
+        width 304px
+
+    &-full
+        height 60px        
+        width 100% 
+        background-color $green              
+
+
+/** Estilo Texto **/
+
+.texto-paragrafo
+    font-size 16px
+    line-height 33px
+
+.f-size-gi
+    font-size 60px
+    line-height 98px
+
+.f-size-xh
+    font-size 50px
+    line-height 82px
+
+.f-size-hg
+    font-size 30px
+    line-height 49px
+
+.f-size-xl        
+    font-size 26px
+    line-height 42px
+    text-transform uppercase
+
+.f-size-lg
+    font-size 22px
+    line-height 36px
+
+.f-size-sd
+    font-size 20px
+    line-height 33px
+
+.f-size-md
+    font-size 18px
+    line-height 29px
+
+.f-size-sm
+    font-size 16px
+    line-height 26px
+
+.f-size-xs
+    font-size 14px
+    line-height 23px
+
+.f-size-mi
+    font-size 12px
+    line-height 20px   
+
+/** Misc Classes **/
+.f-gotham
+    font-family 'Gotham Book'
+
+.f-gotham-upper
+    font-family 'Gotham Bold'
+    text-transform uppercase
+
+.f-color-gray
+    color $neroGray
+
+.f-color-greyblue 
+    color $heatherBlue   
+    
+.f-disabled 
+    text-decoration line-through
+    color $orange
+
+.f-highlight 
+    color $burningSand    
+
+.f-bold    
+    font-weight bold
+
+.f-opaque
+    opacity 0.5
+
+    &:hover
+        opacity 1
+
+.f-selection
+    padding-left 7px
+    color $darkblue
+
+.p-left
+    float left
+
+.p.right
+   margin-left 100px  
+
+.s-block    
+    display block
