@@ -32,7 +32,7 @@ section {
 }
 /** Style **/
 body {
-  font: 1em 'Open Sans', sans-serif;
+  font: 16px 'Open Sans', sans-serif;
   line-height: 1;
   color: #202020;
   background: rgba(255,255,255,0.9);
@@ -198,6 +198,50 @@ input[type=text]:focus {
 .product-info--description {
   margin-top: 20px;
 }
+.shoppingcart {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(32,32,32,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.shoppingcart-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 288px;
+  padding: 40px 90px 40px 90px;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+}
+.shoppingcart-content--close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  float: right;
+  width: 28px;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+}
+.shoppingcart-content--close:hover {
+  background-color: #ccc;
+}
+.shoppingcart-content--continue {
+  margin-top: 10px;
+}
+.shoppingcart-show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
 /** Shelf **/
 .shelf {
   padding: 100px 40px 10px 40px;
@@ -206,7 +250,6 @@ input[type=text]:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #de8f75;
 }
 .shelf-wrapper {
   display: flex;
@@ -478,11 +521,14 @@ input[type=text]:focus {
   padding-left: 7px;
   color: #5f75aa;
 }
+.p-center {
+  text-align: center;
+}
 .p-left {
   float: left;
 }
 .p.right {
-  margin-left: 100px;
+  float: right;
 }
 .s-block {
   display: block;
