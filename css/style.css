@@ -92,7 +92,7 @@ header {
         background-image: url("../img/icones/bolsa.png"); }
 
 section.produtoprincipal {
-  height: 100vh; }
+  min-height: 100vh; }
   section.produtoprincipal nav.local {
     padding: 15px 0; }
     section.produtoprincipal nav.local ul {
@@ -211,6 +211,8 @@ section.produtoprincipal {
           border-radius: 50%;
           background-color: black;
           z-index: 2; }
+        section.produtoprincipal .produto .produto--descricao .produto--descricao__cores .ativo {
+          border: 3px solid #E0DA9C; }
       section.produtoprincipal .produto .produto--descricao .produto--descricao__tamanho {
         margin-top: 40px; }
         section.produtoprincipal .produto .produto--descricao .produto--descricao__tamanho > span:nth-child(1) {
@@ -232,7 +234,7 @@ section.produtoprincipal {
           margin-left: 150px; }
         section.produtoprincipal .produto .produto--descricao .produto--descricao__tamanho .produto--descricao__tamanho__eclipses {
           margin-top: 10px; }
-          section.produtoprincipal .produto .produto--descricao .produto--descricao__tamanho .produto--descricao__tamanho__eclipses span {
+          section.produtoprincipal .produto .produto--descricao .produto--descricao__tamanho .produto--descricao__tamanho__eclipses .tamanho {
             cursor: pointer;
             text-align: center;
             display: inline-block;
@@ -245,8 +247,8 @@ section.produtoprincipal {
             font-weight: 600;
             font-size: 14px;
             color: #2A5A75; }
-            section.produtoprincipal .produto .produto--descricao .produto--descricao__tamanho .produto--descricao__tamanho__eclipses span:hover {
-              background-color: #E0DA9C; }
+          section.produtoprincipal .produto .produto--descricao .produto--descricao__tamanho .produto--descricao__tamanho__eclipses .tamanhoativo {
+            background-color: #E0DA9C; }
       section.produtoprincipal .produto .produto--descricao .produto--descricao__sacola {
         margin-top: 40px; }
         section.produtoprincipal .produto .produto--descricao .produto--descricao__sacola a {
@@ -292,6 +294,7 @@ section.quemviu {
         border-right: 7px solid #fff;
         z-index: 1; }
       section.quemviu .quemviu--produtos .quemviu--produtos__single .quemviu--produtos__single__plus {
+        cursor: pointer;
         position: absolute;
         right: 15px;
         top: 10px;
@@ -354,5 +357,123 @@ section.quemviu {
         background-position: center;
         background-repeat: no-repeat;
         cursor: pointer; }
+
+footer {
+  margin-top: 150px;
+  width: 100%;
+  height: auto;
+  position: relative; }
+  footer > .container {
+    border-top: 1px solid black;
+    width: 1280px; }
+  footer .footer--form {
+    position: absolute;
+    right: 60px;
+    top: 0;
+    transform: translateY(calc(-50% + 40px));
+    width: 293px;
+    height: 293px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: white;
+    z-index: 2;
+    padding: 50px;
+    text-align: center; }
+    footer .footer--form h3 {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 16px;
+      font-family: Gotham Book, sans-serif;
+      color: #202020;
+      line-height: 23px; }
+    footer .footer--form input[type=text] {
+      margin-top: 10px;
+      border: none;
+      padding: 10px 5px;
+      border-bottom: 2px solid #AEB6C1; }
+      footer .footer--form input[type=text]:focus {
+        outline: none; }
+    footer .footer--form input[type=email] {
+      margin-top: 10px;
+      border: none;
+      padding: 10px 5px;
+      border-bottom: 2px solid #AEB6C1; }
+      footer .footer--form input[type=email]:focus {
+        outline: none; }
+    footer .footer--form input[type=submit] {
+      cursor: pointer;
+      margin: 20px auto;
+      width: 110px;
+      height: 50px;
+      color: white;
+      text-transform: uppercase;
+      border: none;
+      background-color: #DE8F75; }
+  footer .footer--sociais {
+    padding: 20px 0; }
+    footer .footer--sociais a {
+      margin: 0 10px; }
+  footer .footer--informacoes {
+    display: flex;
+    padding: 20px 0; }
+    footer .footer--informacoes .footer--informacoes__selos {
+      padding: 20px 0;
+      width: 20%; }
+      footer .footer--informacoes .footer--informacoes__selos .selo1 {
+        display: inline-block;
+        width: 92px;
+        height: 58px;
+        background-image: url("../img/selos/selo1.png");
+        background-size: contain;
+        background-position: center; }
+      footer .footer--informacoes .footer--informacoes__selos .selo2 {
+        margin-left: 30px;
+        display: inline-block;
+        width: 54px;
+        height: 58px;
+        background-image: url("../img/selos/selo2.png");
+        background-size: contain;
+        background-position: center; }
+    footer .footer--informacoes .footer--informacoes__geral {
+      width: 20%;
+      display: inline-block; }
+      footer .footer--informacoes .footer--informacoes__geral h4 {
+        font-family: Gotham Book, sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: #AEB6C1;
+        line-height: 17px; }
+      footer .footer--informacoes .footer--informacoes__geral a {
+        font-size: 14px;
+        font-family: Open Sans, sans-serif;
+        text-decoration: none;
+        color: #202020;
+        margin-bottom: 30px;
+        display: block; }
+  footer .footer--footer {
+    height: 60px;
+    background-color: #DE8F75;
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 150px; }
+    footer .footer--footer .footer--footer__endereco {
+      width: 80%; }
+      footer .footer--footer .footer--footer__endereco p {
+        font-size: 12px;
+        color: white;
+        font-family: Open Sans, sans-serif; }
+    footer .footer--footer .footer--footer__logo {
+      width: 20%; }
+      footer .footer--footer .footer--footer__logo .footer--logo {
+        z-index: 3;
+        width: 111px;
+        height: 25px;
+        background-image: url("../img/Vector (1).png");
+        background-size: contain;
+        background-position: center; }
 
 /*# sourceMappingURL=style.css.map */

@@ -11,27 +11,29 @@
 </head>
 <body>
     <header>
-        
-        <div class="logo"></div><!--logo-->
-        <nav class="desktop">
-            <ul class="desktop--esquerda">
-                <li><a href="#">Entrar</a></li>
-                <li>|</li>
-                <li><a href="#">Cadastrar</a></li>
-            </ul><!--desktop--esquerda-->            
-            <ul class="desktop--center">                
-                <li><a href="#">sapatos</a></li>
-                <li><a href="#">bolsas</a></li>
-                <li><a href="#">acessorios</a></li>
-                <li><a href="#">off</a></li>
-            </ul><!--desktop-center-->
-            <div class="desktop--direita">
-                <form class="desktop--direita__form">
-                    <input type="search" placeholder="Buscar">
-                </form>
-                <div class="desktop--direita__icone"></div><!--desktop-direita__icone-->
-            </div><!--desktop-direita-->            
-        </nav><!--desktop-->
+        <div class="container">
+            <div class="logo"></div><!--logo-->
+            <nav class="desktop">
+                <ul class="desktop--esquerda">
+                    <li><a href="#">Entrar</a></li>
+                    <li>|</li>
+                    <li><a href="#">Cadastrar</a></li>
+                </ul><!--desktop--esquerda-->            
+                <ul class="desktop--center">                
+                    <li><a href="#">sapatos</a></li>
+                    <li><a href="#">bolsas</a></li>
+                    <li><a href="#">acessorios</a></li>
+                    <li><a href="#">off</a></li>
+                </ul><!--desktop-center-->
+                <div class="desktop--direita">
+                    <form class="desktop--direita__form">
+                        <input type="search" placeholder="Buscar">
+                    </form>
+                    <div class="desktop--direita__icone"></div><!--desktop-direita__icone-->
+                </div><!--desktop-direita-->            
+            </nav><!--desktop-->
+        </div> 
+       
     </header> 
     <section class="produtoprincipal">
         <div class="container">
@@ -79,7 +81,7 @@
                         </div>
                         <div class="produto--descricao__cores">
                             <p>Cor: <span style="color: #5F75AA">(Funcsia)</span></p>
-                            <div class="cores" style="background-color: #A9095E; border:3px solid #E0DA9C"></div>
+                            <div class="cores ativo" style="background-color: #A9095E;"></div>
                             <div class="cores" style="background-color: #6B85C1" ></div>
                             <div class="cores" style="background-color: #A14830"></div>
                             <div class="cores"></div>                            
@@ -87,7 +89,7 @@
                         <div class="produto--descricao__tamanho">                          
                            <span>Tamanho:</span><span>(37)</span> <a href="#">Guia de medidas</a>                     
                         <div class="produto--descricao__tamanho__eclipses">
-                            <span class="tamanho">33</span>
+                            <span class="tamanho tamanhoativo">33</span>
                             <span class="tamanho">34</span>
                             <span class="tamanho">35</span>
                             <span class="tamanho">36</span>
@@ -173,7 +175,55 @@
 
 
     <footer>
-        
+        <div class="container">
+            <div class="footer--form">
+                <form action="">
+                    <h3>Assine nossa news</h3>
+                    <input type="text" placeholder="Nome" required>
+                    <input type="email" placeholder="E-mail" required>
+                    <input type="submit" value="Enviar">
+                </form>
+            </div><!--footer-form-->
+            <div class="footer--sociais">
+                <a href="#" class="facebook"><img src="img/icones/facebook.png" alt="facebook"></a>
+                <a href="#" class="instagram"><img src="img/icones/instagram.png" alt="facebook"></a>
+                <a href="#" class="pinterest"><img src="img/icones/pinterest.png" alt="facebook"></a>
+            </div>
+            <div class="footer--informacoes">
+                <div class="footer--informacoes__selos">
+                    <div class="selo1"></div>
+                    <div class="selo2"></div>
+                </div>
+                <div class="footer--informacoes__geral">
+                    <h4>institucional</h4>
+                    <a href="#">A marca</a>
+                    <a href="#">Lojas</a>
+                    <a href="#">Contato</a>
+                </div>
+                <div class="footer--informacoes__geral">
+                    <h4>Informações</h4>
+                    <a href="#">Formas de pagamento</a>
+                    <a href="#">Trocas e Devoluções</a>
+                    <a href="#">Cuidados com o produto</a>
+                </div>
+                <div class="footer--informacoes__geral">
+                    <h4>conheça</h4>
+                    <a href="#">Franquias e Multimarcas</a>
+                    <a href="#">Trabalhe com a gente</a>
+                    <a href="#">Procon - RJ</a>
+                </div>
+            </div><!--footer-informacoes-->            
+        </div><!--container-->
+        <div class="footer--footer">
+            <div class="footer--footer__endereco">
+                <p>Via Mia | V. Milano Centro Comercio de Bolsas Eireli - EPP.</p>
+                <p>Av.das Américas, 500 - bloco 20, loja 126 - Barra da Tijuca - Rio de Janeiro - RJ - CEP: 22640-100</p>
+                <p>CNPJ: 05.292.288/0002-10 - I.E: 86.732.548 - E-mail: ecommerce@viamia.com.br</p>
+            </div>
+            <div class="footer--footer__logo">
+                <div class="footer--logo"></div>
+            </div>
+        </div>
     </footer>
 
     

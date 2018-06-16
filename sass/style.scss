@@ -27,12 +27,12 @@ header{
         background-size: contain;
         margin: 0 auto;
     }
-    nav.desktop{
+    nav.desktop{        
         padding: 13px 0;
         border-top: 1px solid #ccc;
         border-bottom: 1px solid #ccc;
         display: flex;
-        flex-wrap: wrap;        
+        flex-wrap: wrap;               
         ul{
             list-style-type: none;           
             text-align: center;
@@ -103,7 +103,7 @@ header{
 
 // sessao 1 produto
 section.produtoprincipal{
-    height: 100vh;    
+    min-height: 100vh;    
     nav.local{
         padding: 15px 0;
         ul{
@@ -256,6 +256,9 @@ section.produtoprincipal{
                     background-color: black;
                     z-index: 2;
                 }
+                .ativo{
+                    border: 3px solid #E0DA9C;
+                }
             }
             .produto--descricao__tamanho{
                 margin-top: 40px;   
@@ -284,7 +287,7 @@ section.produtoprincipal{
 
             .produto--descricao__tamanho__eclipses {
                 margin-top: 10px;
-                span{
+                .tamanho{
                     cursor: pointer;
                     text-align: center;                    
                     display: inline-block;
@@ -296,10 +299,10 @@ section.produtoprincipal{
                     font-family: $font--gotham;
                     font-weight: 600;
                     font-size: 14px;
-                    color: #2A5A75;
-                    &:hover{
-                        background-color: #E0DA9C;
-                    }
+                    color: #2A5A75;                    
+                }
+                .tamanhoativo{
+                    background-color: #E0DA9C;
                 }
             }         
                 
@@ -362,6 +365,7 @@ section.quemviu{
             z-index: 1;             
         }
         .quemviu--produtos__single__plus{
+            cursor: pointer;
             position: absolute;
             right: 15px;
             top: 10px;
@@ -434,5 +438,146 @@ section.quemviu{
 
 // Footer
 footer{
+    margin-top:150px;
+    width: 100%;
+    height: auto;    
+    position: relative;
+    > .container{
+        border-top: 1px solid black;
+        width: 1280px;
+    }
+    .footer--form{
+        position: absolute;
+        right: 60px;
+        top: 0;
+        transform: translateY(calc(-50% + 40px));
+        width: 293px;
+        height: 293px;
+        border-radius: 50%;
+        border: 2px solid black;
+        background-color: white;
+        z-index: 2;
+        padding: 50px;
+        text-align: center;
+        h3{
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 16px;
+            font-family: $font--gotham;
+            color: $color--black;
+            line-height: 23px;
+        }
+        input[type=text]{
+            margin-top: 10px;
+            border: none;
+            padding: 10px 5px;
+            border-bottom: 2px solid #AEB6C1;
+            &:focus{
+                outline: none;
+            }
+        }
+        input[type=email]{
+            margin-top: 10px;
+            border: none;
+            padding: 10px 5px;
+            border-bottom: 2px solid #AEB6C1;
+            &:focus{
+                outline: none;
+            }
+        }
+        input[type=submit]{   
+            cursor: pointer;         
+            margin: 20px auto;            
+            width: 110px;
+            height: 50px;
+            color: white;
+            text-transform: uppercase;
+            border: none;
+            background-color: #DE8F75;
+        }
+    }
     
+    .footer--sociais{
+        padding: 20px 0;
+        a{
+            margin: 0 10px;
+        }
+    }   
+
+    .footer--informacoes{
+        display: flex;
+        padding: 20px 0;
+        .footer--informacoes__selos{
+            padding: 20px 0;
+            width: 20%;
+            .selo1{
+                display: inline-block;
+                width: 92px;
+                height: 58px;
+                background-image: url('../img/selos/selo1.png');
+                background-size: contain;
+                background-position: center;
+            }
+            .selo2{
+                margin-left: 30px;
+                display: inline-block;
+                width: 54px;
+                height: 58px;
+                background-image: url('../img/selos/selo2.png');
+                background-size: contain;
+                background-position: center;
+            }
+        }
+        .footer--informacoes__geral{
+            width: 20%;
+            display: inline-block;
+            h4{
+                font-family: $font--gotham;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-size: 12px;
+                color: #AEB6C1;
+                line-height: 17px;
+            }
+            a{
+                font-size: 14px;
+                font-family: $font--open;
+                text-decoration: none;
+                color: $color--black;
+                margin-bottom: 30px;
+                display: block;
+            }
+        }        
+    }
+
+    .footer--footer{
+        height: 60px;
+        background-color: #DE8F75;
+        width: 1280px;
+        margin:0 auto;
+        display: flex; 
+        flex-wrap: wrap;
+        align-items: center;
+        padding-left: 150px;         
+        .footer--footer__endereco{
+            width: 80%;
+            p{
+                font-size: 12px;
+                color: white;
+                font-family: $font--open;
+            }
+        }
+        .footer--footer__logo{
+            width: 20%;
+            .footer--logo{
+                z-index: 3;
+                width: 111px;
+                height: 25px;
+                background-image: url('../img/Vector\ \(1\).png');
+                background-size: contain;
+                background-position: center;                
+            }
+        }          
+    }
+  
 }
