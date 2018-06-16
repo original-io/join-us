@@ -1,0 +1,438 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{height: 100%;}
+
+// Gerais
+.container{max-width: 1280px; margin: 0 auto; padding: 0 2%}
+.clear{clear:both}
+$font--gotham: Gotham Book, sans-serif;
+$font--open: Open Sans, sans-serif;
+$color--nav: #686868;
+$color--black: #202020;
+
+
+
+// header
+header{
+    width: 100%;    
+    .logo{
+        width: 148px;
+        height: 86px;
+        background-image: url(../img/Vector.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin: 0 auto;
+    }
+    nav.desktop{
+        padding: 13px 0;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        flex-wrap: wrap;        
+        ul{
+            list-style-type: none;           
+            text-align: center;
+            position: relative;
+            top: 8px;         
+            li{
+                display: inline-block;
+                margin: 0 20px;
+                a{
+                    color: black;
+                    text-decoration: none;
+                    font-family: $font--gotham;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    color: $color--nav;
+                }
+            }
+        }
+        ul.desktop--center{width: 50%}
+        ul.desktop--esquerda{
+            padding-left: 2%;
+            text-align: left;
+            width: 25%;
+            a{font-family: $font--open; font-size: 12px; text-transform: initial;}
+            li{margin:0 10px; color: $color--nav;}                      
+        }
+        div.desktop--direita{
+            padding-right: 2%;
+            text-align: right;
+            width: 25%;
+            form.desktop--direita__form{
+                display: inline-block;
+                margin: 0px 10px;
+                position: relative;
+                top: -4px;
+                input[type=search]{
+                  width: 83px;
+                  line-height: 20px;
+                  padding-left: 28px;
+                  padding-top: 5px;
+                  padding-bottom: 5px;
+                  border: none;                  
+                  border-bottom: 1px solid #ccc;
+                  background-image: url('..//img/icones/lupa.png');
+                  background-position: left;
+                  background-size: 21px 21px;
+                  background-repeat: no-repeat;
+                  &:focus{
+                      outline: none;
+                  }
+                }
+            }            
+            div.desktop--direita__icone{
+                position: relative;
+                top: 4px;
+                cursor: pointer;
+                margin: 0px 10px;
+                display: inline-block;
+                width: 27px;
+                height: 24px;
+                background-image: url('../img/icones/bolsa.png')
+            }          
+        }        
+        
+    }   
+    
+}
+
+// sessao 1 produto
+section.produtoprincipal{
+    height: 100vh;    
+    nav.local{
+        padding: 15px 0;
+        ul{
+            list-style-type: none;
+            font-size: 12px;
+            li{
+                display: inline-block;
+                margin: 0 3px;
+                
+                a{
+                    color: $color--nav;
+                    text-decoration: none;
+                    font-family: $font--gotham;
+
+                }
+            }
+        }
+    }
+    
+    .produto{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .produto--slider{
+            text-align: center;
+            width: 10%;
+            
+            .produto--slider__single{
+                filter: grayscale(100%);
+                transition: 0.1s;
+                &:hover{
+                    filter: grayscale(0);
+                }
+            }          
+            img{
+                cursor: pointer;                
+                max-width: 74px;
+                height: 94px;
+                border: 3px solid rgba(0,0,0,0);
+                background-clip: content-box;
+                margin: 5px 0;                               
+            }
+            p{
+                font-size: 12px;                
+                font-family: $font--open;
+                color: #DE8F75;
+            }
+            .produto--slider__play{
+                cursor: pointer;
+                width: 31px;
+                height: 31px;
+                background-image: url('../img/icones/play.png');
+                background-size: cover;
+                margin: 0 auto;
+            }
+            .produto--slider__arrowUp{
+                cursor: pointer;
+                width: 14px;
+                height: 8px;
+                background-image: url('../img/icones/arrow_c.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                margin: 10px auto;
+            }
+            .produto--slider__arrowDown{
+                cursor: pointer;
+                width: 14px;
+                height: 8px;
+                background-image: url('../img/icones/arrow_b.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                margin: 10px auto;
+            }
+        }
+
+        .produto--slider--grande{
+            width: 45%;
+            padding-left: 20px;
+            
+            img{
+                min-height: 556px;
+                min-width: 430px;
+            }
+        } 
+        
+        .produto--descricao{            
+            width: 45%;
+            margin-left: 30px;
+            max-width: 444px;
+            height: auto;                       
+            .produto--descricao--wrapper{
+                border: 2px solid #D2E1DF;
+                padding: 20px;
+            }
+            .produto--descricao__titulo{
+                h2{
+                    text-transform: uppercase;
+                    font-size: 26px;
+                    line-height: 37px;
+                    color: $color--black;
+                    font-family: $font--gotham;
+                }
+                p{
+                    font-size: 14px;
+                    font-family: $font--open;
+                    color: $color--black;
+                    line-height: 23px;
+                    text-transform: uppercase;
+                }
+            }
+            .produto--descricao__valores{
+                margin-top: 15px;
+                span{
+                    &:nth-child(1){
+                        font-family: $font--open;
+                        font-size: 14px;
+                        line-height: 23px;
+                        color: #E35442;
+                    }
+                    &:nth-child(2){
+                        font-family: $font--gotham;
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height: 28px;
+                        color: $color--nav;
+                    }
+                }
+                p{
+                    font-family: $font--open;
+                    font-size: 12px;
+                    line-height: 20px;
+                    color: #7F7F7F;
+                }
+            }
+            .produto--descricao__cores{
+                margin-top: 40px;
+                p{
+                    font-family: $font--open;
+                    font-size: 14px;
+                    line-height: 23px;
+                    color: $color--black;
+                }
+                .cores{
+                    cursor: pointer;
+                    display: inline-block;                    
+                    width: 22px;
+                    height: 22px;
+                    margin: 0 5px;
+                    border-radius: 50%;
+                    background-color: black;
+                    z-index: 2;
+                }
+            }
+            .produto--descricao__tamanho{
+                margin-top: 40px;   
+             > span{
+                  &:nth-child(1){
+                      font-family: $font--open;
+                      font-size: 14px;
+                      line-height: 23px;
+                      color: $color--black;
+                  }
+                  &:nth-child(2){
+                    font-family: $font--open;
+                    font-size: 14px;
+                    line-height: 23px;
+                    color: #5F75AA;
+                    margin-left: 20px;
+                  }
+              }
+              a{
+                font-family: $font--open;
+                font-size: 14px;
+                line-height: 23px;
+                color: #DE8F75;
+                margin-left: 150px;
+              }  
+
+            .produto--descricao__tamanho__eclipses {
+                margin-top: 10px;
+                span{
+                    cursor: pointer;
+                    text-align: center;                    
+                    display: inline-block;
+                    width: 34px;
+                    line-height: 34px;
+                    height: 34px;
+                    background-color: #EBEBEB;
+                    border-radius: 50%;
+                    font-family: $font--gotham;
+                    font-weight: 600;
+                    font-size: 14px;
+                    color: #2A5A75;
+                    &:hover{
+                        background-color: #E0DA9C;
+                    }
+                }
+            }         
+                
+            }
+
+            .produto--descricao__sacola{
+                margin-top: 40px;
+                a{
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-family: $font--open;
+                    color: #fff;
+                    text-align: center;
+                    margin: 0 auto;
+                    display: block;
+                    width: 404px;
+                    height: 60px;
+                    line-height: 60px;
+                    background-color: #32917B;
+                }
+            }
+            .produto--descricao__descricao{
+                margin-top: 20px;
+                p{
+                    color: $color--black;
+                    font-size: 14px;
+                    line-height: 29px;
+                }
+            }
+        }        
+    }    
+}
+
+// section 2 quemViu
+
+section.quemviu{
+    width: 100%;
+    background-color: #fff;
+    min-height: 100vh;
+    margin-top: 20px;
+    h2{
+        font-family: $font--gotham;
+        font-size: 26px;
+        line-height: 37px;
+        color: #DE8F75;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: normal;
+    }
+    .quemviu--produtos{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    
+    .quemviu--produtos__single{
+        position: relative;
+        img{
+            border-right: 7px solid #fff;            
+            z-index: 1;             
+        }
+        .quemviu--produtos__single__plus{
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            z-index: 2;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 1px solid #DE8F75;
+            background-color: rgba(255,255,255,0.3);
+            background-image: url('../img/icones/plus.png');
+            background-position: center;
+            background-size: 16px 16px;
+            background-repeat: no-repeat;
+        }
+
+        .quemviu--produtos__single__preco{                        
+            span{
+                font-family: $font--open;
+                font-size: 14px;
+                text-transform: uppercase;
+                line-height: 26px;
+            }
+            .quemviu--cores__wrapper{
+                display: inline-block;
+                margin-left: 150px;               
+            }
+            .quemviu--cores{             
+                cursor: pointer;
+                display: inline-block;                    
+                width: 13px;
+                height: 13px;                
+                border-radius: 50%;
+                background-color: black;
+                z-index: 2;                                
+            }
+        }
+    }
+    .quemviu--paginas{
+        margin: 20px auto;
+        .quemviu--paginas__arrowL{
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: 1px solid black;
+            background-color: rgba(255,255,255,0.7);
+            background-image: url('../img/icones/arrow_l.png');
+            background-size: 8px 14px;
+            background-position: center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        span{position: relative; top: -14px; margin: 0 10px; font-size: 14px; font-family: $font--open; color: #2A5A75}
+        .quemviu--paginas__arrowR{
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: 1px solid black;
+            background-color: rgba(255,255,255,0.7);
+            background-image: url('../img/icones/arrow_r.png');
+            background-size: 8px 14px;
+            background-position: center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+    }
+ }
+}
+
+// Footer
+footer{
+    
+}
