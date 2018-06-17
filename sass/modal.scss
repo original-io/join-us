@@ -1,0 +1,64 @@
+.modal--mascara{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 4;    
+}
+
+.modal--sucesso{
+    display: none;
+    position: relative;
+    z-index: 5;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 445px;
+    height: 602px;
+    background-color: white;
+    text-align: center;
+    padding: 50px 0;
+    .modal--sucesso__fechar{
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 16px;
+        height: 16px;
+        background-image: url('../img/icones/fechar.png');
+        background-size: contain;
+    }
+    h2{
+        font-size: 22px;
+        color: $color--orange;
+        font-family: $font--gotham;
+        line-height: 31px;
+        text-transform: uppercase;
+        padding: 20px 0;
+    }
+    a.modal--sucesso__continuar{
+        color: $color--cinzanormal;
+        font-size: 14px;
+        font-family: $font--gotham;
+        line-height: 20px;
+        text-decoration: none;
+        display: block;
+        margin: 20px auto;       
+    }
+    a.modal--sucesso__btn{
+        font-size: 18px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: $font--open;
+        color: #fff;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        width: 290px;
+        height: 50px;
+        line-height: 50px;
+        background-color: $color--btn;
+    }
+}

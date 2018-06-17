@@ -1,0 +1,144 @@
+// Footer
+footer{
+    margin:150px auto 0 auto;
+    max-width: 1280px;
+    height: auto;    
+    position: relative;
+    > .container{
+        border-top: 1px solid black;        
+    }
+    .footer--form{
+        position: absolute;
+        right: 60px;
+        top: 0;
+        transform: translateY(calc(-50% + 40px));
+        width: 293px;
+        height: 293px;
+        border-radius: 50%;
+        border: 2px solid black;
+        background-color: white;
+        z-index: 2;
+        padding: 50px;
+        text-align: center;
+        h3{
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 16px;
+            font-family: $font--gotham;
+            color: $color--black;
+            line-height: 23px;
+        }
+        input[type=text]{
+            margin-top: 10px;
+            border: none;
+            padding: 10px 5px;
+            border-bottom: 2px solid $color--cinzanormal;
+            &:focus{
+                outline: none;
+            }
+        }
+        input[type=email]{
+            margin-top: 10px;
+            border: none;
+            padding: 10px 5px;
+            border-bottom: 2px solid $color--cinzanormal;
+            &:focus{
+                outline: none;
+            }
+        }
+        input[type=submit]{   
+            cursor: pointer;         
+            margin: 20px auto;            
+            width: 110px;
+            height: 50px;
+            color: white;
+            text-transform: uppercase;
+            border: none;
+            background-color: $color--orange;
+        }
+    }
+    
+    .footer--sociais{
+        padding: 20px 0;
+        a{
+            margin: 0 10px;
+        }
+    }   
+
+    .footer--informacoes{
+        display: flex;
+        padding: 20px 0;
+        .footer--informacoes__selos{
+            padding: 20px 0;
+            width: 20%;
+            .selo1{
+                display: inline-block;
+                width: 92px;
+                height: 58px;
+                background-image: url('../img/selos/selo1.png');
+                background-size: contain;
+                background-position: center;
+            }
+            .selo2{
+                margin-left: 30px;
+                display: inline-block;
+                width: 54px;
+                height: 58px;
+                background-image: url('../img/selos/selo2.png');
+                background-size: contain;
+                background-position: center;
+            }
+        }
+        .footer--informacoes__geral{
+            width: 20%;
+            display: inline-block;
+            h4{
+                font-family: $font--gotham;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-size: 12px;
+                color: $color--cinzanormal;
+                line-height: 17px;
+            }
+            a{
+                font-size: 14px;
+                font-family: $font--open;
+                text-decoration: none;
+                color: $color--black;
+                margin-bottom: 30px;
+                display: block;
+            }
+        }        
+    }
+
+    .footer--footer{
+        height: 60px;
+        background-color: $color--orange;
+        max-width: 1280px;
+        margin:0 auto;
+        display: flex; 
+        flex-wrap: wrap;
+        align-items: center;
+        padding-left: 150px;         
+        .footer--footer__endereco{
+            width: 80%;
+            p{
+                font-size: 12px;
+                color: white;
+                font-family: $font--open;
+            }
+        }
+        .footer--footer__logo{
+            width: 20%;
+            .footer--logo{
+                z-index: 3;
+                width: 111px;
+                height: 25px;
+                background-image: url('../img/Vector\ \(1\).png');
+                background-size: contain;
+                background-position: center;                
+            }
+        }          
+    }
+  
+}

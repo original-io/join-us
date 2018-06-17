@@ -1,0 +1,354 @@
+header{
+    width: 100%;    
+    .logo{
+        width: 148px;
+        height: 86px;
+        background-image: url(../img/Vector.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin: 0 auto;
+    }
+    nav.desktop{        
+        padding: 13px 0;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        flex-wrap: wrap;               
+        ul{
+            list-style-type: none;           
+            text-align: center;
+            position: relative;
+            top: 8px;         
+            li{
+                display: inline-block;
+                margin: 0 20px;
+                a{
+                    color: black;
+                    text-decoration: none;
+                    font-family: $font--gotham;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    color: $color--nav;
+                }
+            }
+        }       
+              
+        ul.desktop--center{width: 50%}
+        ul.desktop--esquerda{
+            padding-left: 2%;
+            text-align: left;
+            width: 25%;
+            a{font-family: $font--open; font-size: 12px; text-transform: initial;}
+            li{margin:0 10px; color: $color--nav;}                      
+        }
+        div.desktop--direita{
+            padding-right: 2%;
+            text-align: right;
+            width: 25%;
+            form.desktop--direita__form{
+                display: inline-block;
+                margin: 0px 10px;
+                position: relative;
+                top: -4px;
+                input[type=search]{
+                  width: 83px;
+                  line-height: 20px;
+                  padding-left: 28px;
+                  padding-top: 5px;
+                  padding-bottom: 5px;
+                  border: none;                  
+                  border-bottom: 1px solid #ccc;
+                  background-image: url('..//img/icones/lupa.png');
+                  background-position: left;
+                  background-size: 21px 21px;
+                  background-repeat: no-repeat;
+                  &:focus{
+                      outline: none;
+                  }
+                }
+            }            
+            div.desktop--direita__icone{
+                position: relative;
+                top: 4px;
+                cursor: pointer;
+                margin: 0px 10px;
+                display: inline-block;
+                width: 27px;
+                height: 24px;
+                background-image: url('../img/icones/bolsa.png')
+            }          
+        }       
+    }
+    .toggleSapatos{
+        z-index: 4;
+        padding:50px 0;
+        display: none;
+        
+        > .container{
+            max-width: 1000px;            
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;                      
+        }
+        .hoverSapatos--single{
+            width: 20%;            
+            text-align: center;
+            padding: 20px 10px;
+            p{
+                color: $color--orange;
+            }
+        }        
+    }
+
+    .toggleBolsas{
+        display: none;
+        padding: 50px 0;
+        > .container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .bolsas--chamadas{
+            width: 33%;
+            text-align: center;
+            a{
+                display: block;
+                width: 159px;
+                height: 42px;
+                line-height: 42px;
+                border: 2px solid $color--orange;
+                font-size: 12px;
+                color: $color--orange;
+                text-decoration: none;
+                margin: 50px auto;
+            }
+           border-right: 2px solid #C4C4C4;
+        }
+        .bolsas--tipos{
+            width: 33%;
+            a{
+                display: block;
+                font-size: 14px;
+                color: $color--orange;
+                line-height: 42px;
+                text-decoration: none;
+                padding-left: 40px;
+                font-family: $font--open;
+            }
+        }
+        .bolsas--imagem{
+            width: 33.3%;
+        }
+    }
+
+    .toggleAcessorios{
+        display: none;
+        padding: 50px 0;
+        > .container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .bolsas--chamadas{
+            width: 33%;
+            text-align: center;
+            a{
+                display: block;
+                width: 159px;
+                height: 42px;
+                line-height: 42px;
+                border: 2px solid $color--orange;
+                font-size: 12px;
+                color: $color--orange;
+                text-decoration: none;
+                margin: 50px auto;
+            }
+           border-right: 2px solid #C4C4C4;
+        }
+        .bolsas--tipos{
+            width: 33%;
+            a{
+                display: block;
+                font-size: 14px;
+                color: $color--orange;
+                line-height: 42px;
+                text-decoration: none;
+                padding-left: 40px;
+                font-family: $font--open;
+            }
+        }
+        .bolsas--imagem{
+            width: 33.3%;
+        }
+    }
+
+    .mobile--menuhamb{            
+        cursor: pointer;
+        margin: 0 auto;
+        width: 23px;
+        height: 15px;
+        background-image: url('../img/icones/menuhamb.png');
+        background-size: cover;
+        display: none;          
+    }
+    .mobile--menuhamb__wrapper{
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        padding: 10px 0;
+        display: none;
+    }
+    
+    nav.mobile{
+        display: none;
+        ul{             
+            position: relative;            
+            list-style-type: none; 
+            display: none;           
+        }
+        li{
+            background-color: rgb(248, 168, 141);
+            text-align: center;
+            padding: 10px 0;
+            border-bottom: 1px solid black;            
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+        a{
+            color: black;
+            text-decoration: none;
+            font-family: $font--gotham;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: $color--nav;
+        }        
+        
+    }    
+    
+}
+
+.sacola--sucesso{
+    display: none;
+    background-color: white;
+    border: 1px solid #ccc;
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 525px;
+    max-height: 700px;
+    padding: 20px;
+    .sacola--sucesso__fechar{
+        width: 40px;
+        height: 40px;
+        background-color: #5F75AA;
+        position: absolute;
+        right: 0;
+        top:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;                     
+    }
+    .sacola--sucesso__titulo{
+        border-bottom: 1px solid $color--cinzaclaro;
+        padding-bottom: 10px;
+        h2{
+            font-size: 26px;
+            text-transform: uppercase;
+            font-family: $font--gotham;
+            font-weight: normal;
+            color: $color--orange;
+        }
+        p{
+            font-size: 18px;
+            line-height: 29px;
+            font-family: $font--open;
+            color: $color--cinzanormal;
+        }
+    } 
+    .sacola--sucesso__produtos{
+        overflow-x: auto;
+        max-height: 400px;
+        padding: 10px 0;
+        &::-webkit-scrollbar-track {
+            background-color: $color--cinzaclaro;
+        }
+        &::-webkit-scrollbar {
+            width: 6px;
+            background: $color--orange;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: $color--orange;
+        }
+        
+        .sacola--sucesso__produtos__single{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            img{
+                width: 64px;
+                height: 83px;
+                margin: 20px 20px;
+            }
+            .img--descricao{
+                margin: 20px 20px;
+            }            
+            .img--quantidade{
+                display: flex;
+                flex-wrap: wrap;
+                margin: 20px 20px;
+                .img--quantidade__menos{
+                    width: 44px;
+                    height: 32px;
+                    background-color: $color--cinzaclaro;
+                    text-align: center;
+                    line-height: 32px;
+                    cursor: pointer;                   
+                }
+                .img--quantidade__atual{
+                    width: 44px;
+                    height: 32px;
+                    background-color: #fff;
+                    text-align: center;
+                    line-height: 32px;
+                    border-top: 1px solid $color--cinzaclaro;
+                    border-bottom: 1px solid $color--cinzaclaro;                    
+                }
+                .img--quantidade__mais{
+                    width: 44px;
+                    height: 32px;
+                    background-color: $color--cinzaclaro;
+                    text-align: center;
+                    line-height: 32px;
+                    cursor: pointer;  
+                }
+            }
+            .sacola--sucesso__excluir{
+                margin: 20px 20px;
+                cursor: pointer;
+                width: 9px;
+                height: 9px;
+                background-image: url('../img/icones/fechar.png');
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    }
+    .sacola--sucesso__frete{
+        width: 100%;
+        height: 50px;
+        background-color: $color--cinzanormal;
+        text-align: center;
+        span{
+            color: white;
+            font-size: 14px;
+            line-height: 50px;
+            margin-right: 20px;
+            margin-left: 20px;    
+            &:nth-of-type(2){
+                font-weight: 600;
+                cursor: pointer;
+            }        
+        }
+    }
+}
