@@ -20,21 +20,208 @@
                     <li><a href="#">Cadastrar</a></li>
                 </ul><!--desktop--esquerda-->            
                 <ul class="desktop--center">                
-                    <li><a href="#">sapatos</a></li>
-                    <li><a href="#">bolsas</a></li>
-                    <li><a href="#">acessorios</a></li>
-                    <li><a href="#">off</a></li>
+                    <li id="sapatos"><a href="#">sapatos</a></li>
+                    <li id="bolsas"><a href="#">bolsas</a></li>
+                    <li id="acessorios"><a href="#">acessorios</a></li>
+                    <li id="off"><a href="#">off</a></li>
                 </ul><!--desktop-center-->
                 <div class="desktop--direita">
                     <form class="desktop--direita__form">
                         <input type="search" placeholder="Buscar">
                     </form>
-                    <div class="desktop--direita__icone"></div><!--desktop-direita__icone-->
+                    <div id="sacolaSucesso" class="desktop--direita__icone"></div><!--desktop-direita__icone-->
                 </div><!--desktop-direita-->            
             </nav><!--desktop-->
-        </div> 
-       
-    </header> 
+
+            <div class="toggleSapatos">
+                <div class="container">
+                    <div class="hoverSapatos--single">
+                        <img src="img/produto/rasteiras.png" alt="">
+                        <p>Rasteiras</p>
+                    </div>
+                    <div class="hoverSapatos--single">
+                        <img src="img/produto/sapatilha.png" alt="">
+                        <p>Sapatilha</p>
+                    </div>
+                    <div class="hoverSapatos--single">
+                        <img src="img/produto/alpargatas.png" alt="">
+                        <p>Alpargatas</p>
+                    </div>
+                    <div class="hoverSapatos--single">
+                        <img src="img/produto/Mocassins.png" alt="">
+                        <p>Mocassins</p>
+                    </div>
+                    <div class="hoverSapatos--single">
+                        <img src="img/produto/tênis.png" alt="">
+                        <p>Tênis</p>
+                    </div>                    
+                    <div class="hoverSapatos--single">
+                        <img src="img/produto/botas.png" alt="">
+                        <p>Botas</p>
+                    </div>
+                    <div class="hoverSapatos--single">
+                        <img src="img/produto/anabela.png" alt="">
+                        <p>Salto Anabela</p>
+                    </div>
+                    <div class="hoverSapatos--single">
+                        <img src="img/produto/plataforma.png" alt="">
+                        <p>Salto Plataforma</p>
+                    </div>
+                    <div class="hoverSapatos--single">
+                        <img src="img/produto/Salto alto.png" alt="">
+                        <p>Salto Alto</p> 
+                    </div>
+                    <div class="hoverSapatos--single">
+                        <img src="img/produto/salto médio.png" alt="">
+                        <p>Salto Médio</p>
+                    </div>                    
+                </div><!--container-->
+            </div>
+
+            <div class="toggleBolsas">
+                <div class="container">
+                    <div class="bolsas--chamadas">
+                        <img src="img/produto/chamada_bolsas.png" alt="">
+                        <a class="chamada--bolsas__link" href="#">VER TODAS</a>    
+                    </div>
+                    <div class="bolsas--tipos">
+                        <a href="#">Bolsas Pequenas</a>
+                        <a href="#">Bolsas Grandes</a>
+                        <a href="#">Bolsas de Tecido</a>
+                        <a href="#">Bolsas Maleta</a>
+                        <a href="#">Bolsas Saco</a>
+                        <a href="#">Mochilas</a>
+                        <a href="#">Malas</a>
+                        
+                    </div>
+                    <div class="bolsas--imagem">
+                        <img src="img/produto/chamada_bolsas2.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="toggleAcessorios">
+                    <div class="container">
+                        <div class="bolsas--chamadas">
+                            <img src="img/produto/chamada_acessorios.png" alt="">
+                            <a class="chamada--bolsas__link" href="#">VER TODOS</a>    
+                        </div>
+                        <div class="bolsas--tipos">
+                            <a href="#">Bijoux</a>
+                            <a href="#">Carteiras</a>
+                            <a href="#">Cintos</a>
+                            <a href="#">Necessaires</a>
+                            <a href="#">Organizadores</a>
+                            <a href="#">Pros Dias de Sol</a>
+                            <a href="#">Leve Por Aí</a>
+                            <a href="#">É Tendência</a>
+                            
+                        </div>
+                        <div class="bolsas--imagem">
+                            <img src="img/produto/chamada_acessorios2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            <div class="mobile--menuhamb__wrapper">
+                <div class="mobile--menuhamb"></div>
+            </div>
+            <nav class="mobile">                
+                <ul>                   
+                    <li><a href="#">Entrar</a></li>
+                    <li><a href="#">Cadastrar</a></li>
+                    <li><a href="#">SAPATOS</a></li>
+                    <li><a href="#">BOLSAS</a></li>
+                    <li><a href="#">ACESSÓRIOS</a></li>
+                    <li><a href="#">OFF</a></li>
+                </ul>
+            </nav><!--mobile-->
+        </div>        
+    </header>
+
+    <div class="sacola--sucesso">
+        <div class="sacola--sucesso__fechar">
+            <img src="img/icones/fecharB.png" alt="">
+        </div>
+        <div class="sacola--sucesso__titulo">
+            <h2>sacola</h2>
+            <p>5 itens</p>
+        </div>
+        <div class="sacola--sucesso__produtos">
+            <div class="sacola--sucesso__produtos__single">
+                <img src="img/produto/prod01.png" alt="">
+                <div class="img--descricao">
+                    <p>Rasteira tira dedo</p>
+                    <p>R$ 49,90</p>
+                </div>
+                <div class="img--quantidade">
+                    <div class="img--quantidade__menos"><p>-</p></div>
+                    <div class="img--quantidade__atual">01</div>
+                    <div class="img--quantidade__mais">+</div>
+                </div> 
+                <div class="sacola--sucesso__excluir"></div>              
+            </div><!--sacola-sucesso-single-->
+            <div class="sacola--sucesso__produtos__single">
+                <img src="img/produto/prod01.png" alt="">
+                <div class="img--descricao">
+                    <p>Rasteira tira dedo</p>
+                    <p>R$ 49,90</p>
+                </div>
+                <div class="img--quantidade">
+                    <div class="img--quantidade__menos"><p>-</p></div>
+                    <div class="img--quantidade__atual">01</div>
+                    <div class="img--quantidade__mais">+</div>
+                </div> 
+                <div class="sacola--sucesso__excluir"></div>              
+            </div><!--sacola-sucesso-single-->
+            <div class="sacola--sucesso__produtos__single">
+                <img src="img/produto/prod01.png" alt="">
+                <div class="img--descricao">
+                    <p>Rasteira tira dedo</p>
+                    <p>R$ 49,90</p>
+                </div>
+                <div class="img--quantidade">
+                    <div class="img--quantidade__menos"><p>-</p></div>
+                    <div class="img--quantidade__atual">01</div>
+                    <div class="img--quantidade__mais">+</div>
+                </div> 
+                <div class="sacola--sucesso__excluir"></div>              
+            </div><!--sacola-sucesso-single-->
+            <div class="sacola--sucesso__produtos__single">
+                <img src="img/produto/prod01.png" alt="">
+                <div class="img--descricao">
+                    <p>Rasteira tira dedo</p>
+                    <p>R$ 49,90</p>
+                </div>
+                <div class="img--quantidade">
+                    <div class="img--quantidade__menos"><p>-</p></div>
+                    <div class="img--quantidade__atual">01</div>
+                    <div class="img--quantidade__mais">+</div>
+                </div> 
+                <div class="sacola--sucesso__excluir"></div>              
+            </div><!--sacola-sucesso-single-->
+            <div class="sacola--sucesso__produtos__single">
+                <img src="img/produto/prod01.png" alt="">
+                <div class="img--descricao">
+                    <p>Rasteira tira dedo</p>
+                    <p>R$ 49,90</p>
+                </div>
+                <div class="img--quantidade">
+                    <div class="img--quantidade__menos"><p>-</p></div>
+                    <div class="img--quantidade__atual">01</div>
+                    <div class="img--quantidade__mais">+</div>
+                </div> 
+                <div class="sacola--sucesso__excluir"></div>              
+            </div><!--sacola-sucesso-single-->
+        </div><!--sacola-sucesso__produtos-->        
+        <div class="sacola--sucesso__frete">
+            <span>Faltam R$ xx,xx para você</span> <span>Ganhar Frete Grátis</span>
+        </div>
+        <div class="sacola--sucesso__finalizar"></div>
+    </div><!--sacola-sucesso-->
+
+    <!--SESSAO PRINCIPAL-->
+    
     <section class="produtoprincipal">
         <div class="container">
             <nav class="local">
@@ -102,7 +289,7 @@
                         </div>    
                         </div>
                         <div class="produto--descricao__sacola">
-                            <a href="#">adicionar à sacola</a>
+                            <a id="adicionarSacola" href="#">adicionar à sacola</a>
                         </div>
                         <div class="produto--descricao__descricao">
                             <p>Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal.</p>
@@ -111,7 +298,17 @@
                </div><!--produto-descricao-->
            </div><!--produto-->
         </div><!--container-->
-    </section><!--produto-->
+    </section><!--produto-->   
+
+    <div id="mascaraModal" class="modal--mascara"></div>    
+    <div class="modal--sucesso">
+        <div id="modalFechar" class="modal--sucesso__fechar"></div>
+        <img src="img/produto/modal.png" alt="">
+        <h2>adicionado com sucesso</h2>
+        <a class="modal--sucesso__btn" href="#">finalizar compra</a>
+        <a class="modal--sucesso__continuar" href="#">Continuar comprando</a>
+    </div><!--modal-sucesso-->
+   
 
 
     <section class="quemviu">
@@ -119,8 +316,8 @@
             <h2>quem viu viu também</h2>
             <div class="quemviu--produtos">
                 <div class="quemviu--produtos__single">
-                    <div class="quemviu--produtos__single__plus"></div>
-                    <img src="img/produto/prod03.png" alt="">
+                    <div class="quemviu--produtos__single__plus"></div>                    
+                    <img src="img/produto/prod03.png" alt="">                    
                     <div class="quemviu--produtos__single__preco">
                         <span>r$ 204,90</span>
                         <div class="quemviu--cores__wrapper">                        

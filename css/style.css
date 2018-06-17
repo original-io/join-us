@@ -90,6 +90,224 @@ header {
         width: 27px;
         height: 24px;
         background-image: url("../img/icones/bolsa.png"); }
+  header .toggleSapatos {
+    z-index: 4;
+    padding: 50px 0;
+    display: none; }
+    header .toggleSapatos > .container {
+      max-width: 1000px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+    header .toggleSapatos .hoverSapatos--single {
+      width: 20%;
+      text-align: center;
+      padding: 20px 10px; }
+      header .toggleSapatos .hoverSapatos--single p {
+        color: #DE8F75; }
+  header .toggleBolsas {
+    display: none;
+    padding: 50px 0; }
+    header .toggleBolsas > .container {
+      display: flex;
+      flex-wrap: wrap; }
+    header .toggleBolsas .bolsas--chamadas {
+      width: 33%;
+      text-align: center;
+      border-right: 2px solid #C4C4C4; }
+      header .toggleBolsas .bolsas--chamadas a {
+        display: block;
+        width: 159px;
+        height: 42px;
+        line-height: 42px;
+        border: 2px solid #DE8F75;
+        font-size: 12px;
+        color: #DE8F75;
+        text-decoration: none;
+        margin: 50px auto; }
+    header .toggleBolsas .bolsas--tipos {
+      width: 33%; }
+      header .toggleBolsas .bolsas--tipos a {
+        display: block;
+        font-size: 14px;
+        color: #DE8F75;
+        line-height: 42px;
+        text-decoration: none;
+        padding-left: 40px;
+        font-family: Open Sans, sans-serif; }
+    header .toggleBolsas .bolsas--imagem {
+      width: 33.3%; }
+  header .toggleAcessorios {
+    display: none;
+    padding: 50px 0; }
+    header .toggleAcessorios > .container {
+      display: flex;
+      flex-wrap: wrap; }
+    header .toggleAcessorios .bolsas--chamadas {
+      width: 33%;
+      text-align: center;
+      border-right: 2px solid #C4C4C4; }
+      header .toggleAcessorios .bolsas--chamadas a {
+        display: block;
+        width: 159px;
+        height: 42px;
+        line-height: 42px;
+        border: 2px solid #DE8F75;
+        font-size: 12px;
+        color: #DE8F75;
+        text-decoration: none;
+        margin: 50px auto; }
+    header .toggleAcessorios .bolsas--tipos {
+      width: 33%; }
+      header .toggleAcessorios .bolsas--tipos a {
+        display: block;
+        font-size: 14px;
+        color: #DE8F75;
+        line-height: 42px;
+        text-decoration: none;
+        padding-left: 40px;
+        font-family: Open Sans, sans-serif; }
+    header .toggleAcessorios .bolsas--imagem {
+      width: 33.3%; }
+  header .mobile--menuhamb {
+    cursor: pointer;
+    margin: 0 auto;
+    width: 23px;
+    height: 15px;
+    background-image: url("../img/icones/menuhamb.png");
+    background-size: cover;
+    display: none; }
+  header .mobile--menuhamb__wrapper {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    display: none; }
+  header nav.mobile {
+    display: none; }
+    header nav.mobile ul {
+      position: relative;
+      list-style-type: none;
+      display: none; }
+    header nav.mobile li {
+      background-color: #f8a88d;
+      text-align: center;
+      padding: 10px 0;
+      border-bottom: 1px solid black; }
+      header nav.mobile li:last-child {
+        border-bottom: none; }
+    header nav.mobile a {
+      color: black;
+      text-decoration: none;
+      font-family: Gotham Book, sans-serif;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #686868; }
+
+.sacola--sucesso {
+  display: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 525px;
+  max-height: 700px;
+  padding: 20px; }
+  .sacola--sucesso .sacola--sucesso__fechar {
+    width: 40px;
+    height: 40px;
+    background-color: #5F75AA;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; }
+  .sacola--sucesso .sacola--sucesso__titulo {
+    border-bottom: 1px solid #E3E3E3;
+    padding-bottom: 10px; }
+    .sacola--sucesso .sacola--sucesso__titulo h2 {
+      font-size: 26px;
+      text-transform: uppercase;
+      font-family: Gotham Book, sans-serif;
+      font-weight: normal;
+      color: #DE8F75; }
+    .sacola--sucesso .sacola--sucesso__titulo p {
+      font-size: 18px;
+      line-height: 29px;
+      font-family: Open Sans, sans-serif;
+      color: #AEB6C1; }
+  .sacola--sucesso .sacola--sucesso__produtos {
+    overflow-x: auto;
+    max-height: 400px;
+    padding: 10px 0; }
+    .sacola--sucesso .sacola--sucesso__produtos::-webkit-scrollbar-track {
+      background-color: #E2E2E2; }
+    .sacola--sucesso .sacola--sucesso__produtos::-webkit-scrollbar {
+      width: 6px;
+      background: #DE8F75; }
+    .sacola--sucesso .sacola--sucesso__produtos::-webkit-scrollbar-thumb {
+      background: #DE8F75; }
+    .sacola--sucesso .sacola--sucesso__produtos .sacola--sucesso__produtos__single {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center; }
+      .sacola--sucesso .sacola--sucesso__produtos .sacola--sucesso__produtos__single img {
+        width: 64px;
+        height: 83px;
+        margin: 20px 20px; }
+      .sacola--sucesso .sacola--sucesso__produtos .sacola--sucesso__produtos__single .img--descricao {
+        margin: 20px 20px; }
+      .sacola--sucesso .sacola--sucesso__produtos .sacola--sucesso__produtos__single .img--quantidade {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px 20px; }
+        .sacola--sucesso .sacola--sucesso__produtos .sacola--sucesso__produtos__single .img--quantidade .img--quantidade__menos {
+          width: 44px;
+          height: 32px;
+          background-color: #E3E3E3;
+          text-align: center;
+          line-height: 32px;
+          cursor: pointer; }
+        .sacola--sucesso .sacola--sucesso__produtos .sacola--sucesso__produtos__single .img--quantidade .img--quantidade__atual {
+          width: 44px;
+          height: 32px;
+          background-color: #fff;
+          text-align: center;
+          line-height: 32px;
+          border-top: 1px solid #E3E3E3;
+          border-bottom: 1px solid #E3E3E3; }
+        .sacola--sucesso .sacola--sucesso__produtos .sacola--sucesso__produtos__single .img--quantidade .img--quantidade__mais {
+          width: 44px;
+          height: 32px;
+          background-color: #E3E3E3;
+          text-align: center;
+          line-height: 32px;
+          cursor: pointer; }
+      .sacola--sucesso .sacola--sucesso__produtos .sacola--sucesso__produtos__single .sacola--sucesso__excluir {
+        margin: 20px 20px;
+        cursor: pointer;
+        width: 9px;
+        height: 9px;
+        background-image: url("../img/icones/fechar.png");
+        background-size: cover;
+        background-position: center; }
+  .sacola--sucesso .sacola--sucesso__frete {
+    width: 100%;
+    height: 50px;
+    background-color: #AEB6C1;
+    text-align: center; }
+    .sacola--sucesso .sacola--sucesso__frete span {
+      color: white;
+      font-size: 14px;
+      line-height: 50px;
+      margin-right: 20px;
+      margin-left: 20px; }
+      .sacola--sucesso .sacola--sucesso__frete span:nth-of-type(2) {
+        font-weight: 600;
+        cursor: pointer; }
 
 section.produtoprincipal {
   min-height: 100vh; }
@@ -155,8 +373,8 @@ section.produtoprincipal {
       width: 45%;
       padding-left: 20px; }
       section.produtoprincipal .produto .produto--slider--grande img {
-        min-height: 556px;
-        min-width: 430px; }
+        height: 556px;
+        width: 430px; }
     section.produtoprincipal .produto .produto--descricao {
       width: 45%;
       margin-left: 30px;
@@ -271,6 +489,65 @@ section.produtoprincipal {
           font-size: 14px;
           line-height: 29px; }
 
+.modal--mascara {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 4; }
+
+.modal--sucesso {
+  display: none;
+  position: relative;
+  z-index: 5;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 445px;
+  height: 602px;
+  background-color: white;
+  text-align: center;
+  padding: 50px 0; }
+  .modal--sucesso .modal--sucesso__fechar {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/icones/fechar.png");
+    background-size: contain; }
+  .modal--sucesso h2 {
+    font-size: 22px;
+    color: #DE8F75;
+    font-family: Gotham Book, sans-serif;
+    line-height: 31px;
+    text-transform: uppercase;
+    padding: 20px 0; }
+  .modal--sucesso a.modal--sucesso__continuar {
+    color: #AEB6C1;
+    font-size: 14px;
+    font-family: Gotham Book, sans-serif;
+    line-height: 20px;
+    text-decoration: none;
+    display: block;
+    margin: 20px auto; }
+  .modal--sucesso a.modal--sucesso__btn {
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Open Sans, sans-serif;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 290px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #32917B; }
+
 section.quemviu {
   width: 100%;
   background-color: #fff;
@@ -359,13 +636,12 @@ section.quemviu {
         cursor: pointer; }
 
 footer {
-  margin-top: 150px;
-  width: 100%;
+  margin: 150px auto 0 auto;
+  max-width: 1280px;
   height: auto;
   position: relative; }
   footer > .container {
-    border-top: 1px solid black;
-    width: 1280px; }
+    border-top: 1px solid black; }
   footer .footer--form {
     position: absolute;
     right: 60px;
@@ -454,7 +730,7 @@ footer {
   footer .footer--footer {
     height: 60px;
     background-color: #DE8F75;
-    width: 1280px;
+    max-width: 1280px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -475,5 +751,142 @@ footer {
         background-image: url("../img/Vector (1).png");
         background-size: contain;
         background-position: center; }
+
+@media screen and (max-width: 1260px) {
+  section.quemviu .quemviu--produtos {
+    display: block;
+    text-align: center; }
+
+  section.quemviu .quemviu--produtos .quemviu--produtos__single {
+    width: 45%;
+    text-align: center;
+    display: inline-block; }
+
+  section.quemviu .quemviu--produtos .quemviu--produtos__single .quemviu--produtos__single__plus {
+    cursor: pointer;
+    position: absolute;
+    right: calc(50% - 130px);
+    top: 10px; }
+
+  footer > .container {
+    padding-top: 100px; }
+
+  footer .footer--form {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 293px;
+    height: 293px; } }
+@media screen and (max-width: 1120px) {
+  section.produtoprincipal .produto {
+    display: flex;
+    text-align: center; }
+
+  section.produtoprincipal .produto .produto--slider {
+    width: 20%; }
+
+  section.produtoprincipal .produto .produto--slider--grande {
+    width: 80%;
+    margin: 0 auto; }
+
+  section.produtoprincipal .produto .produto--descricao {
+    margin: 20px auto; }
+
+  section.produtoprincipal .produto .produto--descricao .produto--descricao__tamanho a {
+    margin-left: 2px; }
+
+  section.produtoprincipal .produto .produto--descricao .produto--descricao__sacola a {
+    width: 80%; } }
+@media screen and (max-width: 880px) {
+  header nav.desktop {
+    display: none; }
+
+  header nav.mobile ul {
+    display: none; }
+
+  header .mobile--menuhamb {
+    display: block; }
+
+  header .mobile--menuhamb__wrapper {
+    display: block; }
+
+  header nav.mobile {
+    display: block; }
+
+  footer .footer--footer {
+    padding-left: 0;
+    padding: 5px;
+    text-align: center;
+    height: auto; }
+
+  footer .footer--footer .footer--footer__endereco {
+    width: 100%; }
+
+  footer .footer--footer .footer--footer__logo .footer--logo {
+    display: none; } }
+@media screen and (max-width: 720px) {
+  section.quemviu .quemviu--produtos .quemviu--produtos__single {
+    width: 100%;
+    text-align: center;
+    display: inline-block; }
+
+  footer > .container {
+    padding-top: 130px; }
+
+  footer .footer--informacoes {
+    flex-flow: column;
+    align-items: center; } }
+@media screen and (max-width: 650px) {
+  section.produtoprincipal .produto .produto--descricao .produto--descricao__sacola a {
+    font-size: 12px; }
+
+  section.produtoprincipal .produto .produto--slider--grande img {
+    height: 500px;
+    width: 300px; } }
+@media screen and (max-width: 500px) {
+  section.produtoprincipal .produto .produto--descricao .produto--descricao__titulo h2 {
+    font-size: 20px; }
+
+  section.produtoprincipal .produto .produto--slider--grande img {
+    height: 400px;
+    width: 200px;
+    margin-top: 80px; }
+
+  section.produtoprincipal .produto .produto--descricao {
+    width: 90%;
+    margin: 50px auto;
+    max-width: 444px;
+    height: auto; } }
+@media screen and (max-width: 370px) {
+  section.produtoprincipal .produto .produto--descricao .produto--descricao__titulo h2 {
+    font-size: 17px; }
+
+  section.produtoprincipal .produto .produto--slider--grande img {
+    height: 400px;
+    width: 180px;
+    border: 5px solid white;
+    margin-top: 80px; }
+
+  footer .footer--form {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 253px;
+    height: 253px; }
+
+  footer .footer--form input[type=submit] {
+    width: 70px;
+    height: 30px; }
+
+  section.quemviu .quemviu--produtos .quemviu--produtos__single img {
+    max-width: 95%;
+    max-height: 95%; }
+
+  section.quemviu .quemviu--produtos .quemviu--produtos__single .quemviu--produtos__single__plus {
+    right: calc(50% - 100px); } }
 
 /*# sourceMappingURL=style.css.map */
