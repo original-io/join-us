@@ -53,6 +53,11 @@ $('#modalFechar').click(function(){
     $('.modal--sucesso').hide()
 })
 
+$('.modal--sucesso__continuar').click(function(){
+    $('#mascaraModal').hide()
+    $('.modal--sucesso').hide()
+})
+
 // SACOLA SUCESSO
 
 $('#sacolaSucesso').click(function(){
@@ -61,6 +66,7 @@ $('#sacolaSucesso').click(function(){
 $('.sacola--sucesso__fechar').click(function(){
     $('.sacola--sucesso').hide();
 })
+
 
 // menu desktop
 
