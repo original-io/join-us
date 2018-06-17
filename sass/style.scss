@@ -1,375 +1,10 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html,body{height: 100%;}
+@import "reset";
+@import "fonts";
+@import "cores";
+@import "header";
+@import "footer";
+@import "modal";
 
-// Gerais
-.container{max-width: 1280px; margin: 0 auto; padding: 0 2%}
-.clear{clear:both}
-$font--gotham: Gotham Book, sans-serif;
-$font--open: Open Sans, sans-serif;
-$color--nav: #686868;
-$color--black: #202020;
-
-
-
-// header
-header{
-    width: 100%;    
-    .logo{
-        width: 148px;
-        height: 86px;
-        background-image: url(../img/Vector.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        margin: 0 auto;
-    }
-    nav.desktop{        
-        padding: 13px 0;
-        border-top: 1px solid #ccc;
-        border-bottom: 1px solid #ccc;
-        display: flex;
-        flex-wrap: wrap;               
-        ul{
-            list-style-type: none;           
-            text-align: center;
-            position: relative;
-            top: 8px;         
-            li{
-                display: inline-block;
-                margin: 0 20px;
-                a{
-                    color: black;
-                    text-decoration: none;
-                    font-family: $font--gotham;
-                    font-size: 14px;
-                    text-transform: uppercase;
-                    color: $color--nav;
-                }
-            }
-        }       
-              
-        ul.desktop--center{width: 50%}
-        ul.desktop--esquerda{
-            padding-left: 2%;
-            text-align: left;
-            width: 25%;
-            a{font-family: $font--open; font-size: 12px; text-transform: initial;}
-            li{margin:0 10px; color: $color--nav;}                      
-        }
-        div.desktop--direita{
-            padding-right: 2%;
-            text-align: right;
-            width: 25%;
-            form.desktop--direita__form{
-                display: inline-block;
-                margin: 0px 10px;
-                position: relative;
-                top: -4px;
-                input[type=search]{
-                  width: 83px;
-                  line-height: 20px;
-                  padding-left: 28px;
-                  padding-top: 5px;
-                  padding-bottom: 5px;
-                  border: none;                  
-                  border-bottom: 1px solid #ccc;
-                  background-image: url('..//img/icones/lupa.png');
-                  background-position: left;
-                  background-size: 21px 21px;
-                  background-repeat: no-repeat;
-                  &:focus{
-                      outline: none;
-                  }
-                }
-            }            
-            div.desktop--direita__icone{
-                position: relative;
-                top: 4px;
-                cursor: pointer;
-                margin: 0px 10px;
-                display: inline-block;
-                width: 27px;
-                height: 24px;
-                background-image: url('../img/icones/bolsa.png')
-            }          
-        }       
-    }
-    .toggleSapatos{
-        z-index: 4;
-        padding:50px 0;
-        display: none;
-        
-        > .container{
-            max-width: 1000px;            
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;                      
-        }
-        .hoverSapatos--single{
-            width: 20%;            
-            text-align: center;
-            padding: 20px 10px;
-            p{
-                color: #DE8F75;
-            }
-        }        
-    }
-
-    .toggleBolsas{
-        display: none;
-        padding: 50px 0;
-        > .container{
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .bolsas--chamadas{
-            width: 33%;
-            text-align: center;
-            a{
-                display: block;
-                width: 159px;
-                height: 42px;
-                line-height: 42px;
-                border: 2px solid #DE8F75;
-                font-size: 12px;
-                color: #DE8F75;
-                text-decoration: none;
-                margin: 50px auto;
-            }
-           border-right: 2px solid #C4C4C4;
-        }
-        .bolsas--tipos{
-            width: 33%;
-            a{
-                display: block;
-                font-size: 14px;
-                color: #DE8F75;
-                line-height: 42px;
-                text-decoration: none;
-                padding-left: 40px;
-                font-family: $font--open;
-            }
-        }
-        .bolsas--imagem{
-            width: 33.3%;
-        }
-    }
-
-    .toggleAcessorios{
-        display: none;
-        padding: 50px 0;
-        > .container{
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .bolsas--chamadas{
-            width: 33%;
-            text-align: center;
-            a{
-                display: block;
-                width: 159px;
-                height: 42px;
-                line-height: 42px;
-                border: 2px solid #DE8F75;
-                font-size: 12px;
-                color: #DE8F75;
-                text-decoration: none;
-                margin: 50px auto;
-            }
-           border-right: 2px solid #C4C4C4;
-        }
-        .bolsas--tipos{
-            width: 33%;
-            a{
-                display: block;
-                font-size: 14px;
-                color: #DE8F75;
-                line-height: 42px;
-                text-decoration: none;
-                padding-left: 40px;
-                font-family: $font--open;
-            }
-        }
-        .bolsas--imagem{
-            width: 33.3%;
-        }
-    }
-
-    .mobile--menuhamb{            
-        cursor: pointer;
-        margin: 0 auto;
-        width: 23px;
-        height: 15px;
-        background-image: url('../img/icones/menuhamb.png');
-        background-size: cover;
-        display: none;          
-    }
-    .mobile--menuhamb__wrapper{
-        border-top: 1px solid #ccc;
-        border-bottom: 1px solid #ccc;
-        padding: 10px 0;
-        display: none;
-    }
-    
-    nav.mobile{
-        display: none;
-        ul{             
-            position: relative;            
-            list-style-type: none; 
-            display: none;           
-        }
-        li{
-            background-color: rgb(248, 168, 141);
-            text-align: center;
-            padding: 10px 0;
-            border-bottom: 1px solid black;            
-            &:last-child{
-                border-bottom: none;
-            }
-        }
-        a{
-            color: black;
-            text-decoration: none;
-            font-family: $font--gotham;
-            font-size: 14px;
-            text-transform: uppercase;
-            color: $color--nav;
-        }        
-        
-    }    
-    
-}
-
-.sacola--sucesso{
-    display: none;
-    background-color: white;
-    border: 1px solid #ccc;
-    position: absolute;
-    right: 0;
-    top: 0;
-    max-width: 525px;
-    max-height: 700px;
-    padding: 20px;
-    .sacola--sucesso__fechar{
-        width: 40px;
-        height: 40px;
-        background-color: #5F75AA;
-        position: absolute;
-        right: 0;
-        top:0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;                     
-    }
-    .sacola--sucesso__titulo{
-        border-bottom: 1px solid #E3E3E3;
-        padding-bottom: 10px;
-        h2{
-            font-size: 26px;
-            text-transform: uppercase;
-            font-family: $font--gotham;
-            font-weight: normal;
-            color: #DE8F75;
-        }
-        p{
-            font-size: 18px;
-            line-height: 29px;
-            font-family: $font--open;
-            color: #AEB6C1;
-        }
-    } 
-    .sacola--sucesso__produtos{
-        overflow-x: auto;
-        max-height: 400px;
-        padding: 10px 0;
-        &::-webkit-scrollbar-track {
-            background-color: #E2E2E2;
-        }
-        &::-webkit-scrollbar {
-            width: 6px;
-            background: #DE8F75;
-        }
-        &::-webkit-scrollbar-thumb {
-            background: #DE8F75;
-        }
-        
-        .sacola--sucesso__produtos__single{
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            img{
-                width: 64px;
-                height: 83px;
-                margin: 20px 20px;
-            }
-            .img--descricao{
-                margin: 20px 20px;
-            }            
-            .img--quantidade{
-                display: flex;
-                flex-wrap: wrap;
-                margin: 20px 20px;
-                .img--quantidade__menos{
-                    width: 44px;
-                    height: 32px;
-                    background-color: #E3E3E3;
-                    text-align: center;
-                    line-height: 32px;
-                    cursor: pointer;                   
-                }
-                .img--quantidade__atual{
-                    width: 44px;
-                    height: 32px;
-                    background-color: #fff;
-                    text-align: center;
-                    line-height: 32px;
-                    border-top: 1px solid #E3E3E3;
-                    border-bottom: 1px solid #E3E3E3;                    
-                }
-                .img--quantidade__mais{
-                    width: 44px;
-                    height: 32px;
-                    background-color: #E3E3E3;
-                    text-align: center;
-                    line-height: 32px;
-                    cursor: pointer;  
-                }
-            }
-            .sacola--sucesso__excluir{
-                margin: 20px 20px;
-                cursor: pointer;
-                width: 9px;
-                height: 9px;
-                background-image: url('../img/icones/fechar.png');
-                background-size: cover;
-                background-position: center;
-            }
-        }
-    }
-    .sacola--sucesso__frete{
-        width: 100%;
-        height: 50px;
-        background-color: #AEB6C1;
-        text-align: center;
-        span{
-            color: white;
-            font-size: 14px;
-            line-height: 50px;
-            margin-right: 20px;
-            margin-left: 20px;    
-            &:nth-of-type(2){
-                font-weight: 600;
-                cursor: pointer;
-            }        
-        }
-    }
-}
 
 // sessao 1 produto
 section.produtoprincipal{
@@ -419,7 +54,7 @@ section.produtoprincipal{
             p{
                 font-size: 12px;                
                 font-family: $font--open;
-                color: #DE8F75;
+                color: $color--orange;
             }
             .produto--slider__play{
                 cursor: pointer;
@@ -551,7 +186,7 @@ section.produtoprincipal{
                 font-family: $font--open;
                 font-size: 14px;
                 line-height: 23px;
-                color: #DE8F75;
+                color: $color--orange;
                 margin-left: 150px;
               }  
 
@@ -592,7 +227,7 @@ section.produtoprincipal{
                     width: 404px;
                     height: 60px;
                     line-height: 60px;
-                    background-color: #32917B;
+                    background-color: $color--btn;
                 }
             }
             .produto--descricao__descricao{
@@ -607,70 +242,7 @@ section.produtoprincipal{
     }    
 }
 
-.modal--mascara{
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 4;    
-}
 
-.modal--sucesso{
-    display: none;
-    position: relative;
-    z-index: 5;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 445px;
-    height: 602px;
-    background-color: white;
-    text-align: center;
-    padding: 50px 0;
-    .modal--sucesso__fechar{
-        cursor: pointer;
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        width: 16px;
-        height: 16px;
-        background-image: url('../img/icones/fechar.png');
-        background-size: contain;
-    }
-    h2{
-        font-size: 22px;
-        color: #DE8F75;
-        font-family: $font--gotham;
-        line-height: 31px;
-        text-transform: uppercase;
-        padding: 20px 0;
-    }
-    a.modal--sucesso__continuar{
-        color: #AEB6C1;
-        font-size: 14px;
-        font-family: $font--gotham;
-        line-height: 20px;
-        text-decoration: none;
-        display: block;
-        margin: 20px auto;       
-    }
-    a.modal--sucesso__btn{
-        font-size: 18px;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-family: $font--open;
-        color: #fff;
-        text-align: center;
-        margin: 0 auto;
-        display: block;
-        width: 290px;
-        height: 50px;
-        line-height: 50px;
-        background-color: #32917B;
-    }
-}
 
 // section 2 quemViu
 
@@ -683,7 +255,7 @@ section.quemviu{
         font-family: $font--gotham;
         font-size: 26px;
         line-height: 37px;
-        color: #DE8F75;
+        color: $color--orange;
         text-transform: uppercase;
         text-align: center;
         font-weight: normal;
@@ -708,7 +280,7 @@ section.quemviu{
             width: 45px;
             height: 45px;
             border-radius: 50%;
-            border: 1px solid #DE8F75;
+            border: 1px solid $color--orange;
             background-color: rgba(255,255,255,0.3);
             background-image: url('../img/icones/plus.png');
             background-position: center;
@@ -771,151 +343,9 @@ section.quemviu{
  }
 }
 
-// Footer
-footer{
-    margin:150px auto 0 auto;
-    max-width: 1280px;
-    height: auto;    
-    position: relative;
-    > .container{
-        border-top: 1px solid black;        
-    }
-    .footer--form{
-        position: absolute;
-        right: 60px;
-        top: 0;
-        transform: translateY(calc(-50% + 40px));
-        width: 293px;
-        height: 293px;
-        border-radius: 50%;
-        border: 2px solid black;
-        background-color: white;
-        z-index: 2;
-        padding: 50px;
-        text-align: center;
-        h3{
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 16px;
-            font-family: $font--gotham;
-            color: $color--black;
-            line-height: 23px;
-        }
-        input[type=text]{
-            margin-top: 10px;
-            border: none;
-            padding: 10px 5px;
-            border-bottom: 2px solid #AEB6C1;
-            &:focus{
-                outline: none;
-            }
-        }
-        input[type=email]{
-            margin-top: 10px;
-            border: none;
-            padding: 10px 5px;
-            border-bottom: 2px solid #AEB6C1;
-            &:focus{
-                outline: none;
-            }
-        }
-        input[type=submit]{   
-            cursor: pointer;         
-            margin: 20px auto;            
-            width: 110px;
-            height: 50px;
-            color: white;
-            text-transform: uppercase;
-            border: none;
-            background-color: #DE8F75;
-        }
-    }
-    
-    .footer--sociais{
-        padding: 20px 0;
-        a{
-            margin: 0 10px;
-        }
-    }   
 
-    .footer--informacoes{
-        display: flex;
-        padding: 20px 0;
-        .footer--informacoes__selos{
-            padding: 20px 0;
-            width: 20%;
-            .selo1{
-                display: inline-block;
-                width: 92px;
-                height: 58px;
-                background-image: url('../img/selos/selo1.png');
-                background-size: contain;
-                background-position: center;
-            }
-            .selo2{
-                margin-left: 30px;
-                display: inline-block;
-                width: 54px;
-                height: 58px;
-                background-image: url('../img/selos/selo2.png');
-                background-size: contain;
-                background-position: center;
-            }
-        }
-        .footer--informacoes__geral{
-            width: 20%;
-            display: inline-block;
-            h4{
-                font-family: $font--gotham;
-                font-weight: 600;
-                text-transform: uppercase;
-                font-size: 12px;
-                color: #AEB6C1;
-                line-height: 17px;
-            }
-            a{
-                font-size: 14px;
-                font-family: $font--open;
-                text-decoration: none;
-                color: $color--black;
-                margin-bottom: 30px;
-                display: block;
-            }
-        }        
-    }
 
-    .footer--footer{
-        height: 60px;
-        background-color: #DE8F75;
-        max-width: 1280px;
-        margin:0 auto;
-        display: flex; 
-        flex-wrap: wrap;
-        align-items: center;
-        padding-left: 150px;         
-        .footer--footer__endereco{
-            width: 80%;
-            p{
-                font-size: 12px;
-                color: white;
-                font-family: $font--open;
-            }
-        }
-        .footer--footer__logo{
-            width: 20%;
-            .footer--logo{
-                z-index: 3;
-                width: 111px;
-                height: 25px;
-                background-image: url('../img/Vector\ \(1\).png');
-                background-size: contain;
-                background-position: center;                
-            }
-        }          
-    }
-  
-}
-
+//queries
 @media screen and (max-width: 1260px){
     section.quemviu .quemviu--produtos{
         display: block;
@@ -1087,3 +517,4 @@ footer{
     }
     
 }
+
