@@ -21,38 +21,71 @@
             .list-inline-item
               a.text-secondary.text-uppercase(data-toggle="collapse" href="#off") Off
         .col-lg-4.mb-3.mb-lg-0.text-center.text-lg-right
-          .list-inline
-            .list-inline-item
-              .input-group.mb-2
-                .input-group-prepend.border-bottom
-                  .input-group-text.bg-white.border-0
-                    .fa.fa-search
-                input.form-control.border-top-0.border-left-0.border-right-0(placeholder="busca")
-            .list-inline-item
-              .btn.btn-light
-                .list-inline
-                  .list-inline-item
-                    .fa.fa-shopping-bag
-                  .list-inline-item
-                    .font-weight-bold 0
-      #sapatos.collapse
-        .row
-          .col-lg-2.text-center(v-for="(shoe, index) in shoes" :class="{'offset-lg-1': index % 5 == 0}")
-            a.text-burning-sand(href)
-              img(:src="shoe.image")
-              p {{shoe.name}}
-      #bolsas.collapse
-        .card
-          .card-body
-            span Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-      #acessorios.collapse
-        .card
-          .card-body
-            span Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-      #off.collapse
-        .card
-          .card-body
-            span Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+          .dropdown.w-100
+            #dropdownMenuButton.list-inline(data-toggle="dropdown")
+              .list-inline-item
+                .input-group.mb-2
+                  .input-group-prepend.border-bottom
+                    .input-group-text.bg-white.border-0
+                      .fa.fa-search
+                  input.form-control.border-top-0.border-left-0.border-right-0(placeholder="busca")
+              .list-inline-item
+                .btn.btn-light
+                  .list-inline
+                    .list-inline-item
+                      .fa.fa-shopping-bag
+                    .list-inline-item
+                      .font-weight-bold 0
+            .dropdown-menu.p-3
+              h3.text-uppercase.text-burning-sand Sacola
+              .text-secondary 5 itens
+              hr
+              .row.mb-3(v-for="(item, index) in cart")
+                .col-3
+                  img.img-fluid(:src="item.img")
+                .col-3
+                  .d-block {{item.name}}
+                  .font-weight-bold R$ {{item.price.toFixed(2)}}
+                .col-3
+                  .btn.btn-secondary
+                    .fa.fa-minus
+                  input.form-control(v-model="item.quantity")
+                  .btn.btn-secondary
+                    .fa.fa-plus
+                .col-3
+                  .btn(@click="cart.splice(index, 1)")
+                    .fa.fa-times
+      #accordion
+        #sapatos.collapse(data-parent="#accordion")
+          .row
+            .col-lg-2.text-center(v-for="(shoe, index) in shoes" :class="{'offset-lg-1': index % 5 == 0}")
+              a.text-burning-sand(href)
+                img(:src="shoe.image")
+                p {{shoe.name}}
+        #bolsas.collapse(data-parent="#accordion")
+          .row
+            .col-lg-4.text-center
+              img.mb-3(src="@/assets/Bol sas.png")
+              .mb-3
+                button.btn.btn-outline-burning-sand
+                  .text-uppercase Ver todas
+            .col-lg-4
+              .mb-3(v-for="bolsa in bolsas")
+                a.text-burning-sand(href) {{bolsa.name}}
+            .col-lg-4.text-center
+              img.img-fluid(src="@/assets/banner-menu2.png")
+        #acessorios.collapse(data-parent="#accordion")
+          .row
+            .col-lg-4.text-center
+              img.mb-3(src="@/assets/aces só rios.png")
+              .mb-3
+                button.btn.btn-outline-burning-sand
+                  .text-uppercase Ver todas
+            .col-lg-4
+              .mb-3(v-for="acessorio in acessorios")
+                a.text-burning-sand(href) {{acessorio.name}}
+            .col-lg-4.text-center
+              img.img-fluid(src="@/assets/banner-menu.png")
 </template>
 
 <script>
