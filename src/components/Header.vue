@@ -28,7 +28,6 @@
                   .input-group-text.bg-white.border-0
                     .fa.fa-search
                 input.form-control.border-top-0.border-left-0.border-right-0(placeholder="busca")
-
             .list-inline-item
               .btn.btn-light
                 .list-inline
