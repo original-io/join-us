@@ -5,7 +5,7 @@
         img.my-3(src="@/assets/banner.svg")
     hr.mt-0
     .container
-      .row
+      .row.mb-3
         .col-lg-4.mb-3.mb-lg-0.text-center.text-lg-left.align-self-center
           router-link.text-secondary(to="/") Entrar
           span.mx-1 |
