@@ -13,13 +13,13 @@
         .col-lg-4.mb-3.mb-lg-0.text-center.align-self-center
           .list-inline
             .list-inline-item
-              router-link.text-secondary.text-uppercase(to="/sapatos") Sapatos
+              a.text-secondary.text-uppercase(data-toggle="collapse" href="#sapatos") Sapatos
             .list-inline-item
-              router-link.text-secondary.text-uppercase(to="/bolsas") Bolsas
+              a.text-secondary.text-uppercase(data-toggle="collapse" href="#bolsas") Bolsas
             .list-inline-item
-              router-link.text-secondary.text-uppercase(to="/acessorios") Acessórios
+              a.text-secondary.text-uppercase(data-toggle="collapse" href="#acessorios") Acessórios
             .list-inline-item
-              router-link.text-secondary.text-uppercase(to="/off") Off
+              a.text-secondary.text-uppercase(data-toggle="collapse" href="#off") Off
         .col-lg-4.mb-3.mb-lg-0.text-center.text-lg-right
           .list-inline
             .list-inline-item
@@ -35,4 +35,22 @@
                     .fa.fa-shopping-bag
                   .list-inline-item
                     .font-weight-bold 0
+      #sapatos.collapse
+        .row
+          .col-lg-2.text-center(v-for="(shoe, index) in shoes" :class="{'offset-lg-1': index % 5 == 0}")
+            a.text-burning-sand(href)
+              img(:src="shoe.image")
+              p {{shoe.name}}
+      #bolsas.collapse
+        .card
+          .card-body
+            span Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+      #acessorios.collapse
+        .card
+          .card-body
+            span Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+      #off.collapse
+        .card
+          .card-body
+            span Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
 </template>
