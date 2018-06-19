@@ -54,3 +54,24 @@
           .card-body
             span Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      shoes: [
+        {name: "rasteiras", image: require("@/assets/rasteiras.svg")},
+        {name: "sapatilhas", image: require("@/assets/sapatilha.svg")},
+        {name: "alpargatas", image: require("@/assets/alpargatas.svg")},
+        {name: "mocassins", image: require("@/assets/Mocassins.svg")},
+        {name: "tênis", image: require("@/assets/tênis.svg")},
+        {name: "botas", image: require("@/assets/botas.svg")},
+        {name: "salto anabela", image: require("@/assets/anabela.svg")},
+        {name: "salto plataforma", image: require("@/assets/plataforma.svg")},
+        {name: "salto alto", image: require("@/assets/Salto alto.svg")},
+        {name: "salto médio", image: require("@/assets/salto médio.svg")},
+      ]
+    }
+  }
+}
+</script>
