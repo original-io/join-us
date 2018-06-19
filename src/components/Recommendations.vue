@@ -23,6 +23,7 @@
       .list-inline-item
         .btn
           .far.fa-arrow-alt-circle-right.fa-2x
+    div(style="height:10rem")
 </template>
 
 <script>
