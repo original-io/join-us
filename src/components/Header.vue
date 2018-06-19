@@ -70,6 +70,31 @@ export default {
         {name: "salto plataforma", image: require("@/assets/plataforma.svg")},
         {name: "salto alto", image: require("@/assets/Salto alto.svg")},
         {name: "salto médio", image: require("@/assets/salto médio.svg")},
+      ],
+      bolsas: [
+        {name: "bolsas pequenas"},
+        {name: "bolsas grandes"},
+        {name: "bolsas de tecido"},
+        {name: "bolsas maleta"},
+        {name: "bolsas saco"},
+        {name: "mochilas"},
+        {name: "malas"},
+      ],
+      acessorios: [
+        {name: "Bijoux"},
+        {name: "Carteiras"},
+        {name: "Cintos"},
+        {name: "Necessaires"},
+        {name: "Organizadores"},
+        {name: "Pros Dias de Sol"},
+        {name: "Leve Por Aí"},
+        {name: "É Tendência"},
+      ],
+      cart: [
+        {name: "rasteira tira dedo", price: 49.9, quantity: 1, img: require("@/assets/prod02.jpg")},
+        {name: "rasteira tira dedo", price: 49.9, quantity: 1, img: require("@/assets/prod02.jpg")},
+        {name: "bolsa tresse rolote", price: 49.9, quantity: 1, img: require("@/assets/prod02.jpg")},
+        {name: "rasteira tira dedo", price: 49.9, quantity: 1, img: require("@/assets/prod02.jpg")},
       ]
     }
   }
