@@ -1,6 +1,13 @@
 <template lang="pug">
   div
     .container.mb-3.text-center.text-lg-left
+      .position-relative
+        .position-absolute.p-5.border.rounded-circle.bg-white(style="right:0; transform: translateY(calc(-50%))")
+          form
+            .text-uppercase.font-weight-bold Assine nossa news
+            input.form-control.mb-3.border-top-0.border-left-0.border-right-0(type="text" placeholder="Nome" required)
+            input.form-control.mb-3.border-top-0.border-left-0.border-right-0(type="email" placeholder="E-mail" required)
+            button.btn.btn-outline-burning-sand.form-control.mb-3 Enviar
       .list-inline
         .list-inline-item
           .btn
