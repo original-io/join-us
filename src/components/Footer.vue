@@ -33,7 +33,6 @@
           router-link.text-secondary.d-block(to="/") Franquias e Multimarcas
           router-link.text-secondary.d-block(to="/") Trabalhe com a Gente
           router-link.text-secondary.d-block(to="/") Procon-RJ
-        .col
     .bg-burning-sand
       .container
         .row
