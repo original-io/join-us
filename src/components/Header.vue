@@ -89,6 +89,8 @@
 </template>
 
 <script>
+import $ from "jquery"
+
 export default {
   data() {
     return {
@@ -130,6 +132,11 @@ export default {
         {name: "rasteira tira dedo", price: 49.9, quantity: 1, img: require("@/assets/prod02.jpg")},
       ]
     }
+  },
+  mounted() {
+    $(document).on('click', '.dropdown-menu', function (e) {
+      e.stopPropagation();
+    });
   }
 }
 </script>
