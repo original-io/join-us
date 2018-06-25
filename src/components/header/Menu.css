@@ -1,0 +1,8 @@
+.menu {
+  padding: 0.5rem 0; }
+  .menu__list {
+    margin: 0; }
+    .menu__list-item {
+      margin: 0.5rem 1.5rem; }
+      .menu__list-item-link {
+        text-transform: uppercase; }

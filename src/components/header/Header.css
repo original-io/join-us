@@ -1,0 +1,6 @@
+.header {
+  text-align: center; }
+  .header__logo {
+    border-bottom: 1px solid #CCC; }
+    .header__logo h1 {
+      margin: 1.5rem auto; }

@@ -1,0 +1,24 @@
+.login {
+  padding: 1rem 0 0.5rem;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &__list {
+    margin: 0;
+    
+    &-item {
+      &:not(:last-child) {
+        margin-right: 0.75rem;
+        padding-right: 0.75rem;
+        border-right: 1px solid $gray-700;
+        line-height: 1.125;
+      }
+
+      &-link {
+        font-size: 0.875rem;
+        color: $gray-700;
+      }
+    }
+  }
+}

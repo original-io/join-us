@@ -1,0 +1,18 @@
+.header {
+  &__logo {
+    border-bottom: 1px solid $gray-400;
+
+    h1 {
+      margin: 1.5rem auto;
+    }
+  }
+
+  &__subheader {
+    border-bottom: 1px solid $gray-400;
+  }
+}
+
+@import "src/components/header/Menu.scss";
+@import "src/components/header/Login.scss";
+@import "src/components/header/Search.scss";
+@import "src/components/header/Cart.scss";

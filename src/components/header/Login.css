@@ -1,0 +1,6 @@
+.login {
+  padding: 1rem 0 0; }
+  .login__list {
+    margin: 0; }
+    .login__list-item:not(:last-child) {
+      margin-right: 1rem; }
