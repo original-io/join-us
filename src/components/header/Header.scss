@@ -1,4 +1,7 @@
+@import "src/components/common/Variables.scss";
+
 .header {
+  margin-bottom: 1rem;
   &__logo {
     border-bottom: 1px solid $gray-400;
 

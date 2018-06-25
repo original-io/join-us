@@ -1,8 +1,15 @@
 .menu {
-  padding: 0.5rem 0; }
+  overflow-x: auto;
+  text-align: center; }
   .menu__list {
-    margin: 0; }
+    margin: 0;
+    white-space: nowrap; }
     .menu__list-item {
-      margin: 0.5rem 1.5rem; }
+      margin: 0; }
+      .menu__list-item:not(:last-child) {
+        margin-right: 0; }
       .menu__list-item-link {
-        text-transform: uppercase; }
+        padding: 1rem 1.5rem;
+        text-transform: uppercase;
+        display: inline-block;
+        color: #686868; }

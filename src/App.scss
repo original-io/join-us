@@ -1,21 +1,6 @@
-$white: #fff;
-$gray-100: #F2F2F2;
-$gray-200: #EBEBEB;
-$gray-300: #E3E3E3;
-$gray-400: #CCCCCC;
-$gray-500: #ADADAD;
-$gray-600: #7F7F7F;
-$gray-700: #686868;
-$gray-800: #333333;
-$gray-900: #202020;
-$black: $gray-900;
-
-$primary: #DE8F75;
-
-$grid-gutter-width: 15px;
-
-$link-hover-decoration: none;
+@import "src/components/common/Variables.scss";
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
 @import "src/components/header/Header.scss";
+@import "src/components/footer/Footer.scss";

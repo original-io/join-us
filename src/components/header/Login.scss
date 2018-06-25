@@ -1,5 +1,7 @@
+@import "src/components/common/Variables.scss";
+
 .login {
-  padding: 1rem 0 0.5rem;
+  padding: 1rem 0 0.25rem;
   overflow-y: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -9,8 +11,8 @@
     
     &-item {
       &:not(:last-child) {
-        margin-right: 0.75rem;
-        padding-right: 0.75rem;
+        margin-right: 0.65rem;
+        padding-right: 0.65rem;
         border-right: 1px solid $gray-700;
         line-height: 1.125;
       }

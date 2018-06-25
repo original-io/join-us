@@ -1,6 +1,53 @@
 .header {
-  text-align: center; }
+  margin-bottom: 1rem; }
   .header__logo {
-    border-bottom: 1px solid #CCC; }
+    border-bottom: 1px solid #CCCCCC; }
     .header__logo h1 {
       margin: 1.5rem auto; }
+  .header__subheader {
+    border-bottom: 1px solid #CCCCCC; }
+
+.menu {
+  overflow-x: auto;
+  text-align: center; }
+  .menu__list {
+    margin: 0;
+    white-space: nowrap; }
+    .menu__list-item {
+      margin: 0; }
+      .menu__list-item:not(:last-child) {
+        margin-right: 0; }
+      .menu__list-item-link {
+        padding: 1rem 1.5rem;
+        text-transform: uppercase;
+        display: inline-block;
+        color: #686868; }
+
+.login {
+  padding: 1rem 0 0.25rem;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+  .login__list {
+    margin: 0; }
+    .login__list-item:not(:last-child) {
+      margin-right: 0.65rem;
+      padding-right: 0.65rem;
+      border-right: 1px solid #686868;
+      line-height: 1.125; }
+    .login__list-item-link {
+      font-size: 0.875rem;
+      color: #686868; }
+
+.search {
+  padding: 0.75rem 0 0.25rem; }
+  .search__input {
+    background: url("components/header/Search.svg") 0.25rem center no-repeat transparent scroll;
+    padding-left: calc(21px + 0.5rem); }
+
+.cart {
+  text-align: center;
+  padding: 0.75rem 0 0.25rem; }
+  .cart__button {
+    background: url("components/header/Cart.svg") 0.25rem center no-repeat transparent scroll;
+    padding-left: calc(28px + 0.5rem); }

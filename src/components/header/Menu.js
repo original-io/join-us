@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 
 class Menu extends Component {
   render() {
-    const listItems = this.props.menuItems;
-    const list = listItems.map((menuItem, index) =>
+    const list = this.props.menu;
+    const listItems = list.map((item, index) =>
       <li className="list-inline-item menu__list-item" key={index}>
-        <a className="menu__list-item-link" href="#">{menuItem}</a>
+        <a className="menu__list-item-link" href="#">{item}</a>
       </li>
     );
 
     return (
       <nav className="menu">
         <ul className="list-inline menu__list">
-          {list}
+          {listItems}
         </ul>
       </nav>
     );
