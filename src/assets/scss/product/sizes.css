@@ -1,0 +1,17 @@
+.sizes {
+  margin: 1.75rem 0; }
+  .sizes__list {
+    margin-bottom: 0; }
+    .sizes__list-item:not(:last-child) {
+      margin-right: 0.25rem;
+      margin-bottom: 0.25rem;
+      padding-right: 0.25rem; }
+  .sizes__button {
+    border: 0 none;
+    width: 2.125rem;
+    height: 2.125rem;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: #F2F2F2; }
+  .sizes__description-name {
+    margin-left: 0.25rem; }

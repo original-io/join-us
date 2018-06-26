@@ -1,0 +1,32 @@
+@import "src/assets/scss/shared/variables.scss";
+
+.sizes {
+  margin: 1.75rem 0;
+
+  &__list {
+    margin-bottom: 0;
+    
+    &-item {
+      &:not(:last-child) {
+        margin-right: 0.25rem;
+        margin-bottom: 0.25rem;
+        padding-right: 0.25rem;
+      }
+    }
+  }
+
+  &__button {
+    border: 0 none;
+    width: 2.125rem;
+    height: 2.125rem;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: $gray-100;
+  }
+
+  &__description{
+    &-name {
+      margin-left: 0.25rem;
+    }
+  }
+}

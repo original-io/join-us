@@ -1,0 +1,24 @@
+.payments {
+  margin: 2rem 0;
+  
+  &__list {
+    margin: 0;
+
+    &-item {
+      &:not(:last-child) {
+        margin-right: 0.65rem;
+        padding-right: 0.65rem;
+        border-right: 1px solid $danger;
+      }
+    }
+  }
+
+  &__old-price {
+    color: $danger;
+  }
+
+  &__price {
+    font-size: 1.35rem;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "heading": "Institucional",
+    "items": [
+      "A Marca",
+      "Lojas",
+      "Contato"
+    ]
+  },
+  {
+    "id": 2,
+    "heading": "Informações",
+    "items": [
+      "Formas de Pagamento",
+      "Trocas e Devoluções",
+      "Cuidados com o produto"
+    ]
+  },
+  {
+    "id": 3,
+    "heading": "Conheça",
+    "items": [
+      "Franquias e Multimarcas",
+      "Trabalhe com a gente",
+      "Procon-RJ"
+    ]
+  }
+]

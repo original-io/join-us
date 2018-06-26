@@ -1,0 +1,4 @@
+.form-control {
+  border-bottom: 1px solid #CCCCCC; }
+  .form-control:hover, .form-control:focus, .form-control:active {
+    border-bottom: 1px solid #DE8F75; }

@@ -1,0 +1,29 @@
+@import "src/assets/scss/shared/variables.scss";
+
+.info {
+  &__card {
+    border-width: 2px;
+    border-color: $complement-1;
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &__list {
+    margin-bottom: 2.5rem;
+    
+    &-item {
+      &:not(:last-child) {
+        margin-right: 0.65rem;
+        padding-right: 0.65rem;
+        border-right: 1px solid $gray-700;
+      }
+    }
+  }
+
+  &__cart {
+    margin: 2rem 0 1rem;
+  }
+}

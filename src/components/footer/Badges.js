@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 
-import vtex from './Vtex.png';
-import ebit from './Ebit.png';
+import vtex from '../../assets/img/footer/vtex.png';
+import ebit from '../../assets/img/footer/ebit.png';
 
 class Badges extends Component {
   render() {
     return (
-      <div class="badges">
-        <ul class="list-inline">
-          <li className="list-inline-item"><img class="badges__vtex" src={vtex} alt="Vtex Certified" /></li>
-          <li className="list-inline-item"><img class="badges__ebit" src={ebit} alt="eBit - Ouro" /></li>
+      <div className="badges">
+        <ul className="list-inline">
+          <li className="list-inline-item">
+            <img className="badges__vtex" src={vtex} title="Vtex Certified" alt="Vtex Certified" />
+          </li>
+          <li className="list-inline-item"><img className="badges__ebit" src={ebit} title="eBit - Ouro" alt="eBit - Ouro" /></li>
         </ul>
       </div>
     );

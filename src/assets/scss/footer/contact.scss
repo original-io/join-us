@@ -1,0 +1,12 @@
+@import "src/assets/scss/shared/variables.scss";
+
+.contact {
+  margin-top: 3rem;
+  padding: 0.25rem 0;
+  background-color: $primary;
+  color: $white;
+
+  &__address{
+    margin-bottom: 0;
+  }
+}

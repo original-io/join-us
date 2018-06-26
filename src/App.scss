@@ -1,6 +1,8 @@
-@import "src/components/common/Variables.scss";
+@import "src/assets/scss/shared/variables.scss";
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
-@import "src/components/header/Header.scss";
-@import "src/components/footer/Footer.scss";
+@import "src/assets/scss/shared/shared.scss";
+@import "src/assets/scss/header/header.scss";
+@import "src/assets/scss/product/product.scss";
+@import "src/assets/scss/footer/footer.scss";

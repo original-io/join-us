@@ -1,0 +1,24 @@
+.newsletter {
+  margin: -5rem auto 0;
+  max-width: 18rem; }
+  .newsletter__circle {
+    position: relative;
+    width: 100%;
+    border: 2px solid #AEB6C1;
+    border-radius: 100%;
+    background-color: #fff; }
+    .newsletter__circle:after {
+      content: '';
+      display: block;
+      padding-bottom: 100%; }
+  .newsletter__form {
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%; }
+    .newsletter__form-heading {
+      font-size: 1rem;
+      text-transform: uppercase;
+      font-weight: bold; }

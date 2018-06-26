@@ -5,14 +5,16 @@ import Login from './Login';
 import Search from './Search';
 import Cart from './Cart';
 
-import menu from '../../model/header/Menu';
+import menu from '../../api/menu';
 
 class Header extends Component {
   render() {
     return (
       <header className="header">
         <div className="container-fluid header__logo">
-          <h1 className="text-center">Original.io</h1>
+          <h3 className="header__logo-heading">
+            <img className="img-fluid header__logo-img" src={require("../../assets/img/shared/logo.svg")} alt="Original.io" />
+          </h3>
         </div>
         <div className="header__subheader">
           <div className="container">

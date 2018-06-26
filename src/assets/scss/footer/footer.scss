@@ -1,0 +1,14 @@
+@import "src/assets/scss/shared/variables.scss";
+
+.footer {
+  position: relative;
+  border-top: 2px solid $complement-1;
+  padding-top: 1.5rem;
+  margin-top: 5rem;
+}
+
+@import "src/assets/scss/footer/newsletter.scss";
+@import "src/assets/scss/footer/sitemap.scss";
+@import "src/assets/scss/footer/social.scss";
+@import "src/assets/scss/footer/badges.scss";
+@import "src/assets/scss/footer/contact.scss";

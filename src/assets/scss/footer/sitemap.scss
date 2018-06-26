@@ -1,0 +1,22 @@
+@import "src/assets/scss/shared/variables.scss";
+
+.sitemap {
+  margin: 2rem 0;
+  
+  &__heading {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: $complement-1;
+    font-weight: bold;
+  }
+
+  &__list {
+    &-item {
+      margin: 1rem 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

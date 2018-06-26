@@ -6,7 +6,7 @@ import Social from './Social';
 import Badges from './Badges';
 import Contact from './Contact';
 
-import sitemap from '../../model/footer/Sitemap';
+import sitemap from '../../api/sitemap';
 
 class Footer extends Component {
   render() {
@@ -18,9 +18,14 @@ class Footer extends Component {
               <Newsletter />
             </div>
             <div className="col-lg-2 col-md-7 col-sm-5 order-lg-1 order-md-1 order-sm-1 order-3 align-self-center">
-              <Social />
-              <br />
-              <Badges />
+              <div className="row">
+                <div className="col-sm-12 col-6">
+                  <Social />
+                </div>
+                <div className="col-sm-12 col-6">
+                  <Badges />
+                </div>
+              </div>
             </div>
             <div className="col-lg-6 order-lg-2 order-md-3 order-sm-3 order-2">
               <Sitemap sitemap={sitemap} />

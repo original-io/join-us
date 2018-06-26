@@ -1,0 +1,169 @@
+[
+  {
+    "id": 1,
+    "name": "Rasteira Tira Dedo",
+    "images": [
+      "RasteiraTiraDedo-1.png",
+      "RasteiraTiraDedo-2.png",
+      "RasteiraTiraDedo-3.png",
+      "RasteiraTiraDedo-4.png",
+      "RasteiraTiraDedo-5.png"
+    ],
+    "rt": "RT 0568",
+    "code": "03.07.0653",
+    "oldPrice": 69.00,
+    "price": 55.20,
+    "instalments": 6,
+    "colors": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "sizes": [
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42"
+    ],
+    "description": "Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal.",
+    "relatedProducts": [
+      2,
+      3,
+      4,
+      1
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Bolsa Tressê Roletê",
+    "images": [
+      "BolsaTresseRolete-1.png",
+      "BolsaTresseRolete-2.png",
+      "BolsaTresseRolete-3.png",
+      "BolsaTresseRolete-4.png"
+    ],
+    "rt": "RT 3954",
+    "code": "56.45.3549",
+    "price": 204.90,
+    "colors": [
+      3,
+      4,
+      1,
+      2
+    ],
+    "sizes": [
+      "PP",
+      "P",
+      "M",
+      "G",
+      "GG"
+    ],
+    "description": "Eu tempor laborum consectetur quis exercitation tempor officia adipisicing qui.",
+    "relatedProducts": [
+      4,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Rasteira Lorem Ipsum",
+    "images": [
+      "RasteiraLoremIpsum-1.png",
+      "RasteiraLoremIpsum-2.png",
+      "RasteiraLoremIpsum-3.png",
+      "RasteiraLoremIpsum-4.png",
+      "RasteiraLoremIpsum-5.png"
+    ],
+    "rt": "RT 3248",
+    "code": "63.98.4698",
+    "price": 49.90,
+    "instalments": 3,
+    "colors": [
+      2,
+      1,
+      4,
+      3
+    ],
+    "sizes": [
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39"
+    ],
+    "description": "Aliqua labore veniam qui labore et sit elit nisi. Veniam eiusmod pariatur exercitation irure pariatur consequat esse minim sint culpa.",
+    "relatedProducts": [
+      3,
+      4,
+      1,
+      2
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Bolsa Lorem Ipsum",
+    "images": [
+      "BolsaLoremIpsum-1.png",
+      "BolsaLoremIpsum-2.png",
+      "BolsaLoremIpsum-3.png",
+      "BolsaLoremIpsum-4.png",
+      "BolsaLoremIpsum-5.png"
+    ],
+    "rt": "RT 9842",
+    "code": "65.71.0654",
+    "price": 190.90,
+    "colors": [
+      1,
+      3,
+      2
+    ],
+    "sizes": [
+      "P",
+      "M",
+      "G"
+    ],
+    "description": "Aliqua labore veniam qui labore et sit elit nisi. Veniam eiusmod pariatur exercitation irure pariatur consequat esse minim sint culpa."
+  },
+  {
+    "name": "Rasteira Dolor Sit",
+    "images": [
+      "RasteiraDolorSit-1.png",
+      "RasteiraDolorSit-2.png",
+      "RasteiraDolorSit-3.png"
+    ],
+    "rt": "RT 0564",
+    "code": "01.36.0456",
+    "price": 99.90,
+    "colors": [
+      4,
+      3,
+      2,
+      1
+    ],
+    "sizes": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39"
+    ],
+    "description": "Pariatur anim veniam deserunt ex ullamco ad magna esse consectetur aute sit sit est sint.",
+    "relatedProducts": [
+      4,
+      3,
+      2,
+      1
+    ]
+  }
+]

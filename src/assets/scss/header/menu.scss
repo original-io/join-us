@@ -1,0 +1,32 @@
+@import "src/assets/scss/shared/variables.scss";
+
+.menu {
+  overflow-x: auto;
+  text-align: center;
+
+  &__list {
+    margin: 0;
+    white-space: nowrap;
+    
+    &-item {
+      margin: 0;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+
+      &-link {
+        padding: 1rem 1.5rem;
+        text-transform: uppercase;
+        display: inline-block;
+        color: $gray-700;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: $gray-100;
+        }
+      }
+    }
+  }
+}

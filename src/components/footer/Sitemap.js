@@ -5,7 +5,7 @@ class Sitemap extends Component {
     const sitemap = this.props.sitemap;
     const columns = sitemap.map((column, index) =>
       <div className="col-4" key={index}>
-        <h3 class="sitemap__heading">{column.heading}</h3>
+        <h3 className="sitemap__heading">{column.heading}</h3>
         <ul className="list-unstyled sitemap__list">
           {
             column.items.map((item, index) =>

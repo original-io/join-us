@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "hex": "#A9095E",
+    "name": "Magenta"
+  },
+  {
+    "id": 2,
+    "hex": "#6B85C1",
+    "name": "Fuscia"
+  },
+  {
+    "id": 3,
+    "hex": "#A14830",
+    "name": "Marrom"
+  },
+  {
+    "id": 4,
+    "hex": "#202020",
+    "name": "Preto"
+  }
+]

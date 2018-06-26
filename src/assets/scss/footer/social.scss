@@ -1,0 +1,9 @@
+.social {
+  margin-bottom: 2rem;
+
+  &__list{
+    &-item:not(:last-child) {
+        margin-right: 1.5rem;
+    }
+  }
+}

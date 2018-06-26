@@ -1,0 +1,17 @@
+.menu {
+  overflow-x: auto;
+  text-align: center; }
+  .menu__list {
+    margin: 0;
+    white-space: nowrap; }
+    .menu__list-item {
+      margin: 0; }
+      .menu__list-item:not(:last-child) {
+        margin-right: 0; }
+      .menu__list-item-link {
+        padding: 1rem 1.5rem;
+        text-transform: uppercase;
+        display: inline-block;
+        color: #686868; }
+        .menu__list-item-link:hover, .menu__list-item-link:focus, .menu__list-item-link:active {
+          background-color: #F2F2F2; }

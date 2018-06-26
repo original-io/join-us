@@ -1,0 +1,17 @@
+.colors {
+  margin: 1.75rem 0; }
+  .colors__list {
+    margin-bottom: 0; }
+    .colors__list-item:not(:last-child) {
+      margin-right: 0.25rem;
+      margin-bottom: 0.25rem;
+      padding-right: 0.25rem; }
+  .colors__button {
+    border: 0 none;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+    cursor: pointer; }
+  .colors__description-name {
+    margin-left: 0.25rem; }
