@@ -31,7 +31,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: DejaVu Sans;
+  --font-family-sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 *,
@@ -55,8 +55,8 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "DejaVu Sans";
-  font-size: 0.9rem;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.85rem;
   font-weight: 400;
   line-height: 1.5;
   color: #202020;
@@ -299,31 +299,31 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: inherit;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 500;
   line-height: 1.2;
   color: inherit; }
 
 h1, .h1 {
-  font-size: 2.25rem; }
+  font-size: 2.125rem; }
 
 h2, .h2 {
-  font-size: 1.8rem; }
+  font-size: 1.7rem; }
 
 h3, .h3 {
-  font-size: 1.575rem; }
+  font-size: 1.4875rem; }
 
 h4, .h4 {
-  font-size: 1.35rem; }
+  font-size: 1.275rem; }
 
 h5, .h5 {
-  font-size: 1.125rem; }
+  font-size: 1.0625rem; }
 
 h6, .h6 {
-  font-size: 0.9rem; }
+  font-size: 0.85rem; }
 
 .lead {
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   font-weight: 300; }
 
 .display-1 {
@@ -381,7 +381,7 @@ mark,
 
 .blockquote {
   margin-bottom: 1rem;
-  font-size: 1.125rem; }
+  font-size: 1.0625rem; }
 
 .blockquote-footer {
   display: block;
@@ -1251,7 +1251,7 @@ pre {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   line-height: 1.5;
   color: #686868;
   background-color: #fff;
@@ -1279,7 +1279,7 @@ pre {
     opacity: 1; }
 
 select.form-control:not([size]):not([multiple]) {
-  height: calc(2.1rem + 0); }
+  height: calc(2.025rem + 0); }
 
 select.form-control:focus::-ms-value {
   color: #686868;
@@ -1300,13 +1300,13 @@ select.form-control:focus::-ms-value {
 .col-form-label-lg {
   padding-top: calc(0.5rem + 0);
   padding-bottom: calc(0.5rem + 0);
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   line-height: 1.5; }
 
 .col-form-label-sm {
   padding-top: calc(0.25rem + 0);
   padding-bottom: calc(0.25rem + 0);
-  font-size: 0.7875rem;
+  font-size: 0.74375rem;
   line-height: 1.5; }
 
 .form-control-plaintext {
@@ -1338,7 +1338,7 @@ select.form-control:focus::-ms-value {
 .input-group-sm > .input-group-prepend > .btn,
 .input-group-sm > .input-group-append > .btn {
   padding: 0.25rem 0.5rem;
-  font-size: 0.7875rem;
+  font-size: 0.74375rem;
   line-height: 1.5;
   border-radius: 0; }
 
@@ -1347,7 +1347,7 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .input-group-sm > .input-group-append > select.input-group-text:not([size]):not([multiple]),
 .input-group-sm > .input-group-prepend > select.btn:not([size]):not([multiple]),
 .input-group-sm > .input-group-append > select.btn:not([size]):not([multiple]) {
-  height: calc(1.68125rem + 0); }
+  height: calc(1.61563rem + 0); }
 
 .form-control-lg, .input-group-lg > .form-control,
 .input-group-lg > .input-group-prepend > .input-group-text,
@@ -1355,7 +1355,7 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .input-group-lg > .input-group-prepend > .btn,
 .input-group-lg > .input-group-append > .btn {
   padding: 0.5rem 1rem;
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   line-height: 1.5;
   border-radius: 0; }
 
@@ -1364,7 +1364,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .input-group-lg > .input-group-append > select.input-group-text:not([size]):not([multiple]),
 .input-group-lg > .input-group-prepend > select.btn:not([size]):not([multiple]),
 .input-group-lg > .input-group-append > select.btn:not([size]):not([multiple]) {
-  height: calc(2.6875rem + 0); }
+  height: calc(2.59375rem + 0); }
 
 .form-group {
   margin-bottom: 1rem; }
@@ -1626,7 +1626,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   user-select: none;
   border: 0 solid transparent;
   padding: 0.375rem 0.75rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   line-height: 1.5;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
@@ -2036,13 +2036,13 @@ fieldset:disabled a.btn {
 
 .btn-lg, .btn-group-lg > .btn {
   padding: 0.5rem 1rem;
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 0.25rem 0.5rem;
-  font-size: 0.7875rem;
+  font-size: 0.74375rem;
   line-height: 1.5;
   border-radius: 0.2rem; }
 
@@ -2108,7 +2108,7 @@ input[type="button"].btn-block {
   min-width: 10rem;
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #202020;
   text-align: left;
   list-style: none;
@@ -2242,7 +2242,7 @@ input[type="button"].btn-block {
   display: block;
   padding: 0.5rem 1.5rem;
   margin-bottom: 0;
-  font-size: 0.7875rem;
+  font-size: 0.74375rem;
   color: #7F7F7F;
   white-space: nowrap; }
 
@@ -2423,7 +2423,7 @@ input[type="button"].btn-block {
   align-items: center;
   padding: 0.375rem 0.75rem;
   margin-bottom: 0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 400;
   line-height: 1.5;
   color: #686868;
@@ -2543,7 +2543,7 @@ input[type="button"].btn-block {
 .custom-select {
   display: inline-block;
   width: 100%;
-  height: calc(2.1rem + 0);
+  height: calc(2.025rem + 0);
   padding: 0.375rem 1.75rem 0.375rem 0.75rem;
   line-height: 1.5;
   color: #686868;
@@ -2571,13 +2571,13 @@ input[type="button"].btn-block {
     opacity: 0; }
 
 .custom-select-sm {
-  height: calc(1.68125rem + 0);
+  height: calc(1.61563rem + 0);
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
   font-size: 75%; }
 
 .custom-select-lg {
-  height: calc(2.6875rem + 0);
+  height: calc(2.59375rem + 0);
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
   font-size: 125%; }
@@ -2586,14 +2586,14 @@ input[type="button"].btn-block {
   position: relative;
   display: inline-block;
   width: 100%;
-  height: calc(2.1rem + 0);
+  height: calc(2.025rem + 0);
   margin-bottom: 0; }
 
 .custom-file-input {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: calc(2.1rem + 0);
+  height: calc(2.025rem + 0);
   margin: 0;
   opacity: 0; }
   .custom-file-input:focus ~ .custom-file-label {
@@ -2610,7 +2610,7 @@ input[type="button"].btn-block {
   right: 0;
   left: 0;
   z-index: 1;
-  height: calc(2.1rem + 0);
+  height: calc(2.025rem + 0);
   padding: 0.375rem 0.75rem;
   line-height: 1.5;
   color: #686868;
@@ -2624,7 +2624,7 @@ input[type="button"].btn-block {
     bottom: 0;
     z-index: 3;
     display: block;
-    height: 2.1rem;
+    height: 2.025rem;
     padding: 0.375rem 0.75rem;
     line-height: 1.5;
     color: #686868;
@@ -2789,10 +2789,10 @@ input[type="button"].btn-block {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.33125rem;
-  padding-bottom: 0.33125rem;
+  padding-top: 0.34062rem;
+  padding-bottom: 0.34062rem;
   margin-right: 1rem;
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   line-height: inherit;
   white-space: nowrap; }
   .navbar-brand:hover, .navbar-brand:focus {
@@ -2823,7 +2823,7 @@ input[type="button"].btn-block {
 
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;
@@ -3297,7 +3297,7 @@ input[type="button"].btn-block {
 
 .pagination-lg .page-link {
   padding: 0.75rem 1.5rem;
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   line-height: 1.5; }
 
 .pagination-lg .page-item:first-child .page-link {
@@ -3310,7 +3310,7 @@ input[type="button"].btn-block {
 
 .pagination-sm .page-link {
   padding: 0.25rem 0.5rem;
-  font-size: 0.7875rem;
+  font-size: 0.74375rem;
   line-height: 1.5; }
 
 .pagination-sm .page-item:first-child .page-link {
@@ -3435,7 +3435,7 @@ input[type="button"].btn-block {
   font-weight: 700; }
 
 .alert-dismissible {
-  padding-right: 3.85rem; }
+  padding-right: 3.775rem; }
   .alert-dismissible .close {
     position: absolute;
     top: 0;
@@ -3525,7 +3525,7 @@ input[type="button"].btn-block {
   display: flex;
   height: 1rem;
   overflow: hidden;
-  font-size: 0.675rem;
+  font-size: 0.6375rem;
   background-color: #EBEBEB;
   border-radius: 0.25rem; }
 
@@ -3701,7 +3701,7 @@ input[type="button"].btn-block {
 
 .close {
   float: right;
-  font-size: 1.35rem;
+  font-size: 1.275rem;
   font-weight: 700;
   line-height: 1;
   color: #202020;
@@ -3838,7 +3838,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "DejaVu Sans";
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -3852,7 +3852,7 @@ button.close {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.7875rem;
+  font-size: 0.74375rem;
   word-wrap: break-word;
   opacity: 0; }
   .tooltip.show {
@@ -3923,7 +3923,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "DejaVu Sans";
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -3937,7 +3937,7 @@ button.close {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.7875rem;
+  font-size: 0.74375rem;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: padding-box;
@@ -4042,7 +4042,7 @@ button.close {
 .popover-header {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: inherit;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
@@ -6282,6 +6282,26 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #E3E3E3; } }
 
+@font-face {
+  font-family: 'Open Sans';
+  src: url("./assets/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("./assets/fonts/OpenSans-Bold-webfont.woff") format("woff");
+  font-weight: 700; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("./assets/fonts/Montserrat-Regular-webfont.woff") format("woff");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("./assets/fonts/Montserrat-Bold-webfont.woff") format("woff");
+  font-weight: 700; }
+
 .form-control {
   border-bottom: 1px solid #CCCCCC; }
 
@@ -6290,15 +6310,19 @@ a.text-dark:hover, a.text-dark:focus {
   .header__logo {
     border-bottom: 1px solid #CCCCCC; }
     .header__logo-heading {
-      text-align: center; }
+      text-align: center;
+      margin-bottom: 0; }
     .header__logo-img {
       margin: 1.5rem auto; }
   .header__subheader {
     border-bottom: 1px solid #CCCCCC; }
 
 .menu {
-  overflow-x: auto;
-  text-align: center; }
+  position: relative; }
+  .menu__wrapper {
+    overflow-x: auto;
+    text-align: center;
+    position: relative; }
   .menu__list {
     margin: 0;
     white-space: nowrap; }
@@ -6310,7 +6334,8 @@ a.text-dark:hover, a.text-dark:focus {
         padding: 1rem 1.5rem;
         text-transform: uppercase;
         display: inline-block;
-        color: #686868; }
+        color: #686868;
+        font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
         .menu__list-item-link:hover, .menu__list-item-link:focus, .menu__list-item-link:active {
           background-color: #F2F2F2; }
 
@@ -6343,6 +6368,34 @@ a.text-dark:hover, a.text-dark:focus {
     background: url("assets/img/header/cart.svg") 0.25rem center no-repeat transparent scroll;
     padding-left: calc(28px + 0.5rem);
     color: #686868; }
+
+.submenu {
+  margin-top: 1px;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #CCCCCC;
+  padding: 1rem;
+  position: absolute;
+  z-index: 1; }
+  .submenu__heading {
+    text-transform: uppercase;
+    font-weight: bold;
+    word-break: break-all;
+    text-align: right;
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: 0;
+    color: #E0DA9C;
+    font-kerning: none;
+    -webkit-text-stroke: 2px #2A5A75; }
+  .submenu__list {
+    border-left: 2px solid #AEB6C1;
+    margin-bottom: 0;
+    padding-left: 1rem; }
+    .submenu__list-item {
+      padding: 0.75rem 1rem; }
+  .submenu .row:not(:last-child) {
+    display: none; }
 
 .product {
   position: relative;
@@ -6414,8 +6467,27 @@ a.text-dark:hover, a.text-dark:focus {
   text-align: center; }
   .related__heading {
     text-transform: uppercase;
-    font-weight: bold;
-    margin: 3rem 0 1.5rem; }
+    margin: 3rem 0 1.5rem;
+    color: #DE8F75; }
+  .related__product-container {
+    position: relative; }
+  .related__product-heading {
+    position: absolute;
+    bottom: 0;
+    text-align: left;
+    font-size: 0.85rem;
+    margin-bottom: 0;
+    padding: 1.5rem 1rem 0.5rem;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+    width: 100%; }
+  .related__product-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem; }
+  .related__product-price {
+    text-align: left;
+    padding: 0.25rem 1rem;
+    display: block; }
 
 .sizes {
   margin: 1.75rem 0; }

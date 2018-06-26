@@ -15,10 +15,10 @@ class Product extends Component {
         <main>
           <div className="container">
             <div className="row align-items-center">
-              <div className="col-sm-6">
+              <div className="col-md-6">
                 <Media product={product} />
               </div>
-              <div className="col-sm-5 offset-sm-1">
+              <div className="col-md-5 offset-md-1">
                 <Info product={product} />
               </div>
             </div>

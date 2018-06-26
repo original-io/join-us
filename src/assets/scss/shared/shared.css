@@ -1,4 +1,22 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url("./assets/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("./assets/fonts/OpenSans-Bold-webfont.woff") format("woff");
+  font-weight: 700; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("./assets/fonts/Montserrat-Regular-webfont.woff") format("woff");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("./assets/fonts/Montserrat-Bold-webfont.woff") format("woff");
+  font-weight: 700; }
+
 .form-control {
   border-bottom: 1px solid #CCCCCC; }
-  .form-control:hover, .form-control:focus, .form-control:active {
-    border-bottom: 1px solid #DE8F75; }

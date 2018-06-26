@@ -1,8 +1,13 @@
 @import "src/assets/scss/shared/variables.scss";
 
 .menu {
-  overflow-x: auto;
-  text-align: center;
+  position: relative;
+
+  &__wrapper {
+    overflow-x: auto;
+    text-align: center;
+    position: relative;
+  }
 
   &__list {
     margin: 0;
@@ -20,6 +25,7 @@
         text-transform: uppercase;
         display: inline-block;
         color: $gray-700;
+        font-family: $headings-font-family;
 
         &:hover,
         &:focus,

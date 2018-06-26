@@ -1,5 +1,13 @@
-.payments__list {
-  margin: 0; }
-
-.payments__old-price {
-  margin: 0; }
+.payments {
+  margin: 2rem 0; }
+  .payments__list {
+    margin: 0; }
+    .payments__list-item:not(:last-child) {
+      margin-right: 0.65rem;
+      padding-right: 0.65rem;
+      border-right: 1px solid #E35442; }
+  .payments__old-price {
+    color: #E35442; }
+  .payments__price {
+    font-size: 1.35rem;
+    font-weight: bold; }

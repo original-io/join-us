@@ -1,6 +1,22 @@
 [
-  "Sapatos",
-  "Bolsas",
-  "Acessórios",
-  "OFF"
+  {
+    "id": 1,
+    "title": "Sapatos",
+    "submenu": 1
+  },
+  {
+    "id": 2,
+    "title": "Bolsas",
+    "submenu": 2
+  },
+  {
+    "id": 3,
+    "title": "Acessórios",
+    "submenu": 3
+  },
+  {
+    "id": 4,
+    "title": "OFF",
+    "submenu": 4
+  }
 ]

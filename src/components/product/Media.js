@@ -13,6 +13,7 @@ class Media extends Component {
 
   render() {
     const product = this.props.product;
+    const mainImg = this.state.mainImg;
     const gallery = product.images
       .map((image, key) =>
         <li key={key}>
@@ -43,7 +44,7 @@ class Media extends Component {
           <div className="col-sm-9 col-9 offset-sm-1">
 
             <div className="media__image">
-              <img className="img-fluid" src={require("../../assets/img/product/" + this.state.mainImg)} alt={product.name} />
+              <img className="img-fluid" src={require("../../assets/img/product/" + mainImg)} alt={product.name} />
             </div>
 
           </div>

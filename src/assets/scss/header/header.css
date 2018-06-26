@@ -3,15 +3,19 @@
   .header__logo {
     border-bottom: 1px solid #CCCCCC; }
     .header__logo-heading {
-      text-align: center; }
+      text-align: center;
+      margin-bottom: 0; }
     .header__logo-img {
       margin: 1.5rem auto; }
   .header__subheader {
     border-bottom: 1px solid #CCCCCC; }
 
 .menu {
-  overflow-x: auto;
-  text-align: center; }
+  position: relative; }
+  .menu__wrapper {
+    overflow-x: auto;
+    text-align: center;
+    position: relative; }
   .menu__list {
     margin: 0;
     white-space: nowrap; }
@@ -23,7 +27,8 @@
         padding: 1rem 1.5rem;
         text-transform: uppercase;
         display: inline-block;
-        color: #686868; }
+        color: #686868;
+        font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
         .menu__list-item-link:hover, .menu__list-item-link:focus, .menu__list-item-link:active {
           background-color: #F2F2F2; }
 
@@ -56,3 +61,31 @@
     background: url("assets/img/header/cart.svg") 0.25rem center no-repeat transparent scroll;
     padding-left: calc(28px + 0.5rem);
     color: #686868; }
+
+.submenu {
+  margin-top: 1px;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #CCCCCC;
+  padding: 1rem;
+  position: absolute;
+  z-index: 1; }
+  .submenu__heading {
+    text-transform: uppercase;
+    font-weight: bold;
+    word-break: break-all;
+    text-align: right;
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: 0;
+    color: #E0DA9C;
+    font-kerning: none;
+    -webkit-text-stroke: 2px #2A5A75; }
+  .submenu__list {
+    border-left: 2px solid #AEB6C1;
+    margin-bottom: 0;
+    padding-left: 1rem; }
+    .submenu__list-item {
+      padding: 0.75rem 1rem; }
+  .submenu .row:not(:last-child) {
+    display: none; }

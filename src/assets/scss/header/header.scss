@@ -8,6 +8,7 @@
 
     &-heading {
       text-align: center;
+      margin-bottom: 0;
     }
 
     &-img {
@@ -24,3 +25,4 @@
 @import "src/assets/scss/header/login.scss";
 @import "src/assets/scss/header/search.scss";
 @import "src/assets/scss/header/cart.scss";
+@import "src/assets/scss/header/submenu.scss";

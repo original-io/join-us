@@ -16,7 +16,7 @@ class Colors extends Component {
 
     return (
       <div className="colors">
-        <div class="colors__description">
+        <div className="colors__description">
           <label>Cor:</label> <span style={{ color: defaultColor.hex }}>{defaultColor.name}</span>
         </div>
         <ul className="list-inline">

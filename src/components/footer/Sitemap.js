@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 class Sitemap extends Component {
   render() {
     const sitemap = this.props.sitemap;
-    const columns = sitemap.map((column, index) =>
-      <div className="col-4" key={index}>
+    const columns = sitemap.map((column) =>
+      <div className="col-4" key={column.id}>
         <h3 className="sitemap__heading">{column.heading}</h3>
         <ul className="list-unstyled sitemap__list">
           {

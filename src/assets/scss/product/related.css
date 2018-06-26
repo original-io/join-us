@@ -2,5 +2,24 @@
   text-align: center; }
   .related__heading {
     text-transform: uppercase;
-    font-weight: bold;
-    margin: 3rem 0 1.5rem; }
+    margin: 3rem 0 1.5rem;
+    color: #DE8F75; }
+  .related__product-container {
+    position: relative; }
+  .related__product-heading {
+    position: absolute;
+    bottom: 0;
+    text-align: left;
+    font-size: 0.85rem;
+    margin-bottom: 0;
+    padding: 1.5rem 1rem 0.5rem;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+    width: 100%; }
+  .related__product-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem; }
+  .related__product-price {
+    text-align: left;
+    padding: 0.25rem 1rem;
+    display: block; }

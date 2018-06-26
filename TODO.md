@@ -1,5 +1,8 @@
 # TODO
 
+- Menu
+- Carrinho
+- Adicionar ao carrinho
 - Retirar R$ e colocar na api
 - Carousel, Modal e talvez Zoom?
 - Criar media-queries (especialmente para as badges)
