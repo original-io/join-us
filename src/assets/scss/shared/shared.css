@@ -20,3 +20,6 @@
 
 .form-control {
   border-bottom: 1px solid #CCCCCC; }
+
+.btn-primary, .btn-success {
+  text-transform: uppercase; }

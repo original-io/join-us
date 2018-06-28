@@ -5,6 +5,9 @@
 
   &__logo {
     border-bottom: 1px solid $gray-400;
+    position: relative;
+    z-index: 3;
+    background-color: $white;
 
     &-heading {
       text-align: center;
@@ -18,6 +21,9 @@
 
   &__subheader {
     border-bottom: 1px solid $gray-400;
+    position: relative;
+    z-index: 2;
+    background-color: $white;
   }
 }
 

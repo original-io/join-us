@@ -1,11 +1,16 @@
 .submenu {
-  margin-top: 1px;
   width: 100%;
   background-color: #fff;
   border-bottom: 1px solid #CCCCCC;
-  padding: 1rem;
   position: absolute;
-  z-index: 1; }
+  animation-duration: 0.3s;
+  animation-name: slide-down;
+  animation-timing-function: ease-out; }
+  .submenu__wrapper {
+    position: relative;
+    z-index: 1; }
+  .submenu__item {
+    padding: 1rem 0; }
   .submenu__heading {
     text-transform: uppercase;
     font-weight: bold;
@@ -25,3 +30,11 @@
       padding: 0.75rem 1rem; }
   .submenu .row:not(:last-child) {
     display: none; }
+
+@keyframes slide-down {
+  from {
+    margin-top: -1rem;
+    opacity: 0; }
+  to {
+    margin-top: 0;
+    opacity: 1; } }

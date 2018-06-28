@@ -14,7 +14,7 @@ class Payment extends Component {
             R$ {product.price.toFixed(2)}
           </li>
         </ul>
-        <p><small>Ou {product.instalments}x de R$ {(product.price / product.instalments).toFixed(2)}</small></p>
+        <p className="payments__instalments"><small>Ou {product.instalments}x de R$ {(product.price / product.instalments).toFixed(2)}</small></p>
       </div>
     );
   }

@@ -27,3 +27,10 @@
 .form-control {
   border-bottom: 1px solid $gray-400;
 }
+
+.btn {
+  &-primary,
+  &-success {
+    text-transform: uppercase;
+  }
+}

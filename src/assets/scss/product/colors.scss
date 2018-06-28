@@ -20,11 +20,17 @@
     height: 1.5rem;
     border-radius: 100%;
     cursor: pointer;
+
+    &:focus,
+    &:active,
+    &--active {
+      box-shadow: 0 0 0 5px $complement-2;
+    }
   }
 
   &__description{
     &-name {
-      margin-left: 0.25rem;
+      margin-left: 0.8rem;
     }
   }
 }

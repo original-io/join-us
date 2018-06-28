@@ -1,13 +1,22 @@
 @import "src/assets/scss/shared/variables.scss";
 
 .submenu {
-  margin-top: 1px;
   width: 100%;
   background-color: $white;
   border-bottom: 1px solid $gray-400;
-  padding: 1rem;
   position: absolute;
-  z-index: 1;
+  animation-duration: 0.3s;
+  animation-name: slide-down;
+  animation-timing-function: ease-out;
+
+  &__wrapper {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__item {
+    padding: 1rem 0;
+  }
 
   &__heading {
     text-transform: uppercase;
@@ -34,5 +43,17 @@
 
   .row:not(:last-child) {
     display: none;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    margin-top: -1rem;
+    opacity: 0;
+  }
+
+  to {
+    margin-top: 0;
+    opacity: 1;
   }
 }

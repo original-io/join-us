@@ -8,16 +8,16 @@ class Newsletter extends Component {
           <div className="newsletter__form">
             <h3 className="newsletter__form-heading">Assine nossa News</h3>
             <form>
-              <div className="form-group mb-0">
-                <label className="mb-0"><small>Nome</small></label>
+              <div className="form-group newsletter__form-control">
+                <label className="newsletter__form-label"><small>Nome</small></label>
                 <input type="text" className="form-control form-control-sm" />
               </div>
-              <div className="form-group mb-0">
-                <label className="mb-0"><small>Email</small></label>
+              <div className="form-group newsletter__form-control">
+                <label className="newsletter__form-label"><small>Email</small></label>
                 <input type="text" className="form-control form-control-sm" />
               </div>
               <div className="text-center">
-                <button className="btn btn-primary" type="submit">Enviar</button>
+                <button className="btn btn-primary newsletter__form-button" type="submit">Enviar</button>
               </div>
             </form>
           </div>

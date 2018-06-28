@@ -21,12 +21,20 @@
     height: 2.125rem;
     border-radius: 100%;
     cursor: pointer;
-    background-color: $gray-100;
+    background-color: $gray-200;
+    color: $complement-4;
+
+    &:focus,
+    &:active,
+    &--active {
+      background-color: $complement-2;
+      font-weight: bold;
+    }
   }
 
   &__description{
     &-name {
-      margin-left: 0.25rem;
+      margin-left: 0.8rem;
     }
   }
 }

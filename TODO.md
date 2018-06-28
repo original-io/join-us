@@ -1,10 +1,17 @@
 # TODO
 
 - Menu
-- Carrinho
+
+-- Quando clicar fora do menu, o onMenuChange retorna null (https://stackoverflow.com/questions/32553158/detect-click-outside-react-component)
+-- Toggle class no li do menu (https://stackoverflow.com/questions/33780550/how-to-create-toggle-class-event-in-reactjs-without-jquery)
+
 - Adicionar ao carrinho
 - Retirar R$ e colocar na api
-- Carousel, Modal e talvez Zoom?
 - Criar media-queries (especialmente para as badges)
 - justify-content space-between sempre que possível
-- form-control com mb-0 automático
+
+## Vai ficar faltando
+
+- Carrinho
+- Carousel
+- Zoom

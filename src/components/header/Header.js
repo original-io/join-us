@@ -13,22 +13,45 @@ import { findSubmenuById } from '../../utils/repository';
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = { chosenMenu: '' }
+    this.state = { chosen: null }
     this.handleMenuChange = this.handleMenuChange.bind(this);
+    this.setWrapperRef = this.setWrapperRef.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
   }
 
-  handleMenuChange(chosenMenu) {
-    this.setState({ chosenMenu: chosenMenu });
+  handleMenuChange(chosen) {
+    this.setState({ chosen: chosen });
+  }
+
+  componentDidMount() {
+    document.addEventListener('mousedown', this.handleClickOutside);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClickOutside);
+  }
+
+  setWrapperRef(node) {
+    this.wrapperRef = node;
+  }
+
+  handleClickOutside(e) {
+    if (this.wrapperRef && !this.wrapperRef.contains(e.target)) {
+      this.handleMenuChange(null);
+    }
   }
 
   render() {
-    const chosenMenu = this.state.chosenMenu;
+    const chosen = this.state.chosen;
 
     return (
       <header className="header">
         <div className="container-fluid header__logo">
           <h3 className="header__logo-heading">
-            <img className="img-fluid header__logo-img" src={require("../../assets/img/shared/logo.svg")} alt="Original.io" />
+            <img className="img-fluid header__logo-img"
+              src={require("../../assets/img/shared/logo.svg")}
+              alt="Original.io"
+            />
           </h3>
         </div>
         <div className="header__subheader">
@@ -53,7 +76,9 @@ class Header extends Component {
             </div>
           </div>
         </div>
-        <Submenu submenu={submenu} chosenMenu={chosenMenu} />
+        <div ref={this.setWrapperRef}>
+          <Submenu submenu={submenu} chosen={chosen} />
+        </div>
       </header>
     );
   }

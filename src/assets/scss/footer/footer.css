@@ -12,22 +12,26 @@
     width: 100%;
     border: 2px solid #AEB6C1;
     border-radius: 100%;
-    background-color: #fff; }
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
     .newsletter__circle:after {
       content: '';
       display: block;
       padding-bottom: 100%; }
   .newsletter__form {
-    text-align: left;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 75%; }
+    text-align: left; }
     .newsletter__form-heading {
       font-size: 1rem;
       text-transform: uppercase;
       font-weight: bold; }
+    .newsletter__form-control {
+      margin-bottom: 0.5rem; }
+    .newsletter__form-label {
+      margin-bottom: 0; }
+    .newsletter__form-button {
+      color: #fff; }
 
 .sitemap {
   margin: 2rem 0; }

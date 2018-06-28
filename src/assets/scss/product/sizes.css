@@ -12,6 +12,10 @@
     height: 2.125rem;
     border-radius: 100%;
     cursor: pointer;
-    background-color: #F2F2F2; }
+    background-color: #EBEBEB;
+    color: #2A5A75; }
+    .sizes__button:focus, .sizes__button:active, .sizes__button--active {
+      background-color: #E0DA9C;
+      font-weight: bold; }
   .sizes__description-name {
-    margin-left: 0.25rem; }
+    margin-left: 0.8rem; }

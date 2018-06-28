@@ -31,6 +31,7 @@
         &:focus,
         &:active {
           background-color: $gray-100;
+          color: $primary;
         }
       }
     }

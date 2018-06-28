@@ -1,5 +1,5 @@
 .payments {
-  margin: 2rem 0; }
+  margin: 0 0 2rem; }
   .payments__list {
     margin: 0; }
     .payments__list-item:not(:last-child) {
@@ -10,4 +10,7 @@
     color: #E35442; }
   .payments__price {
     font-size: 1.35rem;
-    font-weight: bold; }
+    font-weight: bold;
+    color: #686868; }
+  .payments__instalments {
+    color: #7F7F7F; }

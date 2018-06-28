@@ -18,7 +18,7 @@
     border-radius: 100%;
     cursor: pointer; }
   .colors__description-name {
-    margin-left: 0.25rem; }
+    margin-left: 0.8rem; }
 
 .info__card {
   border-width: 2px;
@@ -29,7 +29,7 @@
   font-weight: bold; }
 
 .info__list {
-  margin-bottom: 2.5rem; }
+  margin-bottom: 1rem; }
   .info__list-item:not(:last-child) {
     margin-right: 0.65rem;
     padding-right: 0.65rem;
@@ -51,7 +51,7 @@
     padding-bottom: calc(32px + 0.5rem); }
 
 .payments {
-  margin: 2rem 0; }
+  margin: 0 0 2rem; }
   .payments__list {
     margin: 0; }
     .payments__list-item:not(:last-child) {
@@ -62,7 +62,10 @@
     color: #E35442; }
   .payments__price {
     font-size: 1.35rem;
-    font-weight: bold; }
+    font-weight: bold;
+    color: #686868; }
+  .payments__instalments {
+    color: #7F7F7F; }
 
 .related {
   text-align: center; }
@@ -104,6 +107,10 @@
     height: 2.125rem;
     border-radius: 100%;
     cursor: pointer;
-    background-color: #F2F2F2; }
+    background-color: #EBEBEB;
+    color: #2A5A75; }
+    .sizes__button:focus, .sizes__button:active, .sizes__button--active {
+      background-color: #E0DA9C;
+      font-weight: bold; }
   .sizes__description-name {
-    margin-left: 0.25rem; }
+    margin-left: 0.8rem; }

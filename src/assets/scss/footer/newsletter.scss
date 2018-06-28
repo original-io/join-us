@@ -10,6 +10,9 @@
     border: 2px solid $complement-1;
     border-radius: 100%;
     background-color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:after {
       content: '';
@@ -20,16 +23,23 @@
 
   &__form {
     text-align: left;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 75%;
 
     &-heading {
       font-size: 1rem;
       text-transform: uppercase;
       font-weight: bold;
+    }
+
+    &-control {
+      margin-bottom: 0.5rem;
+    }
+
+    &-label {
+      margin-bottom: 0;
+    }
+
+    &-button {
+      color: $white;
     }
   }
 }

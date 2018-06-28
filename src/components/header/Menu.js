@@ -5,18 +5,24 @@ import { findSubmenuById } from '../../utils/repository';
 class Menu extends Component {
   constructor(props) {
     super(props);
-    this.handleInteraction = this.handleInteraction.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleInteraction(menu) {
-    this.props.onMenuChange(findSubmenuById(menu.submenu));
+  handleClick(menu, e) {
+    e.preventDefault();
+    const submenu = findSubmenuById(menu.submenu);
+    this.props.onMenuChange(submenu);
   }
 
   render() {
     const menu = this.props.menu;
     const menuItems = menu.map((item) =>
       <li className="list-inline-item menu__list-item" key={item.id}>
-        <a className="menu__list-item-link" href="#" onMouseOver={() => this.handleInteraction(item)} onClick={() => this.handleInteraction(item)}>{item.title}</a>
+        <a className="menu__list-item-link" href="#"
+          onClick={(e) => this.handleClick(item, e)}
+        >
+          {item.title}
+        </a>
       </li>
     );
 

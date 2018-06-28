@@ -1,7 +1,7 @@
 @import "src/assets/scss/shared/variables.scss";
 
 .payments {
-  margin: 2rem 0;
+  margin: 0 0 2rem;
   
   &__list {
     margin: 0;
@@ -22,5 +22,10 @@
   &__price {
     font-size: 1.35rem;
     font-weight: bold;
+    color: $gray-700;
+  }
+
+  &__instalments {
+    color: $gray-600;
   }
 }
