@@ -1,7 +1,7 @@
 @import "src/assets/scss/shared/variables.scss";
 
 .header {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 
   &__logo {
     border-bottom: 1px solid $gray-400;
@@ -36,3 +36,4 @@
 @import "src/assets/scss/header/search.scss";
 @import "src/assets/scss/header/cart.scss";
 @import "src/assets/scss/header/submenu.scss";
+@import "src/assets/scss/header/breadcrumb.scss";

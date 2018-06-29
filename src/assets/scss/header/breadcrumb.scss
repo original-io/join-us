@@ -1,0 +1,11 @@
+@import "src/assets/scss/shared/variables.scss";
+
+.breadcrumb {
+  &__item {
+    color: $complement-1;
+    
+    &--active {
+      font-weight: bold;
+    }
+  }
+}

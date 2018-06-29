@@ -1,6 +1,7 @@
 .product {
   position: relative;
   margin-bottom: 5rem;
+  overflow-x: hidden;
 }
 
 @import "src/assets/scss/product/colors.scss";

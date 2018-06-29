@@ -17,8 +17,19 @@ class Media extends Component {
     const gallery = product.images
       .map((image, key) =>
         <li className="media__gallery-list-item" key={key}>
-          <button className="media__gallery-button" onClick={() => this.galleryHandleClick(image)}>
-            <img className="img-fluid" src={require("../../assets/img/product/" + image)} alt={product.name} />
+          <button className="media__gallery-button"
+            className={
+              (image === mainImg)
+                ? "media__gallery-button media__gallery-button--active"
+                : "media__gallery-button"
+            }
+            onClick={() => this.galleryHandleClick(image)}
+          >
+            <img
+              className="img-fluid"
+              src={require("../../assets/img/product/" + image)}
+              alt={product.name}
+            />
           </button>
         </li>
       );

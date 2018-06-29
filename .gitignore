@@ -1,6 +1,8 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
-src/assets/scss/*.css
+# Customs
+src/App.css
+src/assets/scss/**/*.css
 .vscode
 
 # dependencies
