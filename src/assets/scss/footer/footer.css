@@ -53,10 +53,10 @@
     margin-right: 1.5rem; }
 
 .badges__vtex {
-  max-width: 90px; }
+  max-width: 85px; }
 
 .badges__ebit {
-  max-width: 55px; }
+  max-width: 52px; }
 
 .contact {
   margin-top: 3rem;
@@ -67,5 +67,5 @@
     margin-bottom: 0; }
   .contact__logo {
     display: block;
-    padding: 1rem;
+    padding: 1rem 1rem 0.25rem;
     margin: 0 auto; }

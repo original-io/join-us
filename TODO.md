@@ -1,11 +1,7 @@
 # TODO
 
-- Criar media-queries (especialmente para as badges)
-- justify-content space-between sempre que possível
-
-## Vai ficar faltando
-
-- Funcionalidade do carrinho
+- Reutilização das funcionalidades e estilos das cores do produto nos produtos relacionados
 - Carousel
+- Funcionalidade do carrinho
+- Busca
 - Zoom
-- Reutilização das funcionalidades e estilos de escolha de cores nos produtos relacionados

@@ -1,20 +1,36 @@
+@import "src/assets/scss/shared/variables.scss";
+
 .media {
   text-align: center;
   padding: 0.75rem 0 0.25rem;
-
-  &__gallery{
-    &-button {
-      border: 0 none;
-      background-color: transparent;
-      cursor: pointer;
-      padding: 0;
-    }
-  }
 
   &__video {
     &-button {
       background: url("assets/img/product/video.svg") center bottom 0.25rem no-repeat transparent scroll;
       padding-bottom: calc(32px + 0.5rem);
+      border: 0 none;
+      display: block;
+      width: 100%;
+      cursor: pointer;
+      color: $primary;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__gallery{
+    &-list {
+      &-item {
+        &:not(:last-child) {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+
+    &-button {
+      border: 0 none;
+      background-color: transparent;
+      cursor: pointer;
+      padding: 0;
     }
   }
 }

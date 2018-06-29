@@ -4,4 +4,9 @@
   .cart__button {
     background: url("assets/img/header/cart.svg") 0.25rem center no-repeat transparent scroll;
     padding-left: calc(28px + 0.5rem);
-    color: #686868; }
+    color: #686868;
+    border: 0 none;
+    display: block;
+    cursor: pointer;
+    min-height: 24px;
+    margin: 0 auto; }

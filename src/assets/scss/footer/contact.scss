@@ -12,7 +12,11 @@
 
   &__logo {
     display: block;
-    padding: 1rem;
+    padding: 1rem 1rem 0.25rem;
     margin: 0 auto;
+
+    @include media-breakpoint-up(lg) {
+      padding: 1rem;
+    }
   }
 }

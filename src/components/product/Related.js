@@ -9,18 +9,18 @@ class Related extends Component {
     const relatedProducts = product.relatedProducts
       .map((id) => findProductById(id))
       .map((item) =>
-        <div className="col-3" key={item.id}>
+        <div className="col-md-3 col-6" key={item.id}>
           <div className="related__product">
             <div className="related__product-container">
               <img className="img-fluid" src={require("../../assets/img/product/" + item.images[0])} alt={item.name} />
               <h4 className="h5 related__product-heading">{item.name}</h4>
               <a href="#" className="related__product-button">+</a>
             </div>
-            <div class="row align-items-center">
-              <div class="col-md-6">
+            <div className="row align-items-center">
+              <div className="col-lg-6">
                 <span className="related__product-price">R$ {item.price.toFixed(2)}</span>
               </div>
-              <div class="col-md-6">
+              <div className="col-lg-6">
                 <ul className="list-inline related__product-colors">
                   {
                     item.colors

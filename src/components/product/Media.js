@@ -16,7 +16,7 @@ class Media extends Component {
     const mainImg = this.state.mainImg;
     const gallery = product.images
       .map((image, key) =>
-        <li key={key}>
+        <li className="media__gallery-list-item" key={key}>
           <button className="media__gallery-button" onClick={() => this.galleryHandleClick(image)}>
             <img className="img-fluid" src={require("../../assets/img/product/" + image)} alt={product.name} />
           </button>
@@ -29,13 +29,13 @@ class Media extends Component {
           <div className="col-sm-2 col-3">
 
             <div className="media__video">
-              <button className="btn btn-link media__video-button">
+              <button className="media__video-button">
                 Vídeo
               </button>
             </div>
 
             <div className="media__gallery">
-              <ul className="list-unstyled">
+              <ul className="list-unstyled media__gallery-list">
                 {gallery}
               </ul>
             </div>

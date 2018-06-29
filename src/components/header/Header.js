@@ -8,7 +8,6 @@ import Submenu from './Submenu';
 
 import menu from '../../api/menu';
 import submenu from '../../api/submenu';
-import { findSubmenuById } from '../../utils/repository';
 
 class Header extends Component {
   constructor(props) {

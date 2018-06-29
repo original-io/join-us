@@ -6387,7 +6387,12 @@ a.text-dark:hover, a.text-dark:focus {
   .cart__button {
     background: url("assets/img/header/cart.svg") 0.25rem center no-repeat transparent scroll;
     padding-left: calc(28px + 0.5rem);
-    color: #686868; }
+    color: #686868;
+    border: 0 none;
+    display: block;
+    cursor: pointer;
+    min-height: 24px;
+    margin: 0 auto; }
 
 .submenu {
   width: 100%;
@@ -6439,7 +6444,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .product {
   position: relative;
-  margin-bottom: 6rem; }
+  margin-bottom: 5rem; }
 
 .colors {
   margin: 1.75rem 0; }
@@ -6482,14 +6487,22 @@ a.text-dark:hover, a.text-dark:focus {
 .media {
   text-align: center;
   padding: 0.75rem 0 0.25rem; }
+  .media__video-button {
+    background: url("assets/img/product/video.svg") center bottom 0.25rem no-repeat transparent scroll;
+    padding-bottom: calc(32px + 0.5rem);
+    border: 0 none;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    color: #DE8F75;
+    margin-bottom: 0.5rem; }
+  .media__gallery-list-item:not(:last-child) {
+    margin-bottom: 0.5rem; }
   .media__gallery-button {
     border: 0 none;
     background-color: transparent;
     cursor: pointer;
     padding: 0; }
-  .media__video-button {
-    background: url("assets/img/product/video.svg") center bottom 0.25rem no-repeat transparent scroll;
-    padding-bottom: calc(32px + 0.5rem); }
 
 .payments {
   margin: 0 0 2rem; }
@@ -6514,52 +6527,54 @@ a.text-dark:hover, a.text-dark:focus {
     text-transform: uppercase;
     margin: 3rem 0 1.5rem;
     color: #DE8F75; }
-  .related__product-container {
-    position: relative; }
-  .related__product-heading {
-    position: absolute;
-    bottom: 0;
-    text-align: left;
-    font-size: 0.85rem;
-    margin-bottom: 0;
-    padding: 1.5rem 1rem 0.5rem;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
-    width: 100%; }
-  .related__product-button {
-    position: absolute;
-    top: 0.75rem;
-    right: 0.75rem;
-    width: 2.75rem;
-    height: 2.75rem;
-    border-radius: 100%;
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.4);
-    border: 2px solid #DE8F75;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem; }
-    .related__product-button:hover, .related__product-button:focus, .related__product-button:active {
-      color: #DE8F75; }
-  .related__product-price {
-    text-align: left;
-    padding: 0.25rem;
-    display: block; }
-  .related__product-colors {
-    padding: 0.25rem;
-    margin-bottom: 0;
-    text-align: right; }
-    .related__product-colors-item:not(:last-child) {
-      margin-right: 0.25rem;
-      margin-bottom: 0.25rem;
-      padding-right: 0.25rem; }
-    .related__product-colors-btn {
-      border: 0 none;
-      display: block;
-      width: 0.8rem;
-      height: 0.8rem;
+  .related__product {
+    margin-bottom: 1rem; }
+    .related__product-container {
+      position: relative; }
+    .related__product-heading {
+      position: absolute;
+      bottom: 0;
+      text-align: left;
+      font-size: 0.85rem;
+      margin-bottom: 0;
+      padding: 1.5rem 0.5rem 0.5rem;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+      width: 100%; }
+    .related__product-button {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      width: 2.75rem;
+      height: 2.75rem;
       border-radius: 100%;
-      cursor: pointer; }
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.4);
+      border: 2px solid #DE8F75;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem; }
+      .related__product-button:hover, .related__product-button:focus, .related__product-button:active {
+        color: #DE8F75; }
+    .related__product-price {
+      text-align: left;
+      padding: 0.25rem;
+      display: block; }
+    .related__product-colors {
+      padding: 0.25rem;
+      margin-bottom: 0;
+      text-align: right; }
+      .related__product-colors-item:not(:last-child) {
+        margin-right: 0.25rem;
+        margin-bottom: 0.25rem;
+        padding-right: 0.25rem; }
+      .related__product-colors-btn {
+        border: 0 none;
+        display: block;
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 100%;
+        cursor: pointer; }
 
 .sizes {
   margin: 1.75rem 0; }
@@ -6688,10 +6703,10 @@ a.text-dark:hover, a.text-dark:focus {
     margin-right: 1.5rem; }
 
 .badges__vtex {
-  max-width: 90px; }
+  max-width: 85px; }
 
 .badges__ebit {
-  max-width: 55px; }
+  max-width: 52px; }
 
 .contact {
   margin-top: 3rem;
@@ -6702,5 +6717,8 @@ a.text-dark:hover, a.text-dark:focus {
     margin-bottom: 0; }
   .contact__logo {
     display: block;
-    padding: 1rem;
+    padding: 1rem 1rem 0.25rem;
     margin: 0 auto; }
+    @media (min-width: 992px) {
+      .contact__logo {
+        padding: 1rem; } }
