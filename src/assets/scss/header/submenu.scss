@@ -22,13 +22,18 @@
     text-transform: uppercase;
     font-weight: bold;
     word-break: break-all;
-    text-align: right;
-    font-size: 4rem;
+    text-align: center;
+    font-size: 3rem;
     line-height: 1;
     margin-bottom: 0;
     color: $complement-2;
     font-kerning: none;
     -webkit-text-stroke: 2px $complement-4;
+
+    @include media-breakpoint-up(sm) {
+      text-align: right;
+      font-size: 4rem;
+    }
   }
 
   &__list {
@@ -41,8 +46,11 @@
     }
   }
 
-  .row:not(:last-child) {
+  &__img {
     display: none;
+    @include media-breakpoint-up(sm) {
+      display: block;
+    }
   }
 }
 

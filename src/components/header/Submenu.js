@@ -12,12 +12,12 @@ class Submenu extends Component {
               <div className="container">
                 <div className="submenu__item">
                   <div className="row align-items-center">
-                    <div className="col-md-2 offset-md-1">
+                    <div className="col-md-2 col-2 offset-1">
                       <h4 className="submenu__heading">
                         {item.title}
                       </h4>
                     </div>
-                    <div className="col-md-4 offset-md-1">
+                    <div className="col-md-4 col-8 offset-1">
                       <ul className="list-unstyled submenu__list">
                         {
                           item.items.map((item, index) =>
@@ -29,7 +29,7 @@ class Submenu extends Component {
                       </ul>
                     </div>
                     <div className="col-md-4">
-                      <img className="img-fluid" src={require("../../assets/img/header/acessorios.png")} />
+                      <img className="img-fluid submenu__img" src={require("../../assets/img/header/acessorios.png")} />
                     </div>
                   </div>
                 </div>

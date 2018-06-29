@@ -15,7 +15,11 @@
     }
 
     &-img {
-      margin: 1.5rem auto;
+      margin: 0.75rem auto;
+
+      @include media-breakpoint-up(sm) {
+        margin: 1.5rem auto;
+      }
     }
   }
 

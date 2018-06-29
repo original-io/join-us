@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { findProductById } from '../../utils/repository';
+import { findColorById } from '../../utils/repository';
 
 class Related extends Component {
   render() {
@@ -15,7 +16,28 @@ class Related extends Component {
               <h4 className="h5 related__product-heading">{item.name}</h4>
               <a href="#" className="related__product-button">+</a>
             </div>
-            <span className="related__product-price">R$ {item.price.toFixed(2)}</span>
+            <div class="row align-center">
+              <div class="col-md-6">
+                <span className="related__product-price">R$ {item.price.toFixed(2)}</span>
+              </div>
+              <div class="col-md-6">
+                <ul className="list-inline related__product-colors">
+                  {
+                    item.colors
+                      .map((id) => findColorById(id))
+                      .map((color) =>
+                        <li className="list-inline-item related__product-colors-item" key={color.id}>
+                          <button
+                            className="related__product-colors-btn"
+                            style={{ backgroundColor: color.hex }} title={color.name}
+                          >
+                          </button>
+                        </li>
+                      )
+                  }
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       );

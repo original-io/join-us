@@ -11,15 +11,24 @@
     
     &-item {
       &:not(:last-child) {
-        margin-right: 0.65rem;
-        padding-right: 0.65rem;
+        margin-right: 0.25rem;
+        padding-right: 0.25rem;
         border-right: 1px solid $gray-700;
         line-height: 1.125;
+
+        @include media-breakpoint-up(sm) {
+          margin-right: 0.65rem;
+          padding-right: 0.65rem;
+        }
       }
 
       &-link {
-        font-size: 0.875rem;
+        font-size: 0.8rem;
         color: $gray-700;
+
+        @include media-breakpoint-up(sm) {
+          font-size: 0.875rem;
+        }
       }
     }
   }

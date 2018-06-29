@@ -7,6 +7,7 @@
   position: relative;
   display: inline-block;
   margin: 0 auto;
+  max-width: 100%;
 
   &__overlay{
     background-color: rgba(0,0,0,0.5);
