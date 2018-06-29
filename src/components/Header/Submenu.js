@@ -32,7 +32,7 @@ class Submenu extends Component {
                       </ul>
                     </div>
                     <div className="col-md-4">
-                      <img className="img-fluid submenu__img" alt="{item.title}" src={require("../../assets/img/header/submenu.png")} />
+                      <img className="img-fluid submenu__img" alt={item.title} src={require("../../assets/img/header/submenu.png")} />
                     </div>
                   </div>
                 </div>
