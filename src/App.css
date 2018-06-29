@@ -6538,11 +6538,9 @@ a.text-dark:hover, a.text-dark:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    transition: transform 0.3s ease; }
+    font-size: 2rem; }
     .related__product-button:hover, .related__product-button:focus, .related__product-button:active {
-      color: #DE8F75;
-      transform: scale(0.9); }
+      color: #DE8F75; }
   .related__product-price {
     text-align: left;
     padding: 0.25rem;
@@ -6681,6 +6679,8 @@ a.text-dark:hover, a.text-dark:focus {
     margin: 1rem 0; }
     .sitemap__list-item:first-child {
       margin-top: 0; }
+    .sitemap__list-item-link {
+      color: #202020; }
 
 .social {
   margin-bottom: 2rem; }
@@ -6700,3 +6700,7 @@ a.text-dark:hover, a.text-dark:focus {
   color: #fff; }
   .contact__address {
     margin-bottom: 0; }
+  .contact__logo {
+    display: block;
+    padding: 1rem;
+    margin: 0 auto; }

@@ -39,13 +39,11 @@
       justify-content: center;
       align-items: center;
       font-size: 2rem;
-      transition: transform 0.3s ease;
 
       &:hover,
       &:focus,
       &:active {
         color: $primary;
-        transform: scale(0.9);
       }
     }
 

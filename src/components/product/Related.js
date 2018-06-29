@@ -16,7 +16,7 @@ class Related extends Component {
               <h4 className="h5 related__product-heading">{item.name}</h4>
               <a href="#" className="related__product-button">+</a>
             </div>
-            <div class="row align-center">
+            <div class="row align-items-center">
               <div class="col-md-6">
                 <span className="related__product-price">R$ {item.price.toFixed(2)}</span>
               </div>

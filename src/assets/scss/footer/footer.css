@@ -44,6 +44,8 @@
     margin: 1rem 0; }
     .sitemap__list-item:first-child {
       margin-top: 0; }
+    .sitemap__list-item-link {
+      color: #202020; }
 
 .social {
   margin-bottom: 2rem; }
@@ -63,3 +65,7 @@
   color: #fff; }
   .contact__address {
     margin-bottom: 0; }
+  .contact__logo {
+    display: block;
+    padding: 1rem;
+    margin: 0 auto; }

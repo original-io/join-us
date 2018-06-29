@@ -5,3 +5,7 @@
   color: #fff; }
   .contact__address {
     margin-bottom: 0; }
+  .contact__logo {
+    display: block;
+    padding: 1rem;
+    margin: 0 auto; }

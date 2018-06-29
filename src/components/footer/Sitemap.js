@@ -9,7 +9,9 @@ class Sitemap extends Component {
         <ul className="list-unstyled sitemap__list">
           {
             column.items.map((item, index) =>
-              <li className="sitemap__list-item" key={index}>{item}</li>
+              <li className="sitemap__list-item" key={index}>
+                <a className="sitemap__list-item-link" href="#">{item}</a>
+              </li>
             )
           }
         </ul>

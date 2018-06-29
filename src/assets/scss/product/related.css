@@ -28,11 +28,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    transition: transform 0.3s ease; }
+    font-size: 2rem; }
     .related__product-button:hover, .related__product-button:focus, .related__product-button:active {
-      color: #DE8F75;
-      transform: scale(0.9); }
+      color: #DE8F75; }
   .related__product-price {
     text-align: left;
     padding: 0.25rem;

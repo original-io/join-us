@@ -9,3 +9,5 @@
     margin: 1rem 0; }
     .sitemap__list-item:first-child {
       margin-top: 0; }
+    .sitemap__list-item-link {
+      color: #202020; }
