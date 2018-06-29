@@ -7,21 +7,21 @@ import pinterest from '../../assets/img/footer/pinterest.svg';
 class Social extends Component {
   render() {
     return (
-      <div className="social">
-        <ul className="list-inline social__list">
-          <li className="list-inline-item social__list-item">
-            <a href="#" title="Facebook">
-              <img src={facebook} alt="Facebook" />
+      <div className="redes">
+        <ul className="list-inline redes__list">
+          <li className="list-inline-item redes__list-item">
+            <a href="#">
+              <img src={facebook} />
             </a>
           </li>
-          <li className="list-inline-item social__list-item">
-            <a href="#" title="Instagram">
-              <img src={instagram} alt="Instagram" />
+          <li className="list-inline-item redes__list-item">
+            <a href="#">
+              <img src={instagram} />
             </a>
           </li>
-          <li className="list-inline-item social__list-item">
-            <a href="#" title="Pinterest">
-              <img src={pinterest} alt="Pinterest" />
+          <li className="list-inline-item redes__list-item">
+            <a href="#">
+              <img src={pinterest} />
             </a>
           </li>
         </ul>
