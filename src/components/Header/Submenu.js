@@ -16,6 +16,9 @@ class Submenu extends Component {
                       <h4 className="submenu__heading">
                         {item.title}
                       </h4>
+                      <button className="btn btn-outline-primary btn-block submenu__heading-btn">
+                        Ver tudo
+                      </button>
                     </div>
                     <div className="col-md-4 col-8 offset-1">
                       <ul className="list-unstyled submenu__list">

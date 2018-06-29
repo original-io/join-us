@@ -31,13 +31,17 @@
       background-color: transparent;
       cursor: pointer;
       padding: 0;
-      opacity: .5;
+      background-color: $white;
 
-      &:hover,
-      &:focus,
-      &:active,
-      &--active {
-        opacity: 1;
+      &-img {
+        opacity: .5;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &--active {
+          opacity: 1;
+        }
       }
     }
   }

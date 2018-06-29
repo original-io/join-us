@@ -31,8 +31,23 @@
     -webkit-text-stroke: 2px $complement-4;
 
     @include media-breakpoint-up(sm) {
+      font-size: 3.5rem;
+    }
+
+    @include media-breakpoint-up(md) {
       text-align: right;
       font-size: 4rem;
+    }
+
+    &-btn {
+      border-width: 2px;
+      margin-top: 2rem;
+      text-transform: uppercase;
+      display: none;
+
+      @include media-breakpoint-up(md) {
+        display: block;
+      }
     }
   }
 
@@ -48,7 +63,7 @@
 
   &__img {
     display: none;
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       display: block;
     }
   }
