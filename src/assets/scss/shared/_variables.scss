@@ -26,6 +26,10 @@ $grid-gutter-width: 15px;
 $font-size-base: 0.85rem;
 $link-hover-decoration: none;
 
+$border-radius: .15rem;
+$border-radius-lg: .2rem;
+$border-radius-sm: .1rem;
+
 $input-btn-padding-y: .75rem;
 $input-btn-padding-x: 1rem;
 $input-btn-padding-y-sm: .25rem;
@@ -39,3 +43,6 @@ $input-border-radius: 0;
 $input-border-radius-lg: 0;
 $input-border-radius-sm: 0;
 $input-focus-box-shadow: 0 none;
+
+$modal-content-border-width: 0;
+$modal-inner-padding: 0 5rem 1rem;

@@ -1,0 +1,48 @@
+.react-modal {
+  animation-duration: 0.3s;
+  animation-name: scale-down;
+  animation-timing-function: ease-out;
+  position: relative;
+  display: inline-block;
+  margin: 0 auto; }
+  .react-modal__overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    outline: 0;
+    z-index: 1050;
+    overflow-x: hidden;
+    text-align: center;
+    animation-duration: 0.3s;
+    animation-name: fade-in;
+    animation-timing-function: ease-out; }
+  .react-modal__heading {
+    text-transform: uppercase;
+    color: #DE8F75;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 0.5rem; }
+  .react-modal__btn-dismiss {
+    color: #AEB6C1; }
+
+.ReactModal__Body--open {
+  overflow: hidden; }
+
+@keyframes scale-down {
+  from {
+    transform: scale(1.25);
+    opacity: 0; }
+  to {
+    transform: scale(1);
+    opacity: 1; } }
+
+@keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }

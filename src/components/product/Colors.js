@@ -21,11 +21,12 @@ class Colors extends Component {
     const colorList = colors.map((id) => findColorById(id));
     const colorListItems = colorList.map((color) =>
       <li className="list-inline-item colors__list-item" key={color.id}>
-        <button className={
-          (color === chosen)
-            ? "colors__button colors__button--active"
-            : "colors__button"
-        }
+        <button
+          className={
+            (color === chosen)
+              ? "colors__button colors__button--active"
+              : "colors__button"
+          }
           style={{ backgroundColor: color.hex }} title={color.name}
           onClick={() => this.handleClick(color)}
         >
