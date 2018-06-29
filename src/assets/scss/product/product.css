@@ -1,15 +1,16 @@
 .product {
   position: relative;
-  margin-bottom: 6rem; }
+  margin-bottom: 5rem; }
 
 .colors {
   margin: 1.75rem 0; }
   .colors__list {
     margin-bottom: 0; }
-    .colors__list-item:not(:last-child) {
-      margin-right: 0.25rem;
-      margin-bottom: 0.25rem;
-      padding-right: 0.25rem; }
+    .colors__list-item {
+      margin-bottom: 0.25rem; }
+      .colors__list-item:not(:last-child) {
+        margin-right: 0.25rem;
+        padding-right: 0.25rem; }
   .colors__button {
     border: 0 none;
     display: block;
@@ -17,6 +18,8 @@
     height: 1.5rem;
     border-radius: 100%;
     cursor: pointer; }
+    .colors__button:focus, .colors__button:active, .colors__button--active {
+      box-shadow: 0 0 0 5px #E0DA9C; }
   .colors__description-name {
     margin-left: 0.8rem; }
 
@@ -41,14 +44,22 @@
 .media {
   text-align: center;
   padding: 0.75rem 0 0.25rem; }
+  .media__video-button {
+    background: url("assets/img/product/video.svg") center bottom 0.25rem no-repeat transparent scroll;
+    padding-bottom: calc(32px + 0.5rem);
+    border: 0 none;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    color: #DE8F75;
+    margin-bottom: 0.5rem; }
+  .media__gallery-list-item:not(:last-child) {
+    margin-bottom: 0.5rem; }
   .media__gallery-button {
     border: 0 none;
     background-color: transparent;
     cursor: pointer;
     padding: 0; }
-  .media__video-button {
-    background: url("assets/img/product/video.svg") center bottom 0.25rem no-repeat transparent scroll;
-    padding-bottom: calc(32px + 0.5rem); }
 
 .payments {
   margin: 0 0 2rem; }
@@ -73,25 +84,55 @@
     text-transform: uppercase;
     margin: 3rem 0 1.5rem;
     color: #DE8F75; }
-  .related__product-container {
-    position: relative; }
-  .related__product-heading {
-    position: absolute;
-    bottom: 0;
-    text-align: left;
-    font-size: 0.85rem;
-    margin-bottom: 0;
-    padding: 1.5rem 1rem 0.5rem;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
-    width: 100%; }
-  .related__product-button {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem; }
-  .related__product-price {
-    text-align: left;
-    padding: 0.25rem 1rem;
-    display: block; }
+  .related__product {
+    margin-bottom: 1rem; }
+    .related__product-container {
+      position: relative; }
+    .related__product-heading {
+      position: absolute;
+      bottom: 0;
+      text-align: left;
+      font-size: 0.85rem;
+      margin-bottom: 0;
+      padding: 1.5rem 0.5rem 0.5rem;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+      width: 100%; }
+    .related__product-button {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 100%;
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.4);
+      border: 2px solid #DE8F75;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem; }
+      .related__product-button:hover, .related__product-button:focus, .related__product-button:active {
+        color: #DE8F75; }
+    .related__product-price {
+      text-align: left;
+      padding: 0.25rem;
+      display: block; }
+    .related__product-colors {
+      padding: 0.25rem;
+      margin-bottom: 0;
+      text-align: right; }
+      .related__product-colors-item {
+        margin-bottom: 0.25rem; }
+        .related__product-colors-item:not(:last-child) {
+          margin-right: 0.25rem;
+          padding-right: 0.25rem; }
+      .related__product-colors-btn {
+        border: 0 none;
+        display: block;
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 100%;
+        cursor: pointer; }
 
 .sizes {
   margin: 1.75rem 0; }
@@ -114,3 +155,53 @@
       font-weight: bold; }
   .sizes__description-name {
     margin-left: 0.8rem; }
+
+.react-modal {
+  animation-duration: 0.3s;
+  animation-name: scale-down;
+  animation-timing-function: ease-out;
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  max-width: 100%; }
+  .react-modal__overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    outline: 0;
+    z-index: 1050;
+    overflow-x: hidden;
+    text-align: center;
+    animation-duration: 0.3s;
+    animation-name: fade-in;
+    animation-timing-function: ease-out; }
+  .react-modal__heading {
+    text-transform: uppercase;
+    color: #DE8F75;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 0.5rem; }
+  .react-modal__btn-dismiss {
+    color: #AEB6C1; }
+
+.ReactModal__Body--open {
+  overflow: hidden; }
+
+@keyframes scale-down {
+  from {
+    transform: scale(1.25);
+    opacity: 0; }
+  to {
+    transform: scale(1);
+    opacity: 1; } }
+
+@keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }

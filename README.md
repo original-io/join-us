@@ -3,8 +3,9 @@
 ## Features
 
 - Simulação de API REST
-- Mobile-first 
-- React
-- Webpack
+- Mobile-first
 - BEM (CSS)
+- SCSS
+- Webpack
+- React
 - Bootstrap 4

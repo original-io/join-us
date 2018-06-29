@@ -41,10 +41,11 @@
       padding: 0.25rem;
       margin-bottom: 0;
       text-align: right; }
-      .related__product-colors-item:not(:last-child) {
-        margin-right: 0.25rem;
-        margin-bottom: 0.25rem;
-        padding-right: 0.25rem; }
+      .related__product-colors-item {
+        margin-bottom: 0.25rem; }
+        .related__product-colors-item:not(:last-child) {
+          margin-right: 0.25rem;
+          padding-right: 0.25rem; }
       .related__product-colors-btn {
         border: 0 none;
         display: block;

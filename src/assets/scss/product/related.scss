@@ -62,9 +62,10 @@
       text-align: right;
       
       &-item {
+        margin-bottom: 0.25rem;
+
         &:not(:last-child) {
           margin-right: 0.25rem;
-          margin-bottom: 0.25rem;
           padding-right: 0.25rem;
         }
       }
