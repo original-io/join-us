@@ -1,0 +1,98 @@
+.header {
+    text-align: center;
+    &__main-title {
+        @include display-flex;
+        align-items: center;
+        border-bottom: solid 1px $soft-grey;
+        justify-content: center;
+        height: 86px;
+    }
+    &__menu {
+        @include display-flex;
+        align-items: center;
+        border-bottom: solid 1px $soft-grey;
+        height: 50px;
+        padding: 0 40px;
+        .menu {
+            &__block {
+                width: 33.3%;
+                &._1 {
+                    @include display-flex;
+                    color: $dark-grey;
+                    font: $font-open;
+                    justify-content: flex-start;
+                    span {
+                        cursor: pointer;
+                        &:nth-child(2) {
+                            margin: 0 10px;
+                        }
+                    }
+                }
+                &._2, &._3 {
+                    @include display-flex;
+                }
+                &._3 {
+                    justify-content: center;
+                }
+            }
+            &__link {
+                color: $dark-grey;
+                font: $font-gotham;
+                position: relative;
+                text-decoration: none;
+                text-transform: uppercase;
+                &:after {
+                    @include line-animation;
+                }
+                &:hover {
+                    &:after {
+                        width: 100%;
+                    }
+                }
+            }
+            &__item {
+                &.search {
+                    @include display-flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    img {
+                        height: 20px;
+                    }
+                    input {
+                        border: none;
+                        margin-left: 5px;   
+                        outline: none!important;
+                        overflow-x: scroll;
+                        width: 100px;
+                    }
+                    &:after {
+                        background: #000;
+                        bottom: 0px;
+                        content: '';
+                        display: block;
+                        height: 1px;
+                        left: 50%;
+                        position: absolute;
+                        transform: translateX(calc(-50% - 5px));
+                        width: 100px;
+                    }
+                }
+                &.cart {                    
+                    @include display-flex; 
+                    align-items: center;
+                    cursor: pointer;
+                    img {
+                        height: 22px;
+                    }
+                    span {                   
+                        color: $dark-grey;
+                        font: $font-gotham;
+                        font-size: 12px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

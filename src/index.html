@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/index.css">
+    <title>Original.io</title>
+</head>
+<body class="produto">
+	<partial src="_header.html"></partial>	
+	<main class="product__main" role="main">
+		<div class="product__main-container">
+			<div class="breadcrumb">
+				<ul class="breadcrumb__items">
+					<li class="breadcrumb__item"><a class="breadcrumb__link" href="/" title="Home">Home /</a></li>
+					<li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Sapatos</a></li>
+				</ul>
+			</div>
+			<div class="product__container js--product" data-sticky-container="data-sticky-container">
+				<div class="product__left">
+					<partial src="_product.html"></partial>	
+				</div>
+				<div class="product__right">
+					<div class="product__main-info js--product-sticky-info">
+						<h1 class="product__name">Rasteira Tira Dedo</h1>
+						<div class="product__sku-reference">RT 0568 | 03.07.0653</div>
+						<div class="product__info">
+							<div class="product__price-wrapper">
+								<del class="product__old-price">R$69,00 |</del>
+								<p class="product__best-price">R$55,20</p>
+							</div>
+							<small class="product__installments-wrapper">Ou 6x de R$9,20</small>
+						</div>
+						<div class="product__selectors">
+							<div class="product__color-container">
+								<h4 class="product__selector-title">Cor: <span id="color__selected"></span></h4>
+								<div class="product__selector-content js--product-color-container">
+									<div class="product__select-color">
+										<span data-color="A9095E">Fucsia</span>
+										<span data-color="6B85C1">Marrom</span>
+										<span data-color="A14830">Azul</span>
+										<span data-color="000000">Preto</span>
+									</div>
+								</div>
+							</div>
+							<div class="product__size-container">
+								<h4 class="product__selector-title">Tamanho: <span id="size__selected"></span></h4>
+								<div class="product__selector-content js--product-size-container">
+									<div class="product__select-size">
+										<span data-sku="1">33</span>
+										<span data-sku="2">34</span>
+										<span data-sku="3">35</span>
+										<span data-sku="4">36</span>
+										<span data-sku="5">37</span>
+										<span data-sku="6">38</span>
+										<span data-sku="7">39</span>
+										<span data-sku="8">40</span>
+										<span data-sku="9">41</span>
+										<span data-sku="10">42</span>
+									</div>
+								</div>
+							</div>
+							<div class="product__buy-btn-wrapper js--add-to-cart">
+								<button class="product__buy-btn">ADICIONAR A SACOLA</button>
+							</div>
+						</div>
+						<div class="product__description-wrapper">
+							<p>Rasteira em artesanato soft com tira de dedo e fechamento de fivela. Possui sola sempre na cor do cabedal.</p>
+						</div>
+					</div>
+				</div>
+				<div class="product__main-shelf">
+					<span class="product__main-shelf-title">QUEM VIU VIU TAMBÉM</span>
+					<div class="product__main-shelf-container js--product-main-shelf">
+						<partial src="_shelf.html"></partial>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="product__cart hide">
+			<div class="cart__content">
+				<span class="cart__close"><img src="assets/images/close.png"></span>
+				<div class="cart__info">
+					<img src="assets/images/prod01.png" id="cart_image"/>
+					<span class="cart__title">ADICIONADO COM SUCESSO!</span>
+					<a href="#" class="cart__buy">FINALIZAR COMPRA</a>
+					<span class="cart__keep">CONTINUAR COMPRANDO</span>
+				</div>
+			</div>
+		</div>
+	</main>
+	<partial src="_footer.html"></partial>
+	<script	src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+	crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script type="text/javascript" src="assets/js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+
+{
+  "extends": "google",
+
+  "rules":{
+    "linebreak-style": 0
+  }
+}
