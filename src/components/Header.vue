@@ -4,13 +4,12 @@
              <img class="m-t-mdd m-b-mdd" src="../assets/logo.png" alt="Logo original.io" >
         </div>
           <div class="columns is-marginless bordaHeader">
-              <div class="column is-2">
-              <div class="columns is-marginless ">
-              <div class="column is-paddingless m-l-md entrar"><a>Entrar</a>  |   <a>Cadastrar-se</a></div>
-            </div>
+              <div class="column is-2 is-offset-1">
+
+                <div class="column m-l-md is-marginless is-paddingless entrar"><a>Entrar</a>  |   <a>Cadastrar-se</a></div>
 
               </div>
-              <div class="column is-paddingless is-8">
+              <div class="column is-paddingless is-6">
                 <nav class="navbar" role="navigation" aria-label="main navigation">
                   <div id="navbarBurger" class="navbar-burger m-t-sm m-b-sm" data-target="navMenu" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
                       <span></span>

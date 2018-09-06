@@ -1,12 +1,18 @@
 <template>
   <div id="app">
     <Header />
+    <!-- Conteudo -->
+    <div class="columns is-marginless is-paddingless">
+      <side-items class="column is-1 m-t-sm is-offset-1 is-paddingless"/>
+    </div>
   </div>
 </template>
 
 <script>
 import Vue from "vue";
+//componentes
 import Header from "./components/Header";
+import sideItems from "./components/sideItems";
 import Buefy from "buefy";
 import "buefy/lib/buefy.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -26,7 +32,8 @@ Vue.use(Buefy, {
 export default {
   name: "app",
   components: {
-    Header
+    Header,
+    sideItems
   }
 };
 </script>
