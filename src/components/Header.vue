@@ -4,10 +4,8 @@
              <img class="m-t-mdd m-b-mdd" src="../assets/logo.png" alt="Logo original.io" >
         </div>
           <div class="columns is-marginless bordaHeader">
-              <div class="column is-2 is-offset-1">
-
-                <div class="column m-l-md is-marginless is-paddingless entrar"><a>Entrar</a>  |   <a>Cadastrar-se</a></div>
-
+              <div class="column is-2 is-offset-1 is-paddingless">
+                <div class="entrar"><a>Entrar</a>&nbsp | &nbsp<a>Cadastrar-se</a></div>
               </div>
               <div class="column is-paddingless is-6">
                 <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -25,10 +23,8 @@
                   </div>
                 </nav>
               </div>
-              <div class="column is-paddingless m-b-sm is-1 buscar">
-                 <font-awesome-icon icon="search" />
-                  <span>&nbsp Buscar</span>
-              </div>
+              <input type="text" class="column is-paddingless m-b-sm is-1 buscar" placeholder="Buscar">
+  
               <div class="column is-paddingless m-b-sm m-l-xs is-1">
                
                 <font-awesome-icon icon="shopping-bag" /> 0
@@ -48,9 +44,17 @@ export default {
 </script>
 
 
-<style>
-.buscar {
-  border-bottom: 2px solid #353535;
+<style lang=scss>
+input {
+  &.buscar {
+    font-family: "Gotham Book";
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 1px;
+    border-left-width: 0px;
+    border-bottom-color: #686868;
+
+  }
 }
 
 .column.is-1,
@@ -61,9 +65,12 @@ export default {
 
 .entrar {
   color: #686868;
-  font-family: "Nunito Sans", sans-serif;
   font-size: 14px;
   display: flex;
+
+  & a {
+    color: #363636;
+  }
 }
 
 .center {
@@ -73,7 +80,6 @@ export default {
 }
 .navbar-item {
   text-decoration: none;
-  font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   text-transform: uppercase;
   color: #686868;
