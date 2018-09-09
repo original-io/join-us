@@ -13,7 +13,7 @@
       </nav>
     <!-- Conteudo -->
     <div class="columns is-marginless is-paddingless">
-      <side-items class="column is-1 m-t-sm"/>
+      <side-items class="column is-1 is-offset-1 m-t-sm"/>
     </div>
   </div>
 </template>

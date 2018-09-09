@@ -23,11 +23,12 @@
                   </div>
                 </nav>
               </div>
-              <input type="text" class="column is-paddingless m-b-sm is-1 buscar" placeholder="Buscar">
+              <font-awesome-icon class="iconBusca"  icon="search" />
+              <input type="text" id="buscar" class="column is-paddingless is-1" placeholder="Buscar">
   
-              <div class="column is-paddingless m-b-sm m-l-xs is-1">
-               
-                <font-awesome-icon icon="shopping-bag" /> 0
+              <div class="column is-paddingless m-l-md is-1">
+                <img src="@/assets/svg/icon-cart.svg">
+                <span>{{bag}}</span>
               </div>
           </div>
     </div>
@@ -37,6 +38,7 @@
 export default {
   data: function() {
     return {
+      bag: 0,
       items: ["Sapatos", "Bolsas", "Acessórios", "Off"]
     };
   }
@@ -45,15 +47,22 @@ export default {
 
 
 <style lang=scss>
+.iconBusca {
+  align-self: center;
+  border-bottom-width: 1px;
+  border-bottom-color: #686868;
+}
 input {
-  &.buscar {
-    font-family: "Gotham Book";
+  font-family: "Gotham Book";
+  &.column.is-1 {
+    width: 70px;
+  }
+  &#buscar {
     border-top-width: 0px;
     border-right-width: 0px;
     border-bottom-width: 1px;
     border-left-width: 0px;
     border-bottom-color: #686868;
-
   }
 }
 
@@ -61,6 +70,10 @@ input {
 .column.is-2,
 .field {
   align-self: center;
+}
+
+input .column.is-1 {
+  width: 70px !important;
 }
 
 .entrar {
