@@ -13,7 +13,10 @@
       </nav>
     <!-- Conteudo -->
     <div class="columns is-marginless is-paddingless">
-      <side-items class="column is-1 is-offset-1 m-t-sm"/>
+      <side-items class="column is-1 is-offset-1
+       m-t-sm"/>
+       <Primary-item class="column is-4" />
+       <Item-description class="column is-4" />
     </div>
   </div>
 </template>
@@ -22,14 +25,16 @@
 import Vue from "vue";
 //componentes
 import Header from "./components/Header";
-import sideItems from "./components/sideItems";
+import SideItems from "./components/SideItems";
+import PrimaryItem from "./components/PrimaryItem";
+import ItemDescription from "./components/ItemDescription"
+
 import Buefy from "buefy";
 import "buefy/lib/buefy.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-/* eslint-disable */
 library.add(fas);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
@@ -45,7 +50,9 @@ export default {
   name: "app",
   components: {
     Header,
-    sideItems
+    SideItems,
+    PrimaryItem,
+    ItemDescription
   }
 };
 
