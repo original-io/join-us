@@ -7,14 +7,14 @@
       </div>
       <div class="column is-paddingless is-6">
         <nav class="navbar" role="navigation" aria-label="main navigation">
-          <div id="navbarBurger" v-if="false" class="navbar-burger m-t-sm m-b-sm" data-target="navMenu" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');"> <span></span> <span></span> <span></span> </div>
+          <div id="navbarBurger" class="navbar-burger m-t-sm m-b-sm" data-target="navMenu" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');"> <span></span> <span></span> <span></span> </div>
           <div class=" nav-center navbar-menu"> <a v-for="item in items" :key="item" class="is-tab is-hidden-desktop navbar-item">{{item}}</a> </div>
           <div id="navMenu" class="nav-right navbar-menu"> <a v-for="item in items" :key="item" class="is-tab is-hidden-touch navbar-item m-r-sm m-l-md">{{item}}</a> </div>
         </nav>
       </div>
-      <div class="column is-paddingless is-2">
+      <div class="column is-paddingless is-2 is-hidden-touch">
         <div class="columns is-paddingless">
-          <fieldset >
+          <fieldset class>
             <input class="column" type="text" id="buscar"  placeholder="Buscar">
             <a class="search-btn" href="">
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21">
@@ -30,89 +30,85 @@
 </template>
 
 <script>
-    export default {
-      data: function() {
-        return {
-          bag: 0,
-          items: ["Sapatos", "Bolsas", "Acessórios", "Off"]
-        };
-      }
+export default {
+  data: function() {
+    return {
+      bag: 0,
+      items: ["Sapatos", "Bolsas", "Acessórios", "Off"]
     };
+  }
+};
 </script>
 
 <style lang=scss>
-    .iconBusca {
-      align-self: center;
-      border-bottom-width: 1px;
-      border-bottom-color: #686868;
-    }
+.iconBusca {
+  align-self: center;
+  border-bottom-width: 1px;
+  border-bottom-color: #686868;
+}
 .search-btn {
-    position: absolute;
-    left: 20px;
-    top: 10px;
+  position: absolute;
+  left: 20px;
+  top: 6px;
 }
 .search-btn svg path {
-    fill: #686868;
+  fill: #686868;
 }
 .search-btn svg {
-    width: 21px;
-    height: auto;
+  width: 25px;
+  height: auto;
 }
-    fieldset{
-      border: 0;
-      position: relative;
-    }
-    
-    input {
-      font-family: "Gotham Book";
-      &.column.is-1 {
-        width: 70px;
-      }
-      &#buscar {
-        border-top-width: 0px;
-        border-right-width: 0px;
-        border-bottom-width: 1px;
-        border-left-width: 0px;
-        padding-left: 60px;
-        border-bottom: 1px solid #c3c3c3;
-        width: 120px;
-      }
-    }
-    
-    .column.is-1,
-    .column.is-2,
-    .field {
-      align-self: center;
-    }
-    
-    input .column.is-1 {
-      width: 70px !important;
-    }
-    
-    .entrar {
-      color: #686868;
-      font-size: 14px;
-      display: flex;
-      & a {
-        color: #363636;
-      }
-    }
-    
-    .center {
-      text-align: center;
-      display: block;
-      width: 100%;
-    }
-    
-    .navbar-item {
-      text-decoration: none;
-      font-size: 16px;
-      text-transform: uppercase;
-      color: #686868;
-    }
-    
-    .bordaHeader {
-      border-top: 1px solid #ccc;
-      border-bottom: 1px solid #ccc;
-    }
+fieldset {
+  border: 0;
+  position: relative;
+}
+
+input {
+  font-family: "Gotham Book";
+  &.column.is-1 {
+    width: 70px;
+  }
+  &#buscar {
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 1px;
+    border-left-width: 0px;
+    padding-left: 50px;
+    border-bottom: 1px solid #c3c3c3;
+    width: 120px;
+  }
+}
+
+.column.is-1,
+.column.is-2,
+.field {
+  align-self: center;
+}
+
+.entrar {
+  color: #686868;
+  font-size: 14px;
+  display: flex;
+  & a {
+    color: #363636;
+  }
+}
+
+.center {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.navbar-item {
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #686868;
+}
+
+.bordaHeader {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
 </style>

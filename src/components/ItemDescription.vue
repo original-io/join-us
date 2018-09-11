@@ -10,7 +10,7 @@
             </div>
             <div class="produtoCores m-b-md">
                 <p>Cor: <span>(Fucsia)</span></p>
-                <div ref="selecaoCor" :style="{ backgroundColor: cor}" v-for="(cor, index) in cores" :key="cor" @click="selecionarCor(index)" class="m-sm produtoCores__opcao cores">
+                <div ref="selecaoCor" :style="{ backgroundColor: cor}" v-for="(cor, index) in cores" :key="cor" @click="selecionarCor(index)" class="produtoCores__opcao cores">
                 </div>
             </div>
             <p class="columns p-b-none m-b-none">
@@ -27,39 +27,36 @@
 
 <script>
 export default {
-    /* eslint-disable */
-    data: function(){
-        return{
-            cores: ["#A9095E","#5f75aa","#A14830","#000000"],
-            corSelecionada: null,
-            tamanhoSelecionado: null
-        }
+  /* eslint-disable */
+  data: function() {
+    return {
+      cores: ["#A9095E", "#5f75aa", "#A14830", "#000000"],
+      corSelecionada: null,
+      tamanhoSelecionado: null
+    };
+  },
+  methods: {
+    selecionarCor(index) {
+      let corNova = this.$refs.selecaoCor[index].style;
+      if (this.corSelecionada != null) {
+        let corAntiga = this.$refs.selecaoCor[this.corSelecionada].style;
+        corAntiga.border = "6px solid #fff";
+      }
+      this.corSelecionada = index;
+      corNova.border = "6px solid #E0DA9C";
     },
-    methods:{
-        selecionarCor(index){
-            let corNova = this.$refs.selecaoCor[index].style;
-            if(this.corSelecionada != null){
-                let corAntiga = this.$refs.selecaoCor[this.corSelecionada].style;
-                corAntiga.width = "22px" 
-                corAntiga.height = "22px";
-                corAntiga.border =  "";
-            }
-            this.corSelecionada = index;
-            corNova.width = "28px" 
-            corNova.height = "28px";
-            corNova.border =  "5px solid #E0DA9C";
-        },
 
-        selecionarTamanho(index){
-            let tamanhoNovo = this.$refs.selecaoTamanho[index-1].style;
-            if(this.tamanhoSelecionado != null){
-                let tamanhoAntigo = this.$refs.selecaoTamanho[this.tamanhoSelecionado].style;
-                tamanhoAntigo.backgroundColor = "#EBEBEB" 
-            }
-            this.tamanhoSelecionado = index-1;
-            tamanhoNovo.backgroundColor = "#E0DA9C" 
-        }
+    selecionarTamanho(index) {
+      let tamanhoNovo = this.$refs.selecaoTamanho[index - 1].style;
+      if (this.tamanhoSelecionado != null) {
+        let tamanhoAntigo = this.$refs.selecaoTamanho[this.tamanhoSelecionado]
+          .style;
+        tamanhoAntigo.backgroundColor = "#EBEBEB";
+      }
+      this.tamanhoSelecionado = index - 1;
+      tamanhoNovo.backgroundColor = "#E0DA9C";
     }
+  }
 };
 </script>
 
@@ -68,57 +65,57 @@ export default {
   &--bordaSolid {
     border: 2px solid #ccc;
   }
-  & .produtoValor{
-    & .anterior{
-        color: #E35442;
-        font-family: Open Sans, sans-serif;
+  & .produtoValor {
+    & .anterior {
+      color: #e35442;
+      font-family: Open Sans, sans-serif;
     }
-    & .atual{
-        font-weight: 600;
-        color: #686868;
+    & .atual {
+      font-weight: 600;
+      color: #686868;
     }
-    &--gray{
-        color:#7F7F7F;
+    &--gray {
+      color: #7f7f7f;
     }
   }
-  & .produtoCores{
-        & span{
-          color: #5F75AA;
-          margin-bottom: 0.25 rem;
+  & .produtoCores {
+    & span {
+      color: #5f75aa;
+      margin-bottom: 0.25 rem;
+    }
+    &__opcao {
+      cursor: pointer;
+      display: inline-block;
+      border-radius: 50%;
+      &.cores {
+        width: 32px;
+        border: 6px solid #fff;
+        height: 32px;
+      }
+      &.tamanho {
+        width: 34px;
+        height: 34px;
+        background-color: #ebebeb;
+        text-align: center;
+        & span {
+          line-height: 34px;
+          font-size: 14px;
+          color: #2a5a75;
         }
-        &__opcao{
-            cursor: pointer;
-            display:  inline-block;
-            border-radius: 50%;
-            &.cores{
-                width: 22px;
-                height: 22px;
-            }
-            &.tamanho{
-                width: 34px;
-                height: 34px;
-                background-color: #EBEBEB;
-                text-align: center;
-                & span{
-                    line-height: 34px;
-                    font-size: 14px;
-                    color: #2A5A75;
-                }
-            }
-        }
+      }
+    }
   }
-    & a{
-          text-decoration: underline;
-    }
-    & .button.is-large{
-        padding: 35px;
-        font-size: 18px;
-        background-color: #32917B;
-        color: #FFFFFF
-
-    }
-    & span.descricao{
-        font-size: 14px;
-    }
+  & a {
+    text-decoration: underline;
+  }
+  & .button.is-large {
+    padding: 35px;
+    font-size: 18px;
+    background-color: #32917b;
+    color: #ffffff;
+  }
+  & span.descricao {
+    font-size: 14px;
+  }
 }
 </style>
