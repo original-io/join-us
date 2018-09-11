@@ -16,7 +16,10 @@
       <side-items class="column is-1 is-offset-1
        m-t-sm"/>
        <Primary-item class="column is-4" />
-       <Item-description class="column is-4" />
+       <Item-description class="column is-4 is-offset-1" />
+    </div>
+    <div class="colums is-marginless is-paddingless">
+       <Other-Items class="column is-10 is-offset-1" />
     </div>
   </div>
 </template>
@@ -27,7 +30,8 @@ import Vue from "vue";
 import Header from "./components/Header";
 import SideItems from "./components/SideItems";
 import PrimaryItem from "./components/PrimaryItem";
-import ItemDescription from "./components/ItemDescription"
+import ItemDescription from "./components/ItemDescription";
+import OtherItems from "./components/OtherItems";
 
 import Buefy from "buefy";
 import "buefy/lib/buefy.css";
@@ -52,7 +56,8 @@ export default {
     Header,
     SideItems,
     PrimaryItem,
-    ItemDescription
+    ItemDescription,
+    OtherItems
   }
 };
 

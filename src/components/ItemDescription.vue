@@ -65,8 +65,6 @@ export default {
 
 <style scoped lang="scss">
 .description {
-  width: 450px;
-  height: 583px;
   &--bordaSolid {
     border: 2px solid #ccc;
   }
