@@ -23,7 +23,21 @@
             <div ref="selecaoTamanho" v-for="index in 10" :key="index" class="produtoCores__opcao tamanho m-xs" @click="selecionarTamanho(index)">
                 <span class="has-text-weight-bold">{{32+index}}</span>
             </div>
-            <div class="button is-large is-fullwidth is-uppercase add-item m-t-lgg m-b-lg">adicionar à sacola</div>
+            <div class="button is-large is-fullwidth is-uppercase add-item m-t-lgg m-b-lg" @click="ativarModal">adicionar à sacola</div>
+
+<div ref="modalSucess" class="modal">
+  <div class="modal-card">
+           <div id="modalFechar" @click="removeModal" class="close"></div>
+    <section class="modal-card-body p-l-xl p-r-xl p-t-lg p-b-md">
+          <img class="m-l-md" src="@/assets/produtos/prod05.png" >
+          <h2>adicionado com sucesso</h2>
+          <div class="button is-large is-fullwidth is-uppercase">finalizar compra</div>
+          <a class="p-l-xl p-r-xl" href="#">Continuar comprando</a>
+    </section>
+  </div>
+</div>
+
+
             <span class="descricao m-t-md">Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal.</span>
         </div>
     </div>
@@ -37,10 +51,19 @@ export default {
     return {
       cores: ["#A9095E", "#5f75aa", "#A14830", "#000000"],
       corSelecionada: null,
-      tamanhoSelecionado: null
+      tamanhoSelecionado: null,
+      isCardModalActive: false
     };
   },
   methods: {
+    removeModal(){
+      let modal = this.$refs.modalSucess;
+      modal.classList.remove("is-active");
+    },
+    ativarModal(){
+      let modal = this.$refs.modalSucess;
+      modal.classList.add("is-active");
+    },
     selecionarCor(index) {
       let corNova = this.$refs.selecaoCor[index].style;
       if (this.corSelecionada != null) {
@@ -66,6 +89,28 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.modal-card-body{
+  & a{
+    color: #AEB6C1;
+    font-size: 14px;
+    text-decoration: none !important;
+    line-height: 20px;
+    text-decoration: none;
+    display: block;
+    margin: 20px auto;
+  }
+  & h2{
+    font-size: 22px;
+    color: #DE8F75;
+    font-family: Gotham Book, sans-serif;
+    line-height: 31px;
+    text-transform: uppercase;
+    padding: 20px 0;
+  }
+}
+.modal-content, .modal-card {
+    width: fit-content !important;
+}
 .description {
   &--bordaSolid {
     border: 2px solid #ccc;
@@ -123,4 +168,16 @@ export default {
     font-size: 14px;
   }
 }
+
+.close {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    background-image: url(../assets/close.png);
+    background-size: contain;
+}
+
 </style>
