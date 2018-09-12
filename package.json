@@ -19,10 +19,10 @@
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.1",
-    "@vue/cli-plugin-eslint": "^3.0.1",
-    "@vue/cli-service": "^3.0.1",
-    "lint-staged": "^7.2.2",
+    "@vue/cli-plugin-babel": "^3.0.2",
+    "@vue/cli-plugin-eslint": "^3.0.2",
+    "@vue/cli-service": "^3.0.2",
+    "lint-staged": "^8.0.0-beta.1",
     "node-sass": "^4.9.3",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
