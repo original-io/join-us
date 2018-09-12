@@ -20,6 +20,7 @@
     <div class="colums is-marginless is-paddingless">
        <Other-Items class="column is-10 is-offset-1" />
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -30,6 +31,7 @@ import Header from "./components/Header";
 import SideItems from "./components/SideItems";
 import ItemDescription from "./components/ItemDescription";
 import OtherItems from "./components/OtherItems";
+import Footer from "./components/Footer";
 
 import Buefy from "buefy";
 import "buefy/lib/buefy.css";
@@ -54,7 +56,8 @@ export default {
     Header,
     SideItems,
     ItemDescription,
-    OtherItems
+    OtherItems,
+    Footer
   }
 };
 

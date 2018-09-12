@@ -1,7 +1,7 @@
 <template>
   <div class="columns">
     <div class="p-md column is-half">
-        <img class="p-l-md" width="450px" height="600px" src="@/assets/sandalias.png" alt="sandalias">
+        <img class="p-l-md" width="450px" height="600px" src="@/assets/produtos/sandalias.png" alt="sandalias">
     </div>
     <div class="column is-half description">
         <div class="description--bordaSolid p-md">

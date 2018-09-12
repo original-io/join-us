@@ -39,22 +39,22 @@ export default {
     return {
       items: [
         {
-          img: require("@/assets/prod03.jpg"),
+          img: require("@/assets/produtos/prod03.jpg"),
           price: 204.9,
           colors: ["#A9095E", "#6B85C1", "#A14830", "#000000"]
         },
         {
-          img: require("@/assets/prod04.jpg"),
+          img: require("@/assets/produtos/prod04.jpg"),
           price: 204.9,
           colors: ["#A9095E", "#6B85C1", "#A14830", "#000000"]
         },
         {
-          img: require("@/assets/prod02.jpg"),
+          img: require("@/assets/produtos/prod02.jpg"),
           price: 204.9,
           colors: []
         },
         {
-          img: require("@/assets/prod01.jpg"),
+          img: require("@/assets/produtos/prod01.jpg"),
           price: 204.9,
           colors: ["#6B85C1", "#A14830", "#000000"]
         }
@@ -84,17 +84,16 @@ export default {
   border-radius: 50%;
   border: 1px solid black;
   background-color: rgba(255, 255, 255, 0.7);
-  //background-image: url(../img/setaesquerda.png);
   background-size: 8px 14px;
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
   &.direita{
-      background-image: url(../assets/setadireita.png);
+      background-image: url(../assets/setas/setadireita.png);
 
   }
   &.esquerda{
-      background-image: url(../assets/setaesquerda.png);
+      background-image: url(../assets/setas/setaesquerda.png);
   }
 }
 .column.has-text-centered {

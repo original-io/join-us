@@ -1,6 +1,6 @@
 <template>
   <div class="is-marginless">
-    <div class="center"> <img class="m-t-mdd m-b-mdd" src="../assets/logo.png" alt="Logo original.io"> </div>
+    <div class="center"> <img class="m-t-mdd m-b-mdd" src="../assets/logos/logo.png" alt="Logo original.io"> </div>
     <div class="columns is-marginless bordaHeader">
       <div class="column is-2 is-offset-1 is-paddingless">
         <div class="entrar"><a>Entrar</a>&nbsp | &nbsp<a>Cadastrar-se</a></div>
