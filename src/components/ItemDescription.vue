@@ -1,5 +1,9 @@
 <template>
-    <div class="description">
+  <div class="columns">
+    <div class="p-md column is-half">
+        <img class="p-l-md" width="450px" height="600px" src="@/assets/sandalias.png" alt="sandalias">
+    </div>
+    <div class="column is-half description">
         <div class="description--bordaSolid p-md">
             <h2 class="is-uppercase has-text-weight-bold is-size-4 has-text-black-bis m-b-xs">Rasteira tira dedo</h2>
             <p class="m-b-md">RT 0568 | 03.07.0653</p>
@@ -23,6 +27,7 @@
             <span class="descricao m-t-md">Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal.</span>
         </div>
     </div>
+  </div>
 </template>
 
 <script>

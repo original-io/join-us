@@ -14,9 +14,8 @@
     <!-- Conteudo -->
     <div class="columns is-marginless is-paddingless">
       <side-items class="column is-1 is-offset-1
-       m-t-sm"/>
-       <Primary-item class="column is-4" />
-       <Item-description class="column is-4 is-offset-1" />
+       m-t-sm m-r-md"/>
+       <Item-description class="column is-marginless is-paddingless is-8 is-offset-1" />
     </div>
     <div class="colums is-marginless is-paddingless">
        <Other-Items class="column is-10 is-offset-1" />
@@ -29,7 +28,6 @@ import Vue from "vue";
 //componentes
 import Header from "./components/Header";
 import SideItems from "./components/SideItems";
-import PrimaryItem from "./components/PrimaryItem";
 import ItemDescription from "./components/ItemDescription";
 import OtherItems from "./components/OtherItems";
 
@@ -55,7 +53,6 @@ export default {
   components: {
     Header,
     SideItems,
-    PrimaryItem,
     ItemDescription,
     OtherItems
   }
