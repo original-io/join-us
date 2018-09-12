@@ -15,7 +15,8 @@
     "@fortawesome/vue-fontawesome": "^0.1.1",
     "buefy": "^0.6.6",
     "npm": "^6.4.1",
-    "vue": "^2.5.17"
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.1",

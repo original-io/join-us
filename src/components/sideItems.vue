@@ -23,20 +23,19 @@ export default {};
 </script>
 
 <style scoped lang="scss">
-.centered{
-    text-align: center;
-    & .font{
-      font-size: 12px;
-      color: #de8f75;
-    }
-    &.flipY{
-        -moz-transform: scaleY(-1);
-        -o-transform: scaleY(-1);
-        -webkit-transform: scaleY(-1);
-        transform: scaleY(-1);
-        filter: FlipH;
-        -ms-filter: "FlipH"
-    }
+.centered {
+  text-align: center;
+  & .font {
+    font-size: 12px;
+    color: #de8f75;
+  }
+  &.flipY {
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+  }
 }
-
 </style>

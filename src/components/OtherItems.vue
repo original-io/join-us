@@ -66,8 +66,8 @@ export default {
 
 <style scoped lang="scss">
 .pagOutros {
-    margin: 20px auto;
-    width: fit-content;
+  margin: 20px auto;
+  width: fit-content;
   & span {
     position: relative;
     top: -14px;
@@ -88,12 +88,11 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
-  &.direita{
-      background-image: url(../assets/setas/setadireita.png);
-
+  &.direita {
+    background-image: url(../assets/setas/setadireita.png);
   }
-  &.esquerda{
-      background-image: url(../assets/setas/setaesquerda.png);
+  &.esquerda {
+    background-image: url(../assets/setas/setaesquerda.png);
   }
 }
 .column.has-text-centered {

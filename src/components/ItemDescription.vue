@@ -24,20 +24,17 @@
                 <span class="has-text-weight-bold">{{32+index}}</span>
             </div>
             <div class="button is-large is-fullwidth is-uppercase add-item m-t-lgg m-b-lg" @click="ativarModal">adicionar à sacola</div>
-
-<div ref="modalSucess" class="modal">
-  <div class="modal-card">
-           <div id="modalFechar" @click="removeModal" class="close"></div>
-    <section class="modal-card-body p-l-xl p-r-xl p-t-lg p-b-md">
-          <img class="m-l-md" src="@/assets/produtos/prod05.png" >
-          <h2>adicionado com sucesso</h2>
-          <div class="button is-large is-fullwidth is-uppercase">finalizar compra</div>
-          <a class="p-l-xl p-r-xl" href="#">Continuar comprando</a>
-    </section>
-  </div>
-</div>
-
-
+              <div ref="modalSucess" class="modal">
+                <div class="modal-card">
+                        <div id="modalFechar" @click="removeModal" class="close"></div>
+                  <section class="modal-card-body p-l-xl p-r-xl p-t-lg p-b-md">
+                        <img class="m-l-md" src="@/assets/produtos/prod05.png" >
+                        <h2>adicionado com sucesso</h2>
+                        <div class="button is-large is-fullwidth is-uppercase">finalizar compra</div>
+                        <a class="p-l-xl p-r-xl" href="#">Continuar comprando</a>
+                  </section>
+                </div>
+              </div>
             <span class="descricao m-t-md">Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal.</span>
         </div>
     </div>

@@ -1,37 +1,11 @@
 <template>
   <div id="app">
-    <Header />
-      <nav class="breadcrumb breadcrumb--alignHeader" >
-        <ul>
-          <li class="breadcrumb__sideItems">
-            <a>Home</a>
-          </li>  
-          <li class="breadcrumb__sideItems">
-            <a><b>Sapatos</b></a>
-          </li>
-        </ul>
-      </nav>
-    <!-- Conteudo -->
-    <div class="columns is-marginless is-paddingless">
-      <side-items class="column is-1 is-offset-1
-       m-t-sm m-r-md"/>
-       <Item-description class="column is-marginless is-paddingless is-8 is-offset-1" />
-    </div>
-    <div class="colums is-marginless is-paddingless">
-       <Other-Items class="column is-10 is-offset-1" />
-    </div>
-    <Footer />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import Vue from "vue";
-//componentes
-import Header from "./components/Header";
-import SideItems from "./components/SideItems";
-import ItemDescription from "./components/ItemDescription";
-import OtherItems from "./components/OtherItems";
-import Footer from "./components/Footer";
 
 import Buefy from "buefy";
 import "buefy/lib/buefy.css";
@@ -45,22 +19,13 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 Vue.config.productionTip = false;
 
-
 Vue.use(Buefy, {
   defaultIconPack: "fa"
 });
 
 export default {
-  name: "app",
-  components: {
-    Header,
-    SideItems,
-    ItemDescription,
-    OtherItems,
-    Footer
-  }
+  name: "app"
 };
-
 </script>
 
 <style lang =scss>
@@ -69,23 +34,21 @@ export default {
 @import "~bulma/sass/utilities/_all";
 
 @font-face {
-    font-family: Gotham Book;
-    src: url("./assets/fonts/Gotham-Book.otf") format("opentype");
+  font-family: Gotham Book;
+  src: url("./assets/fonts/Gotham-Book.otf") format("opentype");
 }
 
 .breadcrumb {
-
-  &--alignHeader{
-      margin-left: 8.33333%;
-      margin-bottom: 0% !important;
+  &--alignHeader {
+    margin-left: 8.33333%;
+    margin-bottom: 0% !important;
   }
-  &__sideItems{
-
+  &__sideItems {
     font-size: 14px;
   }
 
-  & a{
-     color: #aeb6c1 !important;
+  & a {
+    color: #aeb6c1 !important;
   }
 }
 // colors
@@ -113,7 +76,6 @@ $family-primary: "Gotham Book";
 $link: $primary;
 $link-invert: $primary-invert;
 $link-focus-border: $primary;
-
 
 // Import Bulma and Buefy styles
 @import "~bulma";
