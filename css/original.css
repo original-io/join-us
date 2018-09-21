@@ -1,0 +1,623 @@
+body{ 
+    padding: 0; 
+    margin: 0
+}
+
+/*header*/
+
+header{ 
+    text-align: center; 
+    border-bottom: solid 2px #d6d8d9;
+    padding: 1em 0 2em 0;
+    top: 0
+}
+header a{
+    color: #E35442; 
+    text-decoration: none;
+}
+header h1{
+    display: inline;
+}
+.menu-mobile{
+    display: none;
+}
+
+.mobile-ul{
+    display: none;
+    background-color: black;
+    list-style: none;
+    text-align: left;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.mobile-ul li{
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    border-bottom: solid 2px #d6d8d9;
+    width: fit-content;
+    margin-top: 1em;
+    display: inline;
+    margin-left: 5%;
+}
+
+.mobile-ul li:hover{
+    color: black;
+    background-color: white;
+    transition: 1s;
+}
+
+/*nav*/
+
+nav{
+    border-bottom: solid 2px #d6d8d9;
+    padding: 1em; 
+}
+nav button{ 
+    display: inline; 
+    background-color: white; 
+    border: none; float: left; 
+    color: #686868; cursor: pointer
+}
+nav button:first-child{ 
+    border-right: solid 1px; 
+    padding-right: 1em; 
+    margin-left: 1%;
+}
+nav ul{
+    margin: 0 auto; 
+    text-align: center;
+}
+nav ul li{
+    display: inline; 
+    text-decoration: none; 
+    padding: 1.1em 2em 1.1em 2em; 
+    cursor: pointer;
+}
+nav ul li:hover{
+    background-color: #d6d8d9;
+}
+nav ul li{
+    color: #686868;
+}
+#lupa{
+    font-size: 16pt; 
+    margin-right: 0.5em; 
+    color: #686868
+}
+#shopping{
+    font-size: 16pt; 
+    cursor: pointer
+}
+#buscar{
+    border-bottom: solid 2px #d6d8d9; 
+    display: table; 
+    float: right; 
+    margin-right: 2em; 
+    padding-bottom: 0.3em; 
+    cursor: pointer;
+}
+#buscar-mobile{
+    display: none; 
+    border-bottom: solid 2px #d6d8d9; 
+    margin: 0 auto;
+    margin-bottom: 1em; 
+    margin-top: 1em;
+}
+#buscar input{
+    width: 60px; 
+    border: none;
+}
+#buscar-mobile input{
+    border: none; 
+}
+/*lightbox*/
+
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 98;
+    display: none;
+}
+.lightbox{
+    z-index: 99; 
+    position: fixed;
+}
+.lightbox-position{
+    z-index: 99; 
+    margin-top: -2em;
+}
+#myModal{
+    display: none;
+}
+.img-lightbox-compra{
+    width: 60%; 
+    margin: 0 auto;
+}
+#myModal .btn{
+    margin: 0 auto; 
+    margin-bottom: 1em; 
+    width: 60%;
+}
+#myModal .modal-header{
+    border-bottom: none;
+}
+#myModal a{
+    color: #aaa; 
+    margin-bottom: 2em;
+}
+
+#Modal-bolsa{
+    display: none;
+}
+#Modal-chinelo{
+    display: none;
+}
+#Modal-sandalias{
+    display: none;
+}
+#Modal-bolsinha{
+    display: none;
+}
+
+.img-lightbox{
+    width: 90%; 
+    margin: 0 auto; 
+    margin-bottom: 2em;
+}
+
+.close{ 
+    font-size: 48pt; 
+    margin-right: 5%;
+}
+#myModal .close{ 
+    font-size: 30px;
+}
+
+/*menus*/
+
+#bolsa{
+    float: right; 
+    margin-right: 2em;
+    cursor: pointer;
+}
+#sapatos{
+    display: none;
+}
+#sapatos .container{
+    padding-left: 10%;
+}
+#bolsas{
+    display: none;
+}
+.img-bolsa{
+    border-right: solid 2px #d6d8d9;
+    padding-top: 4em;
+}
+.img-bolsas{
+    height: 100%; 
+    width: 120%; 
+    float: right;
+}
+#bolsas .btn{
+    background-color: white; 
+    color: #DE8F75; 
+    border: solid 2px #DE8F75; 
+    padding: 0.5em 2em 0.5em 2em; 
+    margin-left: 4%
+}
+#bolsas ul{
+    text-align: left; 
+    list-style: none; 
+    padding-left: 1em;
+}
+#bolsas ul li{
+    margin-bottom: 1em;
+}
+#bolsas ul li a{
+    color: #DE8F75
+}
+#acessorios{
+    display: none;
+}
+.img-acessorio{
+    border-right: solid 2px #d6d8d9;
+}
+.img-acessorios{
+    height: 100%; 
+    width: 120%; 
+    float: right;
+}
+#acessorios .btn{
+    background-color: white;
+    color: #DE8F75; 
+    border: solid 2px #DE8F75; 
+    padding: 0.5em 2em 0.5em 2em; 
+    margin-left: 4%
+}
+#acessorios ul{
+    text-align: left; 
+    list-style: none; 
+    padding-left: 1em;
+}
+#acessorios ul li{
+    margin-bottom: 1em;
+}
+#acessorios ul li a{
+    color: #DE8F75
+}
+
+/*section*/
+
+#sitemap{
+    margin-left: 2.5%; 
+    margin-top: 0.8em; 
+}
+#sitemap a{
+    color: #aaa;
+}
+.side-bar-left{
+    text-align: center; 
+    display: block
+}
+.side-bar-left label{
+    color: #c78573;
+    display: block;
+    margin: 0;
+}
+.side-bar-left i.play{
+    color: blue;
+    border: solid;
+    border-radius: 100%;
+    padding: 0.7em;
+}
+.side-bar-left i.fa-angle-up{
+    font-size: 20pt; 
+    margin-top: 0.5em; 
+    margin-bottom: 0.5em;
+}
+.side-bar-left i.fa-angle-down{
+    font-size: 20pt;
+}
+.side-bar-center img{
+    width: 100%;
+    height: 600px;
+}
+.side-bar-mobile{
+    display: none;
+}
+.side-bar-right{
+    margin-left: 4%;
+}
+.side-bar-right span:first-child{
+    border-right: solid 1px; 
+    margin-right: 1em; 
+    padding-right: 0.5em; 
+    text-decoration: line-through; 
+    color: #E35442;
+}
+.side-bar-right span:last-child{
+    font-size: 16pt; 
+    color: #686868
+}
+.side-bar-right p{
+    margin-right: 4%;
+}
+.side-bar-right small{
+    margin-bottom: 4em;
+    color: #aaa;
+}
+.color{
+    color: #6B85C1
+}
+.color-product{
+    color: #6B85C1
+}
+.mini-img{
+    margin: 0 auto; 
+    margin-bottom: 1em; 
+    opacity: 0.5; 
+    cursor: pointer;
+} 
+.mini-img img{ 
+    height: 95px;
+}
+.mini-img-selected{ 
+    opacity: 1
+}
+.box-product{
+    padding-left: 4%; 
+    padding-top: 1em; 
+    width: 90%;
+}
+.section-1 .box-product-circle{ 
+    font-size: 18pt; 
+    margin-bottom: 1em;
+}
+.section-1 .box-product-circle .fa-circle{ 
+    cursor: pointer; 
+    margin-right: 1%;
+}
+.fucsia{
+    color: #A9095E;
+}
+.blue{ 
+    color: #6B85C1
+}
+.brown{ 
+    color: #A14830
+}
+.selected-color{ 
+    background-color: #E0DA9C; 
+    border-radius: 100%; 
+    padding: 0.2em;
+}
+.medidas div{
+    color: #6B85C1
+}
+.medidas a{
+    float: right;
+    margin-right: 15%;
+    text-decoration: underline;
+    color: #DE8F75
+}
+.inline{
+    display: inline
+}
+.side-bar-right ul{
+    padding: 0;
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+}
+.tamanho{
+    display: inline;
+    border-radius: 100%;
+    background-color: #EBEBEB;
+    color: #2A5A75;
+    padding: 0.5em; 
+    cursor: pointer
+}
+.selected{ 
+    background-color: #E0DA9C; 
+    font-weight: 800
+}
+.btn{
+    background-color: #32917B;
+    padding: 1em;
+    margin-right: 4%;
+    margin-top: 3em;
+}
+.section-2 .row-pd{
+    margin: 1.5em 3em 0 3em;
+}
+.section-2 .card{ 
+    border: none;
+}
+.section-2 .quickview{
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    margin-top: 2%;
+    margin-right: 2%; 
+    font-size: 20pt;
+    color: #DE8F75;
+    border: solid 1px;
+    border-radius: 100%;
+    padding: 0 0.4em 0 0.4em;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+.section-2 .box-product-circle{ 
+    float: right; 
+    position: absolute; 
+    right: 0; 
+    bottom: 0;
+}
+.section-2 .box-product-circle i{ 
+    margin-left: 2px;
+}
+
+.section-2 h3{
+    text-align: center; 
+    color: #E35442; 
+    margin-top: 2em;
+}
+.img-product{ 
+    width: 100%;
+}
+.arrow-pagination{
+    font-size: 20pt;
+    color: blue; 
+    border: 2px solid; 
+    border-radius: 100%;
+    padding: 0 0.3em 0 0.3em;
+    margin: 0 0.7em 0 0.7em;
+    cursor: pointer
+}
+.pagination{
+    margin: 0 auto; 
+    margin-top: 1em; 
+    margin-bottom: 10em;
+}
+hr{
+    border: solid 2px #d6d8d9;
+}
+.div-footer{
+    float: left;
+}
+.fa-fw{
+    color: #DE8F75
+}
+.icon-img{
+    margin: 3em 0 0 5em;
+}
+.icon-img img{
+    margin-right: 1em;
+}
+.links-footer{
+    display: inline;
+}
+.links-footer li{
+    padding-right: 5em;
+    margin-top: 1em;
+}
+.links-footer li:last-child{
+    padding-right: 0em;
+}
+.links-footer span{
+    color: #aaa;
+    font-weight: 800
+}
+.links-footer a{
+    display: block; 
+    margin-bottom: 1em; 
+    color: black;
+}
+.news{
+    position: absolute;
+    right: 0; 
+    border: solid 2px #d6d8d9; 
+    border-radius: 100%; 
+    padding: 3em 2em 3em 2em;
+    margin-top: -8em;
+    margin-right: 3%;
+    background-color: white;
+    z-index: 2
+}
+.news div{
+    margin-top: 1.8em; 
+    margin-bottom: 1.8em
+}
+.news label{
+    margin: 0; 
+    padding: 0; 
+    display: none;
+}
+.news input{
+    display: block; 
+    border: none; 
+    border-bottom: solid 2px #d6d8d9;
+    z-index: 99
+}
+.news .btn{
+    margin: 0 auto;
+    margin-top: 1.8em; 
+    padding:  1em 1.8em 1em 1.8em;
+    color: white;
+    background-color: #DE8F75;
+}
+
+/*footer*/
+
+.footer{
+    background-color: #DE8F75;
+}
+.footer p{
+    margin: 0;
+}
+.adress{
+    margin-left: 11%;
+}
+.logo-footer{
+    margin-top: 1.5em; 
+    margin-right: 4em
+}
+
+@media(max-width: 990px){
+    .menu-mobile{
+        display: inline;
+        float: right;
+        font-size: 14pt;
+        margin: 1%;
+        background-color: white;
+    }
+
+    nav ul{
+        padding: 1.1em;
+    }
+    nav ul li{
+        display: none;
+    }
+
+    .div-footer{ 
+        float: none; 
+        margin: 0 auto; 
+        width: 100%; 
+        display: block
+    }
+
+    .div-footer ul{ 
+        float: left; 
+        display: block
+    }
+
+    .icon-img{
+        float: left; 
+        margin: 0; 
+        margin-top: 2em; 
+        display: block; 
+        text-align: left; 
+        width: 100%;
+    }
+
+    .icon-img img{
+        margin: 0; 
+        display: block
+    }
+
+    .links-footer li{
+        margin-left: 5%; 
+        display: block
+    }
+
+    .logo-footer{
+    padding-top: 1em; 
+    margin-left: 11%;
+    float: none;
+    margin-bottom: 1em;
+}
+}
+@media(max-width: 570px){
+    nav {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    nav button{
+        float: left;
+        display: block;
+    }
+
+    #buscar{
+        display: none;
+    }
+
+    #buscar-mobile{
+        display: table;
+    }
+
+    .side-bar-left{
+        display: none;
+    }
+    .side-bar-mobile{
+        display: block;
+    }
+
+    ul .tamanho{
+        padding: 0.15em;
+    }
+
+    .news{
+        margin-top: -21em;
+    }
+
+    .div-footer{ 
+        padding-top: 13em;
+    }
+}

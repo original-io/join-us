@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Original.io</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/x-icon" href="./img/original.ico">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+        <link href="css/original.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <h1><a href="index.html"><img src="img/logo.png"></a></h1>
+            <button class="menu-mobile"><i class="fa fa-bars"></i></button>
+            <ul class="mobile-ul">
+                <li class="menu-sapatos">SAPATOS</li>
+                <li class="menu-bolsas">BOLSAS</li>
+                <li class="menu-acessorios">ACESSÓRIOS</li>
+                <li class="menu-OFF">OFF</li>
+            </ul>
+            <div id="buscar-mobile"><i id="lupa" class="fa fa-search" aria-hidden="true"></i><input type="search" placeholder="Busca"/></div>
+        </header>
+        <div class="background"></div>
+        <div class="col-md-12 text-center lightbox">
+            <div class="lightbox-position">
+            
+            <!-- Modal -->
+            <div id="myModal" style="" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" id="fechar" data-dismiss="modal">×</button>
+                        </div>
+                        <img src="img/sandalias.png"  class="img-lightbox-compra"/>
+                        <h4>Adicionado com sucesso!</h4>
+                        <button class="btn text-white">FINALIZAR COMPRA</button>
+                        <a href="">Continuar Comprando</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+            </div>
+        
+        <!--quickview inicio-->
+        
+        <div class="col-md-12 text-center lightbox" id="Modal-bolsa">
+            <div class="lightbox-position">
+            <button type="button" class="close" id="fechar-bolsa" data-dismiss="modal">×</button>
+            
+            <!-- Modal -->
+            <div role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <img src="img/bolsa.png"  class="img-lightbox"/>
+
+                </div>
+            </div>
+
+        </div>
+            </div>
+        <div class="col-md-12 text-center lightbox" id="Modal-chinelo">
+            <div class="lightbox-position">
+            <button type="button" class="close" id="fechar-chinelo" data-dismiss="modal">×</button>
+            
+            <!-- Modal -->
+            <div role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <img src="img/chinelo.png"  class="img-lightbox"/>
+
+                </div>
+            </div>
+
+        </div>
+            </div>
+        <div class="col-md-12 text-center lightbox" id="Modal-sandalias" >
+            <div class="lightbox-position">
+            <button type="button" class="close" id="fechar-sandalias" data-dismiss="modal">×</button>
+            
+            <!-- Modal -->
+            <div role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <img src="img/sandalias.png"  class="img-lightbox"/>
+
+                </div>
+            </div>
+
+        </div>
+            </div>
+        <div class="col-md-12 text-center lightbox" id="Modal-bolsinha">
+            <div class="lightbox-position">
+            <button type="button" class="close" id="fechar-bolsinha" data-dismiss="modal">×</button>
+            
+            <!-- Modal -->
+            <div role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <img src="img/bolsinha.png" class="img-lightbox"/>
+
+                </div>
+            </div>
+
+        </div>
+            </div>
+        
+        <!--quickview final-->
+
+        <nav>
+            <button>Entrar</button> 
+            <button>Cadastrar-se</button> 
+            <div id="bolsa"><img src="img/icone-compra.png"/> 0</div>
+            <div id="buscar"><i id="lupa" class="fa fa-search" aria-hidden="true"></i><input type="search" placeholder="Busca"/></div>
+            <ul>
+                <li class="menu-sapatos">SAPATOS</li>
+                <li class="menu-bolsas">BOLSAS</li>
+                <li class="menu-acessorios">ACESSÓRIOS</li>
+                <li class="menu-OFF">OFF</li>
+            </ul>
+        </nav>
+        <div id="dropbox">
+        <div id="sapatos" class="text-center">
+            <div class="container">
+                <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 text-center">
+                    <img src="img/rasteiras.png" alt="rasteiras" class="img-fluid"/>
+                    <p>Rasteiras</p>
+                    </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 text-center" >
+                    <img src="img/sapatilha.png" alt="sapatilha" class="img-fluid"/>
+                    <p>Rasteiras</p>
+                    </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 text-center">
+                    <img src="img/alpargatas.png" alt="alpargatas" class="img-fluid"/>
+                    <p>Rasteiras</p>
+                    </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 text-center">
+                    <img src="img/Mocassins.png" alt="mocassins" class="img-fluid"/>
+                    <p>Rasteiras</p>
+                    </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 text-center">
+                    <img src="img/tênis.png" alt="tênis" class="img-fluid"/>
+                    <p>Rasteiras</p>
+                    </div>
+                </div>
+                <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 text-center">
+                    <img src="img/botas.png" alt="botas" class="img-fluid"/>
+                    <p>Rasteiras</p>
+                    </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 text-center">
+                    <img src="img/salto-anabela.png" alt="salto anabele " class="img-fluid"/>
+                    <p>Rasteiras</p>
+                    </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 text-center">
+                    <img src="img/salto-plataforma.png" alt="salto plataforma" class="img-fluid"/>
+                    <p>Rasteiras</p>
+                    </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 text-center" >
+                    <img src="img/Salto-alto.png" alt="salto alto" class="img-fluid"/>
+                    <p>Rasteiras</p>
+                    </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 text-center">
+                    <img src="img/salto-medio.png" alt="salto médio" class="img-fluid"/>
+                    <p>Rasteiras</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="bolsas" class="text-center">
+            <div class="container">
+                <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-4 mt-4 img-bolsa">
+                <img src="img/logo-bolsas.png"/><br/>
+                <button class="btn">VER TODAS</button>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+                <ul>
+                    <li><a href="">Bolsas Pequenas</a></li>
+                    <li><a href="">Bolsas Grandes</a></li>
+                    <li><a href="">Bolsas de Tecido</a></li>
+                    <li><a href="">Bolsas Maleta</a></li>
+                    <li><a href="">Bolsas Saco</a></li>
+                    <li><a href="">Mochilas</a></li>
+                    <li><a href="">Malas</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+                <img src="img/bolsas.png" class=" img-bolsas"/><br/>
+            </div>
+                </div>
+            </div>
+        </div>
+        <div id="acessorios" class="text-center">
+            <div class="container">
+                <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-4 mt-4 img-acessorio">
+                <img src="img/logo-acessórios.png"/><br/>
+                <button class="btn">VER TODAS</button>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+                <ul>
+                    <li><a href="">Bijoux</a></li>
+                    <li><a href="">Carteiras</a></li>
+                    <li><a href="">Cintos</a></li>
+                    <li><a href="">Necessaires</a></li>
+                    <li><a href="">Organizadores</a></li>
+                    <li><a href="">Pros Dias de Sol</a></li>
+                    <li><a href="">Leve Por Aí</a></li>
+                    <li><a href="">É Tendência</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+                <img src="img/acessorios.png" class=" img-acessorios"/><br/>
+            </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <section class="section-1">
+            <div id="sitemap"><a href="">Home</a> / <strong><a href="">Sapatos</a></strong></div>
+            <div class="row" style="margin: 0">
+                    <div class="col-sm-6 col-md-4 col-lg-2 mt-4 side-bar-left">
+                        <label>Video</label>
+                        <i class="fa fa-play play"></i><br/>
+                        <i class="fa fa-angle-up seta"></i>
+                        <div class="col-sm-6 col-md-4 col-lg-8 mini-img mini-img-selected">
+                            <div class="card">
+                                <img src="img/sandalias.png"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-8 mini-img">
+                            <div class="card">
+                                <img src="img/sandalias.png"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-8 mini-img" >
+                            <div class="card">
+                                <img src="img/sandalias.png"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-8 mini-img" >
+                            <div class="card">
+                                <img src="img/sandalias.png"/>
+                            </div>
+                        </div>
+                        <i class="fa fa-angle-down"></i>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4 mt-4 side-bar-center">
+                        <img src="img/sandalias.png"/>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-2 mt-4 side-bar-mobile">
+                        <div class="row">
+                        <div class="mini-img mini-img-selected">
+                            <i class="fa fa-angle-left seta"></i>
+                                <img src="img/sandalias.png"/>
+                        </div>
+                        <div class="mini-img">
+                                <img src="img/sandalias.png"/>
+                        </div>
+                        <div class="mini-img" >
+                                <img src="img/sandalias.png"/>
+                        </div>
+                        <div class="mini-img" >
+                                <img align="middle" src="img/sandalias.png"/>
+                                <i class="fa fa-angle-right seta"></i>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-5 mt-4 side-bar-right">
+                        <div class="card box-product">
+                            <h2 class="card-title"><strong>RASTEIRA TIRA DEDO</strong></h2>
+                            <p>RT 0568 | 03.07.0653</p>
+                            <div class="inline price"><span>R$ 69,00</span><span><strong>R$ 55,20</strong></span></div>
+                            <small>Ou 6x de R$ 9,20</small>
+                            <div class="inline color"><label>Cor:</label>(<div class="inline color-product">Fucsia</div>)</div>
+                            <div class="inline box-product-circle">
+                                <div class="inline"><i class="fa fa-circle fucsia selected-color" id="Fucsia"></i></div>
+                                <i class="fa fa-circle blue" id="Azul"></i>
+                                <i class="fa fa-circle brown" id="Marrom"></i>
+                                <i class="fa fa-circle black" id="Preto"></i>
+                            </div>
+                            <div class="inline medidas"><label>Tamanho:</label> <div class="inline">(<div class="inline number-size">37</div>)</div><a href="">Guia de medidas</a></div>
+                            <ul class="inline list-size">
+                                <li class="tamanho">33</li>
+                                <li class="tamanho">34</li>
+                                <li class="tamanho">35</li>
+                                <li class="tamanho">36</li>
+                                <li class="tamanho selected">37</li>
+                                <li class="tamanho">38</li>
+                                <li class="tamanho">39</li>
+                                <li class="tamanho">40</li>
+                                <li class="tamanho">41</li>
+                                <li class="tamanho">42</li>
+                            </ul>
+                            <button class="btn btn-info btn-lg add">ADICIONAR À SACOLA</button>
+                            <p>Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal.</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        
+        <section class="section-2">
+            <h3>QUEM VIU VIU TAMBÉM</h3>
+                <div class="row row-pd" >
+                    <div class="col-sm-6 col-md-3 mb-2">
+                        <div class="card">
+                        <img src="img/bolsa.png" class="img-fluid pd1"/>
+                        <span class="quickview">+</span>
+                        <span>R$ 204,90</span>
+                        <div class="inline box-product-circle">
+                            <i class="fa fa-circle fucsia"></i>
+                            <i class="fa fa-circle blue"></i>
+                            <i class="fa fa-circle brown"></i>
+                            <i class="fa fa-circle black"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 mb-2">
+                        <div class="card">
+                        <img src="img/chinelo.png" class="img-fluid pd2"/>
+                        <span class="quickview">+</span>
+                        <span>R$ 204,90</span>
+                        <div class="inline box-product-circle">
+                            <i class="fa fa-circle fucsia"></i>
+                            <i class="fa fa-circle blue"></i>
+                            <i class="fa fa-circle brown"></i>
+                            <i class="fa fa-circle black"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 mb-2">
+                        <div class="card">
+                        <img src="img/sandalias.png" class="img-fluid pd3"/>
+                        <span class="quickview">+</span>
+                        <span>R$ 204,90</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 mb-2">
+                        <div class="card">
+                        <img src="img/bolsinha.png" class="img-fluid pd4"/>
+                        <span class="quickview">+</span>
+                        <span>R$ 204,90</span>
+                        <div class="inline box-product-circle">
+                            <i class="fa fa-circle blue"></i>
+                            <i class="fa fa-circle brown"></i>
+                            <i class="fa fa-circle black"></i>
+                            </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="container">
+            <div class="row">
+            <div class="inline pagination">
+            <i class="fa fa-angle-left arrow-pagination inline" id="menos"></i>
+            <div class="inline" id="num-page">1</div> de <div class="inline" >10</div>
+            <i class="fa fa-angle-right arrow-pagination inline" id="mais"></i>
+            </div>
+            </div>
+            </div>
+            <hr>
+            <div class="col-lg-3 h-100 text-center my-auto div-footer" >
+                        <ul class="list-inline mb-0 ">
+                            <li class="list-inline-item mr-3">
+                                <a href="" >
+                                    <i class="fa fa-facebook fa-2x fa-fw"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item mr-3">
+                                <a href="">
+                                    <i class="fa fa-instagram fa-2x fa-fw"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="">
+                                    <i class="fa fa-pinterest fa-2x fa-fw"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="list-inline mb-0 icon-img">
+                            <li class="list-inline-item mr-3">
+                                <a href="" >
+                                    <img src="img/vtex.jpg"/>
+                                </a>
+                            </li>
+                            <li class="list-inline-item mr-3">
+                                <a href="">
+                                    <img src="img/ebit.jpg"/>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            <div class="inline news">
+                <h6 class="inline" >ASSINE NOSSA NEWS</h6>
+                <form method="post">
+                    <div>
+                        <label id="label-nome">nome</label>
+                <input placeholder="nome" required="" class="nome"/>
+                    </div>
+                    <label id="label-email">email</label>
+                    <input type="email" placeholder="email" required="" class="email"/>
+                <input class="btn" type="submit" value="ENVIAR"/>
+                </form>
+            </div>
+            <div class="col-lg-4 h-100 links-footer">
+                    <ul class="list-inline mb-2 ">
+                            <li class="list-inline-item">
+                                <span>Institucional</span>
+                                <a href="">A Marca</a>
+                                <a href="">Lojas</a>
+                                <a href="">Contato</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <span>INFORMAÇÕES</span>
+                                <a href="">Formas de Pagamento</a>
+                                <a href="">Trocas e Devoluções</a>
+                                <a href="">Cuidados Com o Produto</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <span>CONHEÇA</span>
+                                <a href="">Fraquias e Multimarcas</a>
+                                <a href="">Trabalhe com a Gente</a>
+                                <a href="">Procon - RJ</a>
+                            </li>
+                        </ul>
+                    </div>
+        </section>
+        <footer class="col-lg-12 h-100 my-auto footer text-white">
+            <div class="pull-right logo-footer">
+                <img src="img/logo-footer.png"/>
+            </div>
+            <div class="adress">
+            <p>Via Mia | V. Milano Centro Comercio de Bolsas Eireli - EPP.</p>
+            <p>Av.das Américas, 500 - bloco 20, loja 126 - Barra da Tijuca - Rio de Janeiro - RJ - CEP: 22640-100</p>
+            <p>CNPJ: 05.292.288/0002-10 - I.E: 86.732.548 - E-mail: ecommerce@viamia.com.br</p>
+            </div>
+
+        </footer>
+        <script type="text/javascript" src="js/original.js"></script>
+    </body>
+</html>
