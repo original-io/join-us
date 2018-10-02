@@ -1,0 +1,19 @@
+// Your variable overrides
+$theme-colors: (
+  "success": #32917B,
+  "jazzberry-jam": #A9095E,
+  "burning-sand": #DE8F75,
+  "waikawa-gray": #5F75AA,
+  "medium-carmine": #A14830
+);
+
+.opacity-75 {
+  opacity: 0.75
+}
+
+.opacity-50 {
+  opacity: 0.5
+}
+
+// Bootstrap and its default variables
+@import "node_modules/bootstrap/scss/bootstrap";
