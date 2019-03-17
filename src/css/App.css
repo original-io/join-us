@@ -1,0 +1,35 @@
+@font-face {
+  font-family: Gotham Book;
+  src: url(../fonts/gotham-book.otf);
+}
+
+h1{
+  margin: 0;
+}
+
+.flex{
+  display: flex;
+}
+.flex-align-center{
+  justify-content: center;
+}
+.flex-space-between{
+  justify-content: space-between;
+}
+.flex-vertical-center{
+  align-items: center;
+}
+.flex-column{
+  flex-direction: column;
+}
+.container{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.text-danger{
+  color: #E35442;
+}
+.text-through{
+  text-decoration: line-through;
+}

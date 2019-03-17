@@ -1,0 +1,10 @@
+{
+  "produto": [
+    {
+      "name": "Rasteria Tira Dedo",
+      "description": "Rasteira em atanado soft com tira dedo e fechamento de fivela, possui sola sempre na cor do cabedal",
+      "active": true,
+      "id": 0
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+.router p,
+.router span{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color: #AEB6C1;
+  margin: 10px 10px 0 0;
+}
+.router span{
+  font-weight: bold;
+}
