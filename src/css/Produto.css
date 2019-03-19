@@ -1,3 +1,55 @@
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(32, 32, 32, 0.6);
+  z-index: 9999;
+}
+.Modal {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  background: #FFFFFF;
+  border-radius: 3px;
+  padding: 36px 70px;
+  z-index: 9999;
+  width: 30%;
+}
+.Modal .mensagem{
+  font-family: Gotham Book;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 31px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #DE8F75;
+  margin: 14px 0;
+}
+.Modal a{
+  font-family: Gotham Book;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #AEB6C1;
+}
+.Modal .btn{
+  margin: 0px 0px 14px 0px;
+}
+.Modal button.close{
+  border: 0;
+  position: absolute;
+  right: 1%;
+  top: 4%;
+  cursor: pointer;
+  outline: none;
+  font-size: 18px;
+  color: #5F75AA;
+}
 .produto{
   margin-top: 26px;
 }
@@ -21,8 +73,8 @@
   margin: 0;
   height: calc(556px - 123px);
 }
-.produto .swiper-button-next,
-.produto .swiper-button-prev{
+.produto .produto-slider.swiper-button-next,
+.produto .produto-slider.swiper-button-prev{
   position: relative;
   left: 0;
   right: 0;
@@ -36,12 +88,13 @@
 }
 .produto .swiper-container .swiper-wrapper img{
   height: 100%;
+  width: 100%;
 }
-.produto .swiper-button-next,
+.produto .produto-slider.swiper-button-next,
 .produto .swiper-container-rtl .swiper-button-prev {
     background-image: url(../imgs/next.svg);
 }
-.produto .swiper-button-prev,
+.produto .produto-slider.swiper-button-prev,
 .produto .swiper-container-rtl .swiper-button-next {
     background-image: url(../imgs/prev.svg);
 }
@@ -127,18 +180,43 @@
   color: #5F75AA;
   margin-left: 10px;
 }
-.produtoDetail .paleta-cores input{
+.produtoDetail input[type="radio"]{
   display: none;
 }
 .produtoDetail .paleta-cores input:checked ~ label .circle{
   box-shadow: 0px 0px 0px 5px #E0DA9C;
 }
-.produtoDetail .paleta-cores label .circle{
+.produtoDetail .paleta-cores label .circle,
+.produtoDetail .tamanhos label .circle{
   width: 22px;
   height: 22px;
   background-color: red;
   border-radius: 50%;
   margin-right: 9px;
+  cursor: pointer;
+}
+.produtoDetail .tamanhos label .circle{
+  background: #EBEBEB;
+  border: 1px solid #FFFFFF;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.produtoDetail .tamanhos label{
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #2A5A75;
+}
+.produtoDetail .tamanhos input:checked ~ label .circle{
+  background: #E0DA9C;
+  border: 1px solid #FFFFFF;
+}
+.produtoDetail .tamanhos input:checked ~ label{
+  color: #2A5A75;
+  font-weight: bold;
 }
 .produtoDetail .link{
   font-family: Open Sans;
@@ -150,4 +228,93 @@
   text-decoration-line: underline;
   color: #DE8F75;
 }
+.produtoDetail .btn{
+  margin-top: 53px;
+}
+.produtoDetail .description{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 29px;
+  margin-top: 15px;
+}
 /* Fim ProdutoDetail */
+
+/* Produtos Realcioandos */
+.produtoRelacionado{
+  margin-top: 104px;
+}
+.produtoRelacionado h4{
+  font-size: 26px;
+  line-height: 37px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #DE8F75;
+  font-weight: 400;
+  margin-bottom: 17px;
+}
+.produtoRelacionado .produtoRelacionado-slider.swiper-container .swiper-slide{
+  position: relative;
+}
+.produtoRelacionado .produtoRelacionado-slider.swiper-container .swiper-slide .sobre-item{
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  border: 1px solid #DE8F75;
+  box-sizing: border-box;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 26px;
+  background: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  color: #DE8F75;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.produtoRelacionado .produtoRelacionado-slider.swiper-container .swiper-slide .sobre-item p{
+  margin: 0;
+  margin-top: -3px;
+}
+.produtoRelacionado .produtoRelacionado-slider.swiper-container .swiper-slide .price{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: #202020;
+  margin-top: 0;
+}
+.produtoRelacionado .produtoRelacionado-slider.swiper-container .swiper-container-horizontal>.swiper-pagination-bullets,
+.produtoRelacionado .produtoRelacionado-slider.swiper-container .swiper-pagination-custom,
+.produtoRelacionado .produtoRelacionado-slider.swiper-container .swiper-pagination-fraction{
+  bottom: 2px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 23px;
+  text-align: center;
+  color: #2A5A75;
+}
+.produtoRelacionado-slider .swiper-button-prev,
+.produtoRelacionado-slider .swiper-container-rtl .swiper-button-next{
+  background-image: url(../imgs/seta-prev.svg);
+  left: 44%;
+}
+.produtoRelacionado-slider .swiper-button-next,
+.produtoRelacionado-slider .swiper-container-rtl .swiper-button-prev {
+  background-image: url(../imgs/seta-next.svg);
+  right: 44%;
+}
+.produtoRelacionado-slider .swiper-button-next,
+.produtoRelacionado-slider .swiper-button-prev{
+  top: 98%;
+  outline: none;
+  width: 35px;
+  height: 35px;
+}
+/* Fim Produtos Relacionados */

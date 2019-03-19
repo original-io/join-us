@@ -6,6 +6,29 @@
 h1{
   margin: 0;
 }
+ label{
+  border-bottom: 1px solid rgba(104, 104, 104, 0.4);
+  padding-bottom: 7px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color: #686868;
+}
+input{
+  border: 0;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color: #686868;
+  margin-left: 17px;
+  outline: none;
+}
 
 .flex{
   display: flex;
@@ -32,4 +55,50 @@ h1{
 }
 .text-through{
   text-decoration: line-through;
+}
+
+.btn{
+  background-color: transparent;
+  border-radius: 3px;
+  text-transform: uppercase;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  color: #ffffff;
+}
+.btn-success{
+  background-color: #32917B;
+}
+.btn-info{
+  background: #DE8F75;
+}
+.btn-large{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 29px;
+  padding: 15px 0;
+}
+.btn-medium{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 23px;
+  text-align: center;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px){
+  .container{
+    width: 90%;
+  }
+  .flex{
+    flex-wrap: wrap;
+  }
+  .produtoDetail{
+    min-width: 465px;
+  }
 }

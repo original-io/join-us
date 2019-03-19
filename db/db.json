@@ -2,9 +2,14 @@
   "produto": [
     {
       "name": "Rasteria Tira Dedo",
+      "cod": "RT 0568 | 03.07.0653",
       "description": "Rasteira em atanado soft com tira dedo e fechamento de fivela, possui sola sempre na cor do cabedal",
       "active": true,
-      "id": 0
+      "price": "R$ 55,22",
+      "priceOff": "R$ 69,00",
+      "imageFull": "http://localhost:3000/static/media/prod-full.3057d1cc.svg",
+      "id": 0,
+      "tamanhos":[ "33", "34", "35", "36", "37", "38" ]
     }
   ]
 }

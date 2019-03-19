@@ -1,10 +1,20 @@
 import React, { Component } from 'react';
+import { WithCookies, Cookies } from 'react-cookie';
 import logo from '../imgs/original.svg';
 import lupa from '../imgs/find.svg';
 import cesta from '../imgs/cesta.svg';
 import '../css/Header.css';
 
 class Header extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      badges: 0
+    };
+  }
+
   render() {
     return (
       <div className="header">
@@ -41,7 +51,7 @@ class Header extends Component {
               </label>
               <div className="flex flex-vertical-center">
                 <img src={cesta} />
-                <p id="badges">0</p>
+                <p id="badges">{this.props.badges}</p>
               </div>
             </div>
           </div>

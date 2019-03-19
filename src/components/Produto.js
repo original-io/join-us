@@ -4,18 +4,27 @@ import img from '../imgs/prod02.svg';
 import player from '../imgs/player.svg';
 import ProdutoImage from "./ProdutoImage";
 import ProdutoDetail from "./ProdutoDetail";
+import ProdutoRelacionado from "./ProdutoRelacionado";
 import '../css/Produto.css';
 
 class Produto extends Component {
 
+  constructor(props) {
+    super(props);
+  }
+
+  handleChildClick(name){
+    this.props.handleClick(name);
+  }
+
   componentDidMount(){
-    var mySwiper = new Swiper('.swiper-container', {
+    var mySwiper = new Swiper('.produto-slider.swiper-container', {
       direction: 'vertical',
       loop: false,
       spaceBetween: 10,
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.produto-slider.swiper-button-next',
+        prevEl: '.produto-slider.swiper-button-prev',
       },
       slidesPerView: 4,
       slidesPerGroup: 1,
@@ -25,6 +34,7 @@ class Produto extends Component {
   render() {
     return (
       <div className="produto">
+      <div className="line"></div>
         <div className="container">
           <div className="flex">
             <div className="produtoImgs flex flex-column flex-vertical-center flex-space-between">
@@ -32,8 +42,8 @@ class Produto extends Component {
                 <p>Video</p>
                 <img src={player} />
               </div>
-              <div className="swiper-button-prev"></div>
-              <div className="swiper-container">
+              <div className="produto-slider swiper-button-prev"></div>
+              <div className="produto-slider swiper-container">
                 <div className="swiper-wrapper">
                     <div className="swiper-slide">
                       <img src={img} />
@@ -55,11 +65,12 @@ class Produto extends Component {
                     </div>
                 </div>
               </div>
-              <div className="swiper-button-next"></div>
+              <div className="produto-slider swiper-button-next"></div>
             </div>
-            <ProdutoImage />
-            <ProdutoDetail />
+            <ProdutoImage produtoImage={this.props.produto.imageFull}/>
+            <ProdutoDetail handleClick={this.handleChildClick.bind(this)} produtoInfo={this.props.produto}/>
           </div>
+          <ProdutoRelacionado />
         </div>
       </div>
     );

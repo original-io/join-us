@@ -1,6 +1,7 @@
 .header .menuList{
   font-family: Gotham Book;
-  border: 1px solid #CCCCCC;
+  border-top: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
 }
 .header .menuList a,
 .header .menuList span{
@@ -39,20 +40,7 @@
 }
 .header label{
   width: 83px;
-  border-bottom: 1px solid rgba(104, 104, 104, 0.4);
-  padding-bottom: 7px;
-  box-sizing: border-box;
-  cursor: pointer;
 }
 .header input{
-  border: 0;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 20px;
-  color: #686868;
   width: calc(83px - 45px);
-  margin-left: 17px;
-  outline: none;
 }

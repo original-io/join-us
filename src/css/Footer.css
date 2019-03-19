@@ -1,0 +1,100 @@
+.footer{
+  margin-top: 100px;
+  border-top: 2px solid #AEB6C1;
+  padding: 20px 0 0 0;
+  margin-bottom: 0;
+}
+.footer .redes-sociais a,
+.footer .certificados img{
+  margin-right: 30px;
+}
+.footer .certificados{
+  margin-right: 55px;
+  margin-top: -75px;
+  flex: 1;
+}
+.footer .footer-menu{
+  flex: 3;
+}
+.footer .footer-menu .footer-menu-box-header h6{
+  font-family: Gotham Book;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #AEB6C1;
+  margin-bottom: 0px;
+}
+.footer .footer-menu .footer-menu-box-content ul{
+  padding: 0;
+  margin-top: 0;
+}
+.footer .footer-menu .footer-menu-box-content ul li,
+.footer .footer-menu .footer-menu-box-content ul li a{
+  list-style: none;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 42px;
+  color: #202020;
+  text-decoration: none;
+}
+.footer .footer-menu .footer-form{
+  padding: 40px;
+  background: #FFFFFF;
+  border: 2px solid #AEB6C1;
+  border-radius: 100%;
+  width: 293px;
+  height: 293px;
+  box-sizing: border-box;
+  transform: translateY(-145px);
+}
+.footer .footer-menu .footer-form h6{
+  font-family: Gotham Book;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #202020;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.footer .footer-menu .footer-form .form-control{
+  position: relative;
+  margin-bottom: 25px;
+}
+.footer .footer-menu .footer-form .form-control input{
+  width: 100%;
+  height: 28px;
+  margin: 0;
+  padding: 0;
+}
+.footer .footer-menu .footer-form .form-control label{
+  position: absolute;
+  width: 100%;
+  top: 0%;
+  height: 100%;
+}
+.footer .footer-menu .footer-form .btn{
+  width: 110px;
+  height: 51px;
+  margin: 0 auto;
+}
+.footer .footer-menu .footer-form .form-control.flex{
+  margin: 0;
+}
+.footer .footer-bottom{
+  background: #DE8F75;
+  padding: 10px 0;
+}
+.footer .footer-bottom p{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color: #FFFFFF;
+  margin: 0;
+}
