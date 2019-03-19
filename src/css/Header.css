@@ -2,6 +2,7 @@
   font-family: Gotham Book;
   border-top: 1px solid #CCCCCC;
   border-bottom: 1px solid #CCCCCC;
+  position: relative;
 }
 .header .menuList a,
 .header .menuList span{
@@ -35,8 +36,77 @@
   text-transform: uppercase;
   list-style: none;
   color: #686868;
-  margin: 0 35px;
+  padding: 0 35px;
   cursor: pointer;
+}
+.header ul li:hover{
+  background-color: #EBEBEB;
+}
+.header ul li .submenu{
+  position: absolute;
+  width: 100%;
+  top: 102%;
+  right: 0;
+  background-color: #ffffff;
+  z-index: 9999;
+  padding: 86px;
+  display: none;
+  cursor: default;
+}
+.header ul li .submenu .submenu-header{
+  border-right: 1px solid #C4C4C4;
+  padding-right: 132px;
+  padding-left: 160px;
+}
+.flex-1{
+  flex: 1;
+}
+.flex-2{
+  flex: 2;
+}
+.header ul li .submenu .submenu-title{
+  font-family: Gotham Book;
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 98px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #E0DA9C;
+  width: 297px;
+  word-wrap: break-word;
+}
+.header ul li .submenu .submenu-verTodos{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #DE8F75;
+  border: 2px solid #DE8F75;
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding: 15px;
+}
+.header ul li .submenu ul li{
+  margin: 0 23px;
+  text-align: left;
+}
+.header ul li .submenu ul li a{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 42px;
+  color: #DE8F75;
+  margin: 0;
+}
+.header ul li .submenu ul li a:hover{
+  text-decoration: underline;
+}
+.header ul li .submenu img{
+  width: 100%;
 }
 .header label{
   width: 83px;

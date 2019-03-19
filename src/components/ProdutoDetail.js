@@ -46,7 +46,7 @@ class ProdutoDetail extends Component {
   }
 
   addProduto(){
-    this.props.handleClick("rudolfo");
+    this.props.handleClick(this.props.produtoInfo.tamanhos);
     this.openModal();
   }
 
@@ -64,7 +64,7 @@ class ProdutoDetail extends Component {
             overlayClassName="Overlay"
           >
 
-            <img ref={src => this.image = src} />
+            <img src={img} />
             <button className="close" onClick={this.closeModal}>X</button>
             <div className="mensagem">Adicionado com sucesso!</div>
             <button className="btn btn-success btn-large" onClick={this.closeModal}>Finalizar Compra</button>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../css/Footer.css';
+import $ from 'jquery';
 import facebook from '../imgs/facebook.svg';
 import instagram from '../imgs/instagram.svg';
 import pint from '../imgs/pint.svg';
@@ -15,6 +16,17 @@ class Header extends Component {
     this.state = {
       badges: 0
     };
+  }
+
+  componentDidMount(){
+    $(".footer input").focusin((e) => {
+      $(e.target).parent().find("label").addClass('active');
+    })
+    $(".footer input").focusout((e) => {
+      if ($(e.target).val() == "") {
+        $(e.target).parent().find("label").removeClass('active');
+      }
+    })
   }
 
   render() {

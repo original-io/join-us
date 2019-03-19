@@ -70,12 +70,25 @@
   height: 28px;
   margin: 0;
   padding: 0;
+  border-bottom: 1px solid rgba(104, 104, 104, 0.4);
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 23px;
+  color: #202020;
 }
 .footer .footer-menu .footer-form .form-control label{
   position: absolute;
   width: 100%;
   top: 0%;
   height: 100%;
+  border-bottom: 0;
+  transition: .5s;
+}
+.footer .footer-menu .footer-form .form-control label.active{
+  top: -11px;
+  font-size: 9px;
 }
 .footer .footer-menu .footer-form .btn{
   width: 110px;
