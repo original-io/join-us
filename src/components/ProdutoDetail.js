@@ -110,10 +110,26 @@ class ProdutoDetail extends Component {
           console.log(this.props.produtoInfo.tamanhos)
         }
         <div className="form-control">
-          <input checked id="tam-1" name="tamanho" type="radio" />
-          <label for="tam-1">
+          <input checked id="tam1" name="tamanho" type="radio" />
+          <label for="tam1">
             <div className="circle">
             33
+            </div>
+          </label>
+        </div>
+        <div className="form-control">
+          <input id="tam2" name="tamanho" type="radio" />
+          <label for="tam2">
+            <div className="circle">
+            34
+            </div>
+          </label>
+        </div>
+        <div className="form-control">
+          <input id="tam3" name="tamanho" type="radio" />
+          <label for="tam3">
+            <div className="circle">
+            35
             </div>
           </label>
         </div>

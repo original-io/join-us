@@ -38,6 +38,22 @@ class ProdutoRelacionado extends Component {
                     <div className="sobre-item"><p>+</p></div>
                     <div className="flex flex-space-between">
                       <p className="price">R$ 204,90</p>
+                      <div className="paleta-cores flex flex-vertical-center">
+                        <div className="form-control">
+                          <input checked id="cor-relacionado-1" name="corRel" type="radio" />
+                          <label for="cor-relacionado-1">
+                            <div className="circle">
+                            </div>
+                          </label>
+                        </div>
+                        <div className="form-control">
+                          <input id="cor-relacionado-2" name="corRel" type="radio" />
+                          <label for="cor-relacionado-2">
+                            <div className="circle">
+                            </div>
+                          </label>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -48,6 +64,22 @@ class ProdutoRelacionado extends Component {
                     <div className="sobre-item"><p>+</p></div>
                     <div className="flex flex-space-between">
                       <p className="price">R$ 204,90</p>
+                      <div className="paleta-cores flex flex-vertical-center">
+                        <div className="form-control">
+                          <input checked id="cor-relacionado-1" name="corRel" type="radio" />
+                          <label for="cor-relacionado-1">
+                            <div className="circle">
+                            </div>
+                          </label>
+                        </div>
+                        <div className="form-control">
+                          <input id="cor-relacionado-2" name="corRel" type="radio" />
+                          <label for="cor-relacionado-2">
+                            <div className="circle">
+                            </div>
+                          </label>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -58,6 +90,22 @@ class ProdutoRelacionado extends Component {
                     <div className="sobre-item"><p>+</p></div>
                     <div className="flex flex-space-between">
                       <p className="price">R$ 204,90</p>
+                      <div className="paleta-cores flex flex-vertical-center">
+                        <div className="form-control">
+                          <input checked id="cor-relacionado-1" name="corRel" type="radio" />
+                          <label for="cor-relacionado-1">
+                            <div className="circle">
+                            </div>
+                          </label>
+                        </div>
+                        <div className="form-control">
+                          <input id="cor-relacionado-2" name="corRel" type="radio" />
+                          <label for="cor-relacionado-2">
+                            <div className="circle">
+                            </div>
+                          </label>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

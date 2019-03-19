@@ -1,12 +1,3 @@
-# Instalação
-
-* npm install
-* npm install -g json-server
-
-No terminal, use o comando `yarn start` ou `npm start` para rodar o projeto React
-
-Em outra aba do terminal, acesse a pasta `db` e use o comando `json-server -p 4000 db.json` para iniciar o servidor json e alimentar o React com o produto
-
 # Original.io
 ###### Quer trabalhar com a gente? Siga as instruções!
 

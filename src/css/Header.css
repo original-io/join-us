@@ -74,6 +74,7 @@
   color: #E0DA9C;
   width: 297px;
   word-wrap: break-word;
+  text-align: left;
 }
 .header ul li .submenu .submenu-verTodos{
   font-family: Open Sans;
