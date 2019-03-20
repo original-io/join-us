@@ -130,14 +130,14 @@ class Header extends Component {
                   <form>
                     <div className="form-control">
                       <input id="nome" />
-                      <label for="nome" className="flex flex-vertical-center">Nome</label>
+                      <label htmlFor="nome" className="flex flex-vertical-center">Nome</label>
                     </div>
                     <div className="form-control">
                       <input id="email" />
-                      <label for="email" className="flex flex-vertical-center">E-mail</label>
+                      <label htmlFor="email" className="flex flex-vertical-center">E-mail</label>
                     </div>
                     <div className="form-control flex flex-space-center">
-                      <button class="btn btn-info btn-medium">Enviar</button>
+                      <button className="btn btn-info btn-medium">Enviar</button>
                     </div>
                   </form>
                 </div>

@@ -84,15 +84,15 @@ class ProdutoDetail extends Component {
         </div>
         <div className="paleta-cores flex flex-vertical-center">
           <div className="form-control">
-            <input checked id="cor-1" name="cor" type="radio" />
-            <label for="cor-1">
+            <input defaultChecked id="cor-1" name="cor" type="radio" />
+            <label htmlFor="cor-1">
               <div className="circle">
               </div>
             </label>
           </div>
           <div className="form-control">
             <input id="cor-2" name="cor" type="radio" />
-            <label for="cor-2">
+            <label htmlFor="cor-2">
               <div className="circle">
               </div>
             </label>
@@ -106,12 +106,9 @@ class ProdutoDetail extends Component {
           <a className="link" href="">Guia de medidas</a>
         </div>
         <div className="tamanhos flex flex-vertical-center">
-        {
-          console.log(this.props.produtoInfo.tamanhos)
-        }
         <div className="form-control">
-          <input checked id="tam1" name="tamanho" type="radio" />
-          <label for="tam1">
+          <input defaultChecked id="tam1" name="tamanho" type="radio" />
+          <label htmlFor="tam1">
             <div className="circle">
             33
             </div>
@@ -119,7 +116,7 @@ class ProdutoDetail extends Component {
         </div>
         <div className="form-control">
           <input id="tam2" name="tamanho" type="radio" />
-          <label for="tam2">
+          <label htmlFor="tam2">
             <div className="circle">
             34
             </div>
@@ -127,7 +124,7 @@ class ProdutoDetail extends Component {
         </div>
         <div className="form-control">
           <input id="tam3" name="tamanho" type="radio" />
-          <label for="tam3">
+          <label htmlFor="tam3">
             <div className="circle">
             35
             </div>
