@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Product Page</title>
+
+	<link href="css/style.css" type="text/css" rel="stylesheet"/>
+	<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+	<link href="css/slick-theme.css" type="text/css" rel="stylesheet"/>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" type="text/javascript"></script>
+	<!-- <script src="js/slick.min.js" type="text/javascript"></script> -->
+	<script src="js/slick.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+	
+	$(document).ready(function(){
+		$('.product-relative').slick({
+			dots: false,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 1500,
+			arrows: false,
+			variableWidth: true,
+			responsive: [
+			{
+			breakpoint: 1024,
+			settings: {
+				slidesToShow: 3,
+				slidesToScroll: 3,
+				infinite: true,
+				dots: true
+			}
+			},
+			{
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2
+			}
+			},
+			{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+			}
+		]
+		});
+	});
+	
+	</script>
+
+</head>
+<body>
+	<header> <!-- Cabeçalho -->
+		<div class="logo">
+		 <a  class="navbar-brand"> <img src="imagens/logo.png" alt="logo"/></a>
+		</div>
+	</header>
+
+		<!-- Menu de Navegação Principal -->
+		<nav class="navbar navbar-expand-lg navbar-light ">
+			<button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navb" aria-expanded="false">
+			   <span class="navbar-toggler-icon"></span>
+			 </button>
+		   
+		   <div class="container-fluid">
+		   <div class="collapse navbar-collapse login" id="navb">
+				 <a href="#">Entrar </a> <span class="mspace">| </span><a href="#"> Cadastre-se</a></div>
+				   
+			 <div class="collapse navbar-collapse" id="navb">
+			   <ul class="navbar-nav mr-auto">
+				 <li class="nav-item">
+				   <a class="nav-link" href="#">Sapatos</a>
+				 </li>
+				 <li class="nav-item">
+				   <a class="nav-link" href="#">Bolsas</a>
+				 </li>
+				 <li class="nav-item">
+				   <a class="nav-link disabled" href="#">Acessórios</a>
+				 </li>
+				 <li class="nav-item">
+				   <a class="nav-link disabled" href="#">OFF</a>
+				 </li>
+			   </ul>
+			   <form class="form-inline my-2 my-lg-0 menu-right-side">
+				 <input class="form-control mr-sm-2" type="text" name="search" placeholder="Busca">
+				</form>
+				<a class="nav-link disabled" href="javascript:void(0)"><img src="imagens/Vector.png"></a>
+			 </div>
+			 </div>
+		   </nav>
+
+	<!-- Fim do header -->
+
+	<div id="wrapper"> <!-- conteudo -->
+		<section id="content">
+        	<div id="breadcrumb-container">
+        		<div class="container-fluid">
+					<ul class="breadcrumb">
+						<li><a href="#">Home</a></li>
+						<li class="active">Sapatos</li>
+					</ul>
+        		</div>
+        	</div>
+
+	<div class="container-fluid flexbox">
+		<div class="row">
+		<div class="col-md-12">
+
+		<div class="row">
+
+				<div class="col-md-6 col-sm-12 col-xs-12 product-viewer clearfix">
+
+						<div id="vertical-carousel-container">
+        						<ul id="product-carousel" class="nav" data-ride="carousel">
+	        						<li class="active-slide"><a href="#" ><img src="imagens/prod1.png" alt="prod1" class="img-thumbnail"></a></li>
+	        						<li class="active-slide"><a href="#" ><img src="imagens/prod2.png" alt="prod2" class="img-thumbnail"></a></li>
+	        						<li class="active-slide"><a href="#" ><img src="imagens/prod3.png" alt="prod3" class="img-thumbnail"></a></li>
+	        						<li class="active-slide"><a href="#" ><img src="imagens/prod4.png" alt="prod4" class="img-thumbnail"></a></li>
+	        						<li class="active-slide"><a href="#" ><img src="imagens/prod5.png" alt="prod5" class="img-thumbnail"></a></li>
+        						</ul><!-- Fim carousel -->
+     					</div>
+
+     						<div id="product-image-container">
+        						<figure><img src="imagens/prod1.png" alt="Product Big image" id="product-image" data-big="imagens/prod1.jpg" style="width: 430px;" />	
+     								</figure>
+     						</div>	<!-- imagem Grande -->		
+     			</div> <!-- Fim .col-md-6 -->
+
+     				<div class="col-md-4 col-sm-12 col-xs-12 product border">
+                        <div class="lg-margin visible-sm visible-xs"></div><!-- Space -->
+        					<h1 class="product-name">Rasteira Tira Dedo</h1>
+        					<p>RT 0568 | 03.07.0653</p>	
+                            <div class="price-tag">
+                                <h2><span>R$69,00 |</span></span> R$55,20</h2>
+                                <p>Ou 6x de R$9,20</p>				
+							</div>
+
+						<div class="product-color-filter-container">
+                            <span>Cor:</span>
+                            <ul class="filter-color-list clearfix">
+                                <li><img src="imagens/circle1.png"></li>
+                                <li><img src="imagens/circle2.png"></li>
+                                <li><img src="imagens/circle3.png"></li>
+                                <li><img src="imagens/circle4.png"></li>
+                            </ul>
+                        </div><!-- End .product-color-filter-container-->
+
+                         <div class="product-size-filter-container">
+                            <span>Tamanho:</span>
+                            	<ul class="filter-size-list clearfix">
+                                <li><a href="#">33</a></li>
+                                <li><a href="#">34</a></li>
+                                <li><a href="#">35</a></li>
+                                <li><a href="#">36</a></li>
+                                <li><a href="#">37</a></li>
+                                <li><a href="#">38</a></li>
+                                <li><a href="#">39</a></li>
+                                <li><a href="#">40</a></li>
+                                <li><a href="#">41</a></li>
+                                <li><a href="#">42</a></li>
+								</ul>
+							<a href="#"><p class="guide">Guia de tamanhos</p></a>
+                     </div><!-- End .product-size-filter-container-->
+							<div class="product-add clearfix">
+				               <button class="btn btn-lg " data-toggle="modal" data-target="#myModal">Adicionar à Sacola</button>
+							 </div><!-- .product-add -->
+        					<p class="description">
+        				    Rasteira em atanado soft com tira no dedo e fechamento de fivela.
+        					Possui sola sempre na cor do cabedal.
+        					</p>	
+        			</div><!-- End .row -->
+        		</div>
+        	</div>
+        </div>
+    </div>
+		
+		</section>
+		<section class="more-products">
+			<div class="container-fluid">
+				<h2 class="title">Quem viu viu Também</h2>
+					<div class="product-relative">
+
+						<div class="more-product col-md-12">
+							<div class="plus">
+								<a href="#" class="circle"><p >+</p></a>
+							</div>
+							<img src="imagens/prod03.png" alt="prod03">
+							<div class="more-description">
+								<p>R$204,90</p>
+									<div class="more-colors">
+										<ul class="filter-color-list clearfix">
+											<li><img src="imagens/circle1.png"></li>
+											<li><img src="imagens/circle2.png"></li>
+											<li><img src="imagens/circle3.png"></li>
+											<li><img src="imagens/circle4.png"></li>
+										</ul>
+									</div>
+							</div>
+						</div>
+
+						<div class="more-product col-md-12">
+								<div class="plus">
+									<a href="#" class="circle"><p >+</p></a>
+								</div>
+								<img src="imagens/prod01.png" alt="prod01">
+								<div class="more-description">
+									<p>R$204,90</p>
+										<div class="more-colors">
+											<ul class="filter-color-list clearfix">
+												<li><img src="imagens/circle1.png"></li>
+												<li><img src="imagens/circle2.png"></li>
+												<li><img src="imagens/circle3.png"></li>
+												<li><img src="imagens/circle4.png"></li>
+											</ul>
+										</div>
+								</div>
+							</div>
+
+						<div class="more-product col-md-12">
+								<div class="plus">
+									<a href="#" class="circle"><p >+</p></a>
+								</div>
+								<img src="imagens/prod4.png" alt="prod4">
+								<div class="more-description">
+									<p>R$204,90</p>
+										<div class="more-colors">
+											<ul class="filter-color-list clearfix">
+												<li><img src="imagens/circle1.png"></li>
+												<li><img src="imagens/circle2.png"></li>
+												<li><img src="imagens/circle3.png"></li>
+												<li><img src="imagens/circle4.png"></li>
+											</ul>
+										</div>
+								</div>
+							</div>
+		
+
+						<div class="more-product col-md-12">
+								<div class="plus">
+									<a href="#" class="circle"><p >+</p></a>
+								</div>
+								<img src="imagens/prod01.png" alt="prod01">
+								<div class="more-description">
+									<p>R$204,90</p>
+										<div class="more-colors">
+											<ul class="filter-color-list clearfix">
+												<li><img src="imagens/circle1.png"></li>
+												<li><img src="imagens/circle2.png"></li>
+												<li><img src="imagens/circle3.png"></li>
+												<li><img src="imagens/circle4.png"></li>
+											</ul>
+										</div>
+								</div>
+							</div>
+
+						<div class="more-product col-md-12">
+								<div class="plus">
+									<a href="#" class="circle"><p >+</p></a>
+								</div>
+								<img src="imagens/prod6.png" alt="prod6">
+								<div class="more-description">
+									<p>R$204,90</p>
+										<div class="more-colors">
+											<ul class="filter-color-list clearfix">
+												<li><img src="imagens/circle1.png"></li>
+												<li><img src="imagens/circle2.png"></li>
+												<li><img src="imagens/circle3.png"></li>
+												<li><img src="imagens/circle4.png"></li>
+											</ul>
+										</div>
+								</div>
+							</div>
+							
+						<div class="more-product col-md-12">
+								<div class="plus">
+									<a href="#" class="circle"><p >+</p></a>
+								</div>
+								<img src="imagens/prod03.png" alt="prod03">
+								<div class="more-description">
+									<p>R$204,90</p>
+										<div class="more-colors">
+											<ul class="filter-color-list clearfix">
+												<li><img src="imagens/circle1.png"></li>
+												<li><img src="imagens/circle2.png"></li>
+												<li><img src="imagens/circle3.png"></li>
+												<li><img src="imagens/circle4.png"></li>
+											</ul>
+										</div>
+								</div>
+							</div>
+				</div>	
+			</div>
+		</section>
+	</div>
+
+<!--End Wrapper-->
+<footer>
+	<div class="container-fluid">
+		<div class="row rowline">
+				<div class="col-md-3 col-sm-5 col-xs-12">
+					<div class="redes-sociais">
+							<a href="#" title="Facebook"><img src="imagens/facebook.png"/> </a>
+							<a href="#" title="Instagram"><img src="imagens/instagram.png"/></a>
+							<a href="#" title="Pinterest"><img src="imagens/pinterest.png"/></a>
+					</div>
+				</div>	
+		</div>
+		<div class="row">
+
+				<div class="col-md-2 col-sm-5 col-xs-12 " >
+									
+						<img src="imagens/vtex-pci-200.png"/>
+						<img src="imagens/selo-ebit.png" />
+			
+	 			</div>
+
+				<div class="col-md-2 col-sm-5 col-xs-12">
+						<h3>Institucional</h3>
+							<ul>
+									<a href="#"><li>A Marca</li></a>
+									<a href="#"><li>Lojas</li></a>
+									<a href="#"><li>Contato</li></a>
+							</ul>
+				</div>
+				<div class="col-md-2 col-sm-5 col-xs-12 "  >
+						<h3>Informações</h3>
+						 <ul>
+								<a href="#"><li>Formas de Pagamento</li></a>
+								<a href="#"><li>Troca e Devoluções</li></a>
+								<a href="#"><li>Cuidados com o Produto</li></a>
+						 </ul>
+				 </div>
+				 <div class="col-md-3 col-sm-5 col-xs-12 ">
+						<h3>Conheça</h3>
+							<ul>
+								 <a href="#"><li>Franquias e Multimarcas</li></a>
+								 <a href="#"><li>Trabalhe com a gente</li></a>
+								 <a href="#"><li>Procon RJ</li></a>
+							</ul>
+					</div>	
+					<div class="col-md-2 col-sm-5  col-xs-12" >
+							<div class="newsletter">
+								<h2> Assine nossa news</h2>
+								<p> Nome</p>
+								<input type="text" name="Seu nome">
+								 <p>Email</p>
+
+								<input type="text" name="Email"><div class="center">
+										 <input type="submit" value="Enviar"></div>
+							</div>
+						</div>	
+		</div><!--Fim do row-->
+	</div>
+	<div class="footer">
+		
+		<div class="address">
+			<p>Via Mia | V. Milano Centro Comercio de Bolsas Eireli - EPP.</br>
+			Av.das Américas, 500 - bloco 20, loja 126 - Barra da Tijuca - Rio de Janeiro - RJ - CEP: 22640-100</br>
+			CNPJ: 05.292.288/0002-10 - I.E: 86.732.548 - E-mail: ecommerce@viamia.com.br</p></div>
+	 	<div class="logo-footer"> <img src="imagens/logo-footer.png"/></div>
+	</div>
+</footer><!--Fim do Footer-->
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+		  
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"> &times;</button>
+			</div>
+			<!-- Modal body -->
+			<div class="modal-body">
+				<img src="imagens/prod1.png"  id="product-image" data-big="imagens/prod1.jpg" />	
+				<h2 class="title">Adicionado </br> com sucesso!</h2>
+					<button class="btn btn-lg " data-toggle="modal" data-target="#myModal">Finalizar Compra</button>
+				<p>Continuar comprando</p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+</body>
+</html>
