@@ -66,15 +66,15 @@ class ProdutoRelacionado extends Component {
                       <p className="price">R$ 204,90</p>
                       <div className="paleta-cores flex flex-vertical-center">
                         <div className="form-control">
-                          <input defaultChecked id="cor-relacionado-1" name="corRel" type="radio" />
-                          <label htmlFor="cor-relacionado-1">
+                          <input defaultChecked id="cor-relacionado-3" name="corRel" type="radio" />
+                          <label htmlFor="cor-relacionado-3">
                             <div className="circle">
                             </div>
                           </label>
                         </div>
                         <div className="form-control">
-                          <input id="cor-relacionado-2" name="corRel" type="radio" />
-                          <label htmlFor="cor-relacionado-2">
+                          <input id="cor-relacionado-4" name="corRel" type="radio" />
+                          <label htmlFor="cor-relacionado-4">
                             <div className="circle">
                             </div>
                           </label>
@@ -92,15 +92,15 @@ class ProdutoRelacionado extends Component {
                       <p className="price">R$ 204,90</p>
                       <div className="paleta-cores flex flex-vertical-center">
                         <div className="form-control">
-                          <input defaultChecked id="cor-relacionado-1" name="corRel" type="radio" />
-                          <label htmlFor="cor-relacionado-1">
+                          <input defaultChecked id="cor-relacionado-5" name="corRel" type="radio" />
+                          <label htmlFor="cor-relacionado-5">
                             <div className="circle">
                             </div>
                           </label>
                         </div>
                         <div className="form-control">
-                          <input id="cor-relacionado-2" name="corRel" type="radio" />
-                          <label htmlFor="cor-relacionado-2">
+                          <input id="cor-relacionado-6" name="corRel" type="radio" />
+                          <label htmlFor="cor-relacionado-6">
                             <div className="circle">
                             </div>
                           </label>

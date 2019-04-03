@@ -64,11 +64,11 @@ class ProdutoDetail extends Component {
             overlayClassName="Overlay"
           >
 
-            <img src={img} />
+            <img src={img} alt="Imagem do modal"/>
             <button className="close" onClick={this.closeModal}>X</button>
             <div className="mensagem">Adicionado com sucesso!</div>
             <button className="btn btn-success btn-large" onClick={this.closeModal}>Finalizar Compra</button>
-            <a href="">Continuar comprando</a>
+            <a href="/">Continuar comprando</a>
           </Modal>
 
         <h1>{this.props.produtoInfo.name}</h1>
