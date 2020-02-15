@@ -6,8 +6,8 @@
       1. Facilidade em produzir uma SPA (opção justificada mais à frente); 
       2. Auxílio na construção de componentes baseados em dados, reforçando a modularidade do front end;
       3. Facilidade de plugin de ferramentas de auxílio (como o Bootstrap e o Vue Router);
-  - **Renderer:** EJS;
-    - Única ferramenta de templates que uso regularmente.
+  - **Renderer:** EJS/Vue Template;
+    - Únicas ferramentas de templates que uso regularmente.
     - Conheço Pug e Mustache e já pesquisei por alto outras alternativas, mas nenhuma me fez querer sair da zona de conforto do EJS.
   - **Bundler:** Webpack;
     - Assim como EJS, minha opção por usar o Webpack é puramente baseada na inexperiência com as alternativas. Já trabalhei com Browserify - que não seria uma opção adequada para esse projeto - e já estudei Parcel.
