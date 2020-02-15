@@ -47,4 +47,3 @@
     - Certificados no footer em .env (uma forma mais inteligente de fazer isso seria apenas laçar um folder 'certs'
     no template do componente, mas preferi manter a parametrização consistente com a dos demais elementos para que TUDO
     que foi parametrizado na aplicação esteja visível no .env e no vars.scss);
-    
