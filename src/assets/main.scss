@@ -14,11 +14,11 @@
 }
 
 .flexCenterRow {
-  @include flex-center(row);
+  @include flexCenter(row);
 }
 
 .flexCenterCol {
-  @include flex-center(column);
+  @include flexCenter(column);
 }
 
 a {
@@ -39,4 +39,18 @@ a {
 
 .secondaryFont {
   font-family: $secondary-font !important;
+}
+
+.textInputContainerWIcon {
+  @include textInputContainer(true);
+}
+
+.textInputContainer {
+  @include textInputContainer(false);
+}
+
+.textInputIcon {
+  position: absolute;
+  top: -5px;
+  left: 0px;
 }

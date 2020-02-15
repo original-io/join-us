@@ -36,3 +36,15 @@
     - Bootstrap para auxílio na UI;
     - Vue Router para facilitar a construção da SPA;
     - Axios para chamadas à API;
+    
+  - **Parametrização do Front-end:**
+    - Todos os parâmetros encontram-se em .env ou src>assets>vars.scss
+    - Brandlogo (svg) e referências ao nome da loja/cliente (string) em .env;
+    - Link de redes sociais e certificados (se não houver nenhum link parametrizado, nada renderiza nessa parte do footer) em .env;
+    - Cores da aplicação em vars.scss;
+    - Fontes em vars.scss;
+    - Root da API;
+    - Certificados no footer em .env (uma forma mais inteligente de fazer isso seria apenas laçar um folder 'certs'
+    no template do componente, mas preferi manter a parametrização consistente com a dos demais elementos para que TUDO
+    que foi parametrizado na aplicação esteja visível no .env e no vars.scss);
+    

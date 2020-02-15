@@ -30,7 +30,7 @@ export default {
   }
 
   #headerTopBlock {
-    @include flex-center(row);
+    @include flexCenter(row);
     padding: 30px 0;
     border-bottom: 1px solid $dividers-color;
   }

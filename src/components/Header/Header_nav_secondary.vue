@@ -1,10 +1,12 @@
 <template>
-    <nav class="text-sm-right text-center">
+    <nav class="text-sm-right text-center secNavContainer">
         <div class="search-container">
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.517 4C7.81321 4 4 7.8131 4 12.5169C4 17.2208 7.81321 21.0342 12.517 21.0342C14.4706 21.0342 16.2704 20.3766 17.7074 19.2705L23.1132 24.6762C23.5448 25.1079 24.2447 25.1079 24.6763 24.6762C25.1079 24.2447 25.1079 23.5448 24.6763 23.1133L19.2704 17.7073C20.3764 16.2704 21.0341 14.4706 21.0341 12.5169C21.0341 7.8131 17.2209 4 12.517 4ZM6.21053 12.5169C6.21053 9.03413 9.03404 6.21053 12.517 6.21053C16 6.21053 18.8235 9.03413 18.8235 12.5169C18.8235 16 16 18.8236 12.517 18.8236C9.03404 18.8236 6.21053 16 6.21053 12.5169Z" fill="black"/>
-            </svg>
-            <span class="secondaryFont" id="searchText">Busca</span>
+            <div class="textInputContainerWIcon">
+                <input class="textInput" placeholder="Busca">
+                <svg class="textInputIcon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.517 4C7.81321 4 4 7.8131 4 12.5169C4 17.2208 7.81321 21.0342 12.517 21.0342C14.4706 21.0342 16.2704 20.3766 17.7074 19.2705L23.1132 24.6762C23.5448 25.1079 24.2447 25.1079 24.6763 24.6762C25.1079 24.2447 25.1079 23.5448 24.6763 23.1133L19.2704 17.7073C20.3764 16.2704 21.0341 14.4706 21.0341 12.5169C21.0341 7.8131 17.2209 4 12.517 4ZM6.21053 12.5169C6.21053 9.03413 9.03404 6.21053 12.517 6.21053C16 6.21053 18.8235 9.03413 18.8235 12.5169C18.8235 16 16 18.8236 12.517 18.8236C9.03404 18.8236 6.21053 16 6.21053 12.5169Z" fill="black"/>
+                </svg>
+            </div>
         </div>
         <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M11.0008 13C11.0008 14.1046 10.1054 15 9.00085 15C7.89628 15 7.00085 14.1046 7.00085 13C7.00085 11.8954 7.89628 11 9.00085 11C10.1054 11 11.0008 11.8954 11.0008 13Z" fill="black"/>
@@ -22,13 +24,14 @@
 </script>
 
 <style lang="scss" scoped>
-    .search-container {
-        display: inline-block;
-        border-bottom: 1px solid rgba($soft-font-color, 0.4);
-        color: $soft-font-color;
-        margin-right: 40px;
-        width: 90px;
+    .secNavContainer {
+        padding-right: 40px;
+    }
+
+    .textInputContainerWIcon {
+        width: 50%;
         text-align: left;
+        color: $soft-font-color;
         font-size: 12px;
     }
 

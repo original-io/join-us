@@ -1,7 +1,64 @@
-@mixin flex-center($direction: row) {
+@mixin flexCenter($direction: row) {
   display: flex;
   flex-direction: $direction;
   justify-content: center;
   align-items: center;
   align-content: center;
+}
+
+@mixin textInputContainer($hasIcon: false) {
+  @if $hasIcon {
+    position: relative;
+    left: 0;
+    top: 0;
+    transition: all 0.6s ease;
+
+    &:hover {
+      svg {
+        transform: scale(1.2, 1.2);
+        path {
+          fill: $primary-color;
+        }
+      }
+      .textInput {
+        transform: scale(1.2, 1.2);
+        color: $primary-color;
+        border-bottom-color: $primary-color;
+        &::placeholder {
+          color: $primary-color;
+        }
+      }
+    }
+
+    .textInput {
+      padding-left: 40px;
+      border: 0;
+      border-bottom: 1px solid rgba($soft-font-color, 0.4);
+      width: 100%;
+      line-height: 24px;
+      transition: all 0.6s ease;
+      &::placeholder {
+        color: $soft-font-color;
+        transition: all 0.6s ease;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: -5px;
+      left: 0;
+      transition: all 0.6s ease;
+      path {
+        transition: all 0.6s ease;
+      }
+    }
+  }
+  @else {
+    .textInput {
+      padding-left: 0;
+    }
+  }
 }
