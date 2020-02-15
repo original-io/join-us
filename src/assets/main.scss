@@ -1,0 +1,42 @@
+@import '@/../node_modules/bootstrap/scss/bootstrap';
+@import '@/../node_modules/bootstrap-vue/src/index.scss';
+@import url($primary-font-importurl);
+@import url($secondary-font-importurl);
+
+* {
+  letter-spacing: 1px;
+  color: inherit;
+}
+
+.page-block {
+  width: 100%;
+  max-width: 1600px;
+}
+
+.flexCenterRow {
+  @include flex-center(row);
+}
+
+.flexCenterCol {
+  @include flex-center(column);
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+  background: none;
+  transition: all 0.6s ease;
+
+  &:hover {
+    text-decoration: none;
+    color: $primary-color !important;
+  }
+}
+
+.primaryFont {
+  font-family: $primary-font !important;
+}
+
+.secondaryFont {
+  font-family: $secondary-font !important;
+}
