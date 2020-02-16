@@ -1,5 +1,5 @@
 <template>
-    <b-collapse id="collapse-1" v-model="visible">
+    <b-collapse id="collapse-1" v-model="visible" v-if="busca">
         <div class="title">
             {{busca || "Insira sua busca"}}
         </div>
