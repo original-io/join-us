@@ -4,32 +4,64 @@
             <img src="https://image.flaticon.com/icons/png/512/32/32339.png" alt="" class="text">
         </div>
         <Breadcrumbs v-if="items[1]" v-bind:items="items"></Breadcrumbs>
+
         <!-- Breadcrumbs só vai renderizar se estivermos a pelo menos um nível de profundidade -->
-        <div>
+        <div class="categoryListContainer">
+            <transition name="fade">
+                <div class="loader" v-if="!categories" style="background: orange; width: 50px; height: 50px; position:absolute; left: 50%; top: 50%;"></div>
+            </transition>
 
-
+            <SectionCollapse :collapsed="loading">
+                <ul class="categoryList flexCenterRow" v-if="categories">
+                    <!-- Eventualmente podemos refatorar, ver observação no readme -->
+                    <li v-for="category in categories">
+                        aaaa
+                    </li>
+                </ul>
+            </SectionCollapse>
         </div>
     </div>
 </template>
 
 <script>
     import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs.vue';
+    import axios from 'axios';
+    import SectionCollapse from "../components/CollapseSection";
+
+    function sleep(t) {
+        return new Promise((accept) => setTimeout(accept, t));
+    }
 
     export default {
         name: "Index",
         components: {
+            SectionCollapse,
             Breadcrumbs
         },
         data() {
             return {
-                openModal: false,
+                loading: false,
                 items: [
                     {
                         text: 'Home',
                         active: true
-                    },
-                ]
+                    }
+                ],
+                categories: null
             }
+        },
+        methods: {
+            async getCategories() {
+                await sleep(1000);
+                let { data } = await axios.get('http://localhost:8081/produto/categoria');
+                return data;
+            }
+        },
+        async created() {
+            this.loading = true;
+            this.categories = await this.getCategories();
+
+            this.loading = false;
         }
     }
 </script>

@@ -58,6 +58,33 @@ router.get('/usuario/carrinho', async (req, res) => {
 
 // Rotas Produtos
 
+router.get('/produto', async (req, res) => {
+    let returnData = [];
+    await Produto.forEach(produto =>{
+        returnData.push(produto);
+    });
+    res.status(200).send(JSON.stringify(returnData));
+});
+
+router.get('/produto/categoria', async (req, res) => {
+    // Quebrando REST para adiantar o mock server:
+    let returnData = [{nome: Produto[0].categoria, foto: Produto[0].foto}];
+
+    Produto.forEach(produto =>{
+        let alreadyIn = false;
+        for(let i = 0; i < returnData.length; i++) {
+            if(returnData[i].nome == produto.categoria) {
+                alreadyIn = true;
+            }
+        }
+        if (!alreadyIn) {
+            returnData.push({nome: produto.categoria, foto: produto.foto});
+        }
+    });
+    console.log(returnData);
+    res.status(200).send(JSON.stringify(returnData));
+});
+
 router.get('/produto/categoria/:categoria', async (req, res) => {
     let produtoEncontrado = [];
 

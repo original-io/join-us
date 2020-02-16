@@ -42,7 +42,7 @@
             }
         },
         methods: {
-            atualizar: function(){
+            atualizar: async function(){
                 this.entrada = document.getElementById("busca").value;
                 axios.get("http://localhost:8081/produto/nome/" + this.entrada)
                         .then(data =>{

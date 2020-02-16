@@ -50,3 +50,11 @@
 
   - **Observações**
     - O menu em dropdown para as categorias de produtos foi propositadamente ignorado;
+    - As listas de categorias, o menu principal e outros componentes podem seguir a mesma lógica de
+    listagem dos componentes de produtos para serem gerados dinamicamente. Isso contribuiria tanto
+    para a escalabilidade do sistema quanto para a parametrização do front. Para não dedicar tempo
+    demais ao modelo de dados (super simplificado em 'Usuarios' e 'Produtos'), isso não foi implementado;
+      - Um exemplo disso é o index, que gera a lista dinamicamente, mas na ausência de um modelo de categoria,
+      faz uma gambiarra para gerar as fotos e passa por uma req ineficiente para saber quais as categorias do sistema.
+      Experimente adicionar um produto de uma categoria nova no Produto.json e veja o Index novamente.
+    - Boa parte da API do mock server não segue as práticas REST pelo bem da brevidade.
