@@ -2,6 +2,7 @@ $primary-color: rgb(222,143,117);
 $canceled-color: rgb(227,84,66);
 $actionable-color: rgb(50,145,123);
 $secondary-actionable-color: rgb(95,117,170);
+$darker-blue: rgb(42,90,117);
 $highlight-yellow: rgb(224,218,156);
 $dividers-color: rgb(204,204,204);
 $main-font-color: rgb(32,32,32);
@@ -9,9 +10,15 @@ $soft-font-color: rgb(104,104,104);
 $softer-font-color: rgb(127,127,127);
 $faded-font-color: rgb(174,182,193);
 $main-darkbg-font-color: rgb(255,255,255);
+$bg-color: rgb(255,255,255);
+$light-gray: rgb(227,227,227);
 
-$primary-font: "Noto Sans";
-$primary-font-importurl: "https://fonts.googleapis.com/css?family=Noto+Sans&display=swap";
+$primary-font: "Gotham Book";
+$primary-font-importurl: "gothambook.otf";
+$primary-font-format: 'opentype';
 $secondary-font: "Open Sans";
 $secondary-font-importurl: "https://fonts.googleapis.com/css?family=Open+Sans&display=swap";
+$secondary-font-format: 'opentype';
+$cart-font: "Montserrat";
+$cart-font-importurl: "https://fonts.googleapis.com/css?family=Montserrat&display=swap";
 

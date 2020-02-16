@@ -135,16 +135,14 @@
                 certFiles: JSON.parse(process.env.VUE_APP_CERT_FILENAMES)
             }
         },
-        computed: {
+            computed: {
             certFilesPath: () => {
                 let certFiles = JSON.parse(process.env.VUE_APP_CERT_FILENAMES);
                 let array = [];
                 for (let i = 0; i < certFiles.length; i++) {
-                    console.log('../../assets/svg/' + certFiles[i]);
                     let filePath = require('../../assets/svg/' + certFiles[i]);
                     array.push(filePath);
                 }
-                console.log(array);
                 return array;
             }
         },

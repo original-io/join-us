@@ -1,9 +1,9 @@
 <template>
     <nav class="navContainer">
-        <router-link class="mainLink" to="/produtos/categorias/sapatos">SAPATOS</router-link>
-        <router-link class="mainLink" to="/produtos/categorias/bolsas">BOLSAS</router-link>
-        <router-link class="mainLink" to="/produtos/categorias/acessorios">ACESSÓRIOS</router-link>
-        <router-link class="mainLink" to="/produtos/categorias/off">OFF</router-link>
+        <router-link class="mainLink" to="/produtos/categorias2/sapatos">SAPATOS</router-link>
+        <router-link class="mainLink" to="/produtos/categorias2/bolsas">BOLSAS</router-link>
+        <router-link class="mainLink" to="/produtos/categorias2/acessorios">ACESSÓRIOS</router-link>
+        <router-link class="mainLink" to="/produtos/categorias2/off">OFF</router-link>
     </nav>
 </template>
 

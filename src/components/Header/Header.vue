@@ -1,8 +1,10 @@
 <template>
   <header class="block-header">
-    <div id="headerTopBlock" ref="brandLogoContainer" class="flexCenter">
-      <!-- Pode ser configurada em .env, basta mudar as variáveis 'brandlogo' -->
-    </div>
+    <router-link to="/">
+      <div id="headerTopBlock" ref="brandLogoContainer" class="flexCenter">
+        <!-- Pode ser configurada em .env, basta mudar as variáveis 'brandlogo' -->
+      </div>
+    </router-link>
     <header_nav></header_nav>
   </header>
 </template>

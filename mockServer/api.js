@@ -1,9 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
+const Aux = require('./auxscripts.js');
 
-let Usuario = JSON.parse(fs.readFileSync ('Usuario.json'));
-let Produto = JSON.parse(fs.readFileSync ('Produto.json'));
+let Usuario = JSON.parse(fs.readFileSync('Usuario.json'));
+let Produto = JSON.parse(fs.readFileSync('Produto.json'));
+let Categoria = JSON.parse(fs.readFileSync('Categoria.json'));
+let Subcategoria = JSON.parse(fs.readFileSync('Subcategoria.json'));
 
 //Rotas usuário
 
@@ -58,7 +61,7 @@ router.get('/usuario/carrinho', async (req, res) => {
 
 // Rotas Produtos
 
-router.get('/produto', async (req, res) => {
+router.get('/produtos', async (req, res) => {
     let returnData = [];
     await Produto.forEach(produto =>{
         returnData.push(produto);
@@ -66,45 +69,36 @@ router.get('/produto', async (req, res) => {
     res.status(200).send(JSON.stringify(returnData));
 });
 
-router.get('/produto/categoria', async (req, res) => {
+router.get('/categorias/:nome', async (req, res) => {
     // Quebrando REST para adiantar o mock server:
-    let returnData = [{nome: Produto[0].categoria, foto: Produto[0].foto}];
-
-    Produto.forEach(produto =>{
-        let alreadyIn = false;
-        for(let i = 0; i < returnData.length; i++) {
-            if(returnData[i].nome == produto.categoria) {
-                alreadyIn = true;
-            }
+    let returnData;
+    for(let cat of Categoria) {
+        if(Aux.removeDiacritics(cat.nome.toLowerCase()) == Aux.removeDiacritics(req.params.nome.toLowerCase())) {
+            returnData = cat;
+            break;
         }
-        if (!alreadyIn) {
-            returnData.push({nome: produto.categoria, foto: produto.foto});
-        }
-    });
-    console.log(returnData);
+    }
     res.status(200).send(JSON.stringify(returnData));
 });
 
-router.get('/produto/categoria/subcategorias', async (req, res) => {
+router.get('/categorias', async (req, res) => {
     // Quebrando REST para adiantar o mock server:
-    let returnData = [{nome: Produto[0].subcategoria, foto: Produto[0].foto}];
+    res.status(200).send(JSON.stringify(Categoria));
+});
 
-    Produto.forEach(produto =>{
-        let alreadyIn = false;
-        for(let i = 0; i < returnData.length; i++) {
-            if(returnData[i].nome == produto.categoria) {
-                alreadyIn = true;
-            }
+router.get('/categorias/:categoria/subcategorias', async (req, res) => {
+    // Quebrando REST para adiantar o mock server:
+    let categoria = req.params.categoria;
+    let returnData = [];
+    for(sc of Subcategoria) {
+        if(!returnData.includes(sc.nome) && Aux.removeDiacritics(sc.categoria.toLowerCase()) == Aux.removeDiacritics(categoria.toLowerCase())) {
+            returnData.push(sc);
         }
-        if (!alreadyIn) {
-            returnData.push({nome: produto.categoria, foto: produto.foto});
-        }
-    });
-    console.log(returnData);
+    }
     res.status(200).send(JSON.stringify(returnData));
 });
 
-router.get('/produto/categoria/:categoria', async (req, res) => {
+router.get('/produtos/categoria/:categoria', async (req, res) => {
     let produtoEncontrado = [];
 
     await Produto.forEach(produto =>{
@@ -115,7 +109,7 @@ router.get('/produto/categoria/:categoria', async (req, res) => {
     res.status(200).send(produtoEncontrado);
 });
 
-router.get('/produto/nome/:nome', async (req, res) => {
+router.get('/produtos/nome/:nome', async (req, res) => {
     let produtoEncontrado = [];
 
     await Produto.forEach(produto =>{
@@ -127,7 +121,7 @@ router.get('/produto/nome/:nome', async (req, res) => {
     res.status(200).send(resultado);
 });
 
-router.get('/produto/id/:id', async (req, res) => {
+router.get('/produtos/id/:id', async (req, res) => {
     let produtoEncontrado = [];
 
     await Produto.forEach(produto =>{
@@ -136,6 +130,17 @@ router.get('/produto/id/:id', async (req, res) => {
         }
     });
     res.status(200).send(produtoEncontrado);
+});
+
+router.get('/produtos/off', async (req, res) => {
+    let returnData = [];
+
+    await Produto.forEach(produto =>{
+        if (produto.valor != produto.valorPromocao){
+            returnData.push(produto);
+        }
+    });
+    res.status(200).send(returnData);
 });
 
 module.exports = router;

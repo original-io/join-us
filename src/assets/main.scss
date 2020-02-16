@@ -1,11 +1,25 @@
 @import '@/../node_modules/bootstrap/scss/bootstrap';
 @import '@/../node_modules/bootstrap-vue/src/index.scss';
-@import url($primary-font-importurl);
+@font-face {
+  font-family: $primary-font;
+  src: url('./fonts/' + $primary-font-importurl);
+}
+/* quebrando o padrão estabelecido nos parâmetros porque decidiram usar uma fonte com faces não unidas em um arquivo */
+@font-face {
+  font-family: $primary-font;
+  src: ('./fonts/gothambold.otf');
+  font-weight: bold;
+}
 @import url($secondary-font-importurl);
+@import url($cart-font-importurl);
 
 * {
   letter-spacing: 1px;
   color: inherit;
+}
+
+body {
+  background-color: $bg-color;
 }
 
 .page-block {
@@ -84,6 +98,10 @@ a {
 
 .text-primary {
   color: $primary-color !important;
+}
+
+.interactible {
+  cursor: pointer;
 }
 
 @import "./transitions";

@@ -1,0 +1,22 @@
+[
+    {
+        "nome": "Sapatos",
+        "foto": "shoe.svg",
+        "banner": "shoebanner.png"
+    },
+    {
+        "nome": "Bolsas",
+        "foto": "purse.svg",
+        "banner": "pursebanner.png"
+    },
+    {
+        "nome": "Acessórios",
+        "foto": "wristwatch.svg",
+        "banner": "wristwatchbanner.png"
+    },
+    {
+        "nome": "Off",
+        "foto": "savings.svg",
+        "banner": "savingsbanner.png"
+    }
+]

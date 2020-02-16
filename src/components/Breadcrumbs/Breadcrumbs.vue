@@ -24,6 +24,7 @@
         .breadcrumb-item {
             font-size: 12px;
             color: $faded-font-color;
+            text-transform: capitalize;
             &.active {
                 color: $faded-font-color;
                 font-weight: bold;

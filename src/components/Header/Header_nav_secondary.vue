@@ -14,7 +14,7 @@
             </div>
             <Header_nav_search v-bind:visible="visible" v-bind:query="query" v-bind:result="result"></Header_nav_search>
         </div>
-        <div class="cartContainer">
+        <div class="cartContainer interactible">
             <svg class="cartIcon" width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11.0008 13C11.0008 14.1046 10.1054 15 9.00085 15C7.89628 15 7.00085 14.1046 7.00085 13C7.00085 11.8954 7.89628 11 9.00085 11C10.1054 11 11.0008 11.8954 11.0008 13Z" fill="black"/>
                 <path d="M20.0008 13C20.0008 14.1046 19.1054 15 18.0008 15C16.8963 15 16.0008 14.1046 16.0008 13C16.0008 11.8954 16.8963 11 18.0008 11C19.1054 11 20.0008 11.8954 20.0008 13Z" fill="black"/>
@@ -44,7 +44,7 @@
         methods: {
             Search: async function(){
                 this.query = document.getElementById("search").value;
-                axios.get("http://localhost:8081/produto/nome/" + this.query)
+                axios.get("http://localhost:8081/produtos/nome/" + this.query)
                         .then(data =>{
                             this.result = data.data;
                         }).catch(err => {

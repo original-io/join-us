@@ -53,8 +53,10 @@
     - As listas de categorias, o menu principal e outros componentes podem seguir a mesma lógica de
     listagem dos componentes de produtos para serem gerados dinamicamente. Isso contribuiria tanto
     para a escalabilidade do sistema quanto para a parametrização do front. Para não dedicar tempo
-    demais ao modelo de dados (super simplificado em 'Usuarios' e 'Produtos'), isso não foi implementado;
-      - Um exemplo disso é o index, que gera a lista dinamicamente, mas na ausência de um modelo de categoria,
-      faz uma gambiarra para gerar as fotos e passa por uma req ineficiente para saber quais as categorias do sistema.
-      Experimente adicionar um produto de uma categoria nova no Produto.json e veja o Index novamente.
+    demais ao modelo de dados, isso não foi implementado;
     - Boa parte da API do mock server não segue as práticas REST pelo bem da brevidade.
+    - Por falta de tempo, não foi implementado um sistema de autenticação. O carrinho e demais funcionalidades dependentes
+    de usuário logado usam o primeiro usuário do JSON como objeto.
+    - Considerei como "off" todo produto que possuisse preço promocional != preço. Cada acesso à categoria "off" faz
+    uma requisição a Produtos, mas num BD tradicional eu implementaria uma regra de tabela para marcar uma flag, que então
+    seria usada no template que renderiza "off".

@@ -1,0 +1,102 @@
+[
+    {
+        "nome": "Rasteira",
+        "categoria": "Sapatos",
+        "foto": "rasteiras.svg"
+    },
+    {
+        "nome": "Sapatilhas",
+        "categoria": "Sapatos",
+        "foto": "sapatilhas.svg"
+    },
+    {
+        "nome": "Alpargatas",
+        "categoria": "Sapatos",
+        "foto": "alpargatas.svg"
+    },
+    {
+        "nome": "Mocassins",
+        "categoria": "Sapatos",
+        "foto": "shoe.svg"
+    },
+    {
+        "nome": "Tênis",
+        "categoria": "Sapatos",
+        "foto": "tenis.svg"
+    },
+    {
+        "nome": "Botas",
+        "categoria": "Sapatos",
+        "foto": "shoe.svg"
+    },
+    {
+        "nome": "Salto Anabela",
+        "categoria": "Sapatos",
+        "foto": "shoe.svg"
+    },
+    {
+        "nome": "Salto Plataforma",
+        "categoria": "Sapatos",
+        "foto": "shoe.svg"
+    },
+    {
+        "nome": "Salto Alto",
+        "categoria": "Sapatos",
+        "foto": "shoe.svg"
+    },
+    {
+        "nome": "Bolsa SC1",
+        "categoria": "Bolsas",
+        "foto": "purse.svg"
+    },
+    {
+        "nome": "Bolsa SC2",
+        "categoria": "Bolsas",
+        "foto": "purse.svg"
+    },
+    {
+        "nome": "Bolsa SC3",
+        "categoria": "Bolsas",
+        "foto": "purse.svg"
+    },
+    {
+        "nome": "Bolsa SC4",
+        "categoria": "Bolsas",
+        "foto": "purse.svg"
+    },
+    {
+        "nome": "Bolsa SC5",
+        "categoria": "Bolsas",
+        "foto": "purse.svg"
+    },
+    {
+        "nome": "Bolsa SC6",
+        "categoria": "Bolsas",
+        "foto": "purse.svg"
+    },
+    {
+        "nome": "Bolsa SC7",
+        "categoria": "Bolsas",
+        "foto": "purse.svg"
+    },
+    {
+        "nome": "Acessório SC1",
+        "categoria": "Acessórios",
+        "foto": "wristwatch.svg"
+    },
+    {
+        "nome": "Acessório SC2",
+        "categoria": "Acessórios",
+        "foto": "wristwatch.svg"
+    },
+    {
+        "nome": "Acessório SC2",
+        "categoria": "Acessórios",
+        "foto": "wristwatch.svg"
+    },
+    {
+        "nome": "Acessório SC3",
+        "categoria": "Acessórios",
+        "foto": "wristwatch.svg"
+    }
+]
