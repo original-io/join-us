@@ -3,8 +3,9 @@
         <div class="add-btn" @click="openModal = !openModal">
             <img src="https://image.flaticon.com/icons/png/512/32/32339.png" alt="" class="text">
         </div>
-
-        <div class="a">
+        <Breadcrumbs v-if="items[1]" v-bind:items="items"></Breadcrumbs>
+        <!-- Breadcrumbs só vai renderizar se estivermos a pelo menos um nível de profundidade -->
+        <div>
 
 
         </div>
@@ -12,11 +13,24 @@
 </template>
 
 <script>
+    import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs.vue';
+
     export default {
         name: "Index",
-        data: () => ({
-            openModal: false
-        })
+        components: {
+            Breadcrumbs
+        },
+        data() {
+            return {
+                openModal: false,
+                items: [
+                    {
+                        text: 'Home',
+                        active: true
+                    },
+                ]
+            }
+        }
     }
 </script>
 

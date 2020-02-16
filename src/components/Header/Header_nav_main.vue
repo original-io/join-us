@@ -22,7 +22,7 @@
         align-items: center;
         .mainLink {
             color: $soft-font-color;
-            padding: 10px 25px;
+            padding: 14.5px 25px;
             font-size: 14px;
             transition: all 0.5s ease;
             &:hover {

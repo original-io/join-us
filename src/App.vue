@@ -2,6 +2,7 @@
   <div>
     <Header></Header>
     <router-view></router-view>
+      <div id="routename">  {{currentRouteName}} </div>
     <Footer></Footer>
   </div>
 </template>
@@ -16,6 +17,11 @@
     components: {
         Header,
         Footer
+    },
+    computed: {
+        currentRouteName() {
+            return this.$route.name;
+        }
     }
   };
 </script>

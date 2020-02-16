@@ -50,4 +50,3 @@
 
   - **Observações**
     - O menu em dropdown para as categorias de produtos foi propositadamente ignorado;
-    - 

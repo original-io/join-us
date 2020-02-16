@@ -23,7 +23,7 @@
             color: inherit;
             a {
                 line-height: 24px;
-                padding: 10px 7px;
+                padding: 14px 7px;
                 color: $soft-font-color;
             }
         }
