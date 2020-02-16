@@ -1,7 +1,7 @@
 module.exports = {
     css: {
         loaderOptions: {
-            sass: {
+            scss: {
                 prependData: `@import '@/assets/globals.scss';`
             }
         }

@@ -24,68 +24,84 @@
                     </div>
                 </div>
                 <div class="row footerRow generalFooterRow page-block">
-                    <div class="col-sm-3 col-12 certificatesCol">
+                    <div class="col-sm-2 col-12 certificatesCol">
                         <div v-for="certFilePath in certFilesPath">
                             <img v-bind:src="certFilePath">
                         </div>
                     </div>
+                    <div class="col-sm-7 col-12 infoFooterSectionContainer">
+                        <div class="row">
+                            <div class="infoFooterSection">
+                                <h5 class="infoFooterSectionTitle primaryFont">
+                                    INSTITUCIONAL
+                                </h5>
+                                <ul class="infoLinkList secondaryFont">
+                                    <li class="infoLink secondaryFont">
+                                        A Marca
+                                    </li>
+                                    <li class="infoLink secondaryFont">
+                                        Lojas
+                                    </li>
+                                    <li class="infoLink secondaryFont">
+                                        Contato
+                                    </li>
+                                </ul>
+                            </div>
 
-                    <div class="col-sm-2 col-12 infoFooterSection">
-                        <h5 class="infoFooterSectionTitle primaryFont">
-                            INSTITUCIONAL
-                        </h5>
-                        <ul class="infoLinkList secondaryFont">
-                            <li class="infoLink secondaryFont">
-                                A Marca
-                            </li>
-                            <li class="infoLink secondaryFont">
-                                Lojas
-                            </li>
-                            <li class="infoLink secondaryFont">
-                                Contato
-                            </li>
-                        </ul>
-                    </div>
+                            <div class="infoFooterSection">
+                                <h5 class="infoFooterSectionTitle primaryFont">
+                                    INFORMAÇÕES
+                                </h5>
+                                <ul class="infoLinkList secondaryFont">
+                                    <li class="infoLink secondaryFont">
+                                        Formas de Pagamento
+                                    </li>
+                                    <li class="infoLink secondaryFont">
+                                        Trocas de Devoluções
+                                    </li>
+                                    <li class="infoLink secondaryFont">
+                                        Cuidados com o Produto
+                                    </li>
+                                </ul>
+                            </div>
 
-                    <div class="col-sm-2 col-12 infoFooterSection">
-                        <h5 class="infoFooterSectionTitle primaryFont">
-                            INFORMAÇÕES
-                        </h5>
-                        <ul class="infoLinkList secondaryFont">
-                            <li class="infoLink secondaryFont">
-                                Formas de Pagamento
-                            </li>
-                            <li class="infoLink secondaryFont">
-                                Trocas de Devoluções
-                            </li>
-                            <li class="infoLink secondaryFont">
-                                Cuidados com o Produto
-                            </li>
-                        </ul>
+                            <div class="infoFooterSection">
+                                <h5 class="infoFooterSectionTitle primaryFont">
+                                    CONHEÇA
+                                </h5>
+                                <ul class="infoLinkList secondaryFont">
+                                    <li class="infoLink secondaryFont">
+                                        Franquias e Multimarcas
+                                    </li>
+                                    <li class="infoLink secondaryFont">
+                                        Trabalhe com a Gente
+                                    </li>
+                                    <li class="infoLink secondaryFont">
+                                        Procon-RJ
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="col-sm-2 col-12 infoFooterSection">
-                        <h5 class="infoFooterSectionTitle primaryFont">
-                            CONHEÇA
-                        </h5>
-                        <ul class="infoLinkList secondaryFont">
-                            <li class="infoLink secondaryFont">
-                                Franquias e Multimarcas
-                            </li>
-                            <li class="infoLink secondaryFont">
-                                Trabalhe com a Gente
-                            </li>
-                            <li class="infoLink secondaryFont">
-                                Procon-RJ
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-3 col-12 newsletterFooterSection">
-                        <div>
-                            <label for="nameInput">Nome</label>
-                            <input type="text" class="textInput" id="nameInput" name="nameInput">
-                            <label for="nameInput">E-mail</label>
-                            <input type="text" class="textInput" id="emailInput" name="emailInput">
+                    <div class="col-sm-3 col-12" style="position: relative; top: 0; left: 0; display: flex; justify-content: flex-end;">
+                        <div class="circleContainer">
+                             <form class="newsletterFooterSection">
+                                <div class="textInputContainer newsletterInputContainer secondaryFont">
+                                    <label for="nameInput" class="newsletterInputLabel" ref="nameInputLabel">Nome</label>
+                                    <input ref="nameInput" type="text" class="textInput" id="nameInput" name="nameInput" @click="nameInputClicked" @blur="nameInputBlurred">
+                                </div>
+                                <div class="textInputContainer newsletterInputContainer secondaryFont">
+                                    <label for="emailInput" class="newsletterInputLabel" ref="emailInputLabel">E-mail</label>
+                                    <input ref="emailInput" type="text" class="textInput" id="emailInput" name="emailInput" @click="emailInputClicked" @blur="emailInputBlurred">
+                                </div>
+                                <button class="btn btn-primary" v-on:click.prevent="subscribeNewsletter">ENVIAR</button>
+                            </form>
+                            <div ref="successMsg" class="successMsg secondaryFont">
+                                Assinado!
+                            </div>
+                            <div ref="errorMsg" class="errorMsg secondaryFont">
+                                Preencha ambos os campos com valores válidos.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -120,7 +136,7 @@
             }
         },
         computed: {
-            certFilesPath: function() {
+            certFilesPath: () => {
                 let certFiles = JSON.parse(process.env.VUE_APP_CERT_FILENAMES);
                 let array = [];
                 for (let i = 0; i < certFiles.length; i++) {
@@ -130,6 +146,45 @@
                 }
                 console.log(array);
                 return array;
+            }
+        },
+        methods: {
+            subscribeNewsletter() {
+                let name = this.$refs.nameInput;
+                let email = this.$refs.emailInput;
+                if(name.value && email.value) {
+                    name.value = "";
+                    email.value = "";
+                    this.$refs.successMsg.style.display = "block";
+                    this.$refs.errorMsg.style.display = "none";
+                    this.$refs.nameInputLabel.classList.remove("stopTranslating");
+                    this.$refs.nameInputLabel.classList.add("resumeTranslating");
+                    this.$refs.emailInputLabel.classList.remove("stopTranslating");
+                    this.$refs.emailInputLabel.classList.add("resumeTranslating");
+                    return;
+                }
+                this.$refs.errorMsg.style.display = "block";
+                this.$refs.successMsg.style.display = "none";
+            },
+
+            nameInputClicked() {
+                this.$refs.nameInputLabel.classList.add("stopTranslating");
+            },
+
+            emailInputClicked() {
+                this.$refs.emailInputLabel.classList.add("stopTranslating");
+            },
+
+            nameInputBlurred() {
+                if(!this.$refs.nameInput.value) {
+                    this.$refs.nameInputLabel.classList.remove("stopTranslating");
+                }
+            },
+
+            emailInputBlurred() {
+                if(!this.$refs.emailInput.value) {
+                    this.$refs.emailInputLabel.classList.remove("stopTranslating");
+                }
             }
         },
         mounted() {
@@ -164,7 +219,7 @@
             background-color: $primary-color;
         }
         .block-footer-top {
-            padding: 20px 0;
+            padding-top: 20px;
         }
     }
 
@@ -191,11 +246,12 @@
     }
 
     .footerRow {
-        margin-bottom: 30px;
+        position: relative;
     }
 
     .certificatesCol {
         margin: auto;
+        padding: 0;
         div {
             display: inline-block;
             margin: 0 10px;
@@ -217,9 +273,83 @@
         padding: 0;
 
         .infoLink {
-            padding: 5px;
+            padding: 5px 0 20px 0;
             color: $main-font-color;
             letter-spacing: normal;
+            font-size: 14px;
+        }
+    }
+
+    .circleContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 auto;
+        max-width: 300px;
+        max-height: 300px;
+        width: 33vw;
+        height: 33vw;
+        position: absolute;
+        top: -170px;
+        right: 0;
+        border-radius: 50%;
+        border: 2px solid $faded-font-color;
+        background-color: white;
+        .successMsg {
+            display: none;
+            margin-top: 10px;
+            color: $actionable-color;
+            font-size: 14px;
+            text-align: center;
+            width: 60%;
+        }
+        .errorMsg {
+            display: none;
+            margin-top: 10px;
+            color: $canceled-color;
+            font-size: 14px;
+            text-align: center;
+            width: 60%;
+        }
+
+    }
+
+    .newsletterFooterSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        color: $faded-font-color;
+        vertical-align: middle;
+        .newsletterInputContainer {
+            text-align: left;
+            margin: 5px;
+            flex: 1 1 auto;
+            .textInput {
+                color: $main-font-color;
+            }
+        }
+        button {
+            margin-top: 15px;
+        }
+    }
+
+    .stopTranslating {
+        transform: translateY(0);
+        font-size: 12px;
+    }
+
+    .resumeTranslating {
+        transform: translateY(23px);
+        font-size: 14px;
+    }
+
+    svg {
+        transition: all 0.6s ease;
+        &:hover {
+            transform: scale(1.2) translateY(-5px);
         }
     }
 </style>

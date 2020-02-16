@@ -1,9 +1,9 @@
 <template>
-    <nav>
-        <router-link to="/produtos/categorias/sapatos">SAPATOS</router-link>
-        <router-link to="/produtos/categorias/bolsas">BOLSAS</router-link>
-        <router-link to="/produtos/categorias/acessorios">ACESSÓRIOS</router-link>
-        <router-link to="/produtos/categorias/off">OFF</router-link>
+    <nav class="navContainer">
+        <router-link class="mainLink" to="/produtos/categorias/sapatos">SAPATOS</router-link>
+        <router-link class="mainLink" to="/produtos/categorias/bolsas">BOLSAS</router-link>
+        <router-link class="mainLink" to="/produtos/categorias/acessorios">ACESSÓRIOS</router-link>
+        <router-link class="mainLink" to="/produtos/categorias/off">OFF</router-link>
     </nav>
 </template>
 
@@ -15,15 +15,19 @@
 
 <style lang="scss" scoped>
 
-    nav {
+    .navContainer {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        a {
+        .mainLink {
             color: $soft-font-color;
-            padding: 0 25px;
+            padding: 10px 25px;
             font-size: 14px;
+            transition: all 0.5s ease;
+            &:hover {
+                transform: scale(1.04);
+            }
         }
     }
 

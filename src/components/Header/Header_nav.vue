@@ -29,7 +29,6 @@
     .block-header-nav {
         display: flex;
         justify-content: space-between;
-        padding: 10px;
         color: $soft-font-color;
         border-bottom: 1px solid $dividers-color;
     }

@@ -22,7 +22,8 @@
         .nav-container-content {
             color: inherit;
             a {
-                padding: 0 7px;
+                line-height: 24px;
+                padding: 10px 7px;
                 color: $soft-font-color;
             }
         }

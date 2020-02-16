@@ -15,13 +15,13 @@
 
     &:hover {
       svg {
-        transform: scale(1.2, 1.2);
+        transform: scale(1.08, 1.08);
         path {
           fill: $primary-color;
         }
       }
       .textInput {
-        transform: scale(1.2, 1.2);
+        transform: scale(1.08);
         color: $primary-color;
         border-bottom-color: $primary-color;
         &::placeholder {
@@ -57,8 +57,39 @@
     }
   }
   @else {
+    label {
+      transition: all 0.6s ease;
+      transform: translateY(23px);
+      font-size: 14px;
+    }
+
     .textInput {
+      background-color: transparent;
       padding-left: 0;
+      border: 0;
+      border-bottom: 1px solid rgba($soft-font-color, 0.4);
+      width: 100%;
+      &:focus {
+        outline: none;
+      }
+      transition: all 0.6s ease;
+    }
+
+    &:hover {
+      label {
+        transform: scale(1.08);
+        color: $primary-color;
+        font-size: 12px;
+      }
+
+      .textInput {
+        transform: scale(1.08);
+        color: $primary-color;
+        border-bottom-color: $primary-color;
+        &::placeholder {
+          color: $primary-color;
+        }
+      }
     }
   }
 }
