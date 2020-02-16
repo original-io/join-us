@@ -2,7 +2,6 @@
   <div>
     <Header></Header>
     <router-view></router-view>
-      <div id="routename">  {{currentRouteName}} </div>
     <Footer></Footer>
   </div>
 </template>

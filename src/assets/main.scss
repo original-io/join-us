@@ -82,4 +82,8 @@ a {
   }
 }
 
+.text-primary {
+  color: $primary-color !important;
+}
+
 @import "./transitions";

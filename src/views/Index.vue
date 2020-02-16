@@ -1,24 +1,36 @@
 <template>
     <div>
-        <div class="add-btn" @click="openModal = !openModal">
-            <img src="https://image.flaticon.com/icons/png/512/32/32339.png" alt="" class="text">
-        </div>
         <Breadcrumbs v-if="items[1]" v-bind:items="items"></Breadcrumbs>
-
         <!-- Breadcrumbs só vai renderizar se estivermos a pelo menos um nível de profundidade -->
-        <div class="categoryListContainer">
-            <transition name="fade">
-                <div class="loader" v-if="!categories" style="background: orange; width: 50px; height: 50px; position:absolute; left: 50%; top: 50%;"></div>
-            </transition>
+        <div class="categoryListContainer container-fluid flexCenterCol">
+            <div class="page-block">
+                <div class="row flexCenterRow indexMainContainer">
+                    <transition name="fade">
+                        <b-spinner variant="primary" label="Spinning" class="loader" v-if="!categories"></b-spinner>
+                    </transition>
 
-            <SectionCollapse :collapsed="loading">
-                <ul class="categoryList flexCenterRow" v-if="categories">
-                    <!-- Eventualmente podemos refatorar, ver observação no readme -->
-                    <li v-for="category in categories">
-                        aaaa
-                    </li>
-                </ul>
-            </SectionCollapse>
+                    <SectionCollapse :collapsed="loading" class="w-100">
+                        <main class="w-100">
+                            <ul class="categoryList list-unstyled">
+                                <!-- Eventualmente podemos refatorar, ver observação no readme -->
+                                <li v-for="category in categories" class="">
+                                    <router-link :to="'/produtos/categorias/' + category.nome.toLowerCase()" class="catContainer flexCenterCol">
+                                        <img :src="category.foto" class="catImg" height="50px">
+                                        <span class="catName secondaryFont">{{category.nome}}</span>
+                                    </router-link>
+                                </li>
+                                <!-- Eventualmente podemos refatorar, ver observação no readme -->
+                                <li class="catContainer flexCenterCol">
+                                    <router-link to="/produtos/categorias/off" class="catContainer flexCenterCol">
+                                        <img src="../assets/svg/savings.svg" class="catImg" height="50px">
+                                        <span class="catName secondaryFont">Off</span>
+                                    </router-link>
+                                </li>
+                            </ul>
+                        </main>
+                    </SectionCollapse>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -27,10 +39,7 @@
     import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs.vue';
     import axios from 'axios';
     import SectionCollapse from "../components/CollapseSection";
-
-    function sleep(t) {
-        return new Promise((accept) => setTimeout(accept, t));
-    }
+    import Aux from "../assets/auxscripts/auxscripts.js";
 
     export default {
         name: "Index",
@@ -52,8 +61,12 @@
         },
         methods: {
             async getCategories() {
-                await sleep(1000);
+                // Mockando tempo de espera do BD
+                await Aux.sleep(500);
                 let { data } = await axios.get('http://localhost:8081/produto/categoria');
+                for(let category of data) {
+                    category.foto = require('../assets/svg/' + category.foto);
+                }
                 return data;
             }
         },
@@ -67,53 +80,51 @@
 </script>
 
 <style scoped lang="scss">
-    .add-btn {
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        background: antiquewhite;
-        color: darkgoldenrod;
-        text-align: center;
-        transition: transform .5s cubic-bezier(.48,.02,.47,1.19);
+    .section-collapse {
+        width: 100%;
+    }
+
+    .indexMainContainer {
         position: relative;
-
-        .text {
-            width: 20px;
-            height: 20px;
-
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        &:hover {
-            transform: rotate(180deg);
-        }
+        padding: 80px 30px 30px 30px;
     }
 
-    .my-modal-container {
+    .loader {
         position: absolute;
-        left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
-        pointer-events: none;
+        width: 4rem;
+        height: 4rem;
     }
 
-    .my-modal {
-        width: 500px;
-        height: 500px;
-        background: white;
-        box-shadow: 0 0 15px rgba(black, .2);
-
-        opacity: 0;
-        transform: translateY(-100px);
-        transition: all .5s ease-in-out;
-
-        &.modal-open {
-            opacity: 1;
-            transform: translateY(0);
-            pointer-events: auto;
+    .catContainer {
+        margin: 10px 20px;
+        &:hover {
+            .catName {
+                transform: scale(1.2);
+            }
+            .catImg {
+                 filter: invert(61%) sepia(72%) saturate(272%) hue-rotate(328deg) brightness(100%) contrast(130%);
+            }
         }
+    }
+
+    .catImg {
+        height: auto;
+        width: 150px;
+        margin-bottom: 5px;
+        transition: all 0.6s ease;
+    }
+
+    .catName {
+        font-size: 14px;
+        color: $primary-color;
+        transition: all 0.6s ease;
+    }
+
+    .categoryList {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        flex-wrap: wrap;
     }
 </style>
