@@ -38,7 +38,7 @@
                                     Cor:
                                     <p class="selected">({{selectedColor}})</p>
                                     <div class="color-buttons-container">
-                                        <div v-on:click="selectColor(color.nome)" v-bind:class="color.nome === selectedColor ? 'selected-color' : ''"  class="color-button" v-for="color in product.cor" v-bind:style="'background-color:'+color.codigo"></div>
+                                        <div v-on:click="selectColor(color.nome)" v-bind:class="color.nome === selectedColor ? 'selected-color' : ''"  class="interactible color-button" v-for="color in product.cor" v-bind:style="'background-color:'+color.codigo"></div>
                                     </div>
                                 </div>
                                 <div v-if="product.tamanho" class="size-container">
@@ -46,12 +46,12 @@
                                     <p class="selected">({{selectedSize}})</p>
                                     <p class="guide">Guia de Medidas</p>
                                     <div class="size-buttons-container">
-                                        <div v-on:click="selectSize(size)" class="size-buttons" v-for="size in product.tamanho" v-bind:class="size == selectedSize ? 'selected-size' : ''">
+                                        <div v-on:click="selectSize(size)" class="interactible size-buttons" v-for="size in product.tamanho" v-bind:class="size == selectedSize ? 'selected-size' : ''">
                                             {{size}}
                                         </div>
                                     </div>
                                 </div>
-                                <div v-on:click="addToCart()" class="add-cart">ADICIONAR À SACOLA</div>
+                                <div v-on:click="addToCart()" class="btn-actionable">ADICIONAR À SACOLA</div>
                                 <p class="product-description">{{product.descricao}}</p>
                             </div>
                         </div>
@@ -200,6 +200,13 @@
         justify-content: center;
         cursor: pointer;
         margin-top: 35px;
+        transition: all 0.6s ease;
+        &:hover {
+            box-shadow: 0 0 0 4px rgba($actionable-color, 0.7);
+        }
+        &:active {
+            box-shadow: none;
+        }
     }
     .product-description{
         text-align: justify;
@@ -278,6 +285,11 @@
         flex-shrink: 0;
         background-color: $light-gray;
         cursor: pointer;
+        transition: all 0.5s ease;
+        &:hover {
+            background-color: $highlight-yellow;
+            box-shadow: 0 0 0 4px rgba($highlight-yellow, 0.7);
+        }
     }
     .selected-size{
         background-color: $highlight-yellow;
@@ -300,6 +312,10 @@
         height:24px;
         margin-right: 14.67px;
         border: 1px solid white;
+        transition: all 0.4s ease;
+        &:hover {
+            box-shadow: 0 0 0 4px $highlight-yellow;
+        }
     }
     .selected-color{
         box-shadow: 0 0 0 4px $highlight-yellow;

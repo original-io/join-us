@@ -2,9 +2,9 @@
     <div class="carousel-container flexCenterCol">
         <!-- Muito tarde para refatorar o modelo para permitir um vetor de fotos, vai na gambiarra -->
         <div class="carousel flexCenterCol">
-            <img v-bind:src="require('@/assets/svg/up.svg')" v-on:click="previousImage()">
+            <img style="padding: 10px 10px 0 10px" class="imgSlider" v-bind:src="require('@/assets/svg/up.svg')" v-on:click="previousImage()">
             <img v-bind:class="image.id == selected ? 'caurousel-selected' : 'caurousel-not-selected'" v-for="image in pictures" v-bind:src="image.src" v-on:click="selectImage($event)" v-bind:id="image.id">
-            <img v-bind:src="require('@/assets/svg/down.svg')" v-on:click="nextImage()">
+            <img style="padding: 0px 10px 10px 10px" class="imgSlider" v-bind:src="require('@/assets/svg/down.svg')" v-on:click="nextImage()">
         </div>
     </div>
 </template>
@@ -49,24 +49,35 @@
 </script>
 
 <style lang="scss" scoped>
-    .carousel-container{
+    .carousel-container {
         width: 100%;
-        img{
+        img {
             cursor: pointer;
         }
     }
-    .carousel{
+    .carousel {
         margin-top: 12px;
         margin-bottom: 21px;
-        img{
-            margin-top: 9px;
+        img {
+            padding: 4.5px 0;
         }
     }
-    .caurousel-selected{
+    .caurousel-selected {
         opacity: 1;
     }
-    .caurousel-not-selected{
+    .caurousel-not-selected {
         opacity: .5;
+        transition: all 0.3s ease;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    .imgSlider {
+        transition: all 0.6s ease;
+        &:hover {
+            transform: scale(1.5, 1.3);
+            filter: invert(61%) sepia(72%) saturate(272%) hue-rotate(328deg) brightness(100%) contrast(130%);
+        }
     }
 
 </style>
