@@ -104,4 +104,27 @@ a {
   cursor: pointer;
 }
 
+.btn-primary-transparent {
+  background-color: transparent;
+  border-color: $primary-color;
+  box-shadow: none;
+  &:hover {
+    border-color: rgba($primary-color, 0.8);
+    box-shadow: -1px 2px 10px 4px rgba($primary-color, 0.75);
+  }
+  &:not(:disabled):not(.disabled):active {
+    border-color: rgba($primary-color, 1);
+    box-shadow: 1px 1px 1px 1px rgba($primary-color, 0.75);
+    outline: none;
+  }
+  &:focus {
+    border-color: rgba($primary-color, 1);
+    box-shadow: 1px 1px 5px 1px rgba($primary-color, 0.75);
+  }
+  &:not(:disabled):not(.disabled):active:focus {
+    border-color: rgba($primary-color, 1);
+    box-shadow: 1px 1px 1px 1px rgba($primary-color, 0.75);
+  }
+}
+
 @import "./transitions";

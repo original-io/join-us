@@ -8,36 +8,49 @@
                 </transition>
                 <SectionCollapse :collapsed="loading" class="w-100">
                     <div class="row m-0">
-                        <div class="col-sm-3 col-12 carousel-container flexCenterCol">
-                            <span>Vídeo</span>
-                            <img v-bind:src="require('@/assets/svg/play.svg')">
-                            <img v-bind:src="require('@/assets/svg/up.svg')">
-                            <!-- Muito tarde para refatorar o modelo para permitir um vetor de fotos, vai na gambiarra -->
-                            <img v-bind:src="require('@/assets/svg/' + product.foto)">
-                            <img v-bind:src="require('@/assets/svg/' + product.foto)">
-                            <img v-bind:src="require('@/assets/svg/' + product.foto)">
-                            <img v-bind:src="require('@/assets/svg/' + product.foto)">
-                            <img v-bind:src="require('@/assets/svg/down.svg')">
+                        <div class="col-sm-7 col-12 row m-0">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-2 col-12 flexCenterCol">
+                                <span class="video">Vídeo</span>
+                                <img v-bind:src="require('@/assets/svg/play.svg')">
+                                <PhotoCarousel v-bind:pictures="pictures" v-on:selectionChange="updateSelectedPhoto($event)"></PhotoCarousel>
+                            </div>
+                            <div class="col-sm-6 col-12">
+                                <img class="big" v-bind:src="pictures[selected].src">
+                            </div>
                         </div>
-                        <div class="col-sm-4 col-12">
-                            <img class="big" v-bind:src="require('@/assets/svg/' + product.foto)">
-                        </div>
-                        <div class="col-sm-5">
-                            <div class="info-container">
-                                <p class="product-name">{{product.nome}}</p>
+                        <div class="col-sm-5 col-12">
+                            <div class="info-container col-sm-8">
+                                <p class="product-name">{{product.nome.toUpperCase()}}</p>
                                 <p class="product-id">{{product.id}} | {{product.subID}}</p>
                                 <div v-if="product.valor>product.valorPromocao" class="price-container">
                                     <p class="product-original-price">R${{product.valor}}</p>
                                     <p class="product-price-separator">|</p>
                                     <p class="product-price">R${{product.valorPromocao}}</p>
+                                    <p class="product-parcels">Ou 6x de R${{(parseFloat(product.valorPromocao.replace(',', '.'))/6.0).toFixed(2).replace('.', ',')}}</p>
                                 </div>
-                                <div v-else>
+                                <div v-else class="price-container">
                                     <p class="product-price">R${{product.valor}}</p>
+                                    <p class="product-parcels">Ou 6x de R${{(parseFloat(product.valorPromocao.replace(',', '.'))/6.0).toFixed(2).replace('.', ',')}}</p>
                                 </div>
-                                <p>Cor: (fucsia)</p>
-                                <p>Lista cores</p>
-                                <p>Tamanho: 37 Guia de Medidas</p>
-                                <p>Lista de tamanhos</p>
+                                <div class="color-container">
+                                    Cor:
+                                    <p class="selected">(fucsia)</p>
+                                    <div class="color-buttons-container">
+                                        <div class="color-button" v-for="color in product.cor" v-bind:style="'background-color:'">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="size-container">
+                                    Tamanho:
+                                    <p class="selected">({{selectedSize}})</p>
+                                    <p class="guide">Guia de Medidas</p>
+                                    <div class="size-buttons-container">
+                                        <div v-on:click="selectSize(size)" class="size-buttons" v-for="size in product.tamanho" v-bind:class="size == selectedSize ? 'selected-size' : ''">
+                                            {{size}}
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="add-cart">ADICIONAR À SACOLA</div>
                                 <p class="product-description">{{product.descricao}}</p>
                             </div>
@@ -54,12 +67,15 @@
     import axios from 'axios';
     import SectionCollapse from "../components/CollapseSection";
     import Aux from "../assets/auxscripts/auxscripts.js";
+    import PhotoCarousel from '@/components/PhotoCarousel/PhotoCarousel.vue'
+
 
     export default {
         name: "Produto",
         components: {
             SectionCollapse,
-            Breadcrumbs
+            Breadcrumbs,
+            PhotoCarousel
         },
         data(){
             return {
@@ -70,18 +86,33 @@
                         name: 'Home',
                         to: '/'
                     }
-                ]
+                ],
+                pictures: null,
+                selected: 0,
+                selectedSize: null
             }
         },
-    methods: {
+        methods: {
             async updateProduct() {
                 this.loading = true;
                 let { data } = await axios.get('http://localhost:8081/produtos/id/' + this.$route.params.idProduto);
                 this.product = data;
+                this.pictures = [];
+                this.pictures.push({src :require('@/assets/svg/' + this.product.foto), id : 0});
+                this.pictures.push({src :require('@/assets/svg/prod01.svg'), id : 1});
+                this.pictures.push({src :require('@/assets/svg/prod02.svg'), id : 2});
+                this.pictures.push({src :require('@/assets/svg/prod03.svg'), id : 3});
+                this.selectedSize = this.product.tamanho[0];
                 this.items.push({name: data.categoria, active: true});
                 await Aux.sleep(1000);
                 this.loading = false;
                 return data;
+            },
+            updateSelectedPhoto(value) {
+                this.selected = value;
+            },
+            selectSize(size){
+                this.selectedSize = size;
             }
         },
         async created() {
@@ -92,13 +123,24 @@
 
 <style lang="scss" scoped>
     .carousel-container{
-        width: 100%;
+        img{
+            cursor: pointer;
+        }
+    }
+    .carousel{
+        margin-top: 12px;
+        margin-bottom: 21px;
+        img{
+            margin-top: 9px;
+        }
     }
     .big{
         width: auto;
         height: 100%;
     }
     .info-container{
+        font-family: $secondary-font;
+        font-size: 14px;
         padding-left: 20px;
         padding-right: 20px;
         padding-top: 20px;
@@ -106,6 +148,8 @@
         flex-direction: column;
         border: 2px solid $light-grayish-cyan;
         border-radius: 3px;
+        color: $main-font-color;
+        background-color: $bg-color;
     }
     .product-container{
         margin-top: 10px;
@@ -126,7 +170,6 @@
         background-color: $actionable-color;
         color: $main-darkbg-font-color;
         border-radius: 3px;
-        font-family: $secondary-font;
         font-size: 18px;
         align-items: center;
         justify-content: center;
@@ -134,47 +177,90 @@
     }
     .product-description{
         text-align: justify;
-        font-family: $secondary-font;
-        font-size: 14px;
-        color: $main-font-color;
         margin-top: 16px;
     }
     .product-name{
         font-family: $primary-font;
         font-weight: bold;
-        color: $main-font-color;
         font-size: 26px;
         margin-bottom: 0;
     }
-    .product-id{
-        font-family: $secondary-font;
-        font-size: 14px;
-        color: $main-font-color;
-    }
     .product-price{
+        display: inline;
         font-size: 20px;
         font-family: $primary-font;
         font-weight: bold;
         color: $soft-font-color;
     }
     .product-original-price{
-        font-family: $secondary-font;
-        font-size: 14px;
+        display: inline;
         color: $canceled-color;
         text-decoration-line: line-through;
     }
     .product-price-separator{
-        font-family: $secondary-font;
-        font-size: 14px;
+        display: inline;
         color: $canceled-color;
         margin-right: 5px;
     }
+    .product-parcels{
+        font-size: 12px;
+        color: $softer-font-color;
+    }
     .price-container{
-        display: flex;
         align-items: center;
     }
-
     .page-block {
         position: relative;
+    }
+    .guide{
+        display: inline;
+        float: right;
+        color: $primary-color;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .selected{
+        display: inline;
+        color: $secondary-actionable-color;
+    }
+    .caurousel-selected{
+        opacity: 1;
+    }
+    .caurousel-not-selected{
+        opacity: .5;
+    }
+    .video{
+        color: $primary-color;
+    }
+    .color-container{
+        p{
+            display: inline;
+        }
+    }
+    .color-button{
+        display: inline;
+    }
+    .size-buttons-container{
+        display: flex;
+        margin-top: 5px;
+        margin-bottom: 35px;
+        width: 100%;
+    }
+    .size-buttons{
+        display: inline-block;
+        text-align: center;
+        font-family: $primary-font;
+        color: $darker-blue;
+        margin-right: 3px;
+        padding: 3px 5px;
+        border-radius: 50%;
+        flex-basis: 30px;
+        flex-shrink: 0;
+        background-color: $light-gray;
+        cursor: pointer;
+    }
+    .selected-size{
+        background-color: $highlight-yellow;
+        font-weight: bold;
     }
 </style>
