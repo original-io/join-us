@@ -20,7 +20,7 @@
                             </div>
                         </div>
                         <div class="col-sm-5 col-12">
-                            <div class="info-container col-sm-8">
+                            <div class="info-container col-sm-10">
                                 <p class="product-name">{{product.nome.toUpperCase()}}</p>
                                 <p class="product-id">{{product.id}} | {{product.subID}}</p>
                                 <div v-if="product.valor>product.valorPromocao" class="price-container">
@@ -41,7 +41,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="size-container">
+                                <div class="size-container" v-if="product.tamanho">
                                     Tamanho:
                                     <p class="selected">({{selectedSize}})</p>
                                     <p class="guide">Guia de Medidas</p>
@@ -102,7 +102,9 @@
                 this.pictures.push({src :require('@/assets/svg/prod01.svg'), id : 1});
                 this.pictures.push({src :require('@/assets/svg/prod02.svg'), id : 2});
                 this.pictures.push({src :require('@/assets/svg/prod03.svg'), id : 3});
-                this.selectedSize = this.product.tamanho[0];
+                if(this.product.tamanho) {
+                    this.selectedSize = this.product.tamanho[0];
+                }
                 this.items.push({name: data.categoria, active: true});
                 await Aux.sleep(1000);
                 this.loading = false;
@@ -150,9 +152,10 @@
         border-radius: 3px;
         color: $main-font-color;
         background-color: $bg-color;
+        max-width: 444px;
     }
     .product-container{
-        margin-top: 10px;
+        margin: 10px 0 140px 0;
     }
 
 
@@ -223,16 +226,11 @@
         display: inline;
         color: $secondary-actionable-color;
     }
-    .caurousel-selected{
-        opacity: 1;
-    }
-    .caurousel-not-selected{
-        opacity: .5;
-    }
     .video{
         color: $primary-color;
     }
     .color-container{
+        margin-top: 34px;
         p{
             display: inline;
         }
@@ -247,14 +245,14 @@
         width: 100%;
     }
     .size-buttons{
-        display: inline-block;
+        display: inline;
         text-align: center;
         font-family: $primary-font;
         color: $darker-blue;
         margin-right: 3px;
-        padding: 3px 5px;
+        padding: 6px 5px;
         border-radius: 50%;
-        flex-basis: 30px;
+        flex-basis: 34px;
         flex-shrink: 0;
         background-color: $light-gray;
         cursor: pointer;
@@ -262,5 +260,8 @@
     .selected-size{
         background-color: $highlight-yellow;
         font-weight: bold;
+    }
+    .size-container{
+        margin-top: 14px;
     }
 </style>

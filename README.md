@@ -1,6 +1,10 @@
 # Original.io: Teste do Processo Seletivo
 ### Por Leonardo Ferraz (@ldlferraz)
 ###### Características do projeto e comentários:
+
+**Para rodar o client + o mock server, digite 'npm run serve' no root do projeto**
+
+
   - **Framework:** Vue.js;
     - A escolha por Vue foi baseada em três fatores: 
       1. Facilidade em produzir uma SPA (opção justificada mais à frente); 
@@ -49,18 +53,17 @@
     que foi parametrizado na aplicação esteja visível no .env e no vars.scss);
 
   - **Observações**
+    - Responsividade só é garantida até 1280px, não houve tempo para nenhum ajuste de responsividade mobile;
     - O menu em dropdown para as categorias de produtos foi propositadamente ignorado;
-    - As listas de categorias, o menu principal e outros componentes podem seguir a mesma lógica de
-    listagem dos componentes de produtos para serem gerados dinamicamente. Isso contribuiria tanto
-    para a escalabilidade do sistema quanto para a parametrização do front. Para não dedicar tempo
-    demais ao modelo de dados, isso não foi implementado;
-    - A API do mock server não segue as práticas REST pelo bem da brevidade.
+    - Dois componentes de listagem de subcategorias foram implementados: um referente ao "Sapatos" e outro referente
+    ao "Bolsas" e "Acessórios". Para acessar o primeiro componente, acesse uma categoria via Index (clicando nos svgs de categoria). 
+    Para acessar a outra, acesse uma categoria via nav principal;
+    - A API do mock server não segue as práticas REST pelo bem da brevidade;
     - Por falta de tempo, não foi implementado um sistema de autenticação. O carrinho e demais funcionalidades dependentes
-    de usuário logado usam o primeiro usuário do JSON como objeto.
+    de usuário logado usam o primeiro usuário do JSON;
     - Considerei como "off" todo produto que possuisse preço promocional != preço. Cada acesso à categoria "off" faz
     uma requisição a Produtos, mas num BD tradicional eu implementaria uma regra de tabela para marcar uma flag, que então
-    seria usada no template que renderiza "off".
+    seria usada no template que renderiza "off";
     - Tive problemas com a "Gotham Book/Bold." Baixei e configurei a fonte, mas os componentes que a usam não se assemelham
     ao que vejo no Figma. Isso se destaca em dois lugares: "ASSINE NOSSAS NEWS" e no nome de categorias em amarelo com outline
-    na tela de listagem de subcategorias.
-    - 
+    no componente de listagem de subcategorias.
