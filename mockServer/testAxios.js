@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-// axios.post('http://localhost:8081/usuario/cadastro', {
+// axios.post(process.env.VUE_APP_API_HOST + ":" + process.env.VUE_APP_API_PORT + "/" + 'usuario/cadastro', {
 //     nome: 'asdsad',
 //     email: 'b@gmail.com',
 //     senha: "123"
@@ -10,7 +10,7 @@ const axios = require('axios');
 //         console.log(error);
 //     });
 
-// axios.post('http://localhost:8081/usuario/login', {
+// axios.post(process.env.VUE_APP_API_HOST + ":" + process.env.VUE_APP_API_PORT + "/" + 'usuario/login', {
 //     email: 'b@gmail.com',
 //     senha: "123"
 // }).then(function (response) {
@@ -19,7 +19,7 @@ const axios = require('axios');
 //     console.log(error);
 // });
 
-axios.post('http://localhost:8081/usuario/carrinho', {
+axios.post(process.env.VUE_APP_API_HOST + ":" + process.env.VUE_APP_API_PORT + "/" + 'usuario/carrinho', {
     email: 'b@gmail.com',
     produtoId: '2',
     produtoCor: 'af',

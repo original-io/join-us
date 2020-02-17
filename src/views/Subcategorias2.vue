@@ -88,14 +88,14 @@
                 }
                 // Mockando tempo de espera do BD
                 await Aux.sleep(1000);
-                let { data } = await axios.get('http://localhost:8081/categorias/' + Aux.removeDiacritics(this.$route.params.categoria) + '/subcategorias');
+                let { data } = await axios.get(process.env.VUE_APP_API_HOST + ":" + process.env.VUE_APP_API_PORT + "/" + 'categorias/' + Aux.removeDiacritics(this.$route.params.categoria) + '/subcategorias');
                 for(let category of data) {
                     category.foto = require('../assets/svg/' + category.foto);
                 }
                 return data;
             },
             async getCatBanner() {
-                let { data } = await axios.get('http://localhost:8081/categorias/' + Aux.removeDiacritics(this.$route.params.categoria));
+                let { data } = await axios.get(process.env.VUE_APP_API_HOST + ":" + process.env.VUE_APP_API_PORT + "/" + 'categorias/' + Aux.removeDiacritics(this.$route.params.categoria));
                 let bannerPath = require('../assets/img/' + data.banner);
                 return bannerPath;
             },

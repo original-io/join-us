@@ -47,7 +47,7 @@
         methods: {
             Search: async function(){
                 this.query = document.getElementById("search").value;
-                axios.get("http://localhost:8081/produtos/nome/" + this.query)
+                axios.get(process.env.VUE_APP_API_HOST + ":" + process.env.VUE_APP_API_PORT + "/" + "produtos/nome/" + this.query)
                         .then(data =>{
                             this.result = data.data;
                         }).catch(err => {

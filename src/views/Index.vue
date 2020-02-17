@@ -56,7 +56,7 @@
             async getCategories() {
                 // Mockando tempo de espera do BD
                 await Aux.sleep(500);
-                let { data } = await axios.get('http://localhost:8081/categorias');
+                let { data } = await axios.get(process.env.VUE_APP_API_HOST + ":" + process.env.VUE_APP_API_PORT + "/" + 'categorias');
                 for(let category of data) {
                     category.foto = require('../assets/svg/' + category.foto);
                 }

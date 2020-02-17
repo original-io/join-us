@@ -75,7 +75,7 @@
         },
         methods:{
             subtractProduct: async function(id){
-                let { data } = await axios.post("http://localhost:8081/usuario/carrinho/subtrair/" + id);
+                let { data } = await axios.post(process.env.VUE_APP_API_HOST + ":" + process.env.VUE_APP_API_PORT + "/" + "usuario/carrinho/subtrair/" + id);
                 if(data > 0) {
                     document.getElementById("p" + id).innerText = data;
                 } else {
@@ -85,7 +85,7 @@
                 return data;
             },
             addProduct: async function(id){
-                await axios.post("http://localhost:8081/usuario/carrinho/adicionar/" + id)
+                await axios.post(process.env.VUE_APP_API_HOST + ":" + process.env.VUE_APP_API_PORT + "/" + "usuario/carrinho/adicionar/" + id)
                         .then(data =>{
                             document.getElementById("p" + id).innerText = data.data;
                         }).catch(err =>{
@@ -94,16 +94,16 @@
                 this.updateCart();
             },
             removeProduct: async function(id) {
-                await axios.post("http://localhost:8081/usuario/carrinho/removerProduto/" + id);
+                await axios.post(process.env.VUE_APP_API_HOST + ":" + process.env.VUE_APP_API_PORT + "/" + "usuario/carrinho/removerProduto/" + id);
                 this.updateCart();
             },
             updateCart: async function(){
-                let { data } = await axios.get("http://localhost:8081/usuario/carrinho");
+                let { data } = await axios.get(process.env.VUE_APP_API_HOST + ":" + process.env.VUE_APP_API_PORT + "/" + "usuario/carrinho");
 
                 if(data) {
                     data.forEach(async result => {
                         if(result) {
-                            await axios.get("http://localhost:8081/produtos/id/" + result.id)
+                            await axios.get(process.env.VUE_APP_API_HOST + ":" + process.env.VUE_APP_API_PORT + "/" + "produtos/id/" + result.id)
                                     .then(res => {
                                         result.price = res.data.valorPromocao;
                                         result.name = res.data.nome;

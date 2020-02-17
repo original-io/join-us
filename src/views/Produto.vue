@@ -97,7 +97,7 @@
         methods: {
             async updateProduct() {
                 this.loading = true;
-                let { data } = await axios.get('http://localhost:8081/produtos/id/' + this.$route.params.idProduto);
+                let { data } = await axios.get(process.env.VUE_APP_API_HOST + ":" + process.env.VUE_APP_API_PORT + "/" + 'produtos/id/' + this.$route.params.idProduto);
                 this.product = data;
                 this.pictures = [];
                 this.pictures.push({src :require('@/assets/svg/' + this.product.foto), id : 0});
@@ -127,7 +127,7 @@
                     cor: this.selectedColor,
                     tamanho: this.selectedSize
                 };
-                await axios.post('http://localhost:8081/usuario/carrinho/adicionar/' + this.product.id, productData);
+                await axios.post(process.env.VUE_APP_API_HOST + ":" + process.env.VUE_APP_API_PORT + "/" + 'usuario/carrinho/adicionar/' + this.product.id, productData);
                 this.$eventHub.$emit('updatecart');
                 this.$bvModal.show('modal-add-cart');
             }
