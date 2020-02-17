@@ -108,14 +108,6 @@ router.get('/usuario/carrinho', async (req, res) => {
 
 // Rotas Produtos
 
-router.get('/produtos', async (req, res) => {
-    let returnData = [];
-    await Produto.forEach(produto =>{
-        returnData.push(produto);
-    });
-    res.status(200).send(JSON.stringify(returnData));
-});
-
 router.get('/categorias/:nome', async (req, res) => {
     // Quebrando REST para adiantar o mock server:
     let returnData;
@@ -145,6 +137,14 @@ router.get('/categorias/:categoria/subcategorias', async (req, res) => {
     res.status(200).send(JSON.stringify(returnData));
 });
 
+router.get('/produtos', async (req, res) => {
+    let returnData = [];
+    await Produto.forEach(produto =>{
+        returnData.push(produto);
+    });
+    res.status(200).send(JSON.stringify(returnData));
+});
+
 router.get('/produtos/categoria/:categoria', async (req, res) => {
     let produtoEncontrado = [];
 
@@ -154,6 +154,16 @@ router.get('/produtos/categoria/:categoria', async (req, res) => {
         }
     });
     res.status(200).send(produtoEncontrado);
+});
+
+router.get('/produtos/subcategoria/:subcategoria', async (req, res) => {
+    let returnData = [];
+    await Produto.forEach(produto =>{
+        if(produto.subcategoria == req.params.subcategoria) {
+            returnData.push(produto);
+        }
+    });
+    res.status(200).send(JSON.stringify(returnData));
 });
 
 router.get('/produtos/nome/:nome', async (req, res) => {

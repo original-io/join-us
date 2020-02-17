@@ -38,6 +38,11 @@ const routes = [
         path: '/produtos/categorias2/:categoria',
         name: 'Subcategoria',
         component: Subcategorias2
+    },
+    {
+        path: '/produtos',
+        name: 'Produtos',
+        component: Produtos,
     }
 ];
 

@@ -14,10 +14,12 @@
                             <ul class="categoryList list-unstyled">
                                 <!-- Eventualmente podemos refatorar, ver observação no readme -->
                                 <li v-for="sc in subcategories" class="">
-                                    <div class="catContainer flexCenterCol">
-                                        <img :src="sc.foto" class="catImg" height="50px">
-                                        <span class="catName secondaryFont">{{sc.nome}}</span>
-                                    </div>
+                                    <router-link :to="{path: '/produtos', query: {subcat: sc.id}}">
+                                        <div class="catContainer flexCenterCol">
+                                            <img :src="sc.foto" class="catImg" height="50px">
+                                            <span class="catName secondaryFont">{{sc.nome}}</span>
+                                        </div>
+                                    </router-link>
                                 </li>
                             </ul>
                         </main>
@@ -100,7 +102,7 @@
 
     .indexMainContainer {
         position: relative;
-        padding: 80px 30px 30px 30px;
+        padding: 20px 30px 30px 30px;
     }
 
     .loader {

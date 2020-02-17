@@ -1,101 +1,145 @@
 [
     {
-        "nome": "Rasteira",
+        "id": "0",
+        "nome": "Rasteiras",
         "categoria": "Sapatos",
         "foto": "rasteiras.svg"
     },
     {
+        "id": "1",
         "nome": "Sapatilhas",
         "categoria": "Sapatos",
         "foto": "sapatilhas.svg"
     },
     {
+        "id": "2",
         "nome": "Alpargatas",
         "categoria": "Sapatos",
         "foto": "alpargatas.svg"
     },
     {
+        "id": "3",
         "nome": "Mocassins",
         "categoria": "Sapatos",
         "foto": "shoe.svg"
     },
     {
+        "id": "4",
         "nome": "Tênis",
         "categoria": "Sapatos",
         "foto": "tenis.svg"
     },
     {
+        "id": "5",
         "nome": "Botas",
         "categoria": "Sapatos",
         "foto": "shoe.svg"
     },
     {
+        "id": "6",
         "nome": "Salto Anabela",
         "categoria": "Sapatos",
         "foto": "shoe.svg"
     },
     {
+        "id": "7",
         "nome": "Salto Plataforma",
         "categoria": "Sapatos",
         "foto": "shoe.svg"
     },
     {
+        "id": "8",
         "nome": "Salto Alto",
         "categoria": "Sapatos",
         "foto": "shoe.svg"
     },
     {
-        "nome": "Bolsa SC1",
+        "id": "9",
+        "nome": "Salto Médio",
+        "categoria": "Sapatos",
+        "foto": "shoe.svg"
+    },
+    {
+        "id": "10",
+        "nome": "Bolsa Pequena",
         "categoria": "Bolsas",
         "foto": "purse.svg"
     },
     {
-        "nome": "Bolsa SC2",
+        "id": "11",
+        "nome": "Bolsa Grande",
         "categoria": "Bolsas",
         "foto": "purse.svg"
     },
     {
-        "nome": "Bolsa SC3",
+        "id": "12",
+        "nome": "Bolsa Tecido",
         "categoria": "Bolsas",
         "foto": "purse.svg"
     },
     {
-        "nome": "Bolsa SC4",
+        "id": "13",
+        "nome": "Bolsa Maleta",
         "categoria": "Bolsas",
         "foto": "purse.svg"
     },
     {
-        "nome": "Bolsa SC5",
+        "id": "14",
+        "nome": "Bolsa Casaco",
         "categoria": "Bolsas",
         "foto": "purse.svg"
     },
     {
-        "nome": "Bolsa SC6",
+        "id": "15",
+        "nome": "Mochila",
         "categoria": "Bolsas",
         "foto": "purse.svg"
     },
     {
-        "nome": "Bolsa SC7",
+        "id": "16",
+        "nome": "Mala",
         "categoria": "Bolsas",
         "foto": "purse.svg"
     },
     {
-        "nome": "Acessório SC1",
+        "id": "17",
+        "nome": "Bijoux",
         "categoria": "Acessórios",
         "foto": "wristwatch.svg"
     },
     {
-        "nome": "Acessório SC2",
+        "id": "18",
+        "nome": "Carteira",
         "categoria": "Acessórios",
         "foto": "wristwatch.svg"
     },
     {
-        "nome": "Acessório SC2",
+        "id": "19",
+        "nome": "Cinto",
         "categoria": "Acessórios",
         "foto": "wristwatch.svg"
     },
     {
-        "nome": "Acessório SC3",
+        "id": "20",
+        "nome": "Necessaire",
+        "categoria": "Acessórios",
+        "foto": "wristwatch.svg"
+    },
+    {
+        "id": "21",
+        "nome": "Pros Dias de Sol",
+        "categoria": "Acessórios",
+        "foto": "wristwatch.svg"
+    },
+    {
+        "id": "22",
+        "nome": "Leve por Aí",
+        "categoria": "Acessórios",
+        "foto": "wristwatch.svg"
+    },
+    {
+        "id": "23",
+        "nome": "Tendência",
         "categoria": "Acessórios",
         "foto": "wristwatch.svg"
     }

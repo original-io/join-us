@@ -30,6 +30,7 @@
     import Header_nav_search from '@/components/Header/Header_nav_search';
     import Header_nav_cart from '@/components/Header/Header_nav_cart';
     import axios from "axios";
+    import Aux from '@/assets/auxscripts/auxscripts.js'
 
     export default {
         name: "Header_nav_secondary",
@@ -53,7 +54,8 @@
                         }).catch(err => {
                 });
             },
-            closeSearch() {
+            async closeSearch() {
+                await Aux.sleep(200);
                 this.visible = false;
             }
         }
