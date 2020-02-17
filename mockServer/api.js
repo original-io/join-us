@@ -52,9 +52,28 @@ router.post('/usuario/carrinho', async (req, res) => {
     });
 });
 
+router.post('/usuario/carrinho/subtrair/:id', async (req,res) => {
+    let produtoEncontrado = await Usuario[0].carrinho.findIndex(produtos => (produtos.id === req.params.id));
+    Usuario[0].carrinho[produtoEncontrado].qtd -= 1;
+    let qtd = Usuario[0].carrinho[produtoEncontrado].qtd;
+    fs.writeFile('Usuario.json', JSON.stringify(Usuario), (err) => {
+        if (err) throw err;
+        else res.status(200).send(qtd.toString());
+    });
+});
+
+router.post('/usuario/carrinho/adcionar/:id', async (req,res) => {
+    let produtoEncontrado = await Usuario[0].carrinho.findIndex(produtos => (produtos.id === req.params.id));
+    Usuario[0].carrinho[produtoEncontrado].qtd += 1;
+    let qtd = Usuario[0].carrinho[produtoEncontrado].qtd;
+    fs.writeFile('Usuario.json', JSON.stringify(Usuario), (err) => {
+        if (err) throw err;
+        else res.status(200).send(qtd.toString());
+    });
+});
+
 router.get('/usuario/carrinho', async (req, res) => {
-    let usuarioEncontrado = await Usuario.find(usuarios => (usuarios.email === req.body.email));
-    let carrinho = usuarioEncontrado.carrinho;
+    let carrinho = Usuario[0].carrinho;
     res.status(200).send(carrinho);
 });
 

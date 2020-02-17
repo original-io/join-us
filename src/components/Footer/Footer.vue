@@ -85,6 +85,9 @@
                     </div>
                     <div class="col-sm-3 col-12" style="position: relative; top: 0; left: 0; display: flex; justify-content: flex-end;">
                         <div class="circleContainer">
+                            <h3 class="newsletterCTA">
+                                ASSINE NOSSAS NEWS
+                            </h3>
                              <form class="newsletterFooterSection">
                                 <div class="textInputContainer newsletterInputContainer secondaryFont">
                                     <label for="nameInput" class="newsletterInputLabel" ref="nameInputLabel">Nome</label>
@@ -92,7 +95,7 @@
                                 </div>
                                 <div class="textInputContainer newsletterInputContainer secondaryFont">
                                     <label for="emailInput" class="newsletterInputLabel" ref="emailInputLabel">E-mail</label>
-                                    <input ref="emailInput" type="text" class="textInput" id="emailInput" name="emailInput" @click="emailInputClicked" @blur="emailInputBlurred">
+                                    <input ref="emailInput" type="email" class="textInput" id="emailInput" name="emailInput" @click="emailInputClicked" @blur="emailInputBlurred">
                                 </div>
                                 <button class="btn btn-primary" v-on:click.prevent="subscribeNewsletter">ENVIAR</button>
                             </form>
@@ -349,5 +352,12 @@
         &:hover {
             transform: scale(1.2) translateY(-5px);
         }
+    }
+
+    .newsletterCTA {
+        font-size: 16px;
+        color: #202020;
+        font-family: $primary-font;
+        font-weight: bold;
     }
 </style>

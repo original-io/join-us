@@ -60,3 +60,6 @@
     - Considerei como "off" todo produto que possuisse preço promocional != preço. Cada acesso à categoria "off" faz
     uma requisição a Produtos, mas num BD tradicional eu implementaria uma regra de tabela para marcar uma flag, que então
     seria usada no template que renderiza "off".
+    - Tive problemas com a "Gotham Book/Bold." Baixei e configurei a fonte, mas os componentes que a usam não se assemelham
+    ao que vejo no Figma. Isso se destaca em dois lugares: "ASSINE NOSSAS NEWS" e no nome de categorias em amarelo com outline
+    na tela de listagem de subcategorias.

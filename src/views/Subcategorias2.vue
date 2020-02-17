@@ -32,7 +32,7 @@
                                     </ul>
                                 </div>
                                 <div class="col-sm-4 catContainer catImgContainer">
-                                    <img :src="catBanner">
+                                    <img :src="catBanner" class="catBanner">
                                 </div>
                             </div>
                         </main>
@@ -185,5 +185,9 @@
         margin: 0 auto 0 0;
         width: 50%;
         border-left: 1px solid $softer-font-color;
+    }
+
+    .catBanner {
+        width: 100%;
     }
 </style>
