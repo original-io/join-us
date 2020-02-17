@@ -4,7 +4,7 @@
             <p class="label-product">Produto</p>
             <p class="label-quantity">Quantidade</p>
         </div>
-        <div class="cart">
+        <div class="cart" v-on:updatecart="updateCart">
             <vuescroll :ops="ops">
                 <div class="cart-cards" v-for="product in content">
                     <div class="product">
@@ -143,7 +143,10 @@
         },
         mounted: async function(){
             await this.updateCart();
-        }
+            this.$eventHub.$on('updatecart', data =>{
+                this.updateCart();
+            });
+        },
     }
 </script>
 

@@ -1,5 +1,6 @@
 <template>
     <div>
+        <cartModal v-bind:img="this.pictures[0]"></cartModal>
         <Breadcrumbs v-if="items[1]" v-bind:items="items"></Breadcrumbs>
         <div class="product-container">
             <div class="page-block m-auto">
@@ -35,13 +36,12 @@
                                 </div>
                                 <div class="color-container">
                                     Cor:
-                                    <p class="selected">(fucsia)</p>
+                                    <p class="selected">({{selectedColor}})</p>
                                     <div class="color-buttons-container">
-                                        <div class="color-button" v-for="color in product.cor" v-bind:style="'background-color:'">
-                                        </div>
+                                        <div v-on:click="selectColor(color.nome)" v-bind:class="color.nome === selectedColor ? 'selected-color' : ''"  class="color-button" v-for="color in product.cor" v-bind:style="'background-color:'+color.codigo"></div>
                                     </div>
                                 </div>
-                                <div class="size-container" v-if="product.tamanho">
+                                <div v-if="product.tamanho" class="size-container">
                                     Tamanho:
                                     <p class="selected">({{selectedSize}})</p>
                                     <p class="guide">Guia de Medidas</p>
@@ -51,7 +51,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="add-cart">ADICIONAR À SACOLA</div>
+                                <div v-on:click="addToCart()" class="add-cart">ADICIONAR À SACOLA</div>
                                 <p class="product-description">{{product.descricao}}</p>
                             </div>
                         </div>
@@ -68,14 +68,15 @@
     import SectionCollapse from "../components/CollapseSection";
     import Aux from "../assets/auxscripts/auxscripts.js";
     import PhotoCarousel from '@/components/PhotoCarousel/PhotoCarousel.vue'
-
+    import cartModal from '@/components/Modal/AddToCartModal.vue'
 
     export default {
         name: "Produto",
         components: {
             SectionCollapse,
             Breadcrumbs,
-            PhotoCarousel
+            PhotoCarousel,
+            cartModal
         },
         data(){
             return {
@@ -89,7 +90,8 @@
                 ],
                 pictures: null,
                 selected: 0,
-                selectedSize: null
+                selectedSize: null,
+                selectedColor: null
             }
         },
         methods: {
@@ -105,6 +107,7 @@
                 if(this.product.tamanho) {
                     this.selectedSize = this.product.tamanho[0];
                 }
+                this.selectedColor = this.product.cor[0].nome;
                 this.items.push({name: data.categoria, active: true});
                 await Aux.sleep(1000);
                 this.loading = false;
@@ -115,6 +118,18 @@
             },
             selectSize(size){
                 this.selectedSize = size;
+            },
+            selectColor(color){
+                this.selectedColor = color;
+            },
+            async addToCart(){
+                let productData ={
+                    cor: this.selectedColor,
+                    tamanho: this.selectedSize
+                };
+                await axios.post('http://localhost:8081/usuario/carrinho/adicionar/' + this.product.id, productData)
+                this.$eventHub.$emit('updatecart');
+                this.$bvModal.show('modal-add-cart');
             }
         },
         async created() {
@@ -155,7 +170,7 @@
         max-width: 444px;
     }
     .product-container{
-        margin: 10px 0 140px 0;
+        margin-top: 10px;
     }
 
 
@@ -177,6 +192,7 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        margin-top: 35px;
     }
     .product-description{
         text-align: justify;
@@ -241,7 +257,6 @@
     .size-buttons-container{
         display: flex;
         margin-top: 5px;
-        margin-bottom: 35px;
         width: 100%;
     }
     .size-buttons{
@@ -263,5 +278,23 @@
     }
     .size-container{
         margin-top: 14px;
+    }
+    .color-buttons-container{
+        display: flex;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .color-button{
+        display: inline;
+        text-align: center;
+        border-radius: 50%;
+        flex-basis: 24px;
+        flex-shrink: 0;
+        height:24px;
+        margin-right: 14.67px;
+        border: 1px solid white;
+    }
+    .selected-color{
+        box-shadow: 0 0 0 4px $highlight-yellow;
     }
 </style>

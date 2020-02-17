@@ -73,12 +73,22 @@ router.post('/usuario/carrinho/subtrair/:id', async (req,res) => {
 router.post('/usuario/carrinho/adicionar/:id', async (req,res) => {
     let produtoEncontrado = await Usuario[0].carrinho.findIndex(produtos => (produtos.id === req.params.id));
     if(produtoEncontrado == -1) {
-        Usuario[0].carrinho.push(Produto[Produto.findIndex(produto => {
-            produto.id == req.params.id;
-        })]);
+        let produto;
+        await Produto.forEach(produtos =>{
+            if (produtos.id == req.params.id){
+                produto = produtos;
+            }
+        });
+        let produtoAdicionado = {
+            id: req.params.id,
+            qtd: 1,
+            cor: req.body.cor,
+            tamanho: req.body.tamaho
+        };
+        Usuario[0].carrinho.push(produtoAdicionado);
         fs.writeFile('Usuario.json', JSON.stringify(Usuario), (err) => {
             if (err) throw err;
-            else res.status(200).send(qtd.toString());
+            else res.status(200).send(produtoAdicionado);
         });
     } else {
         Usuario[0].carrinho[produtoEncontrado].qtd += 1;
