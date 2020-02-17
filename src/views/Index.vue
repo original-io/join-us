@@ -6,7 +6,7 @@
             <div class="page-block">
                 <div class="row flexCenterRow indexMainContainer">
                     <transition name="fade">
-                        <b-spinner variant="primary" label="Spinning" class="loader" v-if="!categories"></b-spinner>
+                        <b-spinner variant="primary" label="Spinning" class="loader" v-if="loading"></b-spinner>
                     </transition>
 
                     <SectionCollapse :collapsed="loading" class="w-100">
@@ -46,7 +46,7 @@
                 items: [
                     {
                         text: 'Home',
-                        to: '/',
+                        to: '/'
                     }
                 ],
                 categories: null
@@ -108,7 +108,7 @@
         height: auto;
         width: 150px;
         margin-bottom: 5px;
-        transition: all 0.6s ease;
+        transition: all 0.2s ease;
     }
 
     .catName {

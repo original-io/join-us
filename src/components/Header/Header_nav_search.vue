@@ -49,6 +49,7 @@
         right: 10px;
         width: 290px;
         height: 429px;
+        max-height: 60vh;
         display: flex;
         flex-direction: column;
         border-radius: 3px;

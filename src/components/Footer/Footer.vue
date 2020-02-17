@@ -97,14 +97,14 @@
                                     <label for="emailInput" class="newsletterInputLabel" ref="emailInputLabel">E-mail</label>
                                     <input ref="emailInput" type="email" class="textInput" id="emailInput" name="emailInput" @click="emailInputClicked" @blur="emailInputBlurred">
                                 </div>
+                                 <div ref="successMsg" class="successMsg secondaryFont">
+                                     Assinado!
+                                 </div>
+                                 <div ref="errorMsg" class="errorMsg secondaryFont">
+                                     Preencha ambos os campos com valores válidos.
+                                 </div>
                                 <button class="btn btn-primary" v-on:click.prevent="subscribeNewsletter">ENVIAR</button>
                             </form>
-                            <div ref="successMsg" class="successMsg secondaryFont">
-                                Assinado!
-                            </div>
-                            <div ref="errorMsg" class="errorMsg secondaryFont">
-                                Preencha ambos os campos com valores válidos.
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -301,7 +301,7 @@
             display: none;
             margin-top: 10px;
             color: $actionable-color;
-            font-size: 14px;
+            font-size: 10px;
             text-align: center;
             width: 60%;
         }
@@ -309,7 +309,7 @@
             display: none;
             margin-top: 10px;
             color: $canceled-color;
-            font-size: 14px;
+            font-size: 10px;
             text-align: center;
             width: 60%;
         }
@@ -326,7 +326,7 @@
         vertical-align: middle;
         .newsletterInputContainer {
             text-align: left;
-            margin: 5px;
+            margin: 0;
             flex: 1 1 auto;
             .textInput {
                 color: $main-font-color;

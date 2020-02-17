@@ -1,10 +1,12 @@
 <template>
     <div class="container-fluid">
         <div class="row">
-            <div class="page-block secondaryFont breadcrumbsContainer">
-                <b-breadcrumb :items="items" class="breadcrumbsItem secondaryFont">
-                    <!-- Alimentado pelo componente pai em data() > items -->
-                </b-breadcrumb>
+            <div class="col-12">
+                <div class="page-block secondaryFont breadcrumbsContainer m-auto">
+                    <b-breadcrumb :items="items" class="breadcrumbsItem secondaryFont">
+                        <!-- Alimentado pelo componente pai em data() > items -->
+                    </b-breadcrumb>
+                </div>
             </div>
         </div>
     </div>

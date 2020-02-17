@@ -38,38 +38,56 @@ router.post('/usuario/cadastro', async (req, res) => {
     }
 });
 
-router.post('/usuario/carrinho', async (req, res) => {
-    let produto = {
-        id : req.body.produtoId,
-        tamanho : req.body.produtoTamanho,
-        cor : req.body.produtoCor
-    };
-    let usuarioEncontrado = await Usuario.findIndex(usuarios => (usuarios.email === req.body.email));
-    Usuario[usuarioEncontrado].carrinho.push(produto);
+router.post('/usuario/carrinho/remover/', async (req, res) => {
+    Usuario[0].carrinho = [];
+    res.status(200).send("[]");
+});
+
+router.post('/usuario/carrinho/removerProduto/:id', async (req, res) => {
+    let idx = await Usuario[0].carrinho.findIndex(produtos => (produtos.id === req.params.id));
+    Usuario[0].carrinho.splice(idx, 1);
     fs.writeFile('Usuario.json', JSON.stringify(Usuario), (err) => {
         if (err) throw err;
-        else res.status(200).send();
+        else res.status(200).send("0");
     });
 });
 
 router.post('/usuario/carrinho/subtrair/:id', async (req,res) => {
     let produtoEncontrado = await Usuario[0].carrinho.findIndex(produtos => (produtos.id === req.params.id));
-    Usuario[0].carrinho[produtoEncontrado].qtd -= 1;
-    let qtd = Usuario[0].carrinho[produtoEncontrado].qtd;
-    fs.writeFile('Usuario.json', JSON.stringify(Usuario), (err) => {
-        if (err) throw err;
-        else res.status(200).send(qtd.toString());
-    });
+    if(Usuario[0].carrinho[produtoEncontrado].qtd == 1) {
+        Usuario[0].carrinho.splice(produtoEncontrado, 1);
+        fs.writeFile('Usuario.json', JSON.stringify(Usuario), (err) => {
+            if (err) throw err;
+            else res.status(200).send("0");
+        });
+    } else {
+        Usuario[0].carrinho[produtoEncontrado].qtd -= 1;
+        let qtd = Usuario[0].carrinho[produtoEncontrado].qtd;
+        fs.writeFile('Usuario.json', JSON.stringify(Usuario), (err) => {
+            if (err) throw err;
+            else res.status(200).send(qtd.toString());
+        });
+    }
 });
 
-router.post('/usuario/carrinho/adcionar/:id', async (req,res) => {
+router.post('/usuario/carrinho/adicionar/:id', async (req,res) => {
     let produtoEncontrado = await Usuario[0].carrinho.findIndex(produtos => (produtos.id === req.params.id));
-    Usuario[0].carrinho[produtoEncontrado].qtd += 1;
-    let qtd = Usuario[0].carrinho[produtoEncontrado].qtd;
-    fs.writeFile('Usuario.json', JSON.stringify(Usuario), (err) => {
-        if (err) throw err;
-        else res.status(200).send(qtd.toString());
-    });
+    if(produtoEncontrado == -1) {
+        Usuario[0].carrinho.push(Produto[Produto.findIndex(produto => {
+            produto.id == req.params.id;
+        })]);
+        fs.writeFile('Usuario.json', JSON.stringify(Usuario), (err) => {
+            if (err) throw err;
+            else res.status(200).send(qtd.toString());
+        });
+    } else {
+        Usuario[0].carrinho[produtoEncontrado].qtd += 1;
+        let qtd = Usuario[0].carrinho[produtoEncontrado].qtd;
+        fs.writeFile('Usuario.json', JSON.stringify(Usuario), (err) => {
+            if (err) throw err;
+            else res.status(200).send(qtd.toString());
+        });
+    }
 });
 
 router.get('/usuario/carrinho', async (req, res) => {
@@ -141,11 +159,11 @@ router.get('/produtos/nome/:nome', async (req, res) => {
 });
 
 router.get('/produtos/id/:id', async (req, res) => {
-    let produtoEncontrado = [];
+    let produtoEncontrado;
 
     await Produto.forEach(produto =>{
         if (produto.id == req.params.id){
-            produtoEncontrado.push(produto);
+            produtoEncontrado = produto;
         }
     });
     res.status(200).send(produtoEncontrado);

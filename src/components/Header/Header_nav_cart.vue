@@ -17,17 +17,17 @@
                         </div>
                     </div>
                     <div class="quantity">
-                        <div class="quantity-button" v-on:click="subtractProduct(product.id)">
+                        <div class="quantity-button subtract-button" v-on:click="subtractProduct(product.id)">
                             <img src="../../assets/svg/subtract.svg">
                         </div>
                         <div class="quantity-number">
                             <p v-bind:id="`p${product.id}`">{{product.qtd}}</p>
                         </div>
-                        <div class="quantity-button" v-on:click="addProduct(product.id)">
+                        <div class="quantity-button add-button" v-on:click="addProduct(product.id)">
                             <img src="../../assets/svg/plus.svg">
                         </div>
                     </div>
-                    <div class="remove-btn">
+                    <div class="remove-btn" v-on:click="removeProduct(product.id)">
                         <img src="../../assets/svg/X.svg">
                     </div>
                 </div>
@@ -38,8 +38,8 @@
         </div>
         <div class="buy">
             <div class="total-price">
-                <p class="total">Total: R$149,90</p>
-                <p class="parcel">até 3x de R$49,90 sem juros</p>
+                <p class="total">Total: R${{totalPrice}}</p>
+                <p class="parcel">até 3x de R${{(totalPrice/3).toFixed(2)}} sem juros</p>
             </div>
             <div class="button-container">
                 <p>FINALIZAR COMPRA</p>
@@ -56,9 +56,10 @@
         components: {
             vuescroll
         },
-        data(){
+        data() {
             return{
                 content: [],
+                totalPrice: 0,
                 ops: {
                     bar: {
                         keepShow: true,
@@ -74,47 +75,74 @@
         },
         methods:{
             subtractProduct: async function(id){
-                let valor = document.getElementById("p"+id).innerText;
-                if (valor>0) {
-                    await axios.post("http://localhost:8081/usuario/carrinho/subtrair/" + id)
-                            .then(data => {
-                                document.getElementById("p" + id).innerText = data.data;
-                            }).catch(err => {
-                                console.log(err)
-                            });
+                let { data } = await axios.post("http://localhost:8081/usuario/carrinho/subtrair/" + id);
+                if(data > 0) {
+                    document.getElementById("p" + id).innerText = data;
+                } else {
+                    this.content.splice(this.content.findIndex(prod => prod.id == id), 1);
                 }
+                this.updateCart();
+                return data;
             },
             addProduct: async function(id){
-                await axios.post("http://localhost:8081/usuario/carrinho/adcionar/"+id)
+                await axios.post("http://localhost:8081/usuario/carrinho/adicionar/" + id)
                         .then(data =>{
-                            document.getElementById("p"+id).innerText = data.data;
+                            document.getElementById("p" + id).innerText = data.data;
                         }).catch(err =>{
                             console.log(err)
                         });
+                this.updateCart();
+            },
+            removeProduct: async function(id) {
+                await axios.post("http://localhost:8081/usuario/carrinho/removerProduto/" + id);
+                this.updateCart();
             },
             updateCart: async function(){
-                await axios.get("http://localhost:8081/usuario/carrinho")
-                        .then(data =>{
-                            let results = data.data;
-                            results.forEach(async result =>{
-                                let product = result;
-                                await axios.get("http://localhost:8081/produtos/id/"+product.id)
-                                        .then(res =>{
-                                            product.price = res.data[0].valorPromocao;
-                                            product.name = res.data[0].nome;
-                                            product.pic = res.data[0].foto;
-                                        }).catch(err =>{
-                                            console.log(err);
-                                        });
-                                this.content.push(product);
-                            })
-                        }).catch(err =>{
-                            console.log(err);
-                        })
+                let { data } = await axios.get("http://localhost:8081/usuario/carrinho");
+
+                if(data) {
+                    data.forEach(async result => {
+                        if(result) {
+                            await axios.get("http://localhost:8081/produtos/id/" + result.id)
+                                    .then(res => {
+                                        result.price = res.data.valorPromocao;
+                                        result.name = res.data.nome;
+                                        result.pic = res.data.foto;
+                                    }).catch(err => {
+                                        console.log(err);
+                                    });
+
+                            if (!this.content.some((prod) => prod.id == result.id)) {
+                                this.content.push(result);
+                            } else {
+                                this.content.find((prod) => prod.id == result.id).qtd = result.qtd;
+                            }
+                            this.updateTotalPrice();
+                        }
+                    });
+
+                    let currentProducts = this.content.slice(0);
+
+                    for (let product of currentProducts) {
+                        if (!data.some((d) => d.id == product.id)) {
+                            let idx = this.content.indexOf(product);
+
+                            this.content.splice(idx, 1);
+                        }
+                    }
+                }
+                return data;
+            },
+            updateTotalPrice: function() {
+                let total = 0;
+                for(let prod of this.content) {
+                    total += parseFloat(prod.price.replace(/,/g, '.')) * prod.qtd;
+                }
+                this.totalPrice = total.toFixed(2);
             }
         },
         mounted: async function(){
-            this.updateCart();
+            await this.updateCart();
         }
     }
 </script>
@@ -130,6 +158,19 @@
         box-shadow: 2px 5px 8px #888888;
         display: flex;
         flex-direction: column;
+    }
+    .qtdInput {
+        width: 100%;
+        background: transparent;
+        border: none;
+        &::-webkit-outer-spin-button {
+            margin: 0;
+            -webkit-appearance: none;
+        }
+        &::-webkit-inner-spin-button {
+            margin: 0;
+            -webkit-appearance: none;
+        }
     }
     .cart{
         flex: 1;
@@ -233,11 +274,11 @@
         align-content: center;
         width: 33px;
         height: 33px;
-        background-color: $light-gray;
         cursor: pointer;
     }
     .quantity-button img{
         margin: auto;
+        user-select: none;
     }
     .quantity-number{
         width: 33px;
@@ -247,19 +288,19 @@
         border-style: solid;
         border-width: 1px;
         display: flex;
+        user-select: none;
+        p {
+            margin: auto;
+        }
     }
-    .quantity-number p{
-        font-weight: bold;
-        color: $secondary-actionable-color;
-        text-align: center;
-        margin: auto;
-    }
+
     .remove-btn{
         position: absolute;
         right: 33px;
         cursor: pointer;
         margin: auto;
         align-self: center;
+        user-select: none;
     }
     .label{
         display: flex;
@@ -281,4 +322,17 @@
         flex: 1;
         margin: auto;
     }
+
+    .add-button {
+        background-color: $actionable-color;
+        border-bottom-right-radius: 25%;
+        border-top-right-radius: 25%;
+    }
+
+    .subtract-button {
+        background-color: $canceled-color;
+        border-bottom-left-radius: 25%;
+        border-top-left-radius: 25%;
+    }
+
 </style>

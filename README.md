@@ -54,7 +54,7 @@
     listagem dos componentes de produtos para serem gerados dinamicamente. Isso contribuiria tanto
     para a escalabilidade do sistema quanto para a parametrização do front. Para não dedicar tempo
     demais ao modelo de dados, isso não foi implementado;
-    - Boa parte da API do mock server não segue as práticas REST pelo bem da brevidade.
+    - A API do mock server não segue as práticas REST pelo bem da brevidade.
     - Por falta de tempo, não foi implementado um sistema de autenticação. O carrinho e demais funcionalidades dependentes
     de usuário logado usam o primeiro usuário do JSON como objeto.
     - Considerei como "off" todo produto que possuisse preço promocional != preço. Cada acesso à categoria "off" faz
@@ -63,3 +63,4 @@
     - Tive problemas com a "Gotham Book/Bold." Baixei e configurei a fonte, mas os componentes que a usam não se assemelham
     ao que vejo no Figma. Isso se destaca em dois lugares: "ASSINE NOSSAS NEWS" e no nome de categorias em amarelo com outline
     na tela de listagem de subcategorias.
+    - 

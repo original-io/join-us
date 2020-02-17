@@ -4,6 +4,7 @@ import Index from '../views/Index.vue';
 import Subcategorias from '../views/Subcategorias.vue';
 import Subcategorias2 from '../views/Subcategorias2.vue';
 import Produtos from '../views/Produtos.vue';
+import Produto from '../views/Produto.vue';
 
 Vue.use(VueRouter);
 
@@ -17,6 +18,11 @@ const routes = [
         path: '/produtos',
         name: 'Produtos',
         component: Produtos
+    },
+    {
+        path: '/produtos/:idProduto',
+        name: 'Produto',
+        component: Produto
     },
     {
         path: '/produtos/categorias',

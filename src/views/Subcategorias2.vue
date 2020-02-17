@@ -14,9 +14,9 @@
                             <div class="row">
                                 <div class="col-sm-4 catContainer catTitleContainer">
                                     <div class="m-auto">
-                                        <div class="weirdFont w-50">
+                                        <div class="strokedFont w-50">
                                         {{category.toUpperCase()}}
-                                            <div class="weirdFontShadow">
+                                            <div class="strokedFontShadow">
                                                 {{category.toUpperCase()}}
                                             </div>
                                         </div>
@@ -25,7 +25,7 @@
                                 <div class="col-sm-4 catContainer catListContainer">
                                     <ul class="catList list-unstyled">
                                         <li v-for="sc in subcategories" class="catListItem">
-                                            <div class="catContainer flexCenterCol">
+                                            <div class="catContainer text-left">
                                                 <span class="catName secondaryFont">{{sc.nome}}</span>
                                             </div>
                                         </li>
@@ -144,7 +144,7 @@
         }
     }
 
-    .weirdFont {
+    .strokedFont {
         margin: auto;
         font-family: sans-serif;
         font-weight: bold;
@@ -159,7 +159,7 @@
         left: 0;
         top: 0;
         word-wrap: break-word;
-        .weirdFontShadow {
+        .strokedFontShadow {
             width: 100%;
             font-size: 70px;
             line-height: 98px;
@@ -189,5 +189,9 @@
 
     .catBanner {
         width: 100%;
+    }
+
+    .catName {
+        margin-left: 20px;
     }
 </style>
