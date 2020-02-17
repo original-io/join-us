@@ -55,6 +55,8 @@
   - **Observações**
     - Responsividade só é garantida até 1280px, não houve tempo para nenhum ajuste de responsividade mobile;
     - O menu em dropdown para as categorias de produtos foi propositadamente ignorado;
+    - Como não há tela de seleção de produtos ainda, use a rote /produtos/:id. Dois exemplos com características distintas são:
+    BG0568 (não tem tamanho nem preço promocional) e RT0568 (tem tamanho e preço promocional).
     - Dois componentes de listagem de subcategorias foram implementados: um referente ao "Sapatos" e outro referente
     ao "Bolsas" e "Acessórios". Para acessar o primeiro componente, acesse uma categoria via Index (clicando nos svgs de categoria). 
     Para acessar a outra, acesse uma categoria via nav principal;
