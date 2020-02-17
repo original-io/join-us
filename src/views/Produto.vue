@@ -127,13 +127,20 @@
                     cor: this.selectedColor,
                     tamanho: this.selectedSize
                 };
-                await axios.post('http://localhost:8081/usuario/carrinho/adicionar/' + this.product.id, productData)
+                await axios.post('http://localhost:8081/usuario/carrinho/adicionar/' + this.product.id, productData);
                 this.$eventHub.$emit('updatecart');
                 this.$bvModal.show('modal-add-cart');
             }
         },
         async created() {
             this.updateProduct();
+        },
+        watch: {
+            async $route(to, from) {
+                this.loading = true;
+                this.product = await this.updateProduct();
+                this.loading = false;
+            }
         }
     }
 </script>
@@ -170,7 +177,7 @@
         max-width: 444px;
     }
     .product-container{
-        margin-top: 10px;
+        margin: 10px 0 140px 0;
     }
 
 

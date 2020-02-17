@@ -5,10 +5,9 @@
         </div>
         <div class="results">
             <vuescroll :ops="ops">
-                <div class="results-cards" v-for="product in result">
-                    <img class="img-card" v-bind:src="require(`@/assets/svg/${product.foto}`)">
-                    {{product.nome}}
-                </div>
+                <router-link :to="`/produtos/${product.id}`" class="results-cards" v-for="product in result">
+                    <img class="img-card" v-bind:src="require(`@/assets/svg/${product.foto}`)">{{product.nome}}
+                </router-link>
             </vuescroll>
         </div>
     </b-collapse>

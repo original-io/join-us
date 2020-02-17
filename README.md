@@ -71,3 +71,4 @@
     - Tive problemas com a "Gotham Book/Bold." Baixei e configurei a fonte, mas os componentes que a usam não se assemelham
     ao que vejo no Figma. Isso se destaca em dois lugares: "ASSINE NOSSAS NEWS" e no nome de categorias em amarelo com outline
     no componente de listagem de subcategorias.
+    - BUG: O "adicionar à sacola" faz parar de atualizar as unidades no carrinho automaticamente até o próximo reload.

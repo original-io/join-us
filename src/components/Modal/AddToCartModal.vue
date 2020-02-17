@@ -64,7 +64,7 @@
     .body-text{
         margin: auto;
         max-width: 290px;
-        text-align: left;
+        text-align: center;
         font-family: $primary-font;
         font-weight: bold;
         font-size: 22px;
