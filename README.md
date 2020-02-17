@@ -8,11 +8,13 @@
   - **Framework:** Vue.js;
     - A escolha por Vue foi baseada em três fatores: 
       1. Facilidade em produzir uma SPA (opção justificada mais à frente); 
-      2. Auxílio na construção de componentes baseados em dados, reforçando a modularidade do front end;
+      2. Experiência com a ferramenta;
       3. Facilidade de plugin de ferramentas de auxílio (como o Bootstrap e o Vue Router);
+  
   - **Renderer:** EJS/Vue Template;
     - Únicas ferramentas de templates que uso regularmente.
     - Conheço Pug e Mustache e já pesquisei por alto outras alternativas, mas nenhuma me fez querer sair da zona de conforto do EJS.
+  
   - **Bundler:** Webpack;
     - Assim como EJS, minha opção por usar o Webpack é puramente baseada na inexperiência com as alternativas. Já trabalhei com Browserify - que não seria uma opção adequada para esse projeto - e já estudei Parcel.
     - As principais features que aproveito aqui são: minificação do código, bundling dos scripts e, talvez mais presente no projeto, bundling do CSS.
@@ -26,8 +28,8 @@
   - **Módulo de autenticação:** Passport.js;
     - Em meus projetos pessoais, gosto de usar o Passport.js para lidar com meu sistema de autenticação: é rápido de configurar, flexível e fácil de inserir ou retirar do projeto.
 
-  - **Banco de Dados:** Firebase;
-    - Optei pelo uso do Firebase para perder o menor tempo possível com setup do mesmo, já que o objetivo do projeto é testar o front-end, não o restante.
+  - **Banco de Dados:** JSON;
+    - A intenção original era usar o Firebase, mas por limites no tempo disponível, mockei todos os dados em JSON.
 
   - **Arquitetura do nível de aplicação:** SPA
     - Apesar de e-commerces se preocuparem muito com SEO, optei por fazer uma SPA. 
