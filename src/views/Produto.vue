@@ -193,8 +193,8 @@
             }
         },
         async created() {
-            this.updateProduct();
-            this.updateOtherProducts();
+            await this.updateProduct();
+            await this.updateOtherProducts();
         },
         watch: {
             async $route(to, from) {
