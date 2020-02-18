@@ -71,3 +71,5 @@
     - Tive problemas com a "Gotham Book/Bold." Baixei e configurei a fonte, mas os componentes que a usam não se assemelham
     ao que vejo no Figma. Isso se destaca em dois lugares: "ASSINE NOSSAS NEWS" e no nome de categorias em amarelo com outline
     no componente de listagem de subcategorias.
+    - Não achei solução para os nomes das categorias separados por sílabas que não fosse guardar as sílabas de cada categoria
+    no "BD". A outra opção seria escrevê-los na mão, mas isso derrota o propósito da renderização dinâmica.

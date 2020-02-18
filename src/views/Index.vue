@@ -19,6 +19,10 @@
                                         <span class="catName secondaryFont">{{category.nome}}</span>
                                     </router-link>
                                 </li>
+                                <router-link to="/produtos/categorias/off" class="catContainer flexCenterCol">
+                                    <img src="../assets/svg/savings.svg" class="catImg" height="50px">
+                                    <span class="catName secondaryFont">Off</span>
+                                </router-link>
                             </ul>
                         </main>
                     </SectionCollapse>

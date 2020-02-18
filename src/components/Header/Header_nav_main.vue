@@ -3,7 +3,7 @@
         <router-link class="mainLink" to="/produtos/categorias2/sapatos">SAPATOS</router-link>
         <router-link class="mainLink" to="/produtos/categorias2/bolsas">BOLSAS</router-link>
         <router-link class="mainLink" to="/produtos/categorias2/acessorios">ACESSÓRIOS</router-link>
-        <router-link class="mainLink" to="/produtos/categorias2/off">OFF</router-link>
+        <router-link class="mainLink" :to="{path: '/produtos', query: {offfilter: true}}">OFF</router-link>
     </nav>
 </template>
 

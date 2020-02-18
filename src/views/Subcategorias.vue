@@ -66,7 +66,7 @@
             async getSubcategories() {
                 // Ver readme, em observações, sobre 'off' e categorias.
                 if(Aux.removeDiacritics(this.$route.params.categoria) == 'off') {
-                    this.$router.push('/produtos/off')
+                    this.$router.push('/produtos?offfilter=true')
                 }
                 // Mockando tempo de espera do BD
                 await Aux.sleep(400);
@@ -128,7 +128,7 @@
 
     .catImg {
         height: auto;
-        width: 150px;
+        width: 120px;
         margin-bottom: 5px;
         clip-path: none;
         transition: all 0.6s ease;

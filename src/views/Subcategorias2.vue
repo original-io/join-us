@@ -86,7 +86,7 @@
             async getSubcategories() {
                 // Ver readme, em observações, sobre 'off' e categorias.
                 if(Aux.removeDiacritics(this.$route.params.categoria) == 'off') {
-                    this.$router.push('/produtos/off')
+                    this.$router.push('/produtos?offfilter=true')
                 }
                 // Mockando tempo de espera do BD
                 await Aux.sleep(400);

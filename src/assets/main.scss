@@ -1,5 +1,6 @@
 @import '@/../node_modules/bootstrap/scss/bootstrap';
 @import '@/../node_modules/bootstrap-vue/src/index.scss';
+
 @font-face {
   font-family: $primary-font;
   src: url('./fonts/' + $primary-font-importurl);
@@ -139,7 +140,7 @@ a {
   cursor: pointer;
   margin-top: 35px;
   transition: all 0.6s ease;
-  &:hover {
+  &:hover:not(:disabled) {
     border-color: rgba($actionable-color, 0.8);
     box-shadow: -1px 2px 10px 4px rgba($actionable-color, 0.75);
   }
@@ -155,6 +156,9 @@ a {
   &:not(:disabled):not(.disabled):active:focus {
     border-color: rgba($actionable-color, 1);
     box-shadow: 1px 1px 1px 1px rgba($actionable-color, 0.75);
+  }
+  &:disabled {
+    background-color: gray;
   }
 }
 

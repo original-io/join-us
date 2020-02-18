@@ -58,6 +58,11 @@
                 await Aux.sleep(200);
                 this.visible = false;
             }
+        },
+        mounted: function() {
+            this.$eventHub.$on('updatecart', data =>{
+                this.$emit('open');
+            });
         }
     }
 </script>

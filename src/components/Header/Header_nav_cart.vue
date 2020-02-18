@@ -1,5 +1,5 @@
 <template>
-    <b-collapse id="collapse-2">
+    <b-collapse v-model="visible" @open="openCart()" id="collapse-2">
         <div class="label">
             <p class="label-product">Produto</p>
             <p class="label-quantity">Quantidade</p>
@@ -27,7 +27,7 @@
                             <img src="../../assets/svg/plus.svg">
                         </div>
                     </div>
-                    <div class="remove-btn" v-on:click="removeProduct(product.id)">
+                    <div class="remove-btn" v-on:click="removeProduct(product.id, $event)">
                         <img src="../../assets/svg/X.svg">
                     </div>
                 </div>
@@ -51,6 +51,8 @@
 <script>
     import axios from 'axios';
     import vuescroll from 'vuescroll';
+    import Aux from '@/assets/auxscripts/auxscripts.js';
+
     export default {
         name: "Header_nav_cart",
         components: {
@@ -70,7 +72,8 @@
                         background: '#E2E2E2',
                         opacity: 1
                     }
-                }
+                },
+                visible: false
             }
         },
         methods:{
@@ -93,7 +96,8 @@
                         });
                 this.updateCart();
             },
-            removeProduct: async function(id) {
+            removeProduct: async function(id, event) {
+                event.target.disabled = true;
                 await axios.post(process.env.VUE_APP_API_HOST + ":" + process.env.VUE_APP_API_PORT + "/" + "usuario/carrinho/removerProduto/" + id);
                 this.updateCart();
             },
@@ -136,15 +140,19 @@
             updateTotalPrice: function() {
                 let total = 0;
                 for(let prod of this.content) {
-                    total += parseFloat(prod.price.replace(/,/g, '.')) * prod.qtd;
+                    total += Aux.commaStringToFloat(prod.price.replace(/,/g, '.')) * prod.qtd;
                 }
                 this.totalPrice = total.toFixed(2);
+            },
+            openCart() {
+                this.visible = true;
             }
         },
         mounted: async function(){
             await this.updateCart();
-            this.$eventHub.$on('updatecart', data =>{
-                this.updateCart();
+            this.$eventHub.$on('updatecart', async data => {
+                this.openCart();
+                await this.updateCart();
             });
         },
     }

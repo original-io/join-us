@@ -28,7 +28,7 @@
                                     <p class="product-original-price">R${{product.valor}}</p>
                                     <p class="product-price-separator">|</p>
                                     <p class="product-price">R${{product.valorPromocao}}</p>
-                                    <p class="product-parcels">Ou 6x de R${{(parseFloat(product.valorPromocao.replace(',', '.'))/6.0).toFixed(2).replace('.', ',')}}</p>
+                                    <p class="product-parcels">Ou 6x de R${{(parseFloat(product.valorPromocao)/6.0).toFixed(2).replace('.', ',')}}</p>
                                 </div>
                                 <div v-else class="price-container">
                                     <p class="product-price">R${{product.valor}}</p>
@@ -103,12 +103,6 @@
             return {
                 loading: false,
                 product: null,
-                items: [
-                    {
-                        name: 'Home',
-                        to: '/'
-                    }
-                ],
                 pictures: null,
                 selected: 0,
                 selectedSize: null,
@@ -116,6 +110,25 @@
                 products: null,
                 productsPageNumber: null,
                 productsPage: null
+            }
+        },
+        computed: {
+            // Se items não estiver em computed, o breadcrumbs não atualiza automaticamente a cada navegação
+            items() {
+                return [
+                    {
+                        text: 'Home',
+                        to: '/'
+                    },
+                    {
+                        text: this.product.categoria,
+                        to: '/produtos/categorias2/' + this.product.categoria
+                    },
+                    {
+                        text: this.product.nome,
+                        active: true
+                    }
+                ]
             }
         },
         methods: {
@@ -211,7 +224,7 @@
     }
     .big{
         width: auto;
-        height: 100%;
+        height: 527px;
     }
     .info-container{
         font-family: $secondary-font;

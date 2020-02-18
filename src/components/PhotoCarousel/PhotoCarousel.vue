@@ -63,9 +63,13 @@
         }
     }
     .caurousel-selected {
+        height: 76px;
+        width: auto;
         opacity: 1;
     }
     .caurousel-not-selected {
+        height: 76px;
+        width: auto;
         opacity: .5;
         transition: all 0.3s ease;
         &:hover {
