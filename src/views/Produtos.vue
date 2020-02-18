@@ -1,6 +1,9 @@
 <template>
     <div>
         <div class="page-block m-auto">
+            <transition name="fade">
+                <b-spinner variant="primary" label="Spinning" class="loader" v-if="loading"></b-spinner>
+            </transition>
             <Breadcrumbs v-if="items[1]" v-bind:items="items"></Breadcrumbs>
             <div class="filtersContainer m-auto row">
                 <div class="col-2 m-auto">
@@ -316,8 +319,8 @@
         }
     }
 
-    .offFilterInput {
-        margin: 100px;
+    #offFilter {
+        margin: 10px;
     }
 
     .offFilterContainer {
@@ -326,4 +329,13 @@
             margin: auto;
         }
     }
+
+    .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 4rem;
+        height: 4rem;
+    }
+
 </style>

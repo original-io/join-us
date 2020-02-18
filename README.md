@@ -4,6 +4,12 @@
 
 **Para rodar o client + o mock server, digite 'npm run serve' no root do projeto**
 
+  - **Observações:**
+    - O menu principal no Header e o menu de categorias no Index levam a duas views diferentes do mesmo
+    modelo (Categorias). Ambas as views são especificadas no Figma, uma é mostrada em Sapatos e a outra em
+    Bolsas e Acessórios, então decidi exibí-las uma em cada acesso de menu.
+    - Existem componentes inacabados: autenticação, ordenação na tela de produtos, finalizar compra...
+    - Responsividade só é garantida até 1280px, não houve tempo para nenhum ajuste de responsividade mobile;
 
   - **Framework:** Vue.js;
     - A escolha por Vue foi baseada em três fatores: 
@@ -24,10 +30,7 @@
 
   - **Linter:** _Nenhum_;
     - Em geral, uso o ESLint. Porém, como freelancer, uso diferentes configurações do linter para clientes diferentes a fim de me aproximar do estilo de código dos times in-house deles. Para esse projeto, preferi deixá-los avaliar meu estilo pessoal de escrita de código.
-
-  - **Módulo de autenticação:** Passport.js;
-    - Em meus projetos pessoais, gosto de usar o Passport.js para lidar com meu sistema de autenticação: é rápido de configurar, flexível e fácil de inserir ou retirar do projeto.
-
+    
   - **Banco de Dados:** JSON;
     - A intenção original era usar o Firebase, mas por limites no tempo disponível, mockei todos os dados em JSON.
 
@@ -36,7 +39,7 @@
     - Com mais tempo disponível, seria possível torná-la SEO-friendly com um pre-renderer para páginas menos dinâmicas, como a lista de produtos não-personalizada.
 
   - **Pré-processador CSS:** SCSS
-    - SCSS é minha primeira experiência com pré-processadores CSS e só trabalho com ele há duas semanas.
+    - SCSS é minha única experiência com pré-processadores CSS.
 
   - **Demais módulos notáveis:**
     - Bootstrap para auxílio na UI;
@@ -44,18 +47,19 @@
     - Axios para chamadas à API;
     
   - **Parametrização do Front-end:**
+    - Todos os produtos, categorias, subcategorias, etc são resgatados do "BD". Basta adicionar novas entradas
+    nos JSONs do mock server para ver o efeito.
     - Todos os parâmetros encontram-se em .env ou src>assets>vars.scss
     - Brandlogo (svg) e referências ao nome da loja/cliente (string) em .env;
-    - Link de redes sociais e certificados (se não houver nenhum link parametrizado, nada renderiza nessa parte do footer) em .env;
+    - Link de redes sociais e certificados (se não houver nenhuma rede social parametrizada, nada renderiza nessa parte do footer) em .env;
     - Cores da aplicação em vars.scss;
     - Fontes em vars.scss;
-    - Root da API;
+    - Root e Host da API em .env e .env.production;
     - Certificados no footer em .env (uma forma mais inteligente de fazer isso seria apenas laçar um folder 'certs'
     no template do componente, mas preferi manter a parametrização consistente com a dos demais elementos para que TUDO
     que foi parametrizado na aplicação esteja visível no .env e no vars.scss);
 
-  - **Observações**
-    - Responsividade só é garantida até 1280px, não houve tempo para nenhum ajuste de responsividade mobile;
+  - **Notas**
     - O menu em dropdown para as categorias de produtos foi propositadamente ignorado;
     - Como não há tela de seleção de produtos ainda, use a rote /produtos/:id. Dois exemplos com características distintas são:
     BG0568 (não tem tamanho nem preço promocional) e RT0568 (tem tamanho e preço promocional).

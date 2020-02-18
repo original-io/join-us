@@ -4,9 +4,6 @@
         <Breadcrumbs v-if="items[1]" v-bind:items="items"></Breadcrumbs>
         <div class="product-container">
             <div class="page-block m-auto">
-                <transition name="fade">
-                    <b-spinner variant="primary" label="Spinning" class="loader" v-if="loading"></b-spinner>
-                </transition>
                 <SectionCollapse :collapsed="loading" class="w-100">
                     <div class="row m-0">
                         <div class="col-sm-7 col-12 row m-0">
