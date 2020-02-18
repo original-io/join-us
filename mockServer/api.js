@@ -125,8 +125,11 @@ router.get('/categorias', async (req, res) => {
     res.status(200).send(JSON.stringify(Categoria));
 });
 
+router.get('/subcategorias', async (req, res) => {
+    res.status(200).send(JSON.stringify(Subcategoria));
+});
+
 router.get('/categorias/:categoria/subcategorias', async (req, res) => {
-    // Quebrando REST para adiantar o mock server:
     let categoria = req.params.categoria;
     let returnData = [];
     for(sc of Subcategoria) {

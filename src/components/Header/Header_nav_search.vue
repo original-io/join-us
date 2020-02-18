@@ -53,7 +53,7 @@
         flex-direction: column;
         border-radius: 3px;
         box-shadow: 2px 5px 8px #888888;
-        padding: 10px;
+        padding: 3px;
     }
     #collapse-1::after{
         content: "";
@@ -79,14 +79,17 @@
     }
     .results-cards{
         height: 76px;
-        margin: auto;
-        margin-top: 17px;
         font-family: $secondary-font;
         font-size: 14px;
         color: $main-font-color;
         display: flex;
         align-items: center;
         justify-content: left;
+        padding: 5px 0;
+        transition: all 0.6s ease;
+        &:hover {
+            background-color: rgba($primary-color, 0.3);
+        }
     }
     .title{
         text-align: left;
@@ -98,11 +101,11 @@
         font-size: 14px;
         color: $main-font-color;
         font-weight: bolder;
-        margin-bottom: 5px;
+        padding-left: 5px;
     }
     .img-card{
-        width: 59px;
-        height: 76px;
+        width: auto;
+        height: 100%;
         margin-right: 13px;
     }
 </style>

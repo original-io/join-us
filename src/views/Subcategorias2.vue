@@ -25,9 +25,11 @@
                                 <div class="col-sm-4 catContainer catListContainer">
                                     <ul class="catList list-unstyled">
                                         <li v-for="sc in subcategories" class="catListItem">
-                                            <div class="catContainer text-left">
-                                                <span class="catName secondaryFont">{{sc.nome}}</span>
-                                            </div>
+                                            <router-link :to="{path: '/produtos', query: {subcat: sc.id}}">
+                                                <div class="catContainer text-left">
+                                                    <span class="catName secondaryFont">{{sc.nome}}</span>
+                                                </div>
+                                            </router-link>
                                         </li>
                                     </ul>
                                 </div>
@@ -87,7 +89,7 @@
                     this.$router.push('/produtos/off')
                 }
                 // Mockando tempo de espera do BD
-                await Aux.sleep(1000);
+                await Aux.sleep(400);
                 let { data } = await axios.get(process.env.VUE_APP_API_HOST + ":" + process.env.VUE_APP_API_PORT + "/" + 'categorias/' + Aux.removeDiacritics(this.$route.params.categoria) + '/subcategorias');
                 for(let category of data) {
                     category.foto = require('../assets/svg/' + category.foto);

@@ -56,6 +56,27 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row other-products flexCenterCol">
+                        <div class="col-12 m-0 ">
+                            <div class="col-sm-12 other-title">QUEM VIU, VIU TAMBÉM</div>
+                            <div class="col-sm-12 other-product-card-container flexCenterRow">
+                                <div class="other-product-card" v-for="product in productsPage">
+                                    <router-link class="mainLink" v-bind:to="'/produtos/'+product.id">
+                                        <img v-bind:src="require('@/assets/svg/'+product.foto)">
+                                        <div class="other-product-card-footer">
+                                            <div class="other-product-info">R${{product.valorPromocao}}</div>
+                                            <div class="other-product-card-color" v-for="color in product.cor" v-bind:style="'background-color:'+color.codigo"></div>
+                                        </div>
+                                    </router-link>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 other-product-card-control flexCenterRow">
+                                <img v-bind:src="require('@/assets/svg/left.svg')" v-on:click="prevPage">
+                                {{productsPageNumber}} de 3
+                                <img v-bind:src="require('@/assets/svg/right.svg')" v-on:click="nextPage">
+                            </div>
+                        </div>
+                    </div>
                 </SectionCollapse>
             </div>
         </div>
@@ -91,10 +112,39 @@
                 pictures: null,
                 selected: 0,
                 selectedSize: null,
-                selectedColor: null
+                selectedColor: null,
+                products: null,
+                productsPageNumber: null,
+                productsPage: null
             }
         },
         methods: {
+            async updateOtherProducts() {
+                let { data } = await axios.get('http://localhost:8081/produtos');
+                this.products = data.slice(0,12);
+                this.productsPageNumber = 1;
+                this.productsPage = this.products.slice(0,4);
+            },
+            nextPage(){
+                if(this.productsPageNumber+1 <= 3){
+                    this.productsPageNumber += 1
+                }else{
+                    this.productsPageNumber = 1
+                }
+                this.updatePage();
+            },
+            prevPage(){
+                if(this.productsPageNumber-1 >= 1){
+                    this.productsPageNumber -= 1
+                }else{
+                    this.productsPageNumber = 3
+                }
+                this.updatePage();
+            },
+            updatePage(){
+                let start = (this.productsPageNumber-1)*4;
+                this.productsPage = this.products.slice(start, start+4);
+            },
             async updateProduct() {
                 this.loading = true;
                 let { data } = await axios.get(process.env.VUE_APP_API_HOST + ":" + process.env.VUE_APP_API_PORT + "/" + 'produtos/id/' + this.$route.params.idProduto);
@@ -109,7 +159,7 @@
                 }
                 this.selectedColor = this.product.cor[0].nome;
                 this.items.push({name: data.categoria, active: true});
-                await Aux.sleep(1000);
+                await Aux.sleep(400);
                 this.loading = false;
                 return data;
             },
@@ -134,6 +184,7 @@
         },
         async created() {
             this.updateProduct();
+            this.updateOtherProducts();
         },
         watch: {
             async $route(to, from) {
@@ -319,5 +370,59 @@
     }
     .selected-color{
         box-shadow: 0 0 0 4px $highlight-yellow;
+    }
+    .other-products{
+        width: 100%;
+        font-family: $primary-font;
+        font-size: 26px;
+        color: $primary-color;
+        margin-top: 104px;
+    }
+    .other-title{
+        justify-content: center;
+        text-align: center;
+    }
+    .other-product-card{
+        margin-left: 10px;
+        img{
+            flex: 1;
+            height: 290px;
+            width: auto;
+        }
+    }
+    .other-product-info{
+        font-family: $secondary-font;
+        font-size: 14px;
+        color: $main-font-color;
+        flex: 1;
+    }
+    .other-product-card-control{
+        margin-top: 10px;
+        font-family: $secondary-font;
+        font-size: 14px;
+        color: $darker-blue;
+        img{
+            border: 2px solid $darker-blue;
+            border-radius: 50%;
+            flex-basis: 25px;
+            flex-shrink: 0;
+            height: 25px;
+            padding: 4px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+    .other-product-card-color{
+        margin-top: 5px;
+        text-align: center;
+        border-radius: 50%;
+        flex-basis: 10px;
+        flex-shrink: 0;
+        height:10px;
+        margin-left: 3px;
+    }
+    .other-product-card-footer{
+        display: flex;
+        width: 100%;
     }
 </style>
