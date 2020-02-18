@@ -14,7 +14,7 @@
                             <ul class="categoryList list-unstyled">
                                 <!-- Eventualmente podemos refatorar, ver observação no readme -->
                                 <li v-for="sc in subcategories" class="">
-                                    <router-link :to="{path: '/produtos', query: {subcat: sc.id}}">
+                                    <router-link :to="{path: '/produtos', query: {subcatfilter: sc.id}}">
                                         <div class="catContainer flexCenterCol">
                                             <img :src="sc.foto" class="catImg" height="50px">
                                             <span class="catName secondaryFont">{{sc.nome}}</span>

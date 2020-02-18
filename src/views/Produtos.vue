@@ -8,6 +8,7 @@
                                    class="filter filterSelect"
                                    v-model="filteredCat"
                                    :options="catList"></b-form-select>
+                    <b-form-checkbox v-model="filteredOff" value="true" unchecked-value="false"></b-form-checkbox>
                 </div>
 
                 <div class="col-2 m-auto">
@@ -72,6 +73,7 @@
                 prodList: null,
                 catList: null,
                 subcatList: null,
+                filteredOff: false,
                 filteredProds: null,
                 filteredCat: null,
                 filteredSubcat: null,
@@ -101,7 +103,11 @@
                 },
                 getFiltersFromQuery() {
                     let returnData = [];
-
+                    this.filteredCat = this.$route.query.catfilter;
+                    this.filteredSubcat = this.$route.query.subcatfilter;
+                    this.filteredMaxPrice = this.$route.query.maxpricefilter;
+                    this.filteredName = this.$route.query.namefilter;
+                    this.filteredOff = this.$route.query.offfilter;
                 },
                 calculateMinMaxPrice() {
 

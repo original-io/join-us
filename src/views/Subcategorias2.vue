@@ -25,7 +25,7 @@
                                 <div class="col-sm-4 catContainer catListContainer">
                                     <ul class="catList list-unstyled">
                                         <li v-for="sc in subcategories" class="catListItem">
-                                            <router-link :to="{path: '/produtos', query: {subcat: sc.id}}">
+                                            <router-link :to="{path: '/produtos', query: {subcatfilter: sc.id}}">
                                                 <div class="catContainer text-left">
                                                     <span class="catName secondaryFont">{{sc.nome}}</span>
                                                 </div>
