@@ -25,8 +25,10 @@ class API {
         );
         api.use(bodyParser.json());
         api.use(function(req, res, next) {
-            res.header("Access-Control-Allow-Origin", "http://localhost:8080");
-            res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+            if(whitelist.indexOf(req.headers.origin) > -1){
+                res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+            }
             next();
         });
         api.use(require(process.cwd() + '/api.js'));

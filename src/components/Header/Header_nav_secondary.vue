@@ -68,7 +68,7 @@
     }
 
     .searchContainer {
-        width:40%;
+        width: 50%;
     }
 
     .textInputContainerWIcon {
