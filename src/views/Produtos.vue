@@ -1,102 +1,104 @@
 <template>
     <div>
         <div class="page-block m-auto">
+            <Breadcrumbs v-if="items[1]" v-bind:items="items"></Breadcrumbs>
             <transition name="fade">
                 <b-spinner variant="primary" label="Spinning" class="loader" v-if="loading"></b-spinner>
             </transition>
-            <Breadcrumbs v-if="items[1]" v-bind:items="items"></Breadcrumbs>
-            <div class="filtersContainer m-auto row">
-                <div class="col-2 m-auto">
-                    <label>Categoria:</label>
-                    <b-form-select id="catFilter"
-                                   @change="updateProducts"
-                                   class="filter filterSelect"
-                                   v-model="filteredCat">
-                        <b-form-select-option value="">Todas</b-form-select-option>
-                        <b-form-select-option v-for="cat of catList" :value="cat.id">{{cat.nome}}</b-form-select-option>
-                    </b-form-select>
+            <SectionCollapse :collapsed="loading" class="w-100">
+                <div class="filtersContainer m-auto row">
+                    <div class="col-2 m-auto">
+                        <label>Categoria:</label>
+                        <b-form-select id="catFilter"
+                                       @change="updateProducts"
+                                       class="filter filterSelect"
+                                       v-model="filteredCat">
+                            <b-form-select-option value="">Todas</b-form-select-option>
+                            <b-form-select-option v-for="cat of catList" :value="cat.id">{{cat.nome}}</b-form-select-option>
+                        </b-form-select>
+                    </div>
+
+                    <div class="col-2 m-auto">
+                        <label>Sub-categoria:</label>
+                        <b-form-select id="subcatFilter"
+                                       class="filter filterSelect"
+                                       @change="updateProducts"
+                                       v-model="filteredSubcat">
+                            <b-form-select-option value="">Todas</b-form-select-option>
+                            <b-form-select-option v-for="subcat of subcatList" :value="subcat.id" default>{{subcat.nome}}</b-form-select-option>
+                        </b-form-select>
+                    </div>
+
+                    <div class="col-2 m-auto">
+                        <label>Preço Máximo:</label>
+                        <b-form-input id="maxPriceFilter"
+                                      class="filter filterInput"
+                                      type="number"
+                                      @change="updateProducts"
+                                      :min="minPrice"
+                                      :max="maxPrice"
+                                      v-model="filteredMaxPrice"></b-form-input>
+                    </div>
+
+                    <div class="col-2 m-auto">
+                        <label>Nome:</label>
+                        <b-form-input id="nameFilter"
+                                      type="text"
+                                      class="filter filterSelect"
+                                      @change="updateProducts"
+                                      v-model="filteredName"></b-form-input>
+                    </div>
+
+                    <div class="col-2 m-auto">
+                        <label>Ordenar por:</label>
+                        <b-form-select id="nameFilter"
+                                       class="filter filterSelect"
+                                       @change="updateProducts"
+                                       v-model="orderBy"></b-form-select>
+                    </div>
                 </div>
 
-                <div class="col-2 m-auto">
-                    <label>Sub-categoria:</label>
-                    <b-form-select id="subcatFilter"
-                                   class="filter filterSelect"
-                                   @change="updateProducts"
-                                   v-model="filteredSubcat">
-                        <b-form-select-option value="">Todas</b-form-select-option>
-                        <b-form-select-option v-for="subcat of subcatList" :value="subcat.id" default>{{subcat.nome}}</b-form-select-option>
-                    </b-form-select>
+                <div class="row">
+                    <div class="flexCenterRow offFilterContainer">
+                        <label for="offFilter">Em promoção</label>
+                        <b-form-checkbox id="offFilter" class="m-auto offFilterInput" v-model="filteredOff" @change="updateProducts" value="true" unchecked-value=""></b-form-checkbox>
+                    </div>
                 </div>
 
-                <div class="col-2 m-auto">
-                    <label>Preço Máximo:</label>
-                    <b-form-input id="maxPriceFilter"
-                                  class="filter filterInput"
-                                  type="number"
-                                  @change="updateProducts"
-                                  :min="minPrice"
-                                  :max="maxPrice"
-                                  v-model="filteredMaxPrice"></b-form-input>
-                </div>
-
-                <div class="col-2 m-auto">
-                    <label>Nome:</label>
-                    <b-form-input id="nameFilter"
-                                  type="text"
-                                  class="filter filterSelect"
-                                  @change="updateProducts"
-                                  v-model="filteredName"></b-form-input>
-                </div>
-
-                <div class="col-2 m-auto">
-                    <label>Ordenar por:</label>
-                    <b-form-select id="nameFilter"
-                                   class="filter filterSelect"
-                                   @change="updateProducts"
-                                   v-model="orderBy"></b-form-select>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="flexCenterRow offFilterContainer">
-                    <label for="offFilter">Em promoção</label>
-                    <b-form-checkbox id="offFilter" class="m-auto offFilterInput" v-model="filteredOff" @change="updateProducts" value="true" unchecked-value=""></b-form-checkbox>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12 flexCenterRow productsContainer m-auto">
-                    <div v-for="prod of filteredProds" class="productContainer">
-                            <div class="flexCenterCol">
-                                <router-link :to="`/produtos/${prod.id}`">
-                                <img :src="require(`@/assets/svg/${prod.foto}`)" class="prodImg">
-                                </router-link>
-                                <div>
-                                    <div v-if="prod.valor > prod.valorPromocao">
-                                        <router-link :to="`/produtos/${prod.id}`">
-                                            <div class="prodName">{{prod.nome}}</div>
-                                        </router-link>
-                                        <div class="flexCenterRow">
-                                                <div class="product-original-price">{{'R$' + prod.valor}}</div>
-                                                <div class="product-price-separator"> | </div>
-                                                <div class="product-price">{{'R$' + prod.valorPromocao}}</div>
-                                            <button class="btn-actionable" @click="addToCart($event, prod)">+</button>
+                <div class="row">
+                    <div class="col-12 flexCenterRow productsContainer m-auto">
+                        <div v-for="prod of filteredProds" class="productContainer">
+                                <div class="flexCenterCol">
+                                    <router-link :to="`/produtos/${prod.id}`">
+                                    <img :src="require(`@/assets/svg/${prod.foto}`)" class="prodImg">
+                                    </router-link>
+                                    <div>
+                                        <div v-if="prod.valor > prod.valorPromocao">
+                                            <router-link :to="`/produtos/${prod.id}`">
+                                                <div class="prodName">{{prod.nome}}</div>
+                                            </router-link>
+                                            <div class="flexCenterRow">
+                                                    <div class="product-original-price">{{'R$' + prod.valor}}</div>
+                                                    <div class="product-price-separator"> | </div>
+                                                    <div class="product-price">{{'R$' + prod.valorPromocao}}</div>
+                                                <button class="btn-actionable" @click="addToCart($event, prod)">+</button>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div v-if="prod.valor <= prod.valorPromocao">
-                                        <router-link :to="`/produtos/${prod.id}`">
-                                        <div class="prodName">{{prod.nome}}</div>
-                                        </router-link>
-                                        <div class="flexCenterRow">
-                                            <div class="product-price">{{'R$' + prod.valor}}</div>
-                                            <button class="btn-actionable" @click="addToCart($event, prod)">+</button>
+                                        <div v-if="prod.valor <= prod.valorPromocao">
+                                            <router-link :to="`/produtos/${prod.id}`">
+                                            <div class="prodName">{{prod.nome}}</div>
+                                            </router-link>
+                                            <div class="flexCenterRow">
+                                                <div class="product-price">{{'R$' + prod.valor}}</div>
+                                                <button class="btn-actionable" @click="addToCart($event, prod)">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </SectionCollapse>
         </div>
     </div>
 </template>
@@ -242,6 +244,7 @@
                 await this.loadSubcategories();
                 this.filterProdList();
                 this.calculateMinMaxPrice();
+                await Aux.sleep(1000);
                 this.loading = false;
             },
             async addToCart(event, prod) {
