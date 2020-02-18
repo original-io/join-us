@@ -68,9 +68,9 @@
                                 </div>
                             </div>
                             <div class="col-sm-12 other-product-card-control flexCenterRow">
-                                <img v-bind:src="require('@/assets/svg/left.svg')" v-on:click="prevPage">
+                                <img v-bind:src="require('@/assets/svg/left.svg')" v-on:click="prevPage" class="interactible">
                                 {{productsPageNumber}} de 3
-                                <img v-bind:src="require('@/assets/svg/right.svg')" v-on:click="nextPage">
+                                <img v-bind:src="require('@/assets/svg/right.svg')" v-on:click="nextPage" class="interactible">
                             </div>
                         </div>
                     </div>
@@ -130,7 +130,7 @@
         },
         methods: {
             async updateOtherProducts() {
-                let { data } = await axios.get('http://localhost:8081/produtos');
+                let { data } = await axios.get(process.env.VUE_APP_API_HOST + ":" + process.env.VUE_APP_API_PORT + "/" + 'produtos');
                 this.products = data.slice(0,12);
                 this.productsPageNumber = 1;
                 this.productsPage = this.products.slice(0,4);
