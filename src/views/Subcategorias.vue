@@ -114,12 +114,14 @@
 
     .catContainer {
         margin: 10px 80px 30px 20px;
+        transition: all 0.6s ease;
         &:hover {
             .catName {
                 transform: scale(1.2);
             }
             .catImg {
-                filter: invert(61%) sepia(72%) saturate(272%) hue-rotate(328deg) brightness(100%) contrast(130%);
+                box-shadow: 0 0 8px 3px $primary-color;
+                transform: scale(1.03);
             }
         }
     }
@@ -128,6 +130,7 @@
         height: auto;
         width: 150px;
         margin-bottom: 5px;
+        clip-path: none;
         transition: all 0.6s ease;
     }
 

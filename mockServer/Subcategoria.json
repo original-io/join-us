@@ -3,144 +3,144 @@
         "id": "0",
         "nome": "Rasteiras",
         "categoria": "Sapatos",
-        "foto": "rasteiras.svg"
+        "foto": "prod09.png"
     },
     {
         "id": "1",
         "nome": "Sapatilhas",
         "categoria": "Sapatos",
-        "foto": "sapatilhas.svg"
+        "foto": "prod23.png"
     },
     {
         "id": "2",
         "nome": "Alpargatas",
         "categoria": "Sapatos",
-        "foto": "alpargatas.svg"
+        "foto": "prod07.png"
     },
     {
         "id": "3",
         "nome": "Mocassins",
         "categoria": "Sapatos",
-        "foto": "shoe.svg"
+        "foto": "prod12.png"
     },
     {
         "id": "4",
         "nome": "Tênis",
         "categoria": "Sapatos",
-        "foto": "tenis.svg"
+        "foto": "prod08.png"
     },
     {
         "id": "5",
         "nome": "Botas",
         "categoria": "Sapatos",
-        "foto": "shoe.svg"
+        "foto": "prod08.png"
     },
     {
         "id": "6",
         "nome": "Salto Anabela",
         "categoria": "Sapatos",
-        "foto": "shoe.svg"
+        "foto": "prod11.png"
     },
     {
         "id": "7",
         "nome": "Salto Plataforma",
         "categoria": "Sapatos",
-        "foto": "shoe.svg"
+        "foto": "prod24.png"
     },
     {
         "id": "8",
         "nome": "Salto Alto",
         "categoria": "Sapatos",
-        "foto": "shoe.svg"
+        "foto": "prod11.png"
     },
     {
         "id": "9",
         "nome": "Salto Médio",
         "categoria": "Sapatos",
-        "foto": "shoe.svg"
+        "foto": "prod24.png"
     },
     {
         "id": "10",
         "nome": "Bolsa Pequena",
         "categoria": "Bolsas",
-        "foto": "purse.svg"
+        "foto": "prod05.png"
     },
     {
         "id": "11",
         "nome": "Bolsa Grande",
         "categoria": "Bolsas",
-        "foto": "purse.svg"
+        "foto": "prod04.png"
     },
     {
         "id": "12",
         "nome": "Bolsa Tecido",
         "categoria": "Bolsas",
-        "foto": "purse.svg"
+        "foto": "prod06.png"
     },
     {
         "id": "13",
         "nome": "Bolsa Maleta",
         "categoria": "Bolsas",
-        "foto": "purse.svg"
+        "foto": "prod13.png"
     },
     {
         "id": "14",
         "nome": "Bolsa Casaco",
         "categoria": "Bolsas",
-        "foto": "purse.svg"
+        "foto": "prod04.png"
     },
     {
         "id": "15",
         "nome": "Mochila",
         "categoria": "Bolsas",
-        "foto": "purse.svg"
+        "foto": "prod14.png"
     },
     {
         "id": "16",
         "nome": "Mala",
         "categoria": "Bolsas",
-        "foto": "purse.svg"
+        "foto": "prod22.png"
     },
     {
         "id": "17",
         "nome": "Bijoux",
         "categoria": "Acessórios",
-        "foto": "wristwatch.svg"
+        "foto": "prod15.png"
     },
     {
         "id": "18",
         "nome": "Carteira",
         "categoria": "Acessórios",
-        "foto": "wristwatch.svg"
+        "foto": "prod06.png"
     },
     {
         "id": "19",
         "nome": "Cinto",
         "categoria": "Acessórios",
-        "foto": "wristwatch.svg"
+        "foto": "prod16.png"
     },
     {
         "id": "20",
         "nome": "Necessaire",
         "categoria": "Acessórios",
-        "foto": "wristwatch.svg"
+        "foto": "prod17.png"
     },
     {
         "id": "21",
         "nome": "Pros Dias de Sol",
         "categoria": "Acessórios",
-        "foto": "wristwatch.svg"
+        "foto": "prod19.png"
     },
     {
         "id": "22",
         "nome": "Leve por Aí",
         "categoria": "Acessórios",
-        "foto": "wristwatch.svg"
+        "foto": "prod20.png"
     },
     {
         "id": "23",
         "nome": "Tendência",
         "categoria": "Acessórios",
-        "foto": "wristwatch.svg"
+        "foto": "prod18.png"
     }
 ]
