@@ -1,3 +1,5 @@
+/** Importação das fontes **/
+
 @font-face {
     font-family: "Open Sans";
     src: url("../fonts/OpenSans-Regular.ttf");
@@ -8,6 +10,8 @@
     src: url("../fonts/Gotham\ Book.otf");
 }
 
+/** Resetando o css **/
+
 *,
 body {
     margin: 0;
@@ -15,6 +19,12 @@ body {
     box-sizing: border-box;
     font-family: "Open Sans";
 }
+
+ul {
+    list-style: none;
+}
+
+/** Header **/
 
 .header-wrapper {
     background: rgba(255, 255, 255, 0.9);
@@ -40,7 +50,6 @@ body {
 .login-menu ul {
     white-space: nowrap;
     display: flex;
-    list-style: none;
     margin-left: 40px;
 }
 
@@ -62,7 +71,6 @@ body {
 
 .section-menu ul {
     display: flex;
-    list-style: none;
 }
 
 .section-menu ul li {
@@ -110,4 +118,93 @@ body {
     line-height: 17px;
     font-weight: bold;
     color: #686868;
+}
+
+/** Footer **/
+
+.footer-wrapper {
+    height: 393px;
+}
+
+.footer-section {
+    height: 229px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid #aeb6c1;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+}
+
+.footer-social {
+    display: flex;
+    margin-top: 20px;
+}
+
+.footer-social li {
+    margin-right: 30px;
+}
+
+.footer-social li:last-child {
+    margin-right: 0;
+}
+
+.footer-certificates {
+    display: flex;
+    margin-top: 50px;
+}
+
+.footer-certificates li:first-child {
+    margin-right: 32px;
+}
+
+.footer-menu {
+    display: flex;
+    margin-top: 60px;
+}
+
+.footer-menu nav {
+    margin-right: 62px;
+}
+
+.footer-menu nav h5 {
+    font-size: 12px;
+    line-height: 17px;
+    color: #aeb6c1;
+    text-transform: uppercase;
+}
+
+.footer-menu a {
+    font-size: 14px;
+    line-height: 42px;
+    text-decoration: none;
+    color: #202020;
+}
+
+.footer-news form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    background: #de8f75;
+}
+
+.footer-info p {
+    white-space: nowrap;
+    margin-left: 150px;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.footer-logo {
+    margin-right: 150px;
 }
