@@ -124,9 +124,13 @@ ul {
 
 .footer-wrapper {
     height: 393px;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
 }
 
 .footer-section {
+    margin-top: 104px;
     height: 229px;
     display: flex;
     justify-content: space-between;
@@ -182,11 +186,52 @@ ul {
     line-height: 42px;
     text-decoration: none;
     color: #202020;
+    white-space: nowrap;
+}
+
+.footer-news {
+    position: relative;
+    top: -100px;
+    right: 70px;
+    min-width: 300px;
+    min-height: 300px;
+    border: 2px solid #aeb6c1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #ffffff;
 }
 
 .footer-news form {
     display: flex;
     flex-direction: column;
+}
+
+.footer-news form h4 {
+    font-size: 16px;
+    line-height: 23px;
+}
+
+.footer-news form input {
+    font-size: 14px;
+    line-height: 23px;
+    border: none;
+    border-bottom: 2px solid #aeb6c1;
+}
+
+.news-btn {
+    align-self: center;
+    width: 110px;
+    height: 50px;
+    margin-top: 27px;
+    background: #de8f75;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 23px;
+    color: #ffffff;
 }
 
 .footer-info {
