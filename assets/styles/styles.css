@@ -201,8 +201,8 @@ ul {
 }
 
 .product-description {
-    height: 533px;
-    width: 444px;
+    height: 537px;
+    width: 448px;
     padding: 21px 18px;
     border: 2px solid #d2e1df;
     border-radius: 3px;
@@ -267,15 +267,24 @@ ul {
 .product-options ul {
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    margin: 10px 0 20px 0;
+}
+
+.product-options ul li {
+    width: 34px;
+    height: 34px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .product-options ul li button {
-    width: 24.33px;
+    width: 24px;
     height: 24px;
     border-radius: 50%;
-    margin-right: 14.67px;
     border: 1px solid #fff;
+    cursor: pointer;
 }
 
 .product-options ul li button.active {
@@ -304,6 +313,50 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.size-options a {
+    font-size: 14px;
+    line-height: 23px;
+    color: #de8f75;
+    margin-right: 20px;
+}
+
+.size-btn {
+    margin-right: 0;
+    border-radius: 50%;
+    background: #ebebeb;
+    color: #2a5a75;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.size-btn.active {
+    font-weight: bold;
+    background: #e0da9c;
+}
+
+.cart-add-btn {
+    width: 100%;
+    height: 61px;
+    margin-top: 40px;
+    font-size: 18px;
+    line-height: 29px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    background: #32917b;
+    cursor: pointer;
+}
+
+.more-description {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 28.6px;
+    color: #202020;
 }
 
 /** Footer **/
