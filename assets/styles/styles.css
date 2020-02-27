@@ -140,7 +140,7 @@ ul {
 .footer-links {
     display: flex;
     flex-direction: column;
-    margin-left: 150px;
+    margin-left: 195px;
 }
 
 .footer-social {
@@ -192,7 +192,7 @@ ul {
 .footer-news {
     position: relative;
     top: -100px;
-    right: 70px;
+    right: 192px;
     min-width: 300px;
     min-height: 300px;
     border: 2px solid #aeb6c1;
@@ -244,12 +244,33 @@ ul {
 
 .footer-info p {
     white-space: nowrap;
-    margin-left: 150px;
+    margin-left: 194px;
     color: #ffffff;
     font-size: 12px;
     line-height: 20px;
 }
 
 .footer-logo {
-    margin-right: 150px;
+    margin-right: 195px;
+}
+
+/** Configurações de responsividade **/
+
+@media (max-width: 1440px) {
+    /** Footer **/
+    .footer-news {
+        right: 30px;
+    }
+
+    .footer-links {
+        margin-left: 71px;
+    }
+
+    .footer-info p {
+        margin-left: 130px;
+    }
+
+    .footer-logo {
+        margin-right: 92px;
+    }
 }
