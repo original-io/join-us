@@ -108,6 +108,12 @@ ul {
     display: flex;
     border-bottom: 1px solid rgba(104, 104, 104, 0.4);
     padding-bottom: 3px;
+    transition: 0.2s;
+}
+
+.search-form:focus-within {
+    width: 200px;
+    transition: 0.5s;
 }
 
 .search-form input {
@@ -115,6 +121,12 @@ ul {
     font-size: 12px;
     border: none;
     padding-left: 10px;
+    transition: 0.2s;
+}
+
+.search-form input:focus {
+    width: 180px;
+    transition: 0.5s;
 }
 
 .shopping-cart {
@@ -632,25 +644,51 @@ ul {
 .footer-news form {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-news form h4 {
     font-size: 16px;
     line-height: 23px;
+    margin-bottom: 10px;
 }
 
-.footer-news form input {
-    font-size: 14px;
-    line-height: 23px;
+.footer-news form fieldset {
+    border: none;
+    margin: 10px 0;
+}
+
+.news-input {
     border: none;
     border-bottom: 2px solid #aeb6c1;
+    width: 200px;
+    display: block;
+}
+
+.news-label {
+    position: relative;
+    top: -25px;
+    color: rgba(32, 32, 32, 0.5);
+    font-size: 14px;
+    line-height: 23px;
+    transition: 0.2s ease-in-out;
+    pointer-events: none;
+}
+
+.news-input:focus ~ label,
+.news-input:valid ~ label {
+    top: -40px;
+    font-size: 12px;
+    line-height: 20px;
+    transition: 0.2s ease-in-out;
 }
 
 .news-btn {
     align-self: center;
     width: 110px;
     height: 50px;
-    margin-top: 27px;
+    margin-top: 10px;
     background: #de8f75;
     border: none;
     border-radius: 3px;

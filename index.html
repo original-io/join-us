@@ -14,6 +14,7 @@
         />
     </head>
     <body>
+        <!-- Modal para quando adicionar algo no carrinho -->
         <section id="cart-modal">
             <div id="added-to-cart">
                 <button id="close-modal-btn">
@@ -325,10 +326,14 @@
                 <div class="footer-news">
                     <form>
                         <h4>ASSINE NOSSA NEWS</h4>
-                        <label>Nome</label>
-                        <input type="text" />
-                        <label>E-mail</label>
-                        <input type="email" />
+                        <fieldset>
+                            <input class="news-input" type="text" required />
+                            <label class="news-label">Nome</label>
+                        </fieldset>
+                        <fieldset>
+                            <input class="news-input" type="email" required />
+                            <label class="news-label">E-mail</label>
+                        </fieldset>
                         <button class="news-btn">ENVIAR</button>
                     </form>
                 </div>
