@@ -1,15 +1,10 @@
 //Color
 
-.c-white{color: #fff;}
+.c-black{color: #686868;}
 
-.c-light{color: #8190A5;}
+.c-light{color: #AEB6C1;}
 
-.c-light2{color: #8492A6;}
-
-.c-black{color: #47525E;}
-
-.c-gray{color: #bfbdc5;}
-
+.c-orange{color: #DE8F75;}
 
 //Weight
 
@@ -71,6 +66,11 @@
 
 .s-36{font-size: 36px;}
 
-//Decoration
+//Family
+.font-gotham{
+    font-family: "GothamRegular";
+}
 
-.td-underline{text-decoration: underline;}
+.font-gotham-bold{
+    font-family: "GothamBold";
+}

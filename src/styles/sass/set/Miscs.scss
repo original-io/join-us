@@ -8,9 +8,11 @@
 
 .overflow-y-hide{overflow-y: hidden}
 
-//Mics
+//Miscs
 
 .clickable{cursor: pointer;}
+
+.no-border{border: none;}
 
 .no-outline{outline: none;}
 
@@ -31,4 +33,8 @@
 .z-index-100{z-index: 100;}
 
 .z-index-150{z-index: 150;}
+
+.rotate-180{
+    transform: rotate(180deg)
+}
 

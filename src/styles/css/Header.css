@@ -1,0 +1,30 @@
+.top-header {
+  height: 86px; }
+
+.bottom-head-nav {
+  height: 50px;
+  border-color: #ccc;
+  border-width: 1px 0px;
+  border-style: solid; }
+  .bottom-head-nav .login-listing, .bottom-head-nav .search-container {
+    width: 320px; }
+  .bottom-head-nav .nav-listing {
+    width: 754px; }
+    .bottom-head-nav .nav-listing li {
+      margin: 0 26px; }
+  .bottom-head-nav .head-search {
+    transition: 0.3s ease;
+    width: 83px;
+    border-color: #ccc;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid; }
+    .bottom-head-nav .head-search input {
+      transition: 0.3s ease;
+      width: 41px;
+      height: 36px; }
+    .bottom-head-nav .head-search.active {
+      width: 230px; }
+      .bottom-head-nav .head-search.active input {
+        transition: 0.3s ease;
+        width: 180px;
+        height: 36px; }

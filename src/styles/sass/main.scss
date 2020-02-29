@@ -1,4 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+@font-face {
+    font-family: GothamBold;
+    src: url("./styles/GothamBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: GothamRegular;
+    src: url("./styles/GothamBookRegular.otf") format("opentype");
+}
+
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Open Sans';
+    overflow-x: hidden;
+}
+
+a{
+    color: #686868;
+    text-decoration: none;
+}
+
+ul, li{
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+input{
+    outline: none;
 }

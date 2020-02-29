@@ -1,0 +1,13 @@
+.product-nav-item{
+    width: 74px;
+    margin-bottom: 9px;
+
+    &:nth-last-child(2){
+        margin-bottom: 0px;
+    }
+}
+
+.ProductDetails{
+    width: 400px;
+    border: 2px solid #d2e1df;
+}

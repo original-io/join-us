@@ -1,8 +1,13 @@
 import React from 'react';
 
+//Components
+import Header from './components/Header'
+import Product from './components/Product'
+
 const App = () => (
     <div className='App'>
-      App
+		<Header/>
+		<Product/>
     </div>
 )
 
