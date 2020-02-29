@@ -1,55 +1,68 @@
-# Original.io
-###### Quer trabalhar com a gente? Siga as instruções!
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Quem somos
-Transformamos sonhos e desejos em experiências digitais apaixonantes. Com soluções inteligentes e foco nas necessidades dos nossos clientes e na conversão, atuamos em  diversas divisões de negócio, como B2C, B2B, marketplace, entre outras.
+## Available Scripts
 
-## Proposta
-O seu desafio é codificar [esse layout](https://www.figma.com/file/pArDJGnD4AVjIDv2ovB3xQ/Original.io-frontend-test).
+In the project directory, you can run:
 
-**[IMPORTANTE] Leia os [critérios de avaliação](#critérios-de-avaliação).**
+### `yarn start`
 
-## Obrigatório
-* HTML e CSS 
-* JS(Apenas Junior e Pleno)
-* Git
-* Fidelização ao layout
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Bonus points
-* [React](https://reactjs.org/)
-* Simulação de API REST, usando código assíncrono (Fake server)
-* Código modular 
-* Responsividade
-* Boa aplicação de ferramentas, sejam elas transpiladores, pré-processadores, task-runners, bundlers, etc.
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-## Critérios de avaliação
-Se você está fazendo este teste para uma vaga de **Júnior** ou **Estagio**, levaremos em consideração apenas o que for **[obrigatório](#obrigatório)**, tendo a escrita e organização do código/projeto como critérios de desempate, se necessário.
+### `yarn test`
 
-Caso seu teste seja para uma vaga de desenvolvedor **Pleno**, os critérios que pretendemos avaliar em seu código são, além dos itens obrigatórios e os **[bonus](#bonus-points)**, a capacidade de [pensar modularmente](https://webstandardssherpa.com/reviews/think-modularly); também acreditamos que uma boa organização utilizando o Git e estruturar arquivos e pastas de forma eficiente e organizada são reflexos da sua eficiência ao trabalhar em equipe - algo **essencial** por aqui -, portanto também será levado em consideração.
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Entregando o teste
+### `yarn build`
 
-Você pode fazer tudo em algum repositório privado e, na entrega, liberar acesso de leitura para os e-mails
-ou arquivo **.zip** 
-_**marcell.cruz@original.io**_ _**zeonardo.lima@original.io**_ _**jesus@original.io**_.
-Caso for enviar por e-mail, nos passe o link do seu github.
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Bonus points de entrega
-Se não se importar que outros candidatos possam ver seu teste, você pode forkar esse repositório e fazer dele o seu `origin` para esse projeto. Dessa forma, podemos acompanhar seus commits e avaliar melhor o seu desenvolvimento quando fizer o Pull Request com o resultado - que precisa seguir as diretrizes listadas abaixo.
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-* Hospede o resultado de seu teste em qualquer serviço à sua escolha (Surge.sh, Heroku, Netlify, etc.) e mantenha-a sempre atualizada
-* Crie uma issue aqui neste repositório, com as seguintes informações:
-  * Título _"Vaga [Júnior|Pleno|Senior]"_ (de acordo com o perfil que está se candidatando)
-  * URL do teste hospedado (para que possamos visualizar o resultado final)
-  * Nome completo
-  * **Se tiver desenvolvido em repositório privado**, link para o repositório.
-  * **Se tiver feito Pull Request**, o mesmo deve linkar para sua issue.
-* Não esquecer de enviar seu currículo por e-mail para _**cv@original.io**_, seguindo estas diretrizes:
-  * Assunto _"Vaga Front-End **[Júnior|Pleno]**"_ (de acordo com o perfil que está se candidatando)
-  * Link para a issue criada, para que possamos identificar, mais facilmente, o seu teste.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
----
+### `yarn eject`
 
-#### Boa sorte!
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-**[Original.io](https://original.io)**
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `yarn build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
