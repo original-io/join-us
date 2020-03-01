@@ -82,6 +82,14 @@ shoppingcartbtn.onmouseover = () => {
     shoppingcartsection.style.display = "block";
 };
 
+shoppingcartbtn.onmouseleave = () => {
+    shoppingcartsection.style.display = "none";
+};
+
+shoppingcartsection.onmouseover = () => {
+    shoppingcartsection.style.display = "block";
+};
+
 shoppingcartsection.onmouseleave = () => {
     shoppingcartsection.style.display = "none";
 };
