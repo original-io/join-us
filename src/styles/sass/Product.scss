@@ -11,3 +11,25 @@
     width: 400px;
     border: 2px solid #d2e1df;
 }
+
+.color-item{
+    width: 22px;
+    height: 22px;
+    border: 6px solid #fff;
+    margin-right: 1px;
+
+    &.active{
+        border: 6px solid #E0DA9C;
+    }
+}
+
+.size-item{
+    width: 34px;
+    height: 34px;
+    background-color: #EBEBEB;
+
+    &.active{
+        font-family: "GothamBold";
+        background-color: #E0DA9C;
+    }
+}

@@ -6,8 +6,8 @@ import Product from './components/Product'
 
 const App = () => (
     <div className='App'>
-		<Header/>
-		<Product/>
+      <Header/>
+      <Product/>
     </div>
 )
 

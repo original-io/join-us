@@ -19,6 +19,9 @@
 .d-flex {
   display: flex; }
 
+.br-circle {
+  border-radius: 100px; }
+
 .a-vertical {
   align-items: center; }
 
