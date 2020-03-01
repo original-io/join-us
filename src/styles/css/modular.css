@@ -1,0 +1,12 @@
+.input-anim label {
+  transition: 0.3s ease;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.input-anim input {
+  height: 28px;
+  border-bottom: 2px solid #AEB6C1; }
+
+.input-anim.active label {
+  top: -17%;
+  font-size: 12px; }

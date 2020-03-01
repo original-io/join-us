@@ -15,7 +15,15 @@
 .footer-nav-item{
     margin-bottom: 20px;
     &:first-child{
-        line-height: 1px;
-        margin-top: 0;
+        margin-top: -8px;
+    }
+}
+
+.BottomFooter{
+    padding: 0 92px 0 129px;
+    background-color: #DE8F75;
+    height: 60px;
+    p{
+        line-height: 20px;
     }
 }

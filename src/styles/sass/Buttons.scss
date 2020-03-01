@@ -1,3 +1,7 @@
-.btnLarge{
+.btn{
     border-radius: 3px;
+
+    &.min{
+        padding: 17px 29px;
+    }
 }
