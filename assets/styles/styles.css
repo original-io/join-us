@@ -719,9 +719,9 @@ ul {
     position: absolute;
     right: 0;
     top: 0;
-    display: none;
     display: flex;
     /**  Alterar o display com o js **/
+    display: none;
     flex-direction: column;
     background: #fff;
     z-index: 10;
