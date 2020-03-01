@@ -29,6 +29,70 @@
             </div>
         </section>
 
+        <!-- Carrinho de compras -->
+        <section id="shopping-cart">
+            <button id="close-cart-btn">
+                <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M22.1673 7.47859L20.5223 5.83359L14.0007 12.3553L7.47898 5.83359L5.83398 7.47859L12.3557 14.0002L5.83398 20.5219L7.47898 22.1669L14.0007 15.6452L20.5223 22.1669L22.1673 20.5219L15.6457 14.0002L22.1673 7.47859Z"
+                        fill="#fff"
+                    />
+                </svg>
+            </button>
+            <h2>Sacola</h2>
+            <h3>Quantidade de items</h3>
+            <hr />
+            <div id="cart-items-wrapper">
+                <ul>
+                    <li class="cart-items">
+                        <img src="assets/img/prod02.jpg" />
+                        <div class="price-wrapper">
+                            <p>Nome do item</p>
+                            <h4>R$ 48,90</h4>
+                        </div>
+                        <div class="quantity-wrapper">
+                            <button class="minus-item-btn">-</button>
+                            <span>01</span>
+                            <button class="plus-item-btn">+</button>
+                        </div>
+                        <button class="remove-item-btn">
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 28 28"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M22.1673 7.47859L20.5223 5.83359L14.0007 12.3553L7.47898 5.83359L5.83398 7.47859L12.3557 14.0002L5.83398 20.5219L7.47898 22.1669L14.0007 15.6452L20.5223 22.1669L22.1673 20.5219L15.6457 14.0002L22.1673 7.47859Z"
+                                    fill="#ccc"
+                                />
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+                <div id="free-deliver">
+                    <p>
+                        Faltam R$ xx,xx para você
+                        <strong>Ganhar Frete Grátis</strong>
+                    </p>
+                </div>
+            </div>
+            <div id="cart-finish">
+                <div id="cart-total">
+                    <h1 id="total-price">Total: R$ total</h1>
+                    <p>até 3x de valor sem juros</p>
+                </div>
+                <button id="finish-btn">Finalizar compra</button>
+            </div>
+        </section>
+
         <header id="header-wrapper">
             <div id="logo-wrapper">
                 <h1>
@@ -67,7 +131,7 @@
                         </a>
                         <input type="text" placeholder="Buscar" />
                     </form>
-                    <div id="shopping-cart">
+                    <div id="shopping-cart-icon">
                         <a href="#">
                             <img src="./assets/svg/shopping-cart.svg" />
                         </a>
