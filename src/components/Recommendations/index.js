@@ -6,7 +6,7 @@ import Navigator from './Navigator'
 
 const Recommendations = () => {
     const [currentPage, setPage] = useState({translation: 0, page: 1})
-    const imageWidth = 290.22, imageMargin = 13, noOfItems = 40;
+    const imageWidth = 290.22, imageMargin = 13, noOfItems = 38;
     const containerSize = imageWidth * 4 + (imageMargin * 3);
 
     const product = {

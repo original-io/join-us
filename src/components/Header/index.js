@@ -10,7 +10,7 @@ const Header = () => {
     const navItems = ["Sapatos", "Bolsas", "Acessórios", "Off"];
 
     return (
-        <div className="cw-max-view">
+        <div className="Header cw-max-view">
             <div className='top-header d-flex a-center'><img src={Logo}/></div>
             <div className="bottom-head-nav d-flex a-between a-vertical pad-h-40">
                 <div className="login-listing s-12">
@@ -18,9 +18,11 @@ const Header = () => {
                     <span className="mar-h-8">|</span>
                     <a href="#">Cadastrar-se</a>
                 </div>
-                <ul className="nav-listing font-gotham d-flex a-center s-14">
-                    {navItems.map(label => <li key={label}><a href="#">{label.toUpperCase()}</a></li>)}
-                </ul>
+                <nav>
+                    <ul className="nav-listing font-gotham d-flex a-center s-14">
+                        {navItems.map(label => <li key={label}><a href="#">{label.toUpperCase()}</a></li>)}
+                    </ul>
+                </nav>
                 <div className="search-container d-flex a-flex-end a-vertical">
                     <div className={`head-search mar-r-24 c-black d-flex a-vertical ${searchActive ? "active" : "inactive"}`}>
                         <img src={Search} className="head-search-icon mar-r-16"/>

@@ -1,0 +1,16 @@
+.Footer {
+  margin-top: 190px;
+  border-top: 2px solid #AEB6C1; }
+  .Footer .NewsletterBox {
+    width: 293px;
+    height: 293px;
+    border: 2px solid #AEB6C1;
+    bottom: 40px;
+    right: 30px;
+    background-color: #fff; }
+
+.footer-nav-item {
+  margin-bottom: 20px; }
+  .footer-nav-item:first-child {
+    line-height: 1px;
+    margin-top: 0; }
