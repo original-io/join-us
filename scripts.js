@@ -6,14 +6,16 @@ const accessoriesbtn = document.getElementById("accessories-section-btn");
 const accessoriessection = document.getElementById("accessories-section");
 
 const shoppingcartsection = document.getElementById("shopping-cart-section");
+const finishsectionbtn = document.getElementById("finish-section-btn");
 const shoppingcartbtn = document.getElementById("shopping-cart-btn");
 const shoppingcart = document.getElementById("shopping-cart");
 const closecartbtn = document.getElementById("close-cart-btn");
+const finishbtn = document.getElementById("finish-btn");
 
 const addtocartbtn = document.getElementById("cart-add-btn");
 const addtocartmodal = document.getElementById("cart-modal");
 const closemodalbtn = document.getElementById("close-modal-btn");
-const finishbtn = document.getElementById("finish-btn");
+const finishmodalbtn = document.getElementById("finish-modal-btn");
 const continuebtn = document.getElementById("continue-btn");
 
 /* Exibir os menus das seções quando o mouse estiver em cima */
@@ -84,6 +86,14 @@ shoppingcartsection.onmouseleave = () => {
     shoppingcartsection.style.display = "none";
 };
 
+finishsectionbtn.onclick = () => {
+    shoppingcartsection.style.display = "none";
+};
+
+finishbtn.onclick = () => {
+    shoppingcart.style.display = "none";
+};
+
 /* Modal do carrinho de compras */
 
 addtocartbtn.onclick = () => {
@@ -94,7 +104,7 @@ closemodalbtn.onclick = () => {
     addtocartmodal.style.display = "none";
 };
 
-finishbtn.onclick = () => {
+finishmodalbtn.onclick = () => {
     addtocartmodal.style.display = "none";
     shoppingcart.style.display = "flex";
 };

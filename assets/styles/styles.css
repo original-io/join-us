@@ -802,7 +802,8 @@ ul {
     cursor: pointer;
 }
 
-#finish-btn {
+#finish-btn,
+#finish-modal-btn {
     width: 290px;
     height: 50px;
     background: #32917b;
@@ -1006,7 +1007,7 @@ ul {
     color: #202020;
 }
 
-#finish-btn {
+#finish-section-btn {
     height: 42px;
     width: 235px;
     background: #32917b;
