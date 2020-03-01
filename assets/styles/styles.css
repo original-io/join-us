@@ -41,7 +41,6 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #cccccc;
 }
 
 .navigation-menu {
@@ -49,6 +48,7 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top: 1px solid #cccccc;
     border-bottom: 1px solid #cccccc;
 }
 
@@ -83,16 +83,20 @@ ul {
     line-height: 20px;
     text-transform: uppercase;
     color: #686868;
+    position: relative;
 }
 
-.section-menu-link a {
+.section-menu-link button {
+    border: none;
     text-decoration: none;
-    color: inherit;
+    color: #686868;
     padding: 15px 25px;
+    cursor: pointer;
+    background: none;
 }
 
-.section-menu-link a:hover,
-.section-menu-link a:focus {
+.section-menu-link button:hover,
+.section-menu-link button:focus {
     background: #ebebeb;
 }
 
@@ -142,6 +146,152 @@ ul {
     color: #686868;
 }
 
+/** Navigation sections **/
+
+#shoes-section {
+    position: absolute;
+    display: flex;
+    /** Alterar com js o display **/
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 440px;
+    background: white;
+    padding: 0 50px;
+    z-index: 10;
+    transition: all 0.7s ease-in-out;
+}
+
+.shoes-list {
+    display: flex;
+}
+
+.shoes-list li a {
+    height: 154px;
+    width: 154px;
+    margin: 10px 22.5px 49px 22.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-decoration: none;
+    text-align: center;
+}
+
+.shoes-list li a:hover > svg path {
+    fill: #de8f75;
+}
+
+.shoes-list li a h3 {
+    font-size: 14px;
+    line-height: 23px;
+    color: #de8f75;
+}
+
+#bags-section {
+    position: absolute;
+    display: flex;
+    /** Alterar com js o display **/
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 440px;
+    padding: 28px 0 36px 40px;
+    background: #fff;
+    z-index: 10;
+    transition: all 0.7s ease-in-out;
+}
+
+#bags-banner {
+    width: 445px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#bags-banner button {
+    width: 160px;
+    height: 42px;
+    margin-top: 38px;
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #de8f75;
+    background: #fff;
+    border: 2px solid #de8f75;
+    border-radius: 3px;
+}
+
+#bags-list {
+    display: flex;
+    margin-right: 227px;
+}
+
+#bags-list ul li {
+    font-size: 14px;
+    line-height: 42px;
+    padding-left: 23px;
+    border-left: 2px solid #c4c4c4;
+    color: #de8f75;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+#accessories-section {
+    position: absolute;
+    display: flex;
+    /** Alterar com js o display **/
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 440px;
+    padding: 28px 0 36px 40px;
+    background: #fff;
+    z-index: 10;
+    transition: all 0.7s ease-in-out;
+}
+
+#accessories-banner {
+    width: 445px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#accessories-banner button {
+    width: 160px;
+    height: 42px;
+    margin-top: 38px;
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #de8f75;
+    background: #fff;
+    border: 2px solid #de8f75;
+    border-radius: 3px;
+}
+
+#accessories-list {
+    display: flex;
+    margin-right: 227px;
+}
+
+#accessories-list ul li {
+    font-size: 14px;
+    line-height: 42px;
+    padding-left: 23px;
+    border-left: 2px solid #c4c4c4;
+    color: #de8f75;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
 /** Main **/
 
 .main-wrapper {
@@ -170,6 +320,7 @@ ul {
 
 .product-section {
     display: flex;
+    justify-content: center;
     margin-top: 16px;
     margin-left: 40px;
 }
@@ -453,6 +604,9 @@ ul {
     position: relative;
     top: -400px;
     left: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     opacity: 0.7;
     color: #de8f75;
     width: 45px;
@@ -461,6 +615,7 @@ ul {
     border-radius: 50%;
     border: 2px solid #de8f75;
     background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
 }
 
 .more-products-pagination {
@@ -735,5 +890,25 @@ ul {
 
     .footer-logo {
         margin-right: 92px;
+    }
+
+    #bags-banner {
+        width: 285px;
+    }
+
+    #bags-img-wrapper img {
+        width: 387px;
+        height: 302px;
+        text-align: center;
+    }
+
+    #accessories-banner {
+        width: 285px;
+    }
+
+    #accessories-img-wrapper img {
+        width: 387px;
+        height: 302px;
+        text-align: center;
     }
 }
