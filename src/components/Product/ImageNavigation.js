@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 //Assets
-import ProductImage from '../../assets/prodImage.png'
 import PlayBtn from '../../assets/video_play.png'
 import Arrow from '../../assets/arrow.png'
 
-const ImageNavigation = () => {
-
+const ImageNavigation = ({product: { images }}) => {
+    const [currentImage, setImage] = useState(0)
     return (
         <div className='ImageNavigation d-flex mar-r-106'>
             <div className="mar-r-64">
@@ -16,11 +15,11 @@ const ImageNavigation = () => {
                 </span>
                 <div className="d-flex fdir-column a-center">
                     <img className="mar-v-20" src={Arrow}/>
-                    {[...Array(4)].map((item, index) => <img key={index} className="product-nav-item" src={ProductImage}/>)}
+                    {images.map((image, index) => <img onClick={() => setImage(index)} key={index} className="product-nav-item clickable" src={image}/>)}
                     <img className="mar-v-20 rotate-180" src={Arrow}/>
                 </div>
             </div>
-            <img src={ProductImage}/>
+            <img src={images[currentImage]}/>
         </div>
     )
 }

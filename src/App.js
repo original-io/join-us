@@ -6,13 +6,18 @@ import Product from './components/Product'
 import Recommendations from './components/Recommendations'
 import Footer from './components/Footer'
 
+//Context
+import ProductContextProvider from './contexts/ProductContext'
+
 const App = () => (
-    <div className='App'>
-      <Header/>
-      <Product/>
-      <Recommendations/>
-      <Footer/>
-    </div>
+    <ProductContextProvider>
+      <div className='App'>
+        <Header/>
+        <Product/>
+        <Recommendations/>
+        <Footer/>
+      </div>
+    </ProductContextProvider>
 )
 
 export default App;

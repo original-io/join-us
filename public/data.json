@@ -1,3 +1,104 @@
 {
-    "test": "hello"
+    "products": [
+        {
+            "id": 0,
+            "name": "Rasteira Tira Dedo",
+            "id1": "RT 0568",
+            "id2": "03.07.0653",
+            "price": "69.00",
+            "images": ["https://i.imgur.com/6OASRM7.png", "https://i.picsum.photos/id/1/430/556.jpg", "https://i.picsum.photos/id/2/430/556.jpg", "https://i.picsum.photos/id/3/430/556.jpg"],
+            "description": "Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal.",
+            "availableSizes": [33, 34, 35, 36, 37, 38, 39, 40, 41, 42],
+            "availableColors": [
+                {
+                    "name": "Fucsia",
+                    "hex": "#A9095E"
+                },
+                {
+                    "name": "Azul",
+                    "hex": "#6B85C1"
+                },
+                {
+                    "name": "Marrom",
+                    "hex": "#A14830"
+                },
+                {
+                    "name": "Preto",
+                    "hex": "#000000"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "name": "Rasteira Tira Dedo | Exemplo 2",
+            "id1": "RT 0568",
+            "id2": "03.07.0653",
+            "price": "129.00",
+            "images": ["https://i.picsum.photos/id/4/430/556.jpg", "https://i.imgur.com/6OASRM7.png", "https://i.picsum.photos/id/5/430/556.jpg", "https://i.picsum.photos/id/6/430/556.jpg"],
+            "description": "Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal.",
+            "availableSizes": [33, 34, 39, 40, 41, 42],
+            "availableColors": [
+                {
+                    "name": "Fucsia",
+                    "hex": "#A9095E"
+                },
+                {
+                    "name": "Vermelho",
+                    "hex": "#F00"
+                },
+                {
+                    "name": "Preto",
+                    "hex": "#000000"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Rasteira Tira Dedo | Exemplo 3",
+            "id1": "RT 0568",
+            "id2": "03.07.0653",
+            "price": "33.00",
+            "images": ["https://i.picsum.photos/id/7/430/556.jpg", "https://i.picsum.photos/id/8/430/556.jpg", "https://i.imgur.com/6OASRM7.png", "https://i.picsum.photos/id/9/430/556.jpg"],
+            "description": "Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal.",
+            "availableSizes": [40, 41, 42],
+            "availableColors": [
+                {
+                    "name": "Fucsia",
+                    "hex": "#A9095E"
+                },
+                {
+                    "name": "Azul",
+                    "hex": "#6B85C1"
+                },
+                {
+                    "name": "Marrom",
+                    "hex": "#A14830"
+                },
+                {
+                    "name": "Preto",
+                    "hex": "#000000"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Rasteira Tira Dedo | Exemplo 4",
+            "id1": "RT 0568",
+            "id2": "03.07.0653",
+            "price": "94.00",
+            "images": ["https://i.picsum.photos/id/12/430/556.jpg", "https://i.picsum.photos/id/14/430/556.jpg", "https://i.picsum.photos/id/15/430/556.jpg", "https://i.imgur.com/6OASRM7.png"],
+            "description": "Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal.",
+            "availableSizes": [33, 34, 35, 36, 37],
+            "availableColors": [
+                {
+                    "name": "Fucsia",
+                    "hex": "#A9095E"
+                },
+                {
+                    "name": "Azul",
+                    "hex": "#6B85C1"
+                }
+            ]
+        }
+    ]
 }

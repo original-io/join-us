@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 //Components
 import { ButtonLarge } from '../Buttons' 
 
-const ProductDetails = () => {
+const ProductDetails = ({product}) => {
     const calculator = (price, discount, times) => {
         const discountedPrice = price - (price * discount / 100)
         const currecyParser = (value) => value.toLocaleString("pt-BR",{style: "currency", currency: "BRL"})
@@ -14,33 +14,6 @@ const ProductDetails = () => {
             times, 
             timesPrice: currecyParser(discountedPrice/6)
         }
-    }
-    
-    const product = {
-        name: "Rasteira Tira Dedo",
-        id1: "RT 0568",
-        id2: "03.07.0653",
-        price: "69.00",
-        description: "Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal.",
-        availableSizes: [...Array(10)].map((i, index) => 33 + index),
-        availableColors: [
-            {
-                name: "Fucsia",
-                hex: "#A9095E"
-            },
-            {
-                name: "Azul",
-                hex: "#6B85C1"
-            },
-            {
-                name: "Marrom",
-                hex: "#A14830"
-            },
-            {
-                name: "Preto",
-                hex: "#000000"
-            },
-        ]
     }
 
     const { discountedPrice, price, times, timesPrice } = calculator(parseFloat(product.price), 20, 6)
@@ -64,9 +37,9 @@ const ProductDetails = () => {
             </div>
 
             <div className="cw-fit mar-t-6 mar-b-53">
-                <div className="d-flex a-between">
-                    <p className="s-14 c-strong mar-b-8">Tamanho: <span className="mar-l-6 c-blue">({currentSize})</span></p>
-                    <a href="#" className="c-orange td-underline s-14">Guia de medidas</a>
+                <div className="d-flex a-between a-vertical mar-b-8">
+                    <p className="s-14 c-strong mar-r-20">Tamanho: <span className="mar-l-6 c-blue">({currentSize})</span></p>
+                    <a href="#" className="c-orange td-underline s-14 mar-0">Guia de medidas</a>
                 </div>
                 <div className="d-flex">
                     {product.availableSizes.map((i, index) => <div onClick={() => setSize(i)} className={`clickable size-item br-circle d-flex a-center s-14 c-dark-blue mar-r-3 ${currentSize === i ? "active" : "inactive"}`}>{i}</div>)}
