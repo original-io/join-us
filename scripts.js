@@ -5,6 +5,7 @@ const bagssection = document.getElementById("bags-section");
 const accessoriesbtn = document.getElementById("accessories-section-btn");
 const accessoriessection = document.getElementById("accessories-section");
 
+const shoppingcartsection = document.getElementById("shopping-cart-section");
 const shoppingcartbtn = document.getElementById("shopping-cart-btn");
 const shoppingcart = document.getElementById("shopping-cart");
 const closecartbtn = document.getElementById("close-cart-btn");
@@ -73,6 +74,14 @@ shoppingcartbtn.onclick = () => {
 
 closecartbtn.onclick = () => {
     shoppingcart.style.display = "none";
+};
+
+shoppingcartbtn.onmouseover = () => {
+    shoppingcartsection.style.display = "block";
+};
+
+shoppingcartsection.onmouseleave = () => {
+    shoppingcartsection.style.display = "none";
 };
 
 /* Modal do carrinho de compras */
