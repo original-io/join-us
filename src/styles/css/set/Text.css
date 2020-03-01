@@ -106,6 +106,12 @@
 .s-36 {
   font-size: 36px; }
 
+.lowercase {
+  text-transform: lowercase; }
+
+.uppercase {
+  text-transform: uppercase; }
+
 .td-underline {
   text-decoration: underline; }
 
