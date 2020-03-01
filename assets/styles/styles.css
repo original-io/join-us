@@ -5,11 +5,6 @@
     src: url("../fonts/OpenSans-Regular.ttf");
 }
 
-@font-face {
-    font-family: "Gotham Book";
-    src: url("../fonts/Gotham\ Book.otf");
-}
-
 /** Resetando o css **/
 
 *,
@@ -101,6 +96,7 @@ ul {
 }
 
 #shopping-menu {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -133,13 +129,22 @@ ul {
     transition: 0.5s;
 }
 
-#shopping-cart-icon {
+#shopping-cart-btn {
+    height: 100%;
     display: flex;
     align-items: center;
-    margin-left: 20px;
+    margin-left: 5px;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
 }
 
-#shopping-cart-icon span {
+#shopping-cart-btn:hover {
+    background: #ebebeb;
+}
+
+#shopping-cart-btn span {
     font-size: 12px;
     line-height: 17px;
     font-weight: bold;
@@ -151,17 +156,16 @@ ul {
 #shoes-section {
     position: absolute;
     display: flex;
-    /** Alterar com js o display **/
-    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 440px;
+    height: 0;
     background: white;
     padding: 0 50px;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
     z-index: 10;
-    transition: all 0.7s ease-in-out;
 }
 
 .shoes-list {
@@ -193,16 +197,14 @@ ul {
 #bags-section {
     position: absolute;
     display: flex;
-    /** Alterar com js o display **/
-    display: none;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
     width: 100vw;
-    height: 440px;
-    padding: 28px 0 36px 40px;
+    height: 0;
     background: #fff;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
     z-index: 10;
-    transition: all 0.7s ease-in-out;
 }
 
 #bags-banner {
@@ -244,16 +246,18 @@ ul {
 #accessories-section {
     position: absolute;
     display: flex;
-    /** Alterar com js o display **/
-    display: none;
     justify-content: space-around;
     align-items: center;
     width: 100vw;
-    height: 440px;
-    padding: 28px 0 36px 40px;
+    height: 0;
     background: #fff;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
     z-index: 10;
-    transition: all 0.7s ease-in-out;
+}
+
+#accessories-section:hover {
+    height: 440px;
 }
 
 #accessories-banner {
@@ -558,6 +562,7 @@ ul {
 
 .more-products-item {
     margin: 0 7px;
+    cursor: pointer;
 }
 
 .more-products-description {
@@ -650,7 +655,6 @@ ul {
     height: 100vh;
     background: rgba(32, 32, 32, 0.6);
     position: fixed;
-    /* JS alterar o display para flex */
     display: none;
     align-items: center;
     justify-content: center;
@@ -684,13 +688,17 @@ ul {
     margin: 20px 0;
 }
 
-#product-added-wrapper a {
+#continue-btn {
     margin-top: 15px;
     font-size: 14px;
     color: #aeb6c1;
+    border: none;
+    background: #fff;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
-#finish-button {
+#finish-btn {
     width: 290px;
     height: 50px;
     background: #32917b;
@@ -701,6 +709,7 @@ ul {
     line-height: 22px;
     text-align: center;
     color: #fff;
+    cursor: pointer;
 }
 
 #close-modal-btn {
@@ -709,6 +718,7 @@ ul {
     align-self: flex-end;
     padding: 5px;
     margin: 5px;
+    cursor: pointer;
 }
 
 /** Carrinho de compras **/
@@ -719,17 +729,15 @@ ul {
     position: absolute;
     right: 0;
     top: 0;
-    display: flex;
-    /**  Alterar o display com o js **/
     display: none;
     flex-direction: column;
     background: #fff;
-    z-index: 10;
+    z-index: 20;
 }
 
 #close-cart-btn {
     width: 40px;
-    height: 40px;
+    height: 70px;
     background: #5f75aa;
     color: #fff;
     border: none;
@@ -738,6 +746,7 @@ ul {
     align-items: center;
     justify-content: center;
     align-self: flex-end;
+    cursor: pointer;
 }
 
 #shopping-cart h2 {
@@ -757,17 +766,27 @@ ul {
     align-self: flex-start;
 }
 
-#cart-items-wrapper {
-    margin-top: 18px;
-}
-
 #cart-items-wrapper ul {
     height: 440px;
+    margin: 20px 20px 30px 20px;
+    overflow: auto;
+}
+
+#cart-items-wrapper ul::-webkit-scrollbar {
+    background: #e2e2e2;
+    border-radius: 2px;
+    width: 5px;
+}
+
+#cart-items-wrapper ul::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: #de8f75;
 }
 
 .cart-items {
     display: flex;
     align-items: center;
+    margin: 10px 0;
 }
 
 .cart-items img {
@@ -815,21 +834,30 @@ ul {
 .minus-item-btn {
     height: 100%;
     width: 44px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
     background: #e3e3e3;
     border: none;
+    cursor: pointer;
 }
 
 .plus-item-btn {
     height: 100%;
     width: 44px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
     background: #e3e3e3;
     border: none;
+    cursor: pointer;
 }
 
 .remove-item-btn {
     border: none;
     background: #fff;
     margin-left: 50px;
+    cursor: pointer;
 }
 
 #free-deliver {
