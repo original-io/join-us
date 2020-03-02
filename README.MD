@@ -5,7 +5,7 @@
 Transformamos sonhos e desejos em experiências digitais apaixonantes. Com soluções inteligentes e foco nas necessidades dos nossos clientes e na conversão, atuamos em  diversas divisões de negócio, como B2C, B2B, marketplace, entre outras.
 
 ## Proposta
-O seu desafio é codificar [esse layout](https://www.figma.com/file/pArDJGnD4AVjIDv2ovB3xQ/Original.io-frontend-test).
+O seu desafio é codificar [esse layout](https://www.figma.com/file/pArDJGnD4AVjIDv2ovB3xQ/Original.io-frontend-test?node-id=0%3A1).
 
 **[IMPORTANTE] Leia os [critérios de avaliação](#critérios-de-avaliação).**
 
