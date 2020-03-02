@@ -11,8 +11,10 @@ import AddedCartModal from './components/Modals/AddedCartModal'
 import ProductContextProvider from './contexts/ProductContext'
 import ModalContextProvider from './contexts/ModalContext'
 import CartContextProvider from './contexts/CartContext'
+import CategoryContextProvider from './contexts/CategoryContext'
 
 const App = () => (
+  <CategoryContextProvider>
     <ModalContextProvider>
       <CartContextProvider>
         <ProductContextProvider>
@@ -26,6 +28,7 @@ const App = () => (
         </ProductContextProvider>
       </CartContextProvider>
     </ModalContextProvider>  
+  </CategoryContextProvider>
 )
 
 export default App;

@@ -4,4 +4,19 @@
     &.min{
         padding: 17px 29px;
     }
+
+    &.animated{
+        transition: 0.15s ease;
+        border: 2px solid #DE8F75;
+        background-color: transparent;
+        padding: 12px 43px;
+
+        &:hover{
+            background-color: #DE8F75;
+            
+            span{
+                color: #fff;
+            }
+        }
+    }
 }

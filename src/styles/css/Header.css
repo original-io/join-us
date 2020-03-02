@@ -13,8 +13,13 @@
     width: 320px; }
   .bottom-head-nav .nav-listing {
     width: 754px; }
-    .bottom-head-nav .nav-listing li {
-      margin: 0 26px; }
+    .bottom-head-nav .nav-listing a {
+      transition: 0.2s ease; }
+      .bottom-head-nav .nav-listing a:hover {
+        background-color: #fff; }
+        .bottom-head-nav .nav-listing a:hover + .CategoryModal {
+          opacity: 1;
+          pointer-events: all; }
   .bottom-head-nav .head-search {
     transition: 0.3s ease;
     width: 83px;

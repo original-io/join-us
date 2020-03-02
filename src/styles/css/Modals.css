@@ -64,3 +64,28 @@
   .CartModal .shipping-details {
     background-color: #AEB6C1;
     height: 50px; }
+
+.CategoryModal {
+  top: 138px;
+  left: 0px;
+  height: 367px;
+  z-index: 100;
+  transition: 0.1s ease;
+  opacity: 1;
+  pointer-events: all;
+  border-bottom: 2px solid #EBEBEB;
+  background-color: #fff; }
+  .CategoryModal:hover {
+    opacity: 1;
+    pointer-events: all; }
+  .CategoryModal .main-container {
+    width: 1084px; }
+    .CategoryModal .main-container .image-label-ctn {
+      align-items: flex-end; }
+    .CategoryModal .main-container .sub-category-list .vertical-bar {
+      margin: 0 23px 0 122px;
+      width: 2px;
+      height: 285px;
+      background-color: #C4C4C4; }
+    .CategoryModal .main-container .sub-category-list ul li {
+      width: 381px; }

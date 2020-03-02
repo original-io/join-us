@@ -14,7 +14,7 @@ const ProductSection = () => {
     const { id } = queryString.parse(window.location.search); 
 
     return  (
-        <div className='ProductSection pad-h-40'>
+        <div className='ProductSection pos-relative pad-h-40'>
             <CartModal/>
             <p className="s-12 c-light mar-0 mar-t-4 mar-b-16 pad-v-6">
                 <a className="c-light" href="#" >Home</a> 

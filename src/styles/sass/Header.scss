@@ -19,9 +19,18 @@
 
     .nav-listing{
         width: 754px;
-        
-        li{
-            margin: 0 26px;
+
+        a{
+            transition: 0.2s ease;
+
+            &:hover{
+                background-color: #fff;
+                
+                + .CategoryModal{
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
         }
     }
 

@@ -100,5 +100,19 @@
                 }
             ]
         }
+    ],
+    "categories": [
+        {"label": "Sapatos"},
+        {
+            "label": "Bolsas", 
+            "name": "bolsas",
+            "subcategories": ["Bolsas Pequenas", "Bolsas Grandes", "Bolsas de Tecido", "Bolsas Maleta", "Bolsas Saco", "Mochilas", "Malas"]
+        },
+        {
+            "label": "Acessórios", 
+            "name": "acessorios",
+            "subcategories": ["Bijoux", "Carteiras", "Cintos", "Necessaires", "Organizadores", "Pros Dias de Sol", "Leve Por Aí", "É Tendência"]
+        },
+        {"label": "Off"}
     ]
 }

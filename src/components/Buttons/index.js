@@ -11,3 +11,9 @@ export const ButtonMin = ({label, color, func, style}) => (
         <span className="s-14 c-white">{label.toUpperCase()}</span>
     </button>
 )
+
+export const ButtonAnimated = ({label, style}) => (
+    <button style={style} className="btn animated clickable d-flex a-center no-border no-outline">
+        <span className="s-12 c-orange">{label.toUpperCase()}</span>
+    </button>
+)

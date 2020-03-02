@@ -100,3 +100,40 @@
         height: 50px;
     }
 }
+
+.CategoryModal{
+    top: 138px;
+    left: 0px;
+    height: 367px;
+    z-index: 100;
+    transition: 0.1s ease;
+    opacity: 1;
+    pointer-events: all;
+    border-bottom: 2px solid #EBEBEB;
+    background-color: #fff;
+
+    &:hover{
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .main-container{
+        width: 1084px;
+
+        .image-label-ctn{
+            align-items: flex-end;
+        }
+
+        .sub-category-list{
+            .vertical-bar{
+                margin: 0 23px 0 122px;
+                width: 2px;
+                height: 285px;
+                background-color: #C4C4C4;
+            }
+            ul li{
+                width: 381px;
+            }
+        }
+    }
+}
