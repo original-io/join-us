@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 
 //Assets
 import Logo from '../../assets/logo.png'
 import Search from '../../assets/search.png'
 import Cart from '../../assets/cart.png'
 
+//Context
+import { ModalContext } from '../../contexts/ModalContext'
+
+
 const Header = () => {
+    const { toggleModal } = useContext(ModalContext);
     const [searchActive, setSearch] = useState(false);
     const navItems = ["Sapatos", "Bolsas", "Acessórios", "Off"];
 
@@ -28,9 +33,9 @@ const Header = () => {
                         <img src={Search} className="head-search-icon mar-r-16"/>
                         <input onBlur={() => setSearch(!searchActive)} onFocus={() => setSearch(!searchActive)} placeholder="Busca" className="head-search-box no-border" type="text"/>
                     </div>
-                    <div className="d-flex a-vertical">
-                        <img className="mar-r-4" src={Cart}/>
-                        <span>0</span>
+                    <div onClick={() => toggleModal("cartStatus")} className="clickable d-flex a-vertical">
+                        <img src={Cart}/>
+                        <span className="font-gotham s-12 c-black">0</span>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,102 @@
+.AddedCartModal{
+    transition: 0.3s ease;
+    background-color: rgba(32, 32, 32, 0.6);
+    top: 0;
+
+    .modal-container{
+        background-color: #fff;
+        padding: 36px 78px;
+        border-radius: 3px;
+        max-width: 445px;
+
+        .close-btn{
+            top: 0;
+            right: 20px;
+            color: #5F75AA;
+        }
+
+        p{
+            max-width: 290px;
+        }
+
+        img{
+            width: 290px;
+            height: 373.65px;
+        }
+    }
+}
+
+.CartModal{
+    top: 0;
+    right: 0;
+    width: 525px;
+    background-color: #fff;
+    border: 1px solid #f2f2f2;
+    transition: 0.12s ease;
+
+    .top-cart{
+        border-bottom: 1px solid #E3E3E3;   
+
+        span{
+            top: -20px;
+            right: -20px;
+            width: 40px;
+            height: 40px;
+            background-color: #5F75AA;
+            border-bottom-left-radius: 5px;
+        }
+    }
+
+    .bottom-cart{
+        max-height: 440px;
+
+        .CartItem{
+            img{
+                width: 64px;
+            }
+            .cart-item-details{
+                width: 154px;
+            }
+            .qty-btn{
+                width: 136px;
+                height: 34px;
+                border-radius: 4px;
+                overflow: hidden;
+
+                .qty{
+                    border-top: 1px solid #E3E3E3;
+                    border-bottom: 1px solid #E3E3E3;
+                    background-color: #fff;
+                }
+
+                div{
+                    width: 33.3%;
+                    background-color: #E3E3E3;
+                }
+            }
+        }
+        
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+  
+        &::-webkit-scrollbar-track {
+            background: #E2E2E2; 
+            border-radius: 2px;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background: #DE8F75; 
+            border-radius: 2px;
+        }
+        
+        &::-webkit-scrollbar-thumb:hover {
+            background: rgb(184, 112, 88);
+        }
+    }
+
+    .shipping-details{
+        background-color: #AEB6C1;
+        height: 50px;
+    }
+}

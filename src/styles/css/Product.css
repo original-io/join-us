@@ -1,8 +1,11 @@
 .product-nav-item {
+  transition: 0.1s ease;
   width: 74px;
   margin-bottom: 9px; }
   .product-nav-item:nth-last-child(2) {
     margin-bottom: 0px; }
+  .product-nav-item.inactive {
+    opacity: 0.5; }
 
 .ProductDetails {
   width: 400px;

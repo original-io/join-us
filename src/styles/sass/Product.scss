@@ -1,9 +1,14 @@
 .product-nav-item{
+    transition: 0.1s ease;
     width: 74px;
     margin-bottom: 9px;
 
     &:nth-last-child(2){
         margin-bottom: 0px;
+    }
+
+    &.inactive{
+        opacity: 0.5;
     }
 }
 

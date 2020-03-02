@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 
 //Components
-import { ButtonLarge } from '../Buttons' 
+import { ButtonLarge } from '../Buttons';
+
+//Contexts
+import { CartContext } from "../../contexts/CartContext"
+import { ModalContext } from "../../contexts/ModalContext"
 
 const ProductDetails = ({product}) => {
+    const { addToCart } = useContext(CartContext), { toggleModal } = useContext(ModalContext);
     const calculator = (price, discount, times) => {
         const discountedPrice = price - (price * discount / 100)
         const currecyParser = (value) => value.toLocaleString("pt-BR",{style: "currency", currency: "BRL"})
@@ -46,7 +51,7 @@ const ProductDetails = ({product}) => {
                 </div>
             </div>
 
-            <ButtonLarge label="Adicionar à sacola" color="#32917B" height={60} func={() => null}/>
+            <ButtonLarge label="Adicionar à sacola" color="#32917B" height={60} func={() => addToCart(product).then(() => toggleModal("addToCartStatus"))}/>
             <p className="c-strong s-14 lh-high mar-0 mar-t-16">{product.description}</p>
         </div>
     )

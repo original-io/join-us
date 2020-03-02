@@ -15,7 +15,7 @@ const ImageNavigation = ({product: { images }}) => {
                 </span>
                 <div className="d-flex fdir-column a-center">
                     <img className="mar-v-20" src={Arrow}/>
-                    {images.map((image, index) => <img onClick={() => setImage(index)} key={index} className="product-nav-item clickable" src={image}/>)}
+                    {images.map((image, index) => <img onClick={() => setImage(index)} key={index} className={`product-nav-item ${currentImage === index ? "active" : "inactive"} clickable`} src={image}/>)}
                     <img className="mar-v-20 rotate-180" src={Arrow}/>
                 </div>
             </div>

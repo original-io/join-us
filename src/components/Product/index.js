@@ -7,6 +7,7 @@ import { ProductContext } from '../../contexts/ProductContext'
 //Components
 import ImageNavigation from './ImageNavigation'
 import ProductDetails from './ProductDetails'
+import CartModal from '../Modals/CartModal'
 
 const ProductSection = () => {
     const { products } = useContext(ProductContext);
@@ -14,6 +15,7 @@ const ProductSection = () => {
 
     return  (
         <div className='ProductSection pad-h-40'>
+            <CartModal/>
             <p className="s-12 c-light mar-0 mar-t-4 mar-b-16 pad-v-6">
                 <a className="c-light" href="#" >Home</a> 
                 <span className="mar-h-6">/</span>
