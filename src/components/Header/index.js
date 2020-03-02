@@ -7,10 +7,12 @@ import Cart from '../../assets/cart.png'
 
 //Context
 import { ModalContext } from '../../contexts/ModalContext'
+import { CartContext } from '../../contexts/CartContext'
 
 
 const Header = () => {
     const { toggleModal } = useContext(ModalContext);
+    const { cartList } = useContext(CartContext);
     const [searchActive, setSearch] = useState(false);
     const navItems = ["Sapatos", "Bolsas", "Acessórios", "Off"];
 
@@ -35,7 +37,7 @@ const Header = () => {
                     </div>
                     <div onClick={() => toggleModal("cartStatus")} className="clickable d-flex a-vertical">
                         <img src={Cart}/>
-                        <span className="font-gotham s-12 c-black">0</span>
+                        <span className="font-gotham s-12 c-black">{cartList.length}</span>
                     </div>
                 </div>
             </div>

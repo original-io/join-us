@@ -7,20 +7,11 @@ import { ButtonLarge } from '../Buttons';
 import { CartContext } from "../../contexts/CartContext"
 import { ModalContext } from "../../contexts/ModalContext"
 
+//Partials
+import { calculator } from '../../partials'
+
 const ProductDetails = ({product}) => {
     const { addToCart } = useContext(CartContext), { toggleModal } = useContext(ModalContext);
-    const calculator = (price, discount, times) => {
-        const discountedPrice = price - (price * discount / 100)
-        const currecyParser = (value) => value.toLocaleString("pt-BR",{style: "currency", currency: "BRL"})
-        
-        return { 
-            discountedPrice: currecyParser(discountedPrice), 
-            price: price.toLocaleString("pt-BR",{style: "currency", currency: "BRL"}),
-            times, 
-            timesPrice: currecyParser(discountedPrice/6)
-        }
-    }
-
     const { discountedPrice, price, times, timesPrice } = calculator(parseFloat(product.price), 20, 6)
     const [currentColor, setColor] = useState({hex: product.availableColors[0].hex, name: product.availableColors[0].name})
     const [currentSize, setSize] = useState(product.availableSizes[0])

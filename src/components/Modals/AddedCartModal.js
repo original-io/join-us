@@ -17,7 +17,7 @@ const AddedCartModal = () => {
                 <span onClick={() => toggleModal("addToCartStatus")} className="clickable close-btn pos-absolute s-40">&times;</span>
                 <img src={Object.keys(newlyAdded).length > 0 ? newlyAdded.images[0] : ""}/>
                 <p className="uppercase s-22 c-orange font-gotham-bold txa-center">Adicionado com sucesso!</p>
-                <ButtonLarge height={50} label="Finalizar Compra" color="#32917B" func={() => toggleModal("addToCartStatus")}/>
+                <ButtonLarge height={50} label="Finalizar Compra" color="#32917B" func={() => toggleModal("addToCartStatus").then(() => toggleModal("cartStatus"))}/>
                 <p onClick={() => toggleModal("addToCartStatus")} className="clickable td-underline c-light s-14 txa-center">Continuar Comprando</p>
             </div>
         </div>

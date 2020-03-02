@@ -8,7 +8,7 @@ class ModalContextProvider extends Component {
         cartStatus: false,
     }
 
-    toggleModal = (stateName) => this.setState({...this.state, [stateName]: !this.state[stateName]})
+    toggleModal = async (stateName) => this.setState({...this.state, [stateName]: !this.state[stateName]})
 
     render(){
         return (
