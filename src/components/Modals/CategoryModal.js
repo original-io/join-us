@@ -29,3 +29,24 @@ export const CategoryModal = ({name, subcategories}) => {
         </div>
     )
 }
+
+export const ShoesModal = ({subcategories}) => {
+
+    return (
+        <div className='CategoryModal cw-max-view pos-absolute d-flex a-center'>
+            <div className="main-container shoes d-flex">
+                {
+                    subcategories.map((item, index) => {
+                        const image = require(`../../assets/shoes/${index}.png`)
+                        return (
+                            <div className="category-container d-flex a-center fdir-column">
+                                <img className="mar-b-14" src={image}/>
+                                <p className="txa-center s-14 c-orange">{item}</p>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+        </div>
+    )
+}

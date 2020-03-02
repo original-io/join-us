@@ -14,9 +14,10 @@
   .bottom-head-nav .nav-listing {
     width: 754px; }
     .bottom-head-nav .nav-listing a {
-      transition: 0.2s ease; }
+      transition: 0.2s ease;
+      background-color: #fff; }
       .bottom-head-nav .nav-listing a:hover {
-        background-color: #fff; }
+        background-color: #EBEBEB; }
         .bottom-head-nav .nav-listing a:hover + .CategoryModal {
           opacity: 1;
           pointer-events: all; }

@@ -71,8 +71,8 @@
   height: 367px;
   z-index: 100;
   transition: 0.1s ease;
-  opacity: 1;
-  pointer-events: all;
+  opacity: 0;
+  pointer-events: none;
   border-bottom: 2px solid #EBEBEB;
   background-color: #fff; }
   .CategoryModal:hover {
@@ -80,6 +80,12 @@
     pointer-events: all; }
   .CategoryModal .main-container {
     width: 1084px; }
+    .CategoryModal .main-container.shoes {
+      width: 964px;
+      flex-wrap: wrap; }
+      .CategoryModal .main-container.shoes .category-container {
+        width: 154px;
+        margin: 0 19px; }
     .CategoryModal .main-container .image-label-ctn {
       align-items: flex-end; }
     .CategoryModal .main-container .sub-category-list .vertical-bar {

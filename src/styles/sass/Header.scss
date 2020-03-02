@@ -22,9 +22,10 @@
 
         a{
             transition: 0.2s ease;
+            background-color: #fff;
 
             &:hover{
-                background-color: #fff;
+                background-color: #EBEBEB;
                 
                 + .CategoryModal{
                     opacity: 1;

@@ -5,7 +5,7 @@ import Acessorios from '../../assets/acessorios.png'
 import Bolsas from '../../assets/bolsas.png'
 
 //Components
-import { CategoryModal } from '../Modals/CategoryModal'
+import { CategoryModal, ShoesModal } from '../Modals/CategoryModal'
 
 //Context
 import { CategoryContext } from '../../contexts/CategoryContext'
@@ -15,14 +15,17 @@ const CategoryNav = () => {
 
     return (
             <nav className="nav-listing ch-fill font-gotham d-flex a-center s-14">
-                {navItems.map(({label, name, subcategories}) => (
+                {navItems.map(({label, name, type, subcategories}) => (
                     <Fragment>
                         <a className="ch-100 d-flex a-center pad-h-26 ch-inherit" href="#">{label.toUpperCase()}</a>
                         {
-                            name ? 
+                            type === "normal" ? 
                                 <CategoryModal subcategories={subcategories} name={name}/>
                             :
-                                null
+                                type === "min" ?
+                                    <ShoesModal subcategories={subcategories}/>
+                                :
+                                    null
                         }
                     </Fragment>
                 ))}

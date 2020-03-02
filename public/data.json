@@ -102,13 +102,19 @@
         }
     ],
     "categories": [
-        {"label": "Sapatos"},
         {
+            "label": "Sapatos", 
+            "type": "min",
+            "subcategories": ["Rasteiras", "Sapatilhas", "Alpargatas", "Mocassins", "Tênis", "Botas", "Salto Anabela", "Salto Plataforma", "Salto Alto", "Salto Médio"]
+        },
+        {
+            "type": "normal",
             "label": "Bolsas", 
             "name": "bolsas",
             "subcategories": ["Bolsas Pequenas", "Bolsas Grandes", "Bolsas de Tecido", "Bolsas Maleta", "Bolsas Saco", "Mochilas", "Malas"]
         },
         {
+            "type": "normal",
             "label": "Acessórios", 
             "name": "acessorios",
             "subcategories": ["Bijoux", "Carteiras", "Cintos", "Necessaires", "Organizadores", "Pros Dias de Sol", "Leve Por Aí", "É Tendência"]

@@ -107,8 +107,8 @@
     height: 367px;
     z-index: 100;
     transition: 0.1s ease;
-    opacity: 1;
-    pointer-events: all;
+    opacity: 0;
+    pointer-events: none;
     border-bottom: 2px solid #EBEBEB;
     background-color: #fff;
 
@@ -119,6 +119,16 @@
 
     .main-container{
         width: 1084px;
+
+        &.shoes{
+            width: 964px;
+            flex-wrap: wrap;
+
+            .category-container{
+                width: 154px;
+                margin: 0 19px;
+            }
+        }
 
         .image-label-ctn{
             align-items: flex-end;
