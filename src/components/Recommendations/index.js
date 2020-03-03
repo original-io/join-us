@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 
 //Components
 import ItemCell from './ItemCell'
@@ -10,16 +10,19 @@ import { ProductContext } from '../../contexts/ProductContext'
 const Recommendations = () => {
     const { products } = useContext(ProductContext);
     const productsCopy = [products, products, products, products].flat();
-    const [currentPage, setPage] = useState({translation: 0, page: 1})
+    const [currentPage, setPage] = useState({translation: 0, page: 1});
+    const [windowSize, setWindowSize] = useState(window.innerWidth);
+
     const imageWidth = 290.22, imageMargin = 13, noOfItems = productsCopy.length;
-    const containerSize = imageWidth * 4 + (imageMargin * 3);
+    const maxItemsPerView = Math.floor(windowSize/imageWidth)
+    const containerSize = imageWidth * maxItemsPerView + (imageMargin * (maxItemsPerView - 1));
 
     const navTranslation = { 
         transform: `translateX(-${currentPage.translation}px)` 
     }
 
     const navigate = (forward) => {
-        const maxPages = Math.ceil(noOfItems/4);
+        const maxPages = Math.ceil(noOfItems/maxItemsPerView);
         if(forward){
             return setPage(currentPage.page === maxPages ?
                     { page: 1, translation: 0 }
@@ -34,6 +37,8 @@ const Recommendations = () => {
         )
     }
 
+    useEffect(() => window.addEventListener("resize", ({target: { innerWidth }}) => setWindowSize(innerWidth)));
+
     //&#43;
     return (
         <div className='Recommendations d-flex fdir-column a-vertical pad-h-40'>
@@ -44,7 +49,7 @@ const Recommendations = () => {
                 </div>
             </div>
 
-            <Navigator currentPage={currentPage.page} noOfItems={Math.ceil(noOfItems/4)} navigate={navigate}/>
+            <Navigator currentPage={currentPage.page} noOfItems={Math.ceil(noOfItems/maxItemsPerView)} navigate={navigate}/>
         </div>
     )
 }

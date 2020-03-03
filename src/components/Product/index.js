@@ -21,7 +21,7 @@ const ProductSection = () => {
                 <span className="mar-h-6">/</span>
                 <a href="#" className="c-light w-bold">Sapatos</a>
             </p>
-            <div className="d-flex">
+            <div className="product-container d-flex">
                 {
                     products.length > 0 ?
                         <Fragment>

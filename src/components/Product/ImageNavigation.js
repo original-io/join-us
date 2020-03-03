@@ -14,12 +14,12 @@ const ImageNavigation = ({product: { images }}) => {
                     <img src={PlayBtn}/>
                 </span>
                 <div className="d-flex fdir-column a-center">
-                    <img className="mar-v-20" src={Arrow}/>
+                    <img className="arrow mar-v-20" src={Arrow}/>
                     {images.map((image, index) => <img onClick={() => setImage(index)} key={index} className={`product-nav-item ${currentImage === index ? "active" : "inactive"} clickable`} src={image}/>)}
-                    <img className="mar-v-20 rotate-180" src={Arrow}/>
+                    <img className="arrow mar-v-20 rotate-180" src={Arrow}/>
                 </div>
             </div>
-            <img src={images[currentImage]}/>
+            <img className="image-display" src={images[currentImage]}/>
         </div>
     )
 }
