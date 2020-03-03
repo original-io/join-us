@@ -7,12 +7,6 @@
 .pos-absolute {
   position: absolute; }
 
-.pos-sticky {
-  position: sticky; }
-
-.d-none {
-  display: none !important; }
-
 .d-block {
   display: block; }
 
@@ -82,9 +76,6 @@
 .cw-inherit {
   width: inherit !important; }
 
-.cw-auto {
-  width: auto; }
-
 .cw-25 {
   width: 25%; }
 
@@ -110,9 +101,6 @@
 
 .ch-inherit {
   height: inherit !important; }
-
-.ch-auto {
-  height: auto; }
 
 .ch-25 {
   height: 25%; }
