@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 
 //Components
-import { ButtonLarge } from '../Buttons'
+import { ButtonLarge } from '../../Buttons'
 
 //Contexts
-import { ModalContext } from "../../contexts/ModalContext"
-import { CartContext } from "../../contexts/CartContext"
+import { ModalContext } from "../../../contexts/ModalContext"
+import { CartContext } from "../../../contexts/CartContext"
 
 const AddedCartModal = () => {
     const { addToCartStatus, toggleModal } = useContext(ModalContext);

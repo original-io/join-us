@@ -1,13 +1,13 @@
 import React from 'react';
 
 //Components
-import { ButtonAnimated } from '../Buttons'
+import { ButtonAnimated } from '../../Buttons'
 
 //Assets
-import Banner from '../../assets/banner.png'
+import Banner from '../../../assets/banner.png'
 
 export const CategoryModal = ({name, subcategories}) => {
-    const labelImage = require(`../../assets/${name}.png`);
+    const labelImage = require(`../../../assets/${name}.png`);
 
     return (
         <div className='CategoryModal d-flex a-vertical flex-end cw-max-view pos-absolute'>
@@ -37,7 +37,7 @@ export const ShoesModal = ({subcategories}) => {
             <div className="main-container shoes d-flex">
                 {
                     subcategories.map((item, index) => {
-                        const image = require(`../../assets/shoes/${index}.png`)
+                        const image = require(`../../../assets/shoes/${index}.png`)
                         return (
                             <div className="category-container d-flex a-center fdir-column">
                                 <img className="mar-b-14" src={image}/>

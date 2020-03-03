@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 
 //Partials
-import { calculator } from '../../partials'
+import { calculator } from '../../../partials'
 
 //Context
-import { CartContext } from '../../contexts/CartContext'
+import { CartContext } from '../../../contexts/CartContext'
 
 const CartItem = ({product}) => {
     const { discountedPrice } = calculator(parseFloat(product.price), 20, 6)

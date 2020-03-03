@@ -2,14 +2,14 @@ import React, { useContext } from 'react';
 
 //Components
 import CartItem from './CartItem'
-import { ButtonMin } from '../Buttons'
+import { ButtonMin } from '../../Buttons'
 
 //Partials
-import { calculator } from '../../partials'
+import { calculator } from '../../../partials'
 
 //Context
-import { CartContext } from '../../contexts/CartContext'
-import { ModalContext } from '../../contexts/ModalContext'
+import { CartContext } from '../../../contexts/CartContext'
+import { ModalContext } from '../../../contexts/ModalContext'
 
 const CartModal = () => {
     const { toggleModal, cartStatus } = useContext(ModalContext);

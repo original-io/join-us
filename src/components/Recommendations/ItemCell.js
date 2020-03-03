@@ -7,7 +7,7 @@ import Plus from '../../assets/plus.png'
 import { calculator } from '../../partials'
 
 const ItemCell = ({product: { id, availableColors, price, images }, imageSizes: { imageWidth, imageMargin } }) => {
-    const { totalPrice } = calculator(parseFloat(price), 20, 6)
+    const itemPrice = calculator(parseFloat(price), 20, 6).price
 
     return (
         <div style={{marginRight: imageMargin}} className="recommend-cell pos-relative">
@@ -16,7 +16,7 @@ const ItemCell = ({product: { id, availableColors, price, images }, imageSizes: 
                 <img style={{width: imageWidth}} className="recommend-image" src={images[0]}/>
             </a>
             <div className="d-flex a-between a-vertical">
-                <span className="s-16 c-strong">{totalPrice}</span> 
+                <span className="s-16 c-strong">{itemPrice}</span> 
                 <div className="d-flex">
                     {availableColors.map(({hex}) => <div style={{backgroundColor: hex}} className="recommend-color-cell br-circle"/>)}
                 </div>
