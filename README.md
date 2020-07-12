@@ -2,7 +2,7 @@
 ### Por Leonardo Ferraz (@ldlferraz)
 ###### Características do projeto e comentários:
 
-**Para rodar o client + o mock server, digite 'npm run serve' no root do projeto**
+**Para rodar o client + o mock server: 'npm run serve' no root do projeto > cd mockServer > node server**
 
   - **Observações:**
     - O menu principal no Header e o menu de categorias no Index levam a duas views diferentes do mesmo
