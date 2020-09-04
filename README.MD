@@ -14,13 +14,13 @@ O seu desafio é codificar [esse layout](https://www.figma.com/file/MOlhG4R9BQMl
 * JS(Exceto estágio)
 * Git
 * Fidelização ao layout
+* Responsividade
 * Hospedagem do projeto(Surge.sh, Heroku, Netlify, etc.)
 
 ## Bonus points
 * [React](https://reactjs.org/)
 * Simulação de API REST, usando código assíncrono (Fake server)
 * Código modular 
-* Responsividade
 * Boa aplicação de ferramentas, sejam elas transpiladores, pré-processadores, task-runners, bundlers, etc.
 
 ## Critérios de avaliação
